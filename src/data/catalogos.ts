@@ -38,6 +38,8 @@ export type Catalogo = {
   kit?: { titulo: string; texto: string };
   /** Frase de cierre: "Tu marca, en cada ___." */
   cierre: string;
+  /** Título y descripción para Google (../Web OW/04-SEO-Y-REDIRECCIONES.md). */
+  seo: { titulo: string; descripcion: string };
   /** Mensaje que llega precargado al tocar WhatsApp en esta página. */
   mensaje: string;
   /** Portada (página 1 del PDF), en /public/catalogos/portadas/. */
@@ -51,6 +53,11 @@ const mensaje = (titulo: string) =>
 export const CATALOGOS: Catalogo[] = [
   {
     slug: "drinkware",
+    seo: {
+      titulo: "Mates, termos y botellas personalizados",
+      descripcion:
+        "Catálogo Drinkware 2026: mates, termos, botellas, jarros y tazas con tu marca. 41 modelos. Cotizá por WhatsApp.",
+    },
     titulo: "Drinkware",
     tarjeta: "Mates, termos, botellas, jarros y tazas.",
     h1: "Mates, termos y botellas personalizados.",
@@ -95,6 +102,11 @@ export const CATALOGOS: Catalogo[] = [
   },
   {
     slug: "escritura",
+    seo: {
+      titulo: "Lapiceras y bolígrafos personalizados",
+      descripcion:
+        "Catálogo Escritura 2026: bolígrafos, lápices y set ejecutivo con tu marca. 35 modelos. Cotizá por WhatsApp.",
+    },
     titulo: "Escritura",
     tarjeta: "Bolígrafos, lápices y set ejecutivo.",
     h1: "Lapiceras y bolígrafos personalizados.",
@@ -129,6 +141,11 @@ export const CATALOGOS: Catalogo[] = [
     // ⚠️ Ningún texto de este catálogo puede sugerir que se personalizan las
     // hojas por dentro.
     slug: "cuadernos",
+    seo: {
+      titulo: "Cuadernos y anotadores personalizados",
+      descripcion:
+        "Catálogo Cuadernos y anotadores 2026: tapa dura, flexible, multifunción y ecológicos con tu marca. 25 modelos.",
+    },
     titulo: "Cuadernos y anotadores",
     tarjeta: "Cuadernos, libretas y anotadores.",
     h1: "Cuadernos y anotadores personalizados.",
@@ -151,6 +168,11 @@ export const CATALOGOS: Catalogo[] = [
   {
     // [definir qué PDF se publica: el completo o el "-selection"]
     slug: "oficina",
+    seo: {
+      titulo: "Calendarios 2027 y artículos de escritorio",
+      descripcion:
+        "Catálogo Oficina y escritorio 2026: sets, notas, útiles y calendarios 2027 con tu marca. 24 modelos.",
+    },
     titulo: "Oficina y escritorio",
     tarjeta: "Sets de escritorio, notas, útiles y calendarios 2027.",
     h1: "Calendarios 2027 y artículos de escritorio personalizados.",
@@ -175,6 +197,11 @@ export const CATALOGOS: Catalogo[] = [
   },
   {
     slug: "marroquineria",
+    seo: {
+      titulo: "Mochilas, bolsos y neceseres personalizados",
+      descripcion:
+        "Catálogo Marroquinería 2026: mochilas, bolsos, neceseres y artículos de viaje con tu marca. 27 modelos.",
+    },
     titulo: "Marroquinería",
     tarjeta: "Mochilas, bolsos, neceseres y artículos de viaje.",
     h1: "Mochilas, bolsos y neceseres personalizados.",
@@ -199,6 +226,11 @@ export const CATALOGOS: Catalogo[] = [
   },
   {
     slug: "cintas",
+    seo: {
+      titulo: "Cintas para credenciales e identificadores",
+      descripcion:
+        "Catálogo Cintas e identificación 2026: cintas sublimadas, identificadores, pines y medallas. 19 modelos.",
+    },
     titulo: "Cintas e identificación",
     tarjeta: "Cintas para credenciales, identificadores, pines y medallas.",
     h1: "Cintas para credenciales, pines e identificadores.",
@@ -246,6 +278,11 @@ export const CATALOGOS: Catalogo[] = [
   },
   {
     slug: "llaveros",
+    seo: {
+      titulo: "Llaveros y destapadores personalizados",
+      descripcion:
+        "Catálogo Llaveros 2026: cuero, metal, PVC, destapadores y línea automotor con tu marca. 36 modelos.",
+    },
     titulo: "Llaveros",
     tarjeta: "Llaveros de cuero, metal, PVC y destapadores.",
     h1: "Llaveros y destapadores personalizados.",
@@ -277,3 +314,35 @@ export const CATALOGOS: Catalogo[] = [
     mensaje: mensaje("Llaveros"),
   },
 ];
+
+/** Textos de la página general /catalogos. */
+export const CATALOGOS_HUB = {
+  h1: "Catálogos de merchandising 2026.",
+  bajada:
+    "Estos siete catálogos son una base con lo que más trabajamos. No son todo: si buscás algo que no está, lo conseguimos para tu marca.",
+  banda: {
+    titulo: "¿No ves lo que buscás?",
+    texto: "Hacemos búsquedas a medida: contanos qué necesitás y lo conseguimos.",
+  },
+  seo: {
+    titulo: "Catálogos de merchandising 2026",
+    descripcion:
+      "Siete catálogos para ver online: drinkware, escritura, cuadernos, oficina, marroquinería, cintas y llaveros. Y si no está, lo conseguimos.",
+  },
+};
+
+/**
+ * Rótulos de la página de cada catálogo. Los botones salen de
+ * 03-CONTENIDO-PAGINAS.md; los títulos de bloque son borradores para revisar.
+ */
+export const CATALOGO_PAGINA = {
+  botonPdf: "Ver catálogo PDF",
+  botonPedirPdf: "Pedir el PDF",
+  botonWhatsApp: "Cotizá por WhatsApp",
+  secciones: "Qué hay en este catálogo.",
+  botonKit: "Cotizá tu kit",
+  pedidos: "Pedidos reales de esta línea.",
+};
+
+/** Mensaje de WhatsApp para pedir un PDF que todavía no está publicado. */
+export const mensajePedirPdf = (titulo: string) => `Hola, quiero el PDF del catálogo ${titulo}.`;

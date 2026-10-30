@@ -13,12 +13,14 @@ type Props = {
 /**
  * Titular de On Work: el signo final (punto o signo de pregunta) va en
  * amarillo y las dos últimas palabras quedan unidas (sin viudas).
- * Ver "The Punto Final Rule" en DESIGN.md.
+ * Si el titular termina con un marcador pendiente ("… sorbo. [confirmar]"),
+ * se pinta el signo de antes del marcador. Ver "The Punto Final Rule" en DESIGN.md.
  */
 export default function Titular({ children, as: Tag = "h2", id, className, antes }: Props) {
-  const texto = sinViuda(children.trim());
-  const final = /[.?!]$/.test(texto) ? texto.slice(-1) : "";
-  const cuerpo = final ? texto.slice(0, -1) : texto;
+  const match = children.trim().match(/^([\s\S]*?)([.?!])(\s*\[[^\]]*\])?$/);
+  const cuerpo = match ? match[1] : children.trim();
+  const final = match ? match[2] : "";
+  const marcador = match?.[3]?.trim();
 
   return (
     <Tag
@@ -26,8 +28,9 @@ export default function Titular({ children, as: Tag = "h2", id, className, antes
       className={cn("font-display font-extrabold leading-none tracking-tight", className)}
     >
       {antes}
-      {cuerpo}
+      {sinViuda(cuerpo + final).slice(0, final ? -1 : undefined)}
       {final && <span className="text-ow-yellow">{final}</span>}
+      {marcador && <span className="ml-[0.3em] text-[0.4em] font-bold tracking-normal opacity-60">{marcador}</span>}
     </Tag>
   );
 }

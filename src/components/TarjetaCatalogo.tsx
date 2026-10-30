@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Catalogo } from "@/data/catalogos";
+import { mensajePedirPdf, type Catalogo } from "@/data/catalogos";
 import { whatsappUrl } from "@/lib/site";
 import { sinViuda } from "@/lib/utils";
 import Icon from "./Icon";
@@ -46,7 +46,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
           </a>
         ) : (
           <a
-            href={whatsappUrl(`Hola, quiero el PDF del catálogo ${catalogo.titulo}.`)}
+            href={whatsappUrl(mensajePedirPdf(catalogo.titulo))}
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-target inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"

@@ -10,15 +10,23 @@ import { sinViuda } from "@/lib/utils";
  * reales conseguidos fuera de catálogo muestra, sin explicarlo, que los
  * catálogos son solo una parte. Texto tinta sobre amarillo.
  */
-export default function Busquedas({ id = "busquedas" }: { id?: string }) {
+export default function Busquedas({
+  id = "busquedas",
+  titulo = BUSQUEDAS.titulo,
+  texto = BUSQUEDAS.texto,
+}: {
+  id?: string;
+  titulo?: string;
+  texto?: string;
+}) {
   return (
     <section aria-labelledby={id} className="overflow-hidden py-24 md:py-32">
       <div className="container-ow grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-16">
         <Titular id={id} className="text-[clamp(2.1rem,4.8vw,4rem)]">
-          {BUSQUEDAS.titulo}
+          {titulo}
         </Titular>
         <div>
-          <p className="text-lg text-ow-black/80">{sinViuda(BUSQUEDAS.texto)}</p>
+          <p className="text-lg text-ow-black/80">{sinViuda(texto)}</p>
           <WhatsAppLink tone="black" message={BUSQUEDAS.mensaje} className="mt-7">
             {BUSQUEDAS.boton}
           </WhatsAppLink>
