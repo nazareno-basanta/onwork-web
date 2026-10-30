@@ -6,6 +6,8 @@ import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import CursorDiana from "@/components/CursorDiana";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -60,6 +62,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <WhatsAppFloat />
+        <CursorDiana />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

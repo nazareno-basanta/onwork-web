@@ -1,32 +1,57 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NAV } from "@/lib/site";
-import WhatsAppLink from "./WhatsAppLink";
+import { CATALOGOS } from "@/data/catalogos";
+import { SITE, whatsappUrl, MENSAJE_GENERAL } from "@/lib/site";
+import Icon from "./Icon";
 
+const ON_WORK = [
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/pedidos", label: "Pedidos reales" },
+  { href: "/contacto", label: "Contacto" },
+];
+
+const link = "cursor-target inline-flex min-h-8 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
+
+/** Pie de todas las páginas: wordmark blanco sobre tinta (nunca el isotipo). */
 export default function Footer() {
   return (
-    <footer className="border-t border-white/15 bg-ow-black text-white">
-      <div className="container-ow grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer data-cursor-tone="claro" className="bg-ow-black text-white">
+      <div className="container-ow grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_0.8fr_1fr] lg:py-20">
         <div>
-          <Image
-            src="/brand/logo-onwork-blanco.svg"
-            alt="On Work, comunicación y merchandising"
-            width={715}
-            height={255}
-            className="h-14 w-auto"
-          />
-          <p className="mt-6 max-w-sm text-white/70">
-            Asesoramos y conseguimos lo que tu marca necesita: merchandising,
-            indumentaria, cartelería, tarjetería y mucho más.
-          </p>
+          <Link href="/" aria-label="On Work, ir al inicio" className="cursor-target inline-block rounded-sm">
+            <Image
+              src="/brand/wordmark-onwork-blanco.svg"
+              alt="On Work"
+              width={698}
+              height={111}
+              className="h-8 w-auto"
+            />
+          </Link>
         </div>
 
-        <nav aria-label="Pie de página">
-          <p className="eyebrow text-ow-yellow">Sitio</p>
-          <ul className="mt-5 space-y-3">
-            {NAV.map((item) => (
+        <nav aria-labelledby="pie-catalogos">
+          <h2 id="pie-catalogos" className="font-display text-sm font-bold text-white/60">
+            Catálogos
+          </h2>
+          <ul className="mt-4 space-y-1.5">
+            {CATALOGOS.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/catalogos/${c.slug}`} className={link}>
+                  {c.titulo}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pie-onwork">
+          <h2 id="pie-onwork" className="font-display text-sm font-bold text-white/60">
+            On Work
+          </h2>
+          <ul className="mt-4 space-y-1.5">
+            {ON_WORK.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-ow-yellow">
+                <Link href={item.href} className={link}>
                   {item.label}
                 </Link>
               </li>
@@ -35,19 +60,32 @@ export default function Footer() {
         </nav>
 
         <div>
-          <p className="eyebrow text-ow-yellow">Contacto</p>
-          <p className="mt-5 text-white/70">
-            Contanos qué necesitás y te respondemos por WhatsApp.
-          </p>
-          <WhatsAppLink tone="yellow" className="mt-5">
-            Escribinos
-          </WhatsAppLink>
+          <h2 className="font-display text-sm font-bold text-white/60">Contacto</h2>
+          <ul className="mt-4 space-y-1.5">
+            <li>
+              <a
+                href={whatsappUrl(MENSAJE_GENERAL)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${link} gap-2`}
+              >
+                <Icon name="whatsapp" size={18} />
+                WhatsApp {SITE.whatsappVisible}
+              </a>
+            </li>
+            <li>
+              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className={`${link} gap-2`}>
+                <Icon name="instagram" size={18} />
+                {SITE.instagramUsuario}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <p className="container-ow py-6 text-sm text-white/50">
-          © On Work — Buenos Aires, Argentina
+      <div className="border-t border-white/15">
+        <p className="container-ow py-6 text-sm text-white/70">
+          {SITE.ubicacion} · Desde 1990
         </p>
       </div>
     </footer>

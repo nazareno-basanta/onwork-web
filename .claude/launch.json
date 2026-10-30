@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "onwork-web",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--", "-p", "3005"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev", "-p", "3005"],
       "port": 3005
     }
   ]

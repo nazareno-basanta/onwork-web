@@ -27,7 +27,15 @@ export default function SmoothScroll() {
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
+    // El menú del celular frena el scroll mientras está abierto.
+    const onLock = (e: Event) => {
+      if ((e as CustomEvent<boolean>).detail) lenis.stop();
+      else lenis.start();
+    };
+    window.addEventListener("ow:scroll-lock", onLock);
+
     return () => {
+      window.removeEventListener("ow:scroll-lock", onLock);
       gsap.ticker.remove(tick);
       lenis.destroy();
       lenisRef.current = null;

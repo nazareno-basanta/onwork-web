@@ -1,59 +1,186 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { NAV } from "@/lib/site";
-import WhatsAppLink from "./WhatsAppLink";
+/**
+ * Menú del celular a pantalla completa. Comportamiento tomado de React Bits ·
+ * Staggered Menu (https://reactbits.dev): dos capas entran desde la derecha,
+ * una amarilla y la tinta encima, y los links aparecen en cascada.
+ * Reescrito con motion. Sin numeración de ítems (DESIGN.md: sin números que no
+ * informan). Sobre tinta va el wordmark blanco, nunca el isotipo.
+ *
+ * Accesibilidad: aria-expanded, cierre con Escape, foco atrapado en el panel
+ * y devuelto al botón al cerrar. Con menos movimiento, aparece sin animación.
+ */
 
-/** Menú desplegable para celulares (en pantallas grandes no se muestra). */
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { NAV, SITE } from "@/lib/site";
+import Icon from "./Icon";
+import WhatsAppLink from "./WhatsAppLink";
+import { esActivo } from "./NavDesktop";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
 export default function MobileNav() {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  // Se guarda la página donde se abrió: al navegar a otra, queda cerrado solo.
+  const [abiertoEn, setAbiertoEn] = useState<string | null>(null);
+  const open = abiertoEn === pathname;
+  const setOpen = (valor: boolean) => setAbiertoEn(valor ? pathname : null);
+  const reduce = useReducedMotion();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  // Frena el scroll de la página y atrapa el foco mientras está abierto.
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("ow:scroll-lock", { detail: open }));
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+
+    const panel = panelRef.current;
+    const focusables = () =>
+      Array.from(panel?.querySelectorAll<HTMLElement>("a[href], button") ?? []);
+    focusables()[0]?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setAbiertoEn(null);
+        toggleRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const items = focusables();
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.documentElement.style.overflow = "";
+    };
+  }, [open]);
+
+  const cerrar = () => {
+    setOpen(false);
+    toggleRef.current?.focus();
+  };
+
+  const capa = (delay: number) =>
+    reduce
+      ? { initial: false as const, animate: { x: 0 }, exit: { opacity: 0 } }
+      : {
+          initial: { x: "100%" },
+          animate: { x: 0, transition: { duration: 0.6, ease: EASE, delay } },
+          exit: { x: "100%", transition: { duration: 0.4, ease: EASE, delay: 0.1 - delay / 2 } },
+        };
 
   return (
     <div className="lg:hidden">
       <button
+        ref={toggleRef}
         type="button"
         aria-expanded={open}
         aria-controls="menu-movil"
-        aria-label={open ? "Cerrar menú" : "Abrir menú"}
-        onClick={() => setOpen((v) => !v)}
-        className="grid size-11 place-items-center rounded-full border-2 border-ow-black"
+        onClick={() => setOpen(true)}
+        className="flex min-h-11 items-center gap-2.5 rounded-full border-2 border-ow-black px-4 font-display text-sm font-bold"
       >
-        <span aria-hidden className="relative block h-3 w-5">
-          <span
-            className={`absolute left-0 block h-0.5 w-5 bg-ow-black transition-all duration-300 ${
-              open ? "top-1/2 rotate-45" : "top-0"
-            }`}
-          />
-          <span
-            className={`absolute left-0 block h-0.5 w-5 bg-ow-black transition-all duration-300 ${
-              open ? "top-1/2 -rotate-45" : "bottom-0"
-            }`}
-          />
+        Menú
+        <span aria-hidden className="flex w-5 flex-col gap-1.5">
+          <span className="h-0.5 w-full bg-ow-black" />
+          <span className="h-0.5 w-3/4 self-end bg-ow-black" />
         </span>
       </button>
 
-      <div
-        id="menu-movil"
-        hidden={!open}
-        className="absolute inset-x-0 top-16 border-b border-ow-black/10 bg-white px-5 pb-8 pt-4"
-      >
-        <nav aria-label="Principal móvil" className="flex flex-col gap-1">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="border-b border-ow-black/10 py-4 font-display text-2xl font-extrabold"
+      <AnimatePresence>
+        {open && (
+          <div className="fixed inset-0 z-[60]" id="menu-movil">
+            <motion.div aria-hidden className="absolute inset-0 bg-ow-yellow" {...capa(0)} />
+            <motion.div
+              ref={panelRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Menú"
+              data-cursor-tone="claro"
+              data-lenis-prevent
+              className="absolute inset-0 flex flex-col overflow-y-auto bg-ow-black px-5 pt-4 pb-8 text-white md:px-8"
+              {...capa(0.08)}
             >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <WhatsAppLink tone="yellow" className="mt-6 w-full">
-          Escribinos por WhatsApp
-        </WhatsAppLink>
-      </div>
+              <div className="flex h-12 items-center justify-between">
+                <Image
+                  src="/brand/wordmark-onwork-blanco.svg"
+                  alt="On Work"
+                  width={698}
+                  height={111}
+                  className="h-6 w-auto"
+                />
+                <button
+                  type="button"
+                  onClick={cerrar}
+                  className="flex min-h-11 items-center gap-2 rounded-full border-2 border-white px-4 font-display text-sm font-bold"
+                >
+                  Cerrar
+                  <Icon name="cerrar" size={18} />
+                </button>
+              </div>
+
+              <nav aria-label="Principal" className="mt-12 flex-1">
+                <ul className="space-y-1">
+                  {NAV.map((item, i) => {
+                    const activo = esActivo(pathname, item.href);
+                    return (
+                      <li key={item.href} className="overflow-hidden">
+                        <motion.div
+                          initial={reduce ? false : { y: "110%" }}
+                          animate={{ y: 0, transition: { duration: 0.6, ease: EASE, delay: 0.25 + i * 0.06 } }}
+                        >
+                          <Link
+                            href={item.href}
+                            onClick={() => setOpen(false)}
+                            aria-current={activo ? "page" : undefined}
+                            className="flex items-center gap-3 py-2 font-display text-[clamp(2.25rem,11vw,3.5rem)] leading-tight font-extrabold tracking-tight"
+                          >
+                            {item.label}
+                            {activo && (
+                              <span aria-hidden className="size-3 rounded-full bg-ow-yellow" />
+                            )}
+                          </Link>
+                        </motion.div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+
+              <div className="mt-10 space-y-6 border-t border-white/20 pt-8">
+                <WhatsAppLink tone="yellow" className="w-full">
+                  Escribinos por WhatsApp
+                </WhatsAppLink>
+                <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-white/70">
+                  <a
+                    href={SITE.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex min-h-11 items-center gap-2 font-bold text-white"
+                  >
+                    <Icon name="instagram" size={18} />
+                    {SITE.instagramUsuario}
+                  </a>
+                  <p>{SITE.ubicacion}</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

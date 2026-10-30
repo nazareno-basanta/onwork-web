@@ -1,38 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NAV } from "@/lib/site";
 import MobileNav from "./MobileNav";
+import NavDesktop from "./NavDesktop";
 import WhatsAppLink from "./WhatsAppLink";
 
+/**
+ * Encabezado fijo: crema sólido (sin desenfoque), logo con bajada a la
+ * izquierda en colores originales (más de 120 px de ancho), menú en pastilla
+ * en escritorio y menú a pantalla completa en el celular.
+ */
 export default function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-ow-black/10 bg-white/85 backdrop-blur-md">
-      <div className="container-ow flex h-16 items-center justify-between">
-        <Link href="/" aria-label="On Work, ir al inicio" className="shrink-0">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-ow-black/10 bg-ow-paper">
+      <div className="container-ow flex h-16 items-center justify-between gap-6">
+        <Link
+          href="/"
+          aria-label="On Work, ir al inicio"
+          className="cursor-target shrink-0 rounded-md"
+        >
           <Image
-            src="/brand/logo-onwork.svg"
+            src="/brand/logo-onwork-recortado.svg"
             alt="On Work, comunicación y merchandising"
-            width={715}
-            height={255}
+            width={698}
+            height={171}
             priority
             className="h-9 w-auto"
           />
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-9 lg:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="font-display text-sm font-bold underline-offset-8 decoration-2 decoration-ow-yellow hover:underline"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <WhatsAppLink tone="black" className="!px-5 !py-2.5">
+        <NavDesktop />
+
+        <div className="hidden lg:block">
+          <WhatsAppLink tone="black" className="!px-5">
             Escribinos
           </WhatsAppLink>
-        </nav>
+        </div>
 
         <MobileNav />
       </div>
