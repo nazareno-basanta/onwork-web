@@ -5,7 +5,6 @@ import Cierre from "@/components/sections/Cierre";
 import Clientes from "@/components/sections/Clientes";
 import ComoTrabajamos from "@/components/sections/ComoTrabajamos";
 import Desde1990 from "@/components/sections/Desde1990";
-import FraseRotativa from "@/components/sections/FraseRotativa";
 import Hero from "@/components/sections/Hero";
 import PedidosInicio from "@/components/sections/PedidosInicio";
 import Preguntas from "@/components/sections/Preguntas";
@@ -21,7 +20,6 @@ export default function Home() {
     <>
       <Hero />
       <Clientes />
-      <FraseRotativa />
       <QueHacemos />
       <CatalogosInicio />
       <Busquedas />

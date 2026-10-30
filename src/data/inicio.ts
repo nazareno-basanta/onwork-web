@@ -13,11 +13,38 @@ export const HERO = {
   botonCatalogos: "Ver catálogos",
 };
 
-/** "Tu marca, en cada ___." La primera palabra es la que queda fija con menos movimiento. */
-export const FRASE_ROTATIVA = {
-  inicio: "Tu marca, en cada",
-  palabras: ["evento", "llave", "sorbo", "turno", "escritorio", "stand", "anotación"],
+/**
+ * Probador del hero: la persona escribe su marca y la ve aplicada en los
+ * productos. Textos en borrador para que Nachi los revise.
+ */
+export const PROBADOR = {
+  label: "Probá con tu marca",
+  placeholder: "El nombre de tu marca",
+  /** Lo que se imprime mientras el campo está vacío (sistema de mockups). */
+  ejemplo: "LOGO AQUÍ",
+  /** Cómo empieza la frase cuando todavía no escribió nada. */
+  tuMarca: "Tu marca",
+  elegir: "Elegí un producto",
+  largoMaximo: 18,
+  /** Mensaje de WhatsApp cuando escribió su marca. */
+  mensaje: (marca: string) => `Hola, vi On Work en la web. Mi marca es ${marca} y necesito:`,
 };
+
+/**
+ * Productos del probador del hero y su palabra de "Tu marca, en cada ___.".
+ * El dibujo de cada uno está en src/components/hero/Productos.tsx (mismo id).
+ */
+export const PRODUCTOS_HERO = [
+  { id: "taza", nombre: "Taza", palabra: "sorbo" },
+  { id: "credencial", nombre: "Credencial", palabra: "evento" },
+  { id: "llavero", nombre: "Llavero", palabra: "llave" },
+  { id: "delantal", nombre: "Delantal", palabra: "turno" },
+  { id: "calendario", nombre: "Calendario", palabra: "escritorio" },
+  { id: "banner", nombre: "Banner", palabra: "stand" },
+  { id: "cuaderno", nombre: "Cuaderno", palabra: "anotación" },
+] as const;
+
+export type ProductoHeroId = (typeof PRODUCTOS_HERO)[number]["id"];
 
 export const QUE_HACEMOS = {
   titulo: "Todo lo que gira en torno a tu marca.",

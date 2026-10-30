@@ -18,22 +18,25 @@ type Props = {
   words: string[];
   /** Milisegundos que queda cada palabra. */
   interval?: number;
+  /** Si se pasa, la palabra la elige quien lo usa y no rota sola. */
+  index?: number;
   className?: string;
 };
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function RotatingText({ words, interval = 2200, className }: Props) {
+export default function RotatingText({ words, interval = 2200, index: controlado, className }: Props) {
   const reduce = useReducedMotion();
-  const [index, setIndex] = useState(0);
+  const [propio, setPropio] = useState(0);
 
   useEffect(() => {
-    if (reduce || words.length < 2) return;
-    const id = window.setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
+    if (controlado !== undefined || reduce || words.length < 2) return;
+    const id = window.setInterval(() => setPropio((i) => (i + 1) % words.length), interval);
     return () => window.clearInterval(id);
-  }, [reduce, words.length, interval]);
+  }, [controlado, reduce, words.length, interval]);
 
-  const word = words[reduce ? 0 : index];
+  const index = controlado ?? (reduce ? 0 : propio);
+  const word = words[index];
 
   return (
     <motion.span
