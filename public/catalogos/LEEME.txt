@@ -1,0 +1,3 @@
+Guardá acá los PDF de los catálogos que quieras publicar.
+Antes de subirlos, revisá que no tengan precios internos ni códigos de proveedor.
+Después agregalos en src/data/catalogos.ts

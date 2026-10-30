@@ -1,0 +1,2 @@
+Guardá acá los logos de los clientes (SVG o PNG con fondo transparente).
+Después agregalos en src/data/clientes.ts

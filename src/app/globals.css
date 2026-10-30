@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   SISTEMA DE DISEÑO DE ON WORK
+   Colores y tipografías de la marca, definidos una sola vez.
+   En Tailwind se usan como: bg-ow-yellow, text-ow-black, font-display, etc.
+------------------------------------------------------------------- */
+:root {
+  --ow-yellow: #feb600; /* Pantone 7549 C */
+  --ow-black: #231f20;
+  --ow-paper: #f5f3ee; /* neutro cálido para fondos suaves */
+}
+
+@theme inline {
+  --color-ow-yellow: var(--ow-yellow);
+  --color-ow-black: var(--ow-black);
+  --color-ow-paper: var(--ow-paper);
+
+  /* Títulos: Montserrat. Texto corrido: Nunito. */
+  --font-display: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: auto; /* el scroll suave lo maneja Lenis */
+}
+
+body {
+  background: #fff;
+  color: var(--ow-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--ow-yellow);
+  color: var(--ow-black);
+}
+
+/* Lenis: reglas recomendadas para que el scroll suave no pelee con el navegador */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Quien prefiere menos movimiento no ve animaciones continuas */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Contenedor estándar: mismo ancho y márgenes en todas las secciones */
+.container-ow {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-ow {
+    padding-inline: 2rem;
+  }
+}
+
+/* Etiqueta pequeña sobre los títulos de sección */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
