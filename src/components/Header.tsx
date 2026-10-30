@@ -5,8 +5,8 @@ import NavDesktop from "./NavDesktop";
 import WhatsAppLink from "./WhatsAppLink";
 
 /**
- * Encabezado fijo: crema sólido (sin desenfoque), logo con bajada a la
- * izquierda en colores originales (más de 120 px de ancho), menú en pastilla
+ * Encabezado fijo: crema sólido (sin desenfoque), wordmark "ON WORK!" a la
+ * izquierda en colores originales (más de 64 px de ancho), menú en pastilla
  * en escritorio y menú a pantalla completa en el celular.
  */
 export default function Header() {
@@ -19,12 +19,12 @@ export default function Header() {
           className="cursor-target flex min-h-11 shrink-0 items-center rounded-md"
         >
           <Image
-            src="/brand/logo-onwork-recortado.svg"
-            alt="On Work, comunicación y merchandising"
+            src="/brand/wordmark-onwork.svg"
+            alt="On Work"
             width={698}
-            height={171}
+            height={111}
             priority
-            className="h-9 w-auto"
+            className="h-6 w-auto md:h-7"
           />
         </Link>
 

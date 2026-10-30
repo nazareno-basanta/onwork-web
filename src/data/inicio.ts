@@ -4,9 +4,8 @@
  * Lo que está entre [corchetes] falta confirmar.
  */
 export const HERO = {
-  titulo: "Merchandising que se hace notar.",
-  /** Palabra del título cuya O se dibuja como la diana del logo. */
-  palabraDiana: "notar",
+  // Frase de Nachi (30/10/2026).
+  titulo: "Merchandising que hace que tu marca se vea, se use, y se recuerde.",
   bajada:
     "Desde 1990 hacemos que tu marca se vea, se use y se recuerde. Merchandising, indumentaria, cartelería y tarjetería para marcas de todos los tamaños.",
   botonWhatsApp: "Escribinos por WhatsApp",

@@ -212,6 +212,8 @@ Las formas de `On Work Elementos.pdf` (diana, signo, flechas, sol, estallido, cr
 
 Las fotos de producto van sobre fondo blanco, dentro de un marco blanco redondeado, enteras (`object-fit: contain`). Las fotos de pedidos reales van completas, sin recortar productos; el texto encima va en una pastilla chica sobre una zona vacía.
 
+**The Diana en Texto Rule.** La diana sola (como en el hero) usa las proporciones exactas de la O del logo: aro de 0,572R a R y punto de 0,294R. Cuando reemplaza una O dentro de un texto, se redibuja con el grosor de trazo y el tamaño de la letra de ese texto (una "o" minúscula mide la altura de x), para que se lea como una letra más.
+
 **The Forma Prestada Rule.** Ninguna forma decorativa se inventa ni se escribe con caracteres (■ ▲ ● ↗ +): sale de los archivos de la marca, en SVG.
 
 ## Components
