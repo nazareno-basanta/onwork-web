@@ -5,8 +5,8 @@
  */
 export const HERO = {
   titulo: "Merchandising que se hace notar.",
-  /** Palabra del título que lleva el resaltado amarillo. */
-  resaltado: "Merchandising",
+  /** Palabra del título cuya O se dibuja como la diana del logo. */
+  palabraDiana: "notar",
   bajada:
     "Desde 1990 hacemos que tu marca se vea, se use y se recuerde. Merchandising, indumentaria, cartelería y tarjetería para marcas de todos los tamaños.",
   botonWhatsApp: "Escribinos por WhatsApp",
@@ -14,37 +14,14 @@ export const HERO = {
 };
 
 /**
- * Probador del hero: la persona escribe su marca y la ve aplicada en los
- * productos. Textos en borrador para que Nachi los revise.
+ * "Tu marca, en cada ___." Aparece dentro del amarillo al final del scroll
+ * del hero; la palabra cambia a medida que se baja. Con menos movimiento
+ * queda fija en la primera.
  */
-export const PROBADOR = {
-  label: "Probá con tu marca",
-  placeholder: "El nombre de tu marca",
-  /** Lo que se imprime mientras el campo está vacío (sistema de mockups). */
-  ejemplo: "LOGO AQUÍ",
-  /** Cómo empieza la frase cuando todavía no escribió nada. */
-  tuMarca: "Tu marca",
-  elegir: "Elegí un producto",
-  largoMaximo: 18,
-  /** Mensaje de WhatsApp cuando escribió su marca. */
-  mensaje: (marca: string) => `Hola, vi On Work en la web. Mi marca es ${marca} y necesito:`,
+export const FRASE_ROTATIVA = {
+  inicio: "Tu marca, en cada",
+  palabras: ["evento", "llave", "sorbo", "turno", "escritorio", "stand", "anotación"],
 };
-
-/**
- * Productos del probador del hero y su palabra de "Tu marca, en cada ___.".
- * El dibujo de cada uno está en src/components/hero/Productos.tsx (mismo id).
- */
-export const PRODUCTOS_HERO = [
-  { id: "taza", nombre: "Taza", palabra: "sorbo" },
-  { id: "credencial", nombre: "Credencial", palabra: "evento" },
-  { id: "llavero", nombre: "Llavero", palabra: "llave" },
-  { id: "delantal", nombre: "Delantal", palabra: "turno" },
-  { id: "calendario", nombre: "Calendario", palabra: "escritorio" },
-  { id: "banner", nombre: "Banner", palabra: "stand" },
-  { id: "cuaderno", nombre: "Cuaderno", palabra: "anotación" },
-] as const;
-
-export type ProductoHeroId = (typeof PRODUCTOS_HERO)[number]["id"];
 
 export const QUE_HACEMOS = {
   titulo: "Todo lo que gira en torno a tu marca.",
