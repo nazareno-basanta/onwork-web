@@ -25,7 +25,6 @@ import {
   useScroll,
   useTransform,
 } from "motion/react";
-import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import RotatingText from "@/components/ui/RotatingText";
 import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
@@ -67,13 +66,44 @@ function Diana({ oculta, refDiana }: { oculta?: boolean; refDiana?: React.Ref<SV
   );
 }
 
+/**
+ * Titular del hero: "se vea", "se use" y "se recuerde" se subrayan con la
+ * barra amarilla al pasar el mouse (clase .subrayado en globals.css). En
+ * pantallas táctiles se subrayan solas, una tras otra.
+ */
+function TitularHero() {
+  const { titulo, subrayados } = HERO;
+  const texto = sinViuda(titulo.slice(0, -1));
+  const partes: React.ReactNode[] = [];
+  let resto = texto;
+  subrayados.forEach((frase, i) => {
+    // sinViuda pudo unir la última frase con un espacio duro.
+    const buscada = resto.includes(frase) ? frase : frase.replace(" ", " ");
+    const j = resto.indexOf(buscada);
+    if (j === -1) return;
+    partes.push(resto.slice(0, j));
+    partes.push(
+      <span key={frase} className="subrayado" style={{ "--i": i } as React.CSSProperties}>
+        {buscada}
+      </span>,
+    );
+    resto = resto.slice(j + buscada.length);
+  });
+  partes.push(resto);
+
+  return (
+    <h1 className="max-w-5xl font-display text-[clamp(2rem,5.4vw,5.5rem)] leading-[0.98] font-extrabold tracking-tight">
+      {partes}
+      <span className="text-ow-yellow">{titulo.slice(-1)}</span>
+    </h1>
+  );
+}
+
 function Centro({ diana, opacidad }: { diana: React.ReactNode; opacidad?: MotionValue<number> }) {
   return (
     <div className="flex flex-col items-center gap-[clamp(2rem,5vh,3.5rem)] text-center">
       <motion.div style={opacidad ? { opacity: opacidad } : undefined}>
-        <Titular as="h1" className="max-w-5xl text-[clamp(2rem,5.4vw,5.5rem)] !leading-[0.98]">
-          {HERO.titulo}
-        </Titular>
+        <TitularHero />
       </motion.div>
       {diana}
     </div>
@@ -82,11 +112,8 @@ function Centro({ diana, opacidad }: { diana: React.ReactNode; opacidad?: Motion
 
 function Pie() {
   return (
-    <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-      <div className="max-w-md">
-        <p className="text-lg leading-relaxed text-ow-black/80">{sinViuda(HERO.bajada)}</p>
-        <p className="mt-3 text-sm font-semibold text-ow-gray">{SITE.ubicacion}</p>
-      </div>
+    <div className="flex flex-col-reverse gap-5 md:flex-row md:items-end md:justify-between">
+      <p className="text-sm font-semibold text-ow-gray">{SITE.ubicacion}</p>
       <div className="flex flex-wrap gap-3">
         <WhatsAppLink tone="yellow">{HERO.botonWhatsApp}</WhatsAppLink>
         <Link href="/catalogos" className={btn.line}>

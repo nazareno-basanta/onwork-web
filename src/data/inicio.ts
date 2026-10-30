@@ -6,8 +6,8 @@
 export const HERO = {
   // Frase de Nachi (30/10/2026).
   titulo: "Merchandising que hace que tu marca se vea, se use, y se recuerde.",
-  bajada:
-    "Desde 1990 hacemos que tu marca se vea, se use y se recuerde. Merchandising, indumentaria, cartelería y tarjetería para marcas de todos los tamaños.",
+  /** Partes del titular que se subrayan en amarillo al pasar el mouse. */
+  subrayados: ["se vea", "se use", "se recuerde"],
   botonWhatsApp: "Escribinos por WhatsApp",
   botonCatalogos: "Ver catálogos",
 };

@@ -4,6 +4,9 @@
  */
 export const NOSOTROS = {
   h1: "Una empresa familiar, desde 1990.",
+  // Antes era la bajada del hero del Inicio (movida acá por Nachi, 30/10/2026).
+  bajada:
+    "Desde 1990 hacemos que tu marca se vea, se use y se recuerde. Merchandising, indumentaria, cartelería y tarjetería para marcas de todos los tamaños.",
   historia:
     "On Work nació en 1990 de la mano de dos amigos recién egresados del colegio que eligieron las ventas. Empezaron con serigrafía y, con los años, sumaron técnicas, productos y servicios. Hoy es una empresa familiar que resuelve todo lo que gira en torno a la imagen de una marca.",
   seo: {

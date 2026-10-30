@@ -31,9 +31,10 @@ export default function NosotrosPage() {
             </Titular>
             <div>
               <Trio className="h-9 w-auto" />
-              <p className="mt-6 text-lg leading-relaxed text-ow-black/80 md:text-xl">
-                {sinViuda(NOSOTROS.historia)}
+              <p className="mt-6 font-display text-xl leading-snug font-bold md:text-2xl">
+                {sinViuda(NOSOTROS.bajada)}
               </p>
+              <p className="mt-5 text-lg leading-relaxed text-ow-black/80">{sinViuda(NOSOTROS.historia)}</p>
             </div>
           </div>
         </div>

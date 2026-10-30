@@ -101,6 +101,47 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* Subrayado amarillo de una frase (hero del Inicio): al pasar el mouse, la
+   barra se dibuja de izquierda a derecha, como una pasada de serigrafía, y al
+   salir se retira hacia la derecha. En pantallas táctiles (sin hover) se
+   dibuja sola una vez, con las frases una tras otra (--i = orden). */
+.subrayado {
+  position: relative;
+  isolation: isolate;
+  white-space: nowrap;
+}
+.subrayado::before {
+  content: "";
+  position: absolute;
+  left: -0.04em;
+  right: -0.04em;
+  /* El borde de abajo de un texto en línea está en el descendente (~0,25em
+     bajo la línea de base): la barra arranca apenas debajo de la base. */
+  bottom: 0.2em;
+  height: 0.34em;
+  z-index: -1;
+  background: var(--ow-yellow);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.55s var(--ease-ow);
+}
+.subrayado:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media (hover: none) {
+  .subrayado::before {
+    transform-origin: left;
+    animation: subrayar 0.7s var(--ease-ow) forwards;
+    animation-delay: calc(0.5s + var(--i, 0) * 0.35s);
+  }
+}
+@keyframes subrayar {
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* Preguntas frecuentes: la respuesta se despliega con una transición de
    altura (en navegadores que no lo soportan, se abre sin animación). */
 :root {
