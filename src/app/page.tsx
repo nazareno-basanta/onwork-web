@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import Busquedas from "@/components/sections/Busquedas";
+import CatalogosInicio from "@/components/sections/CatalogosInicio";
+import Cierre from "@/components/sections/Cierre";
+import Clientes from "@/components/sections/Clientes";
+import ComoTrabajamos from "@/components/sections/ComoTrabajamos";
+import Desde1990 from "@/components/sections/Desde1990";
+import FraseRotativa from "@/components/sections/FraseRotativa";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import ClientsMarquee from "@/components/sections/ClientsMarquee";
-import Servicios from "@/components/sections/Servicios";
-import CatalogosPreview from "@/components/sections/CatalogosPreview";
-import CtaBand from "@/components/sections/CtaBand";
+import PedidosInicio from "@/components/sections/PedidosInicio";
+import Preguntas from "@/components/sections/Preguntas";
+import QueHacemos from "@/components/sections/QueHacemos";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -15,11 +20,16 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <ClientsMarquee />
-      <Servicios />
-      <CatalogosPreview />
-      <CtaBand />
+      <Clientes />
+      <FraseRotativa />
+      <QueHacemos />
+      <CatalogosInicio />
+      <Busquedas />
+      <PedidosInicio />
+      <ComoTrabajamos />
+      <Desde1990 />
+      <Preguntas className="border-t border-ow-black/10" />
+      <Cierre />
     </>
   );
 }
