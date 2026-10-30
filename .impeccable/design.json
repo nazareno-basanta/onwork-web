@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T17:15:00-03:00",
+  "title": "Design System: On Work",
+  "extensions": {
+    "colorMeta": {
+      "amarillo-on-work": {
+        "role": "primary",
+        "displayName": "Amarillo On Work",
+        "canonical": "oklch(82.2% 0.170 79.9)",
+        "tonalRamp": ["oklch(15% 0.160 80)", "oklch(26% 0.160 80)", "oklch(38% 0.160 80)", "oklch(50% 0.160 80)", "oklch(62% 0.160 80)", "oklch(74% 0.160 80)", "oklch(86% 0.160 80)", "oklch(95% 0.160 80)"]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(24.4% 0.006 0.6)",
+        "tonalRamp": ["oklch(15% 0.006 1)", "oklch(26% 0.006 1)", "oklch(38% 0.006 1)", "oklch(50% 0.006 1)", "oklch(62% 0.006 1)", "oklch(74% 0.006 1)", "oklch(86% 0.006 1)", "oklch(95% 0.006 1)"]
+      },
+      "crema": {
+        "role": "neutral",
+        "displayName": "Crema",
+        "canonical": "oklch(99.0% 0.017 96.1)",
+        "tonalRamp": ["oklch(15% 0.017 96)", "oklch(26% 0.017 96)", "oklch(38% 0.017 96)", "oklch(50% 0.017 96)", "oklch(62% 0.017 96)", "oklch(74% 0.017 96)", "oklch(86% 0.017 96)", "oklch(95% 0.017 96)"]
+      },
+      "crema-suave": {
+        "role": "neutral",
+        "displayName": "Crema suave",
+        "canonical": "oklch(97.3% 0.035 92.8)",
+        "tonalRamp": ["oklch(15% 0.035 93)", "oklch(26% 0.035 93)", "oklch(38% 0.035 93)", "oklch(50% 0.035 93)", "oklch(62% 0.035 93)", "oklch(74% 0.035 93)", "oklch(86% 0.035 93)", "oklch(95% 0.035 93)"]
+      },
+      "gris-texto": {
+        "role": "neutral",
+        "displayName": "Gris texto",
+        "canonical": "oklch(49.2% 0.009 260.7)",
+        "tonalRamp": ["oklch(15% 0.009 261)", "oklch(26% 0.009 261)", "oklch(38% 0.009 261)", "oklch(50% 0.009 261)", "oklch(62% 0.009 261)", "oklch(74% 0.009 261)", "oklch(86% 0.009 261)", "oklch(95% 0.009 261)"]
+      },
+      "blanco": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "El H1 de cada página. Uno solo por página." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de sección, con el punto final en amarillo." },
+      "title": { "displayName": "Title", "purpose": "Nombres de catálogos, servicios, pasos y pedidos." },
+      "body-lead": { "displayName": "Body lead", "purpose": "Bajadas debajo de los titulares, hasta 42 rem de ancho." },
+      "body": { "displayName": "Body", "purpose": "Textos, respuestas de preguntas frecuentes y descripciones." },
+      "label": { "displayName": "Label", "purpose": "Rótulos chicos y pastillas de código, en mayúsculas. Nunca arriba de un titular." },
+      "button": { "displayName": "Button", "purpose": "Texto de botones." },
+      "accent": { "displayName": "Accent", "purpose": "Nunito como acompañamiento puntual; uso exacto a definir por página." }
+    },
+    "shadows": [
+      { "name": "apoyado", "value": "0 1px 2px rgba(35, 31, 32, 0.06), 0 10px 30px -12px rgba(35, 31, 32, 0.18)", "purpose": "Estado de reposo de tarjetas y marcos de foto. Provisorio." },
+      { "name": "levantado", "value": "0 2px 4px rgba(35, 31, 32, 0.08), 0 22px 44px -16px rgba(35, 31, 32, 0.26)", "purpose": "Hover o foco de una tarjeta que es un link. Provisorio." },
+      { "name": "portada", "value": "0 24px 48px -20px rgba(35, 31, 32, 0.35)", "purpose": "Portada de catálogo inclinada en 3D. Provisorio." }
+    ],
+    "motion": [
+      { "name": "ease-ow", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Entradas y transiciones de estado." },
+      { "name": "duration-hover", "value": "300ms", "purpose": "Hover de botones, links y tarjetas." },
+      { "name": "duration-reveal", "value": "800ms", "purpose": "Entrada de un bloque al aparecer en pantalla." },
+      { "name": "smooth-scroll", "value": "Lenis lerp 0.1", "purpose": "Scroll suave sincronizado con GSAP ScrollTrigger; apagado con prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón amarillo",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal de cada sección y botón de WhatsApp.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Escribinos por WhatsApp<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 24px; border-radius: 9999px; background: #FEB600; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.025em; text-decoration: none; transition: background 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: #231F20; color: #FEB600; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; }"
+    },
+    {
+      "name": "Botón tinta",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Acción principal sobre fondos claros cuando el amarillo ya está en uso.",
+      "html": "<a class=\"ds-btn-dark\" href=\"#\">Ver todos los catálogos<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-dark { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 24px; border-radius: 9999px; background: #231F20; color: #FFFFFF; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.025em; text-decoration: none; transition: background 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-dark:hover { background: #FEB600; color: #231F20; transform: translateY(-2px); } .ds-btn-dark:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; }"
+    },
+    {
+      "name": "Botón contorno",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Acción secundaria, como Ver catálogos o Ver detalle.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Ver catálogos</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 24px; border: 2px solid #231F20; border-radius: 9999px; background: transparent; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.025em; text-decoration: none; transition: background 300ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-outline:hover { background: #231F20; color: #FFFFFF; transform: translateY(-2px); } .ds-btn-outline:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; }"
+    },
+    {
+      "name": "Pastilla de código",
+      "kind": "chip",
+      "refersTo": "pill-code",
+      "description": "Código de producto, año o cantidad de modelos.",
+      "html": "<span class=\"ds-pill-code\">OW-DRK-01</span>",
+      "css": ".ds-pill-code { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 9999px; background: #FEB600; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Tarjeta con relieve",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Superficie crema suave apoyada sobre el fondo crema, con sombra suave en tinta.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-pill\">2026</span><span class=\"ds-card-title\">Drinkware</span><span class=\"ds-card-text\">Mates, termos, botellas, jarros y tazas.</span><span class=\"ds-card-meta\">16 páginas · PDF</span></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 12px; max-width: 360px; padding: 36px; border-radius: 24px; background: #FEF6DC; color: #231F20; text-decoration: none; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgba(35, 31, 32, 0.06), 0 10px 30px -12px rgba(35, 31, 32, 0.18); transition: box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-card:hover, .ds-card:focus-visible { box-shadow: 0 2px 4px rgba(35, 31, 32, 0.08), 0 22px 44px -16px rgba(35, 31, 32, 0.26); transform: translateY(-2px); } .ds-card:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; } .ds-card-pill { align-self: flex-start; padding: 4px 12px; border-radius: 9999px; background: #FEB600; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; } .ds-card-title { font-size: 1.75rem; font-weight: 700; line-height: 1.15; } .ds-card-text { font-size: 1rem; font-weight: 500; line-height: 1.55; } .ds-card-meta { font-size: 0.875rem; font-weight: 500; color: #5E6166; }"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Header crema sólido con el logo original a la izquierda, links y WhatsApp siempre visible. El logo real se carga desde public/brand; acá va un espacio reservado.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\" role=\"img\" aria-label=\"Logo original de On Work con bajada\"></span><nav class=\"ds-nav-links\"><a href=\"#\" aria-current=\"page\">Inicio</a><a href=\"#\">Nosotros</a><a href=\"#\">Catálogos</a><a href=\"#\">Pedidos reales</a><a href=\"#\">Contacto</a></nav><a class=\"ds-nav-cta\" href=\"#\">Escribinos</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 64px; padding: 0 32px; background: #FFFCEF; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; } .ds-nav-logo { display: block; width: 120px; height: 43px; border-radius: 8px; background: #FEF6DC; } .ds-nav-links { display: flex; gap: 28px; } .ds-nav-links a { position: relative; color: #231F20; font-size: 0.875rem; font-weight: 700; text-decoration: none; padding: 12px 0; } .ds-nav-links a[aria-current='page']::after { content: ''; position: absolute; left: 50%; bottom: 2px; width: 6px; height: 6px; margin-left: -3px; border-radius: 9999px; background: #FEB600; } .ds-nav-links a:hover { color: #5E6166; } .ds-nav-links a:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border-radius: 9999px; background: #231F20; color: #FFFFFF; font-size: 0.875rem; font-weight: 700; text-decoration: none; transition: background 300ms, color 300ms; } .ds-nav-cta:hover { background: #FEB600; color: #231F20; }"
+    },
+    {
+      "name": "Pregunta frecuente",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Acordeón con details/summary, filete de 2 px en tinta y círculo amarillo con un más en SVG.",
+      "html": "<details class=\"ds-faq\"><summary>¿Hay un mínimo de unidades?<span class=\"ds-faq-icon\" aria-hidden=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg></span></summary><p>No hay mínimos fijos: nos ajustamos a lo que necesitás.</p></details>",
+      "css": ".ds-faq { max-width: 720px; border-bottom: 2px solid #231F20; padding: 24px 0; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; } .ds-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; cursor: pointer; list-style: none; font-size: 1.125rem; font-weight: 800; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary:focus-visible { outline: 2px solid #231F20; outline-offset: 4px; } .ds-faq-icon { display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; border-radius: 9999px; background: #FEB600; transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-faq[open] .ds-faq-icon { transform: rotate(45deg); } .ds-faq p { margin: 16px 0 0; font-size: 1rem; font-weight: 500; line-height: 1.55; color: #5E6166; }"
+    },
+    {
+      "name": "Titular con punto amarillo",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Firma tipográfica: titular en tinta con el signo final en amarillo y las dos últimas palabras unidas.",
+      "html": "<h2 class=\"ds-headline\">Una base para&nbsp;arrancar<span class=\"ds-headline-dot\">.</span></h2>",
+      "css": ".ds-headline { margin: 0; max-width: 48rem; color: #231F20; font-family: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.025em; text-wrap: pretty; } .ds-headline-dot { color: #FEB600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dar en el blanco",
+    "overview": "Las O del logo son dianas: aro tinta y punto amarillo. Todo el sistema sale de ese gesto. Cada elemento de la página apunta a algo concreto (un catálogo, un pedido, una conversación por WhatsApp) y el amarillo marca el punto exacto donde mirar: el punto final de un titular, el signo, un número, una pastilla con un código. Lo que no apunta a nada, no va. El cursor propio con forma de diana y los estados de hover que encuadran un elemento son la versión interactiva de la misma idea.\n\nLa marca es de modernidad atemporal: simple, poco colorida, impactante y amigable. Es monocromática con un solo acento. La firmeza la pone Montserrat en peso alto y la calidez la ponen la crema de fondo y las formas redondas (círculos, pastillas, esquinas de 24 px). Las superficies tienen relieve suave: tarjetas y portadas parecen objetos apoyados sobre papel crema, con una sombra baja y difusa en tono tinta, nunca un brillo. La densidad es aireada: titulares grandes, mucho espacio entre secciones, una idea por bloque.\n\nEl movimiento es medido: una sola animación protagonista por sección, sólo con `transform` y `opacity`, y nada de movimiento cuando la persona pide menos. Quedan afuera los fondos de partículas, los brillos, los degradés, el vidrio esmerilado, las estrellas y los objetos 3D.",
+    "keyCharacteristics": [
+      "Crema como papel de fondo, tinta para el texto, amarillo como punto de mira (no como relleno de texto).",
+      "Montserrat en todo: 800 en titulares, 700 en nombres y etiquetas, 500 en textos.",
+      "Formas de la marca (diana, signo, flechas, círculo, cuadrado, triángulo) en SVG, una o dos por pieza.",
+      "Superficies con relieve suave en tinta; superficies tinta sin sombra.",
+      "Botones en pastilla; tarjetas con esquinas de 24 px; filetes de 2 px en tinta.",
+      "Logo siempre desde el archivo original, en la versión que corresponde al fondo."
+    ],
+    "rules": [
+      { "name": "The Punto de Mira Rule", "body": "El amarillo es un acento: marca un punto, no llena un párrafo. Va en puntos, signos, números, filetes, pastillas y botones, y nunca pasa del 10 % de una pantalla. Si un bloque entero es amarillo, el texto encima es tinta.", "section": "colors" },
+      { "name": "The Contraste Rule", "body": "No hay texto amarillo sobre crema, crema suave ni blanco en ningún tamaño, y no hay texto blanco sobre amarillo. Texto amarillo, solo sobre tinta.", "section": "colors" },
+      { "name": "The Tinta Rule", "body": "El negro de la marca es tinta (#231F20). Nunca #000, ni en texto, ni en fondos, ni en sombras.", "section": "colors" },
+      { "name": "The Punto Final Rule", "body": "Todo titular termina con su punto final (o su signo de pregunta) en amarillo. Las dos últimas palabras de cada titular y de cada párrafo van unidas con espacio duro, y los bloques de texto llevan `text-wrap: pretty`: sin viudas.", "section": "typography" },
+      { "name": "The Dos Familias Rule", "body": "Nunca más de dos familias en una página: Montserrat y, si hace falta, Nunito.", "section": "typography" },
+      { "name": "The Sin Etiqueta Rule", "body": "No hay etiquetas chicas en mayúscula arriba de los titulares, ni números de sección (01, 02…) salvo en el paso a paso, donde el orden informa.", "section": "typography" },
+      { "name": "The Una Idea Por Bloque Rule", "body": "Cada sección dice una sola cosa, con un titular, una bajada y una acción. Si necesita dos titulares, son dos secciones.", "section": "layout" },
+      { "name": "The Objeto Apoyado Rule", "body": "La sombra dice \"esto es un objeto\". Va debajo de tarjetas, portadas y fotos; nunca en texto, en íconos ni en botones, y nunca como brillo de color alrededor de algo.", "section": "elevation" },
+      { "name": "The Forma Prestada Rule", "body": "Ninguna forma decorativa se inventa ni se escribe con caracteres (■ ▲ ● ↗ +): sale de los archivos de la marca, en SVG.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do usar crema (#FFFCEF) como fondo general y tinta (#231F20) para el texto.",
+      "Do cerrar cada titular con el punto o el signo final en amarillo, y unir las dos últimas palabras con espacio duro.",
+      "Do escribir los textos en Montserrat 500 y los titulares en Montserrat 800, con interlineado de 1,0 en titulares y de 1,45 a 1,6 en textos.",
+      "Do dar relieve suave a tarjetas, portadas y fotos con las sombras \"Apoyado\", \"Levantado\" y \"Portada\", en tono tinta.",
+      "Do sacar las formas, el logo y los íconos de los archivos de la marca, en SVG; íconos de línea con trazo de 2 px, puntas redondas, en tinta dentro de un círculo amarillo.",
+      "Do limitar cada sección a una sola animación protagonista, hecha con `transform` y `opacity`, y dejar todo visible y quieto con `prefers-reduced-motion`.",
+      "Do apagar en pantallas táctiles los efectos que dependen del mouse (cursor diana, inclinación 3D, imán)."
+    ],
+    "donts": [
+      "Don't poner texto amarillo sobre crema, crema suave o blanco (1,7:1), ni texto blanco sobre amarillo (1,8:1).",
+      "Don't usar #000, degradés, brillos, vidrio esmerilado (`backdrop-filter`), partículas, estrellas ni objetos 3D.",
+      "Don't usar el isotipo sobre fondo oscuro, ni el logo con bajada o a color sobre tinta o amarillo: sobre tinta va solo el wordmark blanco.",
+      "Don't tipear \"ON WORK!\" ni dibujar el logo, tampoco en la imagen para compartir (Open Graph).",
+      "Don't usar caracteres o emojis como íconos o formas (↗ → + ■ ▲ ●).",
+      "Don't poner etiquetas chicas en mayúscula arriba de los titulares ni numerar secciones (salvo el paso a paso).",
+      "Don't abrir modales cuando alcanza con una página: las tarjetas de pedidos llevan a su página.",
+      "Don't poner sombras en texto, íconos, botones ni superficies tinta."
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+---
+name: On Work
+description: Comunicación y merchandising desde 1990. Buenos Aires · Envíos a toda la Argentina.
+colors:
+  amarillo-on-work: "#FEB600"
+  tinta: "#231F20"
+  crema: "#FFFCEF"
+  crema-suave: "#FEF6DC"
+  gris-texto: "#5E6166"
+  blanco: "#FFFFFF"
+typography:
+  display:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 7.2vw, 6rem)"
+    fontWeight: 800
+    lineHeight: 1
+    letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 5vw, 4rem)"
+    fontWeight: 800
+    lineHeight: 1
+    letterSpacing: "-0.025em"
+  title:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.75rem"
+    fontWeight: 700
+    lineHeight: 1.15
+  body:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 500
+    lineHeight: 1.55
+  body-lead:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 500
+    lineHeight: 1.55
+  label:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 700
+    letterSpacing: "0.14em"
+  button:
+    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 700
+    letterSpacing: "0.025em"
+  accent:
+    fontFamily: "Nunito Variable, ui-sans-serif, system-ui, sans-serif"
+    fontWeight: 700
+rounded:
+  card: "24px"
+  pill: "9999px"
+spacing:
+  tight: "12px"
+  base: "16px"
+  gutter: "20px"
+  gutter-md: "32px"
+  stack: "56px"
+  section: "96px"
+  section-lg: "128px"
+components:
+  button-primary:
+    backgroundColor: "{colors.amarillo-on-work}"
+    textColor: "{colors.tinta}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "12px 24px"
+  button-primary-hover:
+    backgroundColor: "{colors.tinta}"
+    textColor: "{colors.amarillo-on-work}"
+  button-dark:
+    backgroundColor: "{colors.tinta}"
+    textColor: "{colors.blanco}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "12px 24px"
+  button-dark-hover:
+    backgroundColor: "{colors.amarillo-on-work}"
+    textColor: "{colors.tinta}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.tinta}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "12px 24px"
+  button-outline-hover:
+    backgroundColor: "{colors.tinta}"
+    textColor: "{colors.blanco}"
+  pill-code:
+    backgroundColor: "{colors.amarillo-on-work}"
+    textColor: "{colors.tinta}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "4px 12px"
+  card:
+    backgroundColor: "{colors.crema-suave}"
+    textColor: "{colors.tinta}"
+    rounded: "{rounded.card}"
+    padding: "36px"
+  card-dark:
+    backgroundColor: "{colors.tinta}"
+    textColor: "{colors.blanco}"
+    rounded: "{rounded.card}"
+    padding: "36px"
+  photo-frame:
+    backgroundColor: "{colors.blanco}"
+    rounded: "{rounded.card}"
+  header:
+    backgroundColor: "{colors.crema}"
+    textColor: "{colors.tinta}"
+    height: "64px"
+---
+
+<!--
+Fuentes: skill on-work-marca (manda), ../Web OW/02-BRIEF-WEB.md y el código de onwork-web al 30/10/2026.
+Decisiones de Nachi en este documento: idea guía "Dar en el blanco", Montserrat 500 en los textos, superficies con relieve suave.
+El código todavía difiere en algunos puntos (fondo #F5F3EE y blanco, cuerpo en Nunito, .eyebrow, isotipo sobre tinta, logo tipeado en la imagen OG, flechas como caracteres, header con desenfoque). Se alinea a este documento en el paso 2 y en los pasos de cada página.
+-->
+
+# Design System: On Work
+
+## Overview
+
+**Creative North Star: "Dar en el blanco"**
+
+Las O del logo son dianas: aro tinta y punto amarillo. Todo el sistema sale de ese gesto. Cada elemento de la página apunta a algo concreto (un catálogo, un pedido, una conversación por WhatsApp) y el amarillo marca el punto exacto donde mirar: el punto final de un titular, el signo, un número, una pastilla con un código. Lo que no apunta a nada, no va. El cursor propio con forma de diana y los estados de hover que encuadran un elemento son la versión interactiva de la misma idea.
+
+La marca es de modernidad atemporal: simple, poco colorida, impactante y amigable. Es monocromática con un solo acento. La firmeza la pone Montserrat en peso alto y la calidez la ponen la crema de fondo y las formas redondas (círculos, pastillas, esquinas de 24 px). Las superficies tienen relieve suave: tarjetas y portadas parecen objetos apoyados sobre papel crema, con una sombra baja y difusa en tono tinta, nunca un brillo. La densidad es aireada: titulares grandes, mucho espacio entre secciones, una idea por bloque.
+
+El movimiento es medido: una sola animación protagonista por sección, sólo con `transform` y `opacity`, y nada de movimiento cuando la persona pide menos. Quedan afuera los fondos de partículas, los brillos, los degradés, el vidrio esmerilado, las estrellas y los objetos 3D.
+
+**Key Characteristics:**
+- Crema como papel de fondo, tinta para el texto, amarillo como punto de mira (no como relleno de texto).
+- Montserrat en todo: 800 en titulares, 700 en nombres y etiquetas, 500 en textos.
+- Formas de la marca (diana, signo, flechas, círculo, cuadrado, triángulo) en SVG, una o dos por pieza.
+- Superficies con relieve suave en tinta; superficies tinta sin sombra.
+- Botones en pastilla; tarjetas con esquinas de 24 px; filetes de 2 px en tinta.
+- Logo siempre desde el archivo original, en la versión que corresponde al fondo.
+
+## Colors
+
+Una paleta casi monocromática: papel crema, tinta casi negra y un amarillo que funciona como punto de mira. Proporción de referencia: 60 % crema o blanco, 25 % tinta, 10 % amarillo, 5 % gris.
+
+### Primary
+- **Amarillo On Work** (Pantone 7549 C): puntos finales de titulares, el signo, números grandes, pastillas de código, filetes, el punto de la diana, el relleno de botones principales y el círculo de los íconos. Sobre tinta puede ser texto (9,2:1). Sobre crema nunca es texto: da 1,7:1.
+
+### Neutral
+- **Tinta** (CMYK 0 0 0 100): todo el texto, las superficies oscuras (cierres de página, pie, menú del celular, paso a paso), los filetes de 2 px y los bordes de botón. Sobre crema da 15,9:1.
+- **Crema**: fondo general de todas las páginas y del header.
+- **Crema suave**: tarjetas, recuadros, franjas de tip y bloques que necesitan separarse del fondo sin cambiar de tono.
+- **Gris texto**: bajadas, specs, textos secundarios y metadatos ("16 páginas · PDF"). Sobre crema da 6,1:1 y sobre crema suave, 5,8:1.
+- **Blanco**: marcos de foto de producto y portadas de catálogo; texto sobre tinta.
+
+### Named Rules
+**The Punto de Mira Rule.** El amarillo es un acento: marca un punto, no llena un párrafo. Va en puntos, signos, números, filetes, pastillas y botones, y nunca pasa del 10 % de una pantalla. Si un bloque entero es amarillo, el texto encima es tinta.
+
+**The Contraste Rule.** No hay texto amarillo sobre crema, crema suave ni blanco en ningún tamaño, y no hay texto blanco sobre amarillo. Texto amarillo, solo sobre tinta.
+
+**The Tinta Rule.** El negro de la marca es tinta (#231F20). Nunca #000, ni en texto, ni en fondos, ni en sombras.
+
+## Typography
+
+**Display Font:** Montserrat (con ui-sans-serif, system-ui)
+**Body Font:** Montserrat (con ui-sans-serif, system-ui)
+**Accent Font:** Nunito, solo como acompañamiento puntual
+
+**Character:** Montserrat sostiene todo el sitio: firme y geométrica en 800, clara y neutra en 500. Nunito, redondeada, aparece muy poco para sumar un tono más cercano; su uso exacto se define en cada página y nunca en titulares ni en párrafos largos.
+
+### Hierarchy
+- **Display** (800, clamp de 2,6 a 6 rem, interlineado 1,0): el H1 de cada página. Uno solo por página.
+- **Headline** (800, clamp de 2 a 4 rem, interlineado 1,0): títulos de sección.
+- **Title** (700, 1,75 rem, interlineado 1,15): nombres de catálogos, servicios, pasos y pedidos.
+- **Body lead** (500, 1,125 rem, interlineado 1,55): bajadas debajo de los titulares, hasta 42 rem de ancho (unos 65 caracteres).
+- **Body** (500, 1 rem, interlineado 1,55): textos, respuestas de preguntas frecuentes, descripciones.
+- **Label** (700, 0,75 rem, +14 % de interletrado, mayúsculas): rótulos chicos y pastillas de código. No van como etiqueta arriba de un titular.
+- **Button** (700, 0,875 rem, +2,5 % de interletrado): texto de botones, en caja baja con mayúscula inicial.
+
+### Named Rules
+**The Punto Final Rule.** Todo titular termina con su punto final (o su signo de pregunta) en amarillo. Las dos últimas palabras de cada titular y de cada párrafo van unidas con espacio duro, y los bloques de texto llevan `text-wrap: pretty`: sin viudas.
+
+**The Dos Familias Rule.** Nunca más de dos familias en una página: Montserrat y, si hace falta, Nunito.
+
+**The Sin Etiqueta Rule.** No hay etiquetas chicas en mayúscula arriba de los titulares, ni números de sección (01, 02…) salvo en el paso a paso, donde el orden informa.
+
+## Layout
+
+Un contenedor de hasta 80 rem centrado, con márgenes laterales de 20 px en el celular y de 32 px desde 768 px. Las secciones respiran: 96 px de alto de padding vertical en el celular y 128 px en escritorio (80 y 112 px en secciones secundarias). Dentro de una sección, el titular y su bajada se separan del contenido por unos 56 px.
+
+Todo se alinea a la izquierda. Los titulares ocupan como máximo de 48 a 80 rem de ancho según su largo y las bajadas, 42 rem. En el celular las grillas pasan a una columna. Se diseña primero para 375 px, porque la gente que llega desde Instagram y los catálogos se abren en el teléfono. El header es fijo, de 64 px de alto, y el contenido arranca debajo.
+
+**The Una Idea Por Bloque Rule.** Cada sección dice una sola cosa, con un titular, una bajada y una acción. Si necesita dos titulares, son dos secciones.
+
+## Elevation & Depth
+
+Relieve suave: las tarjetas, las portadas de catálogo y los paneles flotantes parecen objetos apoyados sobre el papel crema. La sombra es baja, difusa, desplazada hacia abajo y teñida de tinta, nunca de amarillo ni de negro puro. Las superficies tinta no llevan sombra: su profundidad es el contraste. Los valores exactos son provisorios y se calibran en `shape` y `critique`.
+
+### Shadow Vocabulary
+- **Apoyado** (`box-shadow: 0 1px 2px rgba(35, 31, 32, 0.06), 0 10px 30px -12px rgba(35, 31, 32, 0.18)`): estado de reposo de tarjetas y marcos de foto.
+- **Levantado** (`box-shadow: 0 2px 4px rgba(35, 31, 32, 0.08), 0 22px 44px -16px rgba(35, 31, 32, 0.26)`): hover o foco de una tarjeta que es un link.
+- **Portada** (`box-shadow: 0 24px 48px -20px rgba(35, 31, 32, 0.35)`): portada de catálogo inclinada en 3D, como un objeto sobre la mesa.
+
+### Named Rules
+**The Objeto Apoyado Rule.** La sombra dice "esto es un objeto". Va debajo de tarjetas, portadas y fotos; nunca en texto, en íconos ni en botones, y nunca como brillo de color alrededor de algo.
+
+## Shapes
+
+La forma de la marca es redonda y gráfica: las dianas del logo, el punto, el círculo de los íconos. Los botones y las pastillas son cápsulas completas (9999 px). Las tarjetas, los marcos de foto y las portadas usan esquinas de 24 px. Las listas y los acordeones se separan con filetes de 2 px en tinta.
+
+Las formas de `On Work Elementos.pdf` (diana, signo, flechas, sol, estallido, cruz, cuadrado, círculo, triángulo y el trío cuadrado-triángulo-círculo) entran siempre como SVG, en amarillo o tinta, una o dos por pieza. En portadas y separadores pueden ir grandes y cortadas por el borde. Nunca van encima de un producto ni pegadas al logo.
+
+Las fotos de producto van sobre fondo blanco, dentro de un marco blanco redondeado, enteras (`object-fit: contain`). Las fotos de pedidos reales van completas, sin recortar productos; el texto encima va en una pastilla chica sobre una zona vacía.
+
+**The Forma Prestada Rule.** Ninguna forma decorativa se inventa ni se escribe con caracteres (■ ▲ ● ↗ +): sale de los archivos de la marca, en SVG.
+
+## Components
+
+### Buttons
+Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
+- **Shape:** cápsula completa (9999 px), 12 × 24 px de padding interno, área táctil de 44 px o más.
+- **Primary (amarillo):** fondo amarillo con texto tinta. Al pasar el mouse, fondo tinta con texto amarillo. Es el botón de WhatsApp y la acción principal de cada sección.
+- **Dark (tinta):** fondo tinta con texto blanco; al pasar el mouse, fondo amarillo con texto tinta. Acción principal sobre fondos claros cuando el amarillo ya está en uso.
+- **Outline:** borde de 2 px en tinta, sin fondo; al pasar el mouse, fondo tinta con texto blanco. Acción secundaria ("Ver catálogos", "Ver detalle").
+- **Hover / Focus:** transición de 300 ms con subida de 2 px. Foco visible con contorno de 2 px en tinta separado 4 px (en blanco sobre tinta).
+- **Ícono:** la flecha o el ícono de WhatsApp van en SVG con trazo de 2 px y puntas redondas, nunca como caracteres.
+
+### Chips
+- **Pastilla de código:** fondo amarillo, texto tinta en estilo label, cápsula completa. Lleva el código de producto, "2026" o la cantidad de modelos. Sin borde ni sombra.
+
+### Cards / Containers
+- **Corner Style:** 24 px.
+- **Background:** crema suave sobre crema; tinta para las tarjetas destacadas (con texto blanco).
+- **Shadow Strategy:** "Apoyado" en reposo y "Levantado" al pasar el mouse si la tarjeta es un link (ver Elevation & Depth). Las tarjetas tinta no llevan sombra.
+- **Border:** ninguno en tarjetas con relieve; los filetes de 2 px en tinta quedan para listas, acordeones y botones outline.
+- **Internal Padding:** 28 px en el celular y 36 px en escritorio.
+- **Links:** una tarjeta con dos acciones (por ejemplo "Ver PDF" y "Ver detalle") tiene dos links claros, no un link gigante.
+
+### Navigation
+- **Desktop:** logo con bajada a la izquierda, en colores originales sobre crema, de 120 px de ancho o más. Links en Montserrat 700 de 0,875 rem. Botón de WhatsApp siempre visible. El link activo lleva el punto amarillo.
+- **Celular:** panel a pantalla completa en tinta, links grandes en blanco que entran en cascada, sin numerar, con el activo marcado por el punto amarillo. Wordmark en blanco, nunca el isotipo.
+- **Header:** crema sólido, sin desenfoque ni transparencia, 64 px de alto, fijo.
+- **Accesibilidad:** `aria-expanded`, cierre con Escape, foco atrapado en el panel abierto, área táctil de 44 px o más.
+
+### Preguntas frecuentes
+- Acordeón con `<details>` y `<summary>`, separado por filetes de 2 px en tinta. Pregunta en Montserrat 800; respuesta en body con el gris texto o con tinta al 75 %. El control es un círculo amarillo con un "+" en SVG que gira a "×" al abrirse. Las respuestas quedan en el HTML.
+
+### Logo (signature)
+- **Archivos:** siempre los originales de `public/brand/` (o convertidos desde `On Work/Elementos OW/` con `pdftocairo -svg`). Nunca se dibuja, se tipea ni se aproxima.
+- **Versiones y fondos:**
+  - Sobre crema o blanco, colores originales: logo con bajada en el header y el isotipo en el favicon.
+  - Sobre tinta, solo el wordmark "ON WORK!" en blanco con el signo amarillo.
+  - El isotipo nunca va sobre oscuro ni en un solo color.
+  - Sobre amarillo no va el logo a color.
+- **Área de resguardo:** 1x libre por lado, donde x es el diámetro del círculo amarillo de la O.
+- **Tamaños mínimos:**
+
+  | Versión | Mínimo |
+  |---|---|
+  | Isologotipo | 160 px |
+  | Logo con bajada | 120 px |
+  | Wordmark | 64 px |
+  | Isotipo | 24 px |
+
+  Si no entra, se pasa a la versión siguiente, más simple.
+
+### Titular con punto amarillo (signature)
+- Headline o display en tinta cuyo signo final (punto o signo de pregunta) va en amarillo. Las dos últimas palabras van unidas con espacio duro. Es la firma tipográfica de la marca en todas las páginas.
+
+## Do's and Don'ts
+
+### Do:
+- **Do** usar crema (#FFFCEF) como fondo general y tinta (#231F20) para el texto.
+- **Do** cerrar cada titular con el punto o el signo final en amarillo, y unir las dos últimas palabras con espacio duro.
+- **Do** escribir los textos en Montserrat 500 y los titulares en Montserrat 800, con interlineado de 1,0 en titulares y de 1,45 a 1,6 en textos.
+- **Do** dar relieve suave a tarjetas, portadas y fotos con las sombras "Apoyado", "Levantado" y "Portada", en tono tinta.
+- **Do** sacar las formas, el logo y los íconos de los archivos de la marca, en SVG; íconos de línea con trazo de 2 px, puntas redondas, en tinta dentro de un círculo amarillo.
+- **Do** limitar cada sección a una sola animación protagonista, hecha con `transform` y `opacity`, y dejar todo visible y quieto con `prefers-reduced-motion`.
+- **Do** apagar en pantallas táctiles los efectos que dependen del mouse (cursor diana, inclinación 3D, imán).
+
+### Don't:
+- **Don't** poner texto amarillo sobre crema, crema suave o blanco (1,7:1), ni texto blanco sobre amarillo (1,8:1).
+- **Don't** usar #000, degradés, brillos, vidrio esmerilado (`backdrop-filter`), partículas, estrellas ni objetos 3D.
+- **Don't** usar el isotipo sobre fondo oscuro, ni el logo con bajada o a color sobre tinta o amarillo: sobre tinta va solo el wordmark blanco.
+- **Don't** tipear "ON WORK!" ni dibujar el logo, tampoco en la imagen para compartir (Open Graph).
+- **Don't** usar caracteres o emojis como íconos o formas (↗ → + ■ ▲ ●).
+- **Don't** poner etiquetas chicas en mayúscula arriba de los titulares ni numerar secciones (salvo el paso a paso).
+- **Don't** abrir modales cuando alcanza con una página: las tarjetas de pedidos llevan a su página.
+- **Don't** poner sombras en texto, íconos, botones ni superficies tinta.
