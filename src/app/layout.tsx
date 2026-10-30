@@ -9,41 +9,54 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CursorDiana from "@/components/CursorDiana";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
+// Título y descripción del Inicio (../Web OW/04-SEO-Y-REDIRECCIONES.md).
+// Las demás páginas definen los suyos y se completan con " | On Work".
+const DESCRIPCION =
+  "Merchandising, indumentaria, cartelería y tarjetería con tu marca. Desde 1990. Buenos Aires · Envíos a toda la Argentina.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "On Work | Merchandising personalizado y corporativo en Buenos Aires",
+    default: "Merchandising personalizado en Buenos Aires | On Work",
     template: "%s | On Work",
   },
-  description:
-    "Merchandising personalizado, indumentaria, cartelería y tarjetería para empresas. Asesoramos y conseguimos el producto que tu marca necesita.",
+  description: DESCRIPCION,
   applicationName: SITE.name,
   openGraph: {
     type: "website",
     locale: SITE.locale,
     siteName: SITE.name,
-    title: "On Work | Merchandising personalizado y corporativo",
-    description:
-      "Merchandising, indumentaria, cartelería y tarjetería para empresas. Si lo necesitás, lo conseguimos.",
+    title: "Merchandising personalizado en Buenos Aires | On Work",
+    description: DESCRIPCION,
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#feb600",
+  themeColor: "#fffcef",
 };
 
 // Datos estructurados: le explican a Google qué es On Work.
-// (Cuando tengamos dirección y teléfono confirmados, se pueden sumar acá.)
+// El logo es un PNG sobre blanco de más de 112 px, como pide Google.
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE.name,
   url: SITE.url,
-  logo: `${SITE.url}/brand/isotipo-onwork.svg`,
+  logo: `${SITE.url}/brand/logo-onwork-google.png`,
+  foundingDate: "1990",
   description:
-    "Empresa de comunicación y merchandising de Buenos Aires: merchandising personalizado, indumentaria, cartelería, tarjetería y fotografía de producto.",
+    "Empresa familiar de comunicación y merchandising de Buenos Aires: merchandising, indumentaria, cartelería, tarjetería y fotografía de producto.",
   areaServed: "AR",
+  address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
+  sameAs: [SITE.instagram, "https://www.facebook.com/onworkba"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: SITE.whatsappVisible,
+    contactType: "sales",
+    areaServed: "AR",
+    availableLanguage: "es",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
