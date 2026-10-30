@@ -140,14 +140,3 @@ details.faq[open]::details-content {
     padding-inline: 2rem;
   }
 }
-
-/* Etiqueta pequeña sobre los títulos de sección.
-   ⚠️ En salida: DESIGN.md la prohíbe. Se va sacando de cada sección a medida
-   que se rehace cada página; cuando no quede ninguna, se borra esta regla. */
-.eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}

@@ -45,3 +45,20 @@ export const mensajePedido = (cliente: string) =>
   `Hola, vi el pedido de ${cliente} en la web. Necesito:`;
 
 export const PEDIDOS: Pedido[] = [];
+
+/** Textos de /pedidos y de la página de cada pedido (03-CONTENIDO-PAGINAS.md). */
+export const PEDIDOS_PAGINA = {
+  h1: "Pedidos reales.",
+  bajada: "Así se ve la marca de nuestros clientes en cada producto.",
+  vacio:
+    "[Pedidos reales: sumá al menos 3 carpetas en Web OW/pedidos-reales/ con el OK de cada cliente]",
+  necesitaba: "Qué necesitaba.",
+  hicimos: "Qué hicimos.",
+  productos: "Productos de este pedido.",
+  verCatalogo: "Ver el catálogo",
+  seo: {
+    titulo: "Pedidos reales de merchandising",
+    descripcion:
+      "Pedidos reales de On Work: cómo se ve la marca de cada cliente en cada producto.",
+  },
+};
