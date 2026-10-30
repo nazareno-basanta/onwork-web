@@ -1,12 +1,14 @@
 /**
- * Lo que hace On Work y casos reales. Cada tarjeta lleva un mensaje de
- * WhatsApp ya escrito, así el cliente llega a la conversación con contexto.
+ * Lo que hace On Work ("Qué hacemos"), las búsquedas a medida y casos reales.
+ * Textos de ../Web OW/03-CONTENIDO-PAGINAS.md. Lo que está entre [corchetes]
+ * falta confirmar.
  */
 export type Servicio = {
   id: string;
   titulo: string;
   texto: string;
-  mensaje: string;
+  /** Mensaje de WhatsApp propio del servicio. Sin mensaje, usa el general. */
+  mensaje?: string;
 };
 
 export const SERVICIOS: Servicio[] = [
@@ -14,37 +16,59 @@ export const SERVICIOS: Servicio[] = [
     id: "merchandising",
     titulo: "Merchandising",
     texto:
-      "Productos con la marca de tu empresa, pensados para que se usen y se recuerden.",
-    mensaje: "¡Hola On Work! Quiero cotizar merchandising para mi empresa.",
+      "Productos con tu marca para regalar, entregar en un evento o usar todos los días.",
+    mensaje: "Hola, vi On Work en la web. Necesito merchandising con mi marca:",
   },
   {
     id: "indumentaria",
     titulo: "Indumentaria",
     texto:
-      "Ropa de trabajo, uniformes y prendas de marca, hasta indumentaria técnica.",
-    mensaje: "¡Hola On Work! Necesito indumentaria con la marca de mi empresa.",
+      "Ropa de trabajo, uniformes, delantales y prendas de marca, hasta indumentaria técnica.",
+    mensaje: "Hola, vi On Work en la web. Necesito indumentaria con mi marca:",
   },
   {
     id: "carteleria",
     titulo: "Cartelería",
-    texto: "Cartelería y comunicación visual para tu local, evento o empresa.",
-    mensaje: "¡Hola On Work! Quiero consultar por cartelería.",
+    texto: "Comunicación visual para tu local, tu stand o tu evento.",
+    mensaje: "Hola, vi On Work en la web. Necesito cartelería:",
   },
   {
     id: "tarjeteria",
     titulo: "Tarjetería",
-    texto: "Tarjetas y papelería corporativa con identidad cuidada.",
-    mensaje: "¡Hola On Work! Quiero consultar por tarjetería y papelería.",
+    texto: "Tarjetas y papelería comercial con tu identidad.",
+    mensaje: "Hola, vi On Work en la web. Necesito tarjetería:",
   },
   {
-    id: "busquedas",
-    titulo: "Búsquedas personalizadas",
+    id: "fotografia",
+    titulo: "Fotografía de producto",
     texto:
-      "¿Necesitás algo puntual? Lo buscamos, lo conseguimos y te asesoramos de punta a punta.",
-    mensaje:
-      "¡Hola On Work! Estoy buscando un producto específico y quería que me asesoren.",
+      "Fotos de producto para tu catálogo, tu tienda online o tus redes. [confirmar alcance]",
+    mensaje: "Hola, vi On Work en la web. Necesito fotos de producto:",
   },
 ];
+
+/**
+ * "¿No está en el catálogo? Lo buscamos." Los ejemplos son productos reales
+ * que On Work consiguió fuera de catálogo: sumá solo pedidos reales.
+ * [sumar otros pedidos reales]
+ */
+export const BUSQUEDAS = {
+  titulo: "¿No está en el catálogo? Lo buscamos.",
+  texto:
+    "Cada marca necesita algo distinto. Contanos qué tenés en mente: buscamos el producto, lo producimos con tu marca y te lo enviamos.",
+  ejemplos: [
+    "Indumentaria de nieve",
+    "Fundas para gafas de ski",
+    "Almohadas de viaje",
+    "Frisbees",
+    "Delantales",
+    "Gorras trucker",
+    "Mochilas",
+  ],
+  boton: "Contanos qué buscás",
+  mensaje:
+    "Hola, vi On Work en la web. Busco un producto que no está en los catálogos:",
+};
 
 export type Caso = {
   titulo: string;
@@ -60,7 +84,7 @@ export const CASOS: Caso[] = [
     texto:
       "Un cliente patagónico necesitaba indumentaria de nieve con su marca. La buscamos, la desarrollamos y la entregamos.",
     mensaje:
-      "¡Hola On Work! Necesito indumentaria técnica o de nieve para mi empresa.",
+      "Hola, vi On Work en la web. Necesito indumentaria técnica o de nieve con mi marca:",
   },
   {
     titulo: "Fundas para gafas de ski",
@@ -68,6 +92,6 @@ export const CASOS: Caso[] = [
     texto:
       "Un producto que no está en ningún catálogo común: lo rastreamos y lo producimos con identidad de marca.",
     mensaje:
-      "¡Hola On Work! Busco un producto muy específico, similar a fundas para gafas de ski.",
+      "Hola, vi On Work en la web. Busco un producto que no está en los catálogos:",
   },
 ];

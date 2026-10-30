@@ -10,12 +10,15 @@ export const SITE = {
   url: "https://onworkba.com",
   locale: "es_AR",
   /**
-   * ⚠️ PENDIENTE: reemplazar por el número real de WhatsApp (el que termina en 9402).
-   * Formato internacional, SOLO dígitos: sin "+", sin espacios, sin guiones.
-   * Celular argentino: 54 + 9 + código de área (sin 0) + número (sin 15).
-   * Ejemplo de formato: 5491112349402
+   * WhatsApp del asesor de ventas, en formato internacional y SOLO dígitos
+   * (sin "+", espacios ni guiones): 54 + 9 + código de área sin 0 + número.
    */
-  whatsapp: "549XXXXXXXX9402",
+  whatsapp: "5491131579402",
+  // El mismo número, como se muestra escrito en la web.
+  whatsappVisible: "+54 9 11 3157-9402",
+  instagram: "https://www.instagram.com/onworkba",
+  instagramUsuario: "@onworkba",
+  ubicacion: "Buenos Aires · Envíos a toda la Argentina",
 } as const;
 
 /** Arma el link de WhatsApp con un mensaje ya escrito. */
@@ -24,11 +27,13 @@ export function whatsappUrl(message?: string) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
-export const MENSAJE_GENERAL =
-  "¡Hola On Work! Quiero hacerles una consulta.";
+/** Mensaje que llega precargado cuando no hay uno propio de la página. */
+export const MENSAJE_GENERAL = "Hola, vi On Work en la web. Necesito:";
 
 export const NAV = [
   { href: "/", label: "Inicio" },
-  { href: "/merchandising", label: "Merchandising" },
+  { href: "/nosotros", label: "Nosotros" },
   { href: "/catalogos", label: "Catálogos" },
+  { href: "/pedidos", label: "Pedidos reales" },
+  { href: "/contacto", label: "Contacto" },
 ] as const;

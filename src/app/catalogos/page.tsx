@@ -45,7 +45,7 @@ export default function CatalogosPage() {
                       {c.titulo}
                     </h2>
                     <p className="mt-3 max-w-md text-ow-black/75">
-                      {c.descripcion}
+                      {c.tarjeta}
                     </p>
                   </div>
                   <div className="mt-8">

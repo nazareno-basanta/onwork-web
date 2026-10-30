@@ -2,39 +2,77 @@
 
 /* ------------------------------------------------------------------
    SISTEMA DE DISEÑO DE ON WORK
-   Colores y tipografías de la marca, definidos una sola vez.
-   En Tailwind se usan como: bg-ow-yellow, text-ow-black, font-display, etc.
+   Colores, tipografías y sombras de la marca, definidos una sola vez.
+   La referencia completa está en DESIGN.md (raíz del proyecto).
+   En Tailwind se usan como: bg-ow-yellow, text-ow-gray, shadow-apoyado, etc.
 ------------------------------------------------------------------- */
 :root {
-  --ow-yellow: #feb600; /* Pantone 7549 C */
-  --ow-black: #231f20;
-  --ow-paper: #f5f3ee; /* neutro cálido para fondos suaves */
+  --ow-yellow: #feb600; /* Amarillo On Work · Pantone 7549 C */
+  --ow-black: #231f20; /* Tinta: nunca #000 */
+  --ow-paper: #fffcef; /* Crema: fondo general */
+  --ow-paper-soft: #fef6dc; /* Crema suave: tarjetas, recuadros, franjas */
+  --ow-gray: #5e6166; /* Gris texto: bajadas, specs, textos secundarios */
 }
 
 @theme inline {
   --color-ow-yellow: var(--ow-yellow);
   --color-ow-black: var(--ow-black);
   --color-ow-paper: var(--ow-paper);
+  --color-ow-paper-soft: var(--ow-paper-soft);
+  --color-ow-gray: var(--ow-gray);
 
-  /* Títulos: Montserrat. Texto corrido: Nunito. */
+  /* Montserrat en todo (titulares 800, nombres 700, textos 500).
+     Nunito solo como acompañamiento puntual: font-accent. */
   --font-display: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Relieve suave: sombras bajas y difusas en tono tinta (ver DESIGN.md).
+     Van debajo de tarjetas, portadas y fotos; nunca en texto ni en botones. */
+  --shadow-apoyado: 0 1px 2px rgb(35 31 32 / 0.06), 0 10px 30px -12px rgb(35 31 32 / 0.18);
+  --shadow-levantado: 0 2px 4px rgb(35 31 32 / 0.08), 0 22px 44px -16px rgb(35 31 32 / 0.26);
+  --shadow-portada: 0 24px 48px -20px rgb(35 31 32 / 0.35);
+
+  /* Curva de las entradas y transiciones: arranca rápido y frena suave. */
+  --ease-ow: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
   scroll-behavior: auto; /* el scroll suave lo maneja Lenis */
+  scrollbar-color: var(--ow-black) var(--ow-paper);
 }
 
 body {
-  background: #fff;
+  background: var(--ow-paper);
   color: var(--ow-black);
   font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Sin viudas: el navegador reparte mejor las últimas palabras de cada línea.
+   (Además, en los textos se unen las dos últimas palabras con espacio duro.) */
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+summary {
+  text-wrap: pretty;
 }
 
 ::selection {
   background: var(--ow-yellow);
   color: var(--ow-black);
+}
+
+/* Foco visible de teclado en todo lo que se puede tocar. Toma el color del
+   texto, así se ve tanto sobre crema como sobre tinta. */
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 /* Lenis: reglas recomendadas para que el scroll suave no pelee con el navegador */
@@ -73,7 +111,9 @@ html.lenis body {
   }
 }
 
-/* Etiqueta pequeña sobre los títulos de sección */
+/* Etiqueta pequeña sobre los títulos de sección.
+   ⚠️ En salida: DESIGN.md la prohíbe. Se va sacando de cada sección a medida
+   que se rehace cada página; cuando no quede ninguna, se borra esta regla. */
 .eyebrow {
   font-family: var(--font-display);
   font-size: 0.75rem;
