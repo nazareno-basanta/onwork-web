@@ -10,7 +10,7 @@ const ON_WORK = [
   { href: "/contacto", label: "Contacto" },
 ];
 
-const link = "cursor-target inline-flex min-h-8 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
+const link = "cursor-target inline-flex min-h-11 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
 
 /** Pie de todas las páginas: wordmark blanco sobre tinta (nunca el isotipo). */
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
     <footer data-cursor-tone="claro" className="bg-ow-black text-white">
       <div className="container-ow grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_0.8fr_1fr] lg:py-20">
         <div>
-          <Link href="/" aria-label="On Work, ir al inicio" className="cursor-target inline-block rounded-sm">
+          <Link href="/" aria-label="On Work, ir al inicio" className="cursor-target inline-flex min-h-11 items-center rounded-sm">
             <Image
               src="/brand/wordmark-onwork-blanco.svg"
               alt="On Work"
@@ -33,7 +33,7 @@ export default function Footer() {
           <h2 id="pie-catalogos" className="font-display text-sm font-bold text-white/60">
             Catálogos
           </h2>
-          <ul className="mt-4 space-y-1.5">
+          <ul className="mt-2">
             {CATALOGOS.map((c) => (
               <li key={c.slug}>
                 <Link href={`/catalogos/${c.slug}`} className={link}>
@@ -48,7 +48,7 @@ export default function Footer() {
           <h2 id="pie-onwork" className="font-display text-sm font-bold text-white/60">
             On Work
           </h2>
-          <ul className="mt-4 space-y-1.5">
+          <ul className="mt-2">
             {ON_WORK.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={link}>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div>
           <h2 className="font-display text-sm font-bold text-white/60">Contacto</h2>
-          <ul className="mt-4 space-y-1.5">
+          <ul className="mt-2">
             <li>
               <a
                 href={whatsappUrl(MENSAJE_GENERAL)}
