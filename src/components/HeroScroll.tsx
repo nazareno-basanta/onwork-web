@@ -3,10 +3,10 @@
 /**
  * Hero del Inicio: "dar en el blanco" con el scroll.
  *
- * Arranca simple y centrado: el titular y, debajo, el isotipo de On Work (la
- * diana con el signo) con su gráfica de arcos, tal como están en los archivos
- * de la marca. De fondo, ondas finas salen del punto amarillo una y otra vez
- * (la "onda expansiva" de la animación del logo).
+ * Arranca simple y centrado: el titular y, debajo, el isotipo original de
+ * On Work (la diana con el signo), sin ningún agregado. De fondo, ondas finas
+ * salen del centro de la pantalla una y otra vez (la "onda expansiva" de la
+ * animación del logo), separadas del isotipo.
  *
  * Al bajar, la pantalla queda fija: el isotipo crece, viaja al centro y se
  * entra en el punto amarillo, que llena la pantalla. Adentro aparece
@@ -29,7 +29,7 @@ import {
   useTransform,
 } from "motion/react";
 import RotatingText from "@/components/ui/RotatingText";
-import { ARCOS, CONJUNTO, ISO_ARO, ISO_PUNTO, ISO_RADIO, ISO_SIGNO } from "@/components/IsotipoArcos";
+import { ISO_ARO, ISO_CAJA, ISO_PUNTO, ISO_SIGNO } from "@/components/Isotipo";
 import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
 import { sinViuda } from "@/lib/utils";
@@ -41,42 +41,45 @@ const FRASE: [number, number] = [0.45, 0.5];
 const PALABRAS: [number, number] = [0.5, 0.9]; // de 0,9 a 1 queda "detalle"
 /** Cuánto se aceleran las palabras: 1 = parejo; más alto = arranca lento y termina rápido. */
 const RAMPA = 1.8;
-const ONDAS = 3;
+const ONDAS = 4;
 
 const tramo = (v: number, [a, b]: [number, number]) => Math.min(1, Math.max(0, (v - a) / (b - a)));
 
-const COLOR = { amarillo: "var(--ow-yellow)", tinta: "var(--ow-black)" } as const;
-
-/** Ondas que salen del punto amarillo (van detrás del texto). */
+/**
+ * Fondo: ondas finas que nacen en el centro de la pantalla y se abren hasta
+ * salir por los bordes, una tras otra. No dependen del isotipo.
+ */
 function Ondas({ opacidad }: { opacidad?: MotionValue<number> }) {
   return (
-    <motion.g style={opacidad ? { opacity: opacidad } : undefined}>
+    <motion.svg
+      aria-hidden
+      focusable="false"
+      className="pointer-events-none absolute inset-0 h-full w-full"
+      style={opacidad ? { opacity: opacidad } : undefined}
+    >
       {Array.from({ length: ONDAS }, (_, i) => (
-          <circle
-            key={i}
-            className="onda"
-            style={{ animationDelay: `${i * 2}s` }}
-            cx={ISO_PUNTO.x}
-            cy={ISO_PUNTO.y}
-            r={ISO_RADIO * 1.1}
-            fill="none"
-            stroke="var(--ow-black)"
-            strokeOpacity="0.28"
-            strokeWidth="1.5"
-            vectorEffect="non-scaling-stroke"
-          />
-        ))}
-    </motion.g>
+        <circle
+          key={i}
+          className="onda"
+          style={{ animationDelay: `${i * 2.5}s` }}
+          cx="50%"
+          cy="50%"
+          r="22%"
+          fill="none"
+          stroke="var(--ow-black)"
+          strokeOpacity="0.16"
+          strokeWidth="1.5"
+          vectorEffect="non-scaling-stroke"
+        />
+      ))}
+    </motion.svg>
   );
 }
 
-/** Isotipo + arcos, en las unidades del isotipo. */
-function Conjunto() {
+/** El isotipo original (paths del archivo de marca, sin cambios). */
+function Isotipo() {
   return (
     <>
-      {ARCOS.map((a, i) => (
-        <path key={i} className="arco" style={{ animationDelay: `${0.3 + i * 0.12}s` }} d={a.d} fill={COLOR[a.color]} />
-      ))}
       <path d={ISO_ARO} fill="var(--ow-black)" />
       <path d={ISO_SIGNO} fill="var(--ow-yellow)" />
     </>
@@ -116,20 +119,18 @@ function TitularHero() {
   );
 }
 
-/** El isotipo con arcos en reposo (también es lo que se ve antes de que cargue el JavaScript). */
+/** El isotipo en reposo (también es lo que se ve antes de que cargue el JavaScript). */
 function IsotipoReposo({ oculto, refCaja }: { oculto?: boolean; refCaja?: React.Ref<SVGSVGElement> }) {
   return (
     <svg
       ref={refCaja}
-      viewBox={`${CONJUNTO.x} ${CONJUNTO.y} ${CONJUNTO.w} ${CONJUNTO.h}`}
-      overflow="visible"
+      viewBox={`${ISO_CAJA.x} ${ISO_CAJA.y} ${ISO_CAJA.w} ${ISO_CAJA.h}`}
       role="img"
       aria-label="Isotipo de On Work"
-      className="h-[clamp(8.5rem,26vh,15rem)] w-auto"
+      className="h-[clamp(7.5rem,22vh,12rem)] w-auto"
       style={{ visibility: oculto ? "hidden" : "visible" }}
     >
-      <Ondas />
-      <Conjunto />
+      <Isotipo />
     </svg>
   );
 }
@@ -199,7 +200,6 @@ export default function HeroScroll() {
   const stageRef = useRef<HTMLDivElement>(null);
   const cajaRef = useRef<SVGSVGElement>(null);
   const grupoRef = useRef<SVGGElement>(null);
-  const ondasRef = useRef<SVGGElement>(null);
   const [geo, setGeo] = useState<Geo | null>(null);
   const [indice, setIndice] = useState(0);
   const ultima = FRASE_ROTATIVA.palabras.length - 1;
@@ -214,11 +214,11 @@ export default function HeroScroll() {
       if (!st || !caja) return;
       const s = st.getBoundingClientRect();
       const c = caja.getBoundingClientRect();
-      const k = c.width / CONJUNTO.w;
+      const k = c.width / ISO_CAJA.w;
       const lejos = Math.hypot(s.width / 2, s.height / 2);
       setGeo({
-        ox: c.left - s.left + (ISO_PUNTO.x - CONJUNTO.x) * k,
-        oy: c.top - s.top + (ISO_PUNTO.y - CONJUNTO.y) * k,
+        ox: c.left - s.left + (ISO_PUNTO.x - ISO_CAJA.x) * k,
+        oy: c.top - s.top + (ISO_PUNTO.y - ISO_CAJA.y) * k,
         sx: s.width / 2,
         sy: s.height / 2,
         k,
@@ -259,10 +259,7 @@ export default function HeroScroll() {
     [cx, cy, escala, k],
     ([x, y, s, kk]: number[]) => `translate(${x} ${y}) scale(${kk * s}) translate(${-ISO_PUNTO.x} ${-ISO_PUNTO.y})`,
   );
-  const aplicar = (t: string) => {
-    grupoRef.current?.setAttribute("transform", t);
-    ondasRef.current?.setAttribute("transform", t);
-  };
+  const aplicar = (t: string) => grupoRef.current?.setAttribute("transform", t);
   useMotionValueEvent(transform, "change", aplicar);
   useEffect(() => {
     if (geo) aplicar(transform.get());
@@ -297,19 +294,13 @@ export default function HeroScroll() {
   return (
     <section ref={contRef} className="relative h-[380vh]">
       <div ref={stageRef} className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden">
-        {geo && (
-          <svg aria-hidden className="pointer-events-none absolute inset-0 h-full w-full overflow-visible" focusable="false">
-            <g ref={ondasRef}>
-              <Ondas opacidad={ondasOpacidad} />
-            </g>
-          </svg>
-        )}
+        <Ondas opacidad={ondasOpacidad} />
         <Escena opacidad={textoOpacidad} isotipo={<IsotipoReposo oculto={!!geo} refCaja={cajaRef} />} />
 
         {geo && (
           <svg aria-hidden className="pointer-events-none absolute inset-0 z-10 h-full w-full overflow-visible" focusable="false">
             <g ref={grupoRef}>
-              <Conjunto />
+              <Isotipo />
             </g>
           </svg>
         )}

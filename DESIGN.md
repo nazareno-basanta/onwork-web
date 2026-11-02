@@ -248,6 +248,7 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 - Acordeón con `<details>` y `<summary>`, separado por filetes de 2 px en tinta. Pregunta en Montserrat 800; respuesta en body con el gris texto o con tinta al 75 %. El control es un círculo amarillo con un "+" en SVG que gira a "×" al abrirse. Las respuestas quedan en el HTML.
 
 ### Logo (signature)
+- **Isotipo inalterable:** el isotipo (diana con signo) se usa tal cual el archivo original, solo y sin agregarle gráficas (la de arcos de la pág. 18 de Elementos es una pieza artística, no el isotipo). Las ondas u otros recursos van de fondo, separados de él (Nachi, 2/11/2026).
 - **Archivos:** siempre los originales de `public/brand/` (o convertidos desde `On Work/Elementos OW/` con `pdftocairo -svg`). Nunca se dibuja, se tipea ni se aproxima.
 - **Versiones y fondos:**
   - Sobre crema o blanco, colores originales: logo con bajada en el header y el isotipo en el favicon.
