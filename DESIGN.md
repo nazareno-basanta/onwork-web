@@ -125,7 +125,7 @@ El código todavía difiere en algunos puntos (fondo #F5F3EE y blanco, cuerpo en
 
 **Creative North Star: "Dar en el blanco"**
 
-Las O del logo son dianas: aro tinta y punto amarillo. Todo el sistema sale de ese gesto. Cada elemento de la página apunta a algo concreto (un catálogo, un pedido, una conversación por WhatsApp) y el amarillo marca el punto exacto donde mirar: el punto final de un titular, el signo, un número, una pastilla con un código. Lo que no apunta a nada, no va. El cursor propio con forma de diana y los estados de hover que encuadran un elemento son la versión interactiva de la misma idea.
+Las O del logo son dianas: aro tinta y punto amarillo. Todo el sistema sale de ese gesto. Cada elemento de la página apunta a algo concreto (un catálogo, un pedido, una conversación por WhatsApp) y el amarillo marca el punto exacto donde mirar: el punto final de un titular, el signo, un número, una pastilla con un código. Lo que no apunta a nada, no va. El puntero es el del sistema: la idea vive en la diana y en los hovers amarillos, no en un cursor propio.
 
 La marca es de modernidad atemporal: simple, poco colorida, impactante y amigable. Es monocromática con un solo acento. La firmeza la pone Montserrat en peso alto y la calidez la ponen la crema de fondo y las formas redondas (círculos, pastillas, esquinas de 24 px). Las superficies tienen relieve suave: tarjetas y portadas parecen objetos apoyados sobre papel crema, con una sombra baja y difusa en tono tinta, nunca un brillo. La densidad es aireada: titulares grandes, mucho espacio entre secciones, una idea por bloque.
 
@@ -278,7 +278,7 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 - **Do** dar relieve suave a tarjetas, portadas y fotos con las sombras "Apoyado", "Levantado" y "Portada", en tono tinta.
 - **Do** sacar las formas, el logo y los íconos de los archivos de la marca, en SVG; íconos de línea con trazo de 2 px, puntas redondas, en tinta dentro de un círculo amarillo.
 - **Do** limitar cada sección a una sola animación protagonista, hecha con `transform` y `opacity`, y dejar todo visible y quieto con `prefers-reduced-motion`.
-- **Do** apagar en pantallas táctiles los efectos que dependen del mouse (cursor diana, inclinación 3D, imán).
+- **Do** apagar en pantallas táctiles los efectos que dependen del mouse (inclinación 3D, imán).
 
 ### Don't:
 - **Don't** poner texto amarillo sobre crema, crema suave o blanco (1,7:1), ni texto blanco sobre amarillo (1,8:1).
@@ -289,3 +289,4 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 - **Don't** poner etiquetas chicas en mayúscula arriba de los titulares ni numerar secciones (salvo el paso a paso).
 - **Don't** abrir modales cuando alcanza con una página: las tarjetas de pedidos llevan a su página.
 - **Don't** poner sombras en texto, íconos, botones ni superficies tinta.
+- **Don't** reemplazar el cursor del sistema por uno propio: desentona con la seriedad de la marca (decisión de Nachi, 2/11/2026).

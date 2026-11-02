@@ -97,7 +97,7 @@ export default async function PedidoPage({ params }: PageProps<"/pedidos/[client
             <p className="font-display text-xl font-bold">{PEDIDOS_PAGINA.productos}</p>
             <Link
               href={`/catalogos/${catalogo.slug}`}
-              className="cursor-target inline-flex min-h-11 items-center gap-2 rounded-sm font-display font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+              className="inline-flex min-h-11 items-center gap-2 rounded-sm font-display font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
             >
               {PEDIDOS_PAGINA.verCatalogo} {catalogo.titulo}
               <Icon name="flecha-derecha" size={18} />

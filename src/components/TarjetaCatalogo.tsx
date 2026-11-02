@@ -19,8 +19,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
       <Link
         href={detalle}
         aria-label={`Catálogo ${catalogo.titulo}`}
-        className="cursor-target block rounded-xl"
-        data-cursor-label="Ver detalle"
+        className="block rounded-xl"
       >
         <TiltedCard>
           <PortadaCatalogo catalogo={catalogo} priority={priority} />
@@ -39,7 +38,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
             href={catalogo.pdf}
             target="_blank"
             rel="noopener"
-            className="cursor-target inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
           >
             <Icon name="documento" size={18} />
             Ver PDF
@@ -49,7 +48,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
             href={whatsappUrl(mensajePedirPdf(catalogo.titulo))}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-target inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
           >
             <Icon name="whatsapp" size={18} />
             Pedir el PDF
@@ -57,7 +56,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
         )}
         <Link
           href={detalle}
-          className="cursor-target inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+          className="inline-flex min-h-11 items-center gap-1.5 rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
         >
           Ver detalle
           <Icon name="flecha-derecha" size={18} />

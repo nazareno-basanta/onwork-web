@@ -1,10 +1,9 @@
 /**
  * Estilos de botón compartidos (ver "Buttons" en DESIGN.md). Los definimos una
  * sola vez para que todos los botones del sitio se vean y se comporten igual.
- * La clase cursor-target hace que el cursor diana los encuadre.
  */
 const base =
-  "cursor-target inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-sm font-bold tracking-wide " +
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-sm font-bold tracking-wide " +
   "transition-[background-color,color,transform] duration-300 ease-ow hover:-translate-y-0.5";
 
 export const btn = {

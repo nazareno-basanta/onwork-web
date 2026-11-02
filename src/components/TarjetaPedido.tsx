@@ -13,8 +13,7 @@ export default function TarjetaPedido({ pedido }: { pedido: Pedido }) {
   return (
     <Link
       href={`/pedidos/${pedido.slug}`}
-      data-cursor-label="Ver pedido"
-      className="cursor-target group relative block aspect-[3/4] overflow-hidden rounded-3xl bg-white shadow-apoyado transition-shadow duration-300 ease-ow hover:shadow-levantado"
+      className="group relative block aspect-[3/4] overflow-hidden rounded-3xl bg-white shadow-apoyado transition-shadow duration-300 ease-ow hover:shadow-levantado"
     >
       {portada && (
         <Image

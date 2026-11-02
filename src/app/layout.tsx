@@ -6,7 +6,6 @@ import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
-import CursorDiana from "@/components/CursorDiana";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 // Título y descripción del Inicio (../Web OW/04-SEO-Y-REDIRECCIONES.md).
@@ -46,7 +45,7 @@ const organizationJsonLd = {
   logo: `${SITE.url}/brand/logo-onwork-google.png`,
   foundingDate: "1990",
   description:
-    "Empresa familiar de comunicación y merchandising de Buenos Aires: merchandising, indumentaria, cartelería, tarjetería y fotografía de producto.",
+    "Empresa familiar de comunicación y merchandising de Buenos Aires: merchandising, indumentaria, cartelería y tarjetería.",
   areaServed: "AR",
   address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
   sameAs: [SITE.instagram, "https://www.facebook.com/onworkba"],
@@ -76,7 +75,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <WhatsAppFloat />
-        <CursorDiana />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

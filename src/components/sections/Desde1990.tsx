@@ -16,7 +16,7 @@ export default function Desde1990() {
           <p className="text-lg text-ow-black/80">{sinViuda(DESDE_1990.texto)}</p>
           <Link
             href="/nosotros"
-            className="cursor-target mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm font-display font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+            className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm font-display font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
           >
             {DESDE_1990.link}
             <Icon name="flecha-derecha" size={18} />

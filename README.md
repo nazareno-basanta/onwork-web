@@ -44,7 +44,6 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 
 | Componente | Origen | Dónde |
 |---|---|---|
-| Cursor diana | React Bits · Target Cursor | Todo el sitio (solo con mouse) |
 | Menú en pastilla y menú del celular | React Bits · Pill Nav y Staggered Menu (comportamiento) | Encabezado |
 | Cinta infinita | Magic UI · Marquee | Logos de clientes y búsquedas a medida |
 | Frase rotativa | React Bits · Rotating Text | Inicio |
@@ -63,7 +62,7 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 ## Pendientes antes de publicar
 
 1. Los PDF, los logos de clientes y al menos 3 pedidos reales (ver arriba).
-2. Completar los marcadores de `src/data/` (secciones de catálogos, horario, pagos, hitos, técnicas, alcance de fotografía).
+2. Completar los marcadores de `src/data/` (secciones de catálogos, horario, pagos, hitos, técnicas).
 3. **Dominio**: confirmar que `url` en `src/lib/site.ts` sea el dominio final y elegir `onworkba.com` o `www.onworkba.com` en Vercel.
 4. **GA4**: falta el ID de medición para registrar los clics a WhatsApp y las descargas de PDF.
 5. **Tipografía Dunbar Tall**: hoy se usan Montserrat y Nunito. Dunbar Tall es solo para merch propio.

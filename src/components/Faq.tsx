@@ -12,7 +12,7 @@ export default function Faq({ preguntas }: { preguntas: Pregunta[] }) {
     <div className="border-t-2 border-ow-black">
       {preguntas.map((q) => (
         <details key={q.pregunta} className="faq group border-b-2 border-ow-black">
-          <summary className="cursor-target flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-lg font-extrabold md:text-xl [&::-webkit-details-marker]:hidden">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-lg font-extrabold md:text-xl [&::-webkit-details-marker]:hidden">
             {sinViuda(q.pregunta)}
             <span
               aria-hidden

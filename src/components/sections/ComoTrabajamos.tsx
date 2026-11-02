@@ -27,7 +27,6 @@ export default function ComoTrabajamos() {
   return (
     <section
       aria-labelledby="como-trabajamos"
-      data-cursor-tone="claro"
       className="bg-ow-black py-24 text-white md:py-32 lg:pb-16"
     >
       <div className="container-ow">

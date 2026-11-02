@@ -109,7 +109,6 @@ export default function MobileNav() {
               role="dialog"
               aria-modal="true"
               aria-label="Menú"
-              data-cursor-tone="claro"
               data-lenis-prevent
               className="absolute inset-0 flex flex-col overflow-y-auto bg-ow-black px-5 pt-4 pb-8 text-white md:px-8"
               {...capa(0.08)}

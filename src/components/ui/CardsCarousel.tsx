@@ -39,7 +39,7 @@ export default function CardsCarousel({ children, label }: { children: ReactNode
   };
 
   const flecha =
-    'cursor-target grid size-12 place-items-center rounded-full border-2 border-ow-black transition-colors duration-300 ease-ow hover:bg-ow-black hover:text-white disabled:pointer-events-none disabled:opacity-30';
+    'grid size-12 place-items-center rounded-full border-2 border-ow-black transition-colors duration-300 ease-ow hover:bg-ow-black hover:text-white disabled:pointer-events-none disabled:opacity-30';
 
   return (
     <div>

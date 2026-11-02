@@ -10,15 +10,15 @@ const ON_WORK = [
   { href: "/contacto", label: "Contacto" },
 ];
 
-const link = "cursor-target inline-flex min-h-11 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
+const link = "inline-flex min-h-11 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
 
 /** Pie de todas las páginas: wordmark blanco sobre tinta (nunca el isotipo). */
 export default function Footer() {
   return (
-    <footer data-cursor-tone="claro" className="bg-ow-black text-white">
+    <footer className="bg-ow-black text-white">
       <div className="container-ow grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_0.8fr_1fr] lg:py-20">
         <div>
-          <Link href="/" aria-label="On Work, ir al inicio" className="cursor-target inline-flex min-h-11 items-center rounded-sm">
+          <Link href="/" aria-label="On Work, ir al inicio" className="inline-flex min-h-11 items-center rounded-sm">
             <Image
               src="/brand/wordmark-onwork-blanco.svg"
               alt="On Work"

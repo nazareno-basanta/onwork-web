@@ -142,6 +142,48 @@ html.lenis body {
   }
 }
 
+/* Hero: ondas que salen del punto amarillo del isotipo, una y otra vez
+   (la "onda expansiva" de la animación del logo), y entrada escalonada de
+   los arcos de la diana. Con menos movimiento: sin ondas y arcos quietos. */
+.onda {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: onda 6s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+@keyframes onda {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+.arco {
+  animation: arco 0.9s var(--ease-ow) both;
+}
+@keyframes arco {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .onda {
+    display: none;
+  }
+  .arco {
+    animation: none;
+  }
+}
+
 /* Preguntas frecuentes: la respuesta se despliega con una transición de
    altura (en navegadores que no lo soportan, se abre sin animación). */
 :root {

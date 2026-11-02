@@ -20,7 +20,6 @@ export default function Cierre({ titulo = CIERRE.titulo, texto = CIERRE.texto, m
   return (
     <section
       aria-labelledby="cierre-titulo"
-      data-cursor-tone="claro"
       className="relative isolate overflow-hidden bg-ow-black py-24 text-white md:py-32"
     >
       <Diana className="absolute top-1/2 -right-[18%] -z-10 w-[min(70vw,34rem)] -translate-y-1/2 text-ow-yellow md:-right-[8%]" />

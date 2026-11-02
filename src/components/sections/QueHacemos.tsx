@@ -27,7 +27,7 @@ export default function QueHacemos() {
                 href={whatsappUrl(s.mensaje ?? MENSAJE_GENERAL)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target group grid grid-cols-[1fr_auto] items-center gap-6 rounded-sm py-7 md:py-8"
+                className="group grid grid-cols-[1fr_auto] items-center gap-6 rounded-sm py-7 md:py-8"
               >
                 <span>
                   <span className="block font-display text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight font-bold">

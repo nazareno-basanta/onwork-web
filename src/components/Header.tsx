@@ -16,7 +16,7 @@ export default function Header() {
         <Link
           href="/"
           aria-label="On Work, ir al inicio"
-          className="cursor-target flex min-h-11 shrink-0 items-center rounded-md"
+          className="flex min-h-11 shrink-0 items-center rounded-md"
         >
           <Image
             src="/brand/wordmark-onwork.svg"

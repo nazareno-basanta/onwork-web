@@ -38,13 +38,6 @@ export const SERVICIOS: Servicio[] = [
     texto: "Tarjetas y papelería comercial con tu identidad.",
     mensaje: "Hola, vi On Work en la web. Necesito tarjetería:",
   },
-  {
-    id: "fotografia",
-    titulo: "Fotografía de producto",
-    texto:
-      "Fotos de producto para tu catálogo, tu tienda online o tus redes. [confirmar alcance]",
-    mensaje: "Hola, vi On Work en la web. Necesito fotos de producto:",
-  },
 ];
 
 /**

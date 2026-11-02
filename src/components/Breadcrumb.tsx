@@ -34,7 +34,7 @@ export default function Breadcrumb({ items }: { items: Miga[] }) {
                 </span>
               ) : (
                 <>
-                  <Link href={m.href} className="cursor-target rounded-sm underline-offset-4 hover:text-ow-black hover:underline">
+                  <Link href={m.href} className="rounded-sm underline-offset-4 hover:text-ow-black hover:underline">
                     {m.label}
                   </Link>
                   <Icon name="flecha-derecha" size={14} />

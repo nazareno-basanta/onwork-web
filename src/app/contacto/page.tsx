@@ -65,7 +65,7 @@ export default function ContactoPage() {
                   href={SITE.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-target mt-2 inline-flex min-h-11 items-center gap-2 rounded-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+                  className="mt-2 inline-flex min-h-11 items-center gap-2 rounded-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
                 >
                   <Icon name="instagram" size={18} />
                   {SITE.instagramUsuario}

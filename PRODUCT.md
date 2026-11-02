@@ -30,7 +30,7 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 
 - **Los catálogos son una base, no el total.** On Work trabaja con un catálogo muy amplio: lo que no está en los siete PDF, lo busca y lo consigue para cada marca (búsquedas a medida). Ejemplos reales: indumentaria de nieve, fundas para gafas de ski, almohadas de viaje, frisbees, delantales, gorras trucker, mochilas.
 - **Desde 1990, empresa familiar.** Nació de la mano de dos amigos recién egresados del colegio que eligieron las ventas; empezó con serigrafía y fue sumando técnicas, productos y servicios.
-- **Oferta completa alrededor de la imagen de una marca:** merchandising, indumentaria, cartelería, tarjetería y fotografía de producto.
+- **Oferta completa alrededor de la imagen de una marca:** merchandising, indumentaria, cartelería y tarjetería. (La fotografía de producto no es un servicio de On Work: confirmado por Nachi el 2/11/2026.)
 - **A medida de cada pedido:** sin mínimos ni plazos fijos; atención personalizada.
 - Concepto de marca: **Impacto confiable** (servicio + impacto).
 
@@ -54,7 +54,6 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 - Datos editables en `src/data/` (catálogos, pedidos, clientes, preguntas) y datos centrales en `src/lib/site.ts`.
 - **Los textos los escribe Nachi.** Nada de texto inventado: lo que falta va como marcador `[dato]` y cualquier cambio a un texto existente se consulta.
 - Datos sin confirmar (no inventar, dejar marcados):
-  - Alcance de la fotografía de producto.
   - Técnicas vigentes (la lista sale de la web de Wix).
   - Formas de pago, horario de atención y si se publica el mail.
   - Hitos de la historia entre 1990 y 2026.
@@ -102,5 +101,5 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 - Contraste AA en todo texto.
 - `prefers-reduced-motion`: sin animación y con todo el contenido visible.
 - Navegación completa con teclado y foco visible.
-- Los efectos que dependen del mouse (cursor propio, inclinación, imán) se apagan en pantallas táctiles y no reemplazan el cursor de texto ni el foco.
+- Los efectos que dependen del mouse (inclinación, imán) se apagan en pantallas táctiles y no reemplazan el cursor de texto ni el foco.
 - Idioma: español de Argentina (`es-AR`).
