@@ -21,3 +21,9 @@ Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires),
 - Colores y tipografías: `src/app/globals.css`.
 - Páginas: `src/app/`. Componentes: `src/components/`.
 - Guía completa de uso: `README.md`.
+
+<!-- claude-reflect: learned rules (saved from the band; edit freely) -->
+## Learned rules
+- In this project, when the diana symbol appears in text, adjust its stroke weight to match the surrounding text weight instead of using the exact logo version.
+- Never alter the original brand isotipo; keep it unchanged and centered, placing decorative effects like shockwaves only in the background.
+<!-- end claude-reflect -->
