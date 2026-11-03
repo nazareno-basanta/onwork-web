@@ -3,6 +3,11 @@
   "configurations": [
     {
       "name": "onwork-web",
+      "url": "http://localhost:3005",
+      "port": 3005
+    },
+    {
+      "name": "onwork-web (iniciar)",
       "runtimeExecutable": "node",
       "runtimeArgs": ["node_modules/next/dist/bin/next", "dev", "-p", "3005"],
       "port": 3005
