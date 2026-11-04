@@ -10,44 +10,44 @@ colors:
   blanco: "#FFFFFF"
 typography:
   display:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2.6rem, 7.2vw, 6rem)"
     fontWeight: 800
     lineHeight: 1
     letterSpacing: "-0.025em"
   headline:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2rem, 5vw, 4rem)"
     fontWeight: 800
     lineHeight: 1
     letterSpacing: "-0.025em"
   title:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.75rem"
     fontWeight: 700
     lineHeight: 1.15
   body:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 500
     lineHeight: 1.55
   body-lead:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 500
     lineHeight: 1.55
   label:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 700
     letterSpacing: "0.14em"
   button:
-    fontFamily: "Montserrat Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 700
     letterSpacing: "0.025em"
   accent:
-    fontFamily: "Nunito Variable, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Nunito, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 700
 rounded:
   card: "24px"

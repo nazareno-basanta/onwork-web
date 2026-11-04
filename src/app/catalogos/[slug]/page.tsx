@@ -152,7 +152,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
         </section>
       )}
 
-      <Preguntas preguntas={PREGUNTAS_CATALOGO} className="border-t border-ow-black/10" />
+      <Preguntas preguntas={PREGUNTAS_CATALOGO} className="border-t border-ow-black/10" datosEstructurados />
 
       <Franja />
 

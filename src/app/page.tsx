@@ -26,7 +26,7 @@ export default function Home() {
       <PedidosInicio />
       <ComoTrabajamos />
       <Desde1990 />
-      <Preguntas className="border-t border-ow-black/10" />
+      <Preguntas className="border-t border-ow-black/10" datosEstructurados />
       <Cierre />
     </>
   );

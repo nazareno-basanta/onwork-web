@@ -21,6 +21,9 @@ export const SITE = {
   instagram: "https://www.instagram.com/onworkba",
   instagramUsuario: "@onworkba",
   ubicacion: "Buenos Aires · Envíos a toda la Argentina",
+  // Descripción del Inicio para Google (../Web OW/04-SEO-Y-REDIRECCIONES.md).
+  descripcion:
+    "Merchandising, indumentaria, cartelería y tarjetería con tu marca. Desde 1990. Buenos Aires · Envíos a toda la Argentina.",
 } as const;
 
 /** Arma el link de WhatsApp con un mensaje ya escrito. */

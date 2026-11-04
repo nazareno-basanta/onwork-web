@@ -42,6 +42,9 @@ const nextConfig: NextConfig = {
   // ../Web OW/04-SEO-Y-REDIRECCIONES.md y el sitemap de Wix del 30/10/2026
   // (pages-sitemap.xml y store-products-sitemap.xml).
   // /nosotros y /contacto mantienen la misma ruta.
+  // Revisado otra vez el 3/11/2026: el sitemap de Wix no sumó páginas, y
+  // "Identificadores", "Uso deportivo" y "Turismo" son solo títulos sobre
+  // imágenes en la home de Wix, sin página propia: no hay nada que redirigir.
   async redirects() {
     const a = (destination: string, ...sources: string[]) =>
       sources.map((source) => ({ source, destination, permanent: true }));

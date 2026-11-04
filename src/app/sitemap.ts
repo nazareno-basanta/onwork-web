@@ -3,32 +3,36 @@ import { CATALOGOS } from "@/data/catalogos";
 import { HAY_PEDIDOS, PEDIDOS } from "@/data/pedidos";
 import { SITE } from "@/lib/site";
 
+/**
+ * Última edición de cada página (año-mes-día). Google la usa para saber qué
+ * volver a leer: actualizala cuando cambies los textos de esa página.
+ * (Sin priority ni changeFrequency: Google los ignora.)
+ */
+const EDICION = {
+  inicio: "2026-11-03",
+  catalogos: "2026-11-03",
+  catalogo: "2026-11-03",
+  pdf: "2026-11-03",
+  pedidos: "2026-11-03",
+  nosotros: "2026-11-03",
+  contacto: "2026-11-03",
+};
+
 // Mapa del sitio para Google: todas las páginas, los catálogos, los pedidos
 // y los PDF que ya estén publicados.
 export default function sitemap(): MetadataRoute.Sitemap {
   const url = (path: string) => `${SITE.url}${path}`;
+  const pagina = (path: string, fecha: string) => ({ url: url(path), lastModified: fecha });
 
   return [
-    { url: url("/"), changeFrequency: "monthly", priority: 1 },
-    { url: url("/catalogos"), changeFrequency: "monthly", priority: 0.9 },
-    ...CATALOGOS.map((c) => ({
-      url: url(`/catalogos/${c.slug}`),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
-    ...CATALOGOS.filter((c) => c.pdf).map((c) => ({
-      url: url(c.pdf!),
-      changeFrequency: "yearly" as const,
-      priority: 0.5,
-    })),
+    pagina("/", EDICION.inicio),
+    pagina("/catalogos", EDICION.catalogos),
+    ...CATALOGOS.map((c) => pagina(`/catalogos/${c.slug}`, EDICION.catalogo)),
+    ...CATALOGOS.filter((c) => c.pdf).map((c) => pagina(c.pdf!, EDICION.pdf)),
     // /pedidos entra recién cuando hay pedidos cargados (antes no se indexa).
-    ...(HAY_PEDIDOS ? [{ url: url("/pedidos"), changeFrequency: "monthly" as const, priority: 0.7 }] : []),
-    ...PEDIDOS.map((p) => ({
-      url: url(`/pedidos/${p.slug}`),
-      changeFrequency: "yearly" as const,
-      priority: 0.6,
-    })),
-    { url: url("/nosotros"), changeFrequency: "yearly", priority: 0.6 },
-    { url: url("/contacto"), changeFrequency: "yearly", priority: 0.6 },
+    ...(HAY_PEDIDOS ? [pagina("/pedidos", EDICION.pedidos)] : []),
+    ...PEDIDOS.map((p) => pagina(`/pedidos/${p.slug}`, EDICION.pedidos)),
+    pagina("/nosotros", EDICION.nosotros),
+    pagina("/contacto", EDICION.contacto),
   ];
 }

@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
+import { organizacion, sitioWeb } from "@/lib/datosEstructurados";
 import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
+import JsonLd from "@/components/JsonLd";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -27,8 +29,7 @@ const nunito = Nunito({
 
 // Título y descripción del Inicio (../Web OW/04-SEO-Y-REDIRECCIONES.md).
 // Las demás páginas definen los suyos y se completan con " | On Work".
-const DESCRIPCION =
-  "Merchandising, indumentaria, cartelería y tarjetería con tu marca. Desde 1990. Buenos Aires · Envíos a toda la Argentina.";
+const DESCRIPCION = SITE.descripcion;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -52,29 +53,6 @@ export const viewport: Viewport = {
   themeColor: "#fffcef",
 };
 
-// Datos estructurados: le explican a Google qué es On Work.
-// El logo es un PNG sobre blanco de más de 112 px, como pide Google.
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: SITE.name,
-  url: SITE.url,
-  logo: `${SITE.url}/brand/logo-onwork-google.png`,
-  foundingDate: "1990",
-  description:
-    "Empresa familiar de comunicación y merchandising de Buenos Aires: merchandising, indumentaria, cartelería y tarjetería.",
-  areaServed: "AR",
-  address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
-  sameAs: [SITE.instagram, "https://www.facebook.com/onworkba"],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: SITE.whatsappVisible,
-    contactType: "sales",
-    areaServed: "AR",
-    availableLanguage: "es",
-  },
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-AR" className={`${montserrat.variable} ${nunito.variable} h-full`}>
@@ -92,12 +70,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <WhatsAppFloat />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        {/* Datos estructurados: le explican a Google qué es On Work. */}
+        <JsonLd datos={organizacion} />
+        <JsonLd datos={sitioWeb} />
       </body>
     </html>
   );

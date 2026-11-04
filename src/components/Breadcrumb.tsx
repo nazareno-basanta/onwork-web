@@ -1,6 +1,8 @@
 import Link from "next/link";
+import type { BreadcrumbList, WithContext } from "schema-dts";
 import { SITE } from "@/lib/site";
 import Icon from "./Icon";
+import JsonLd from "./JsonLd";
 
 export type Miga = { label: string; href: string };
 
@@ -10,7 +12,7 @@ export type Miga = { label: string; href: string };
  */
 export default function Breadcrumb({ items }: { items: Miga[] }) {
   const todas = [{ label: "Inicio", href: "/" }, ...items];
-  const jsonLd = {
+  const jsonLd: WithContext<BreadcrumbList> = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: todas.map((m, i) => ({
@@ -44,10 +46,7 @@ export default function Breadcrumb({ items }: { items: Miga[] }) {
           );
         })}
       </ol>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd datos={jsonLd} />
     </nav>
   );
 }
