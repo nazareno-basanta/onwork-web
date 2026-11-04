@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cn, mostrarMarcadores, sinViuda } from "@/lib/utils";
+import { cn, mostrarMarcadores, sinMarcadores, sinViuda } from "@/lib/utils";
 
 type Props = {
   children: string;
@@ -18,8 +18,10 @@ type Props = {
  * trabajamos (en la web publicada no). Ver "The Punto Final Rule" en DESIGN.md.
  */
 export default function Titular({ children, as: Tag = "h2", id, className, antes }: Props) {
-  const match = children.trim().match(/^([\s\S]*?)([.?!])(\s*\[[^\]]*\])?$/);
-  const cuerpo = match ? match[1] : children.trim();
+  // En la web publicada, primero se sacan los marcadores (ver sinMarcadores).
+  const texto = sinMarcadores(children).trim();
+  const match = texto.match(/^([\s\S]*?)([.?!])(\s*\[[^\]]*\])?$/);
+  const cuerpo = match ? match[1] : texto;
   const final = match ? match[2] : "";
   const marcador = match?.[3]?.trim();
 
