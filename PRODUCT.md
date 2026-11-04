@@ -36,7 +36,8 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 
 ## Operating Context
 
-- **Contacto solo por WhatsApp:** +54 9 11 3157-9402, lo atiende el asesor de ventas. Cada página tiene su propio mensaje precargado (ej.: `Hola, vi el catálogo [Nombre] en la web. Necesito:`). Sin formularios, sin widget de chat, sin carrito ni ecommerce.
+- **Contacto solo por WhatsApp:** +54 9 11 3157-9402, lo atiende el asesor de ventas. Cada página tiene su propio mensaje precargado, con la frase de Nachi: `Hola, vi en la web de On Work y me interesaría saber sobre…` (completada según la página). Sin formularios ni widget de chat.
+- **Presupuesto, no compra:** los productos de los catálogos se suman a un presupuesto (cantidad y color), sin precios ni pagos, y la web arma el mensaje de WhatsApp con la lista. Nunca "comprar" ni "carrito de compras".
 - **Sin precios en la web ni en los catálogos:** el precio depende de la cantidad y la personalización, y se cotiza por WhatsApp.
 - **Proceso:** el cliente cuenta su proyecto → On Work asesora y cotiza (producto y personalización según la marca, la cantidad y la fecha) → produce y envía a toda la Argentina.
 - **Antes de producir:** qué pasa con el logo (adaptación del archivo, prueba para aprobar) depende de cada pedido. No prometer un paso fijo.

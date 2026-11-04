@@ -96,3 +96,30 @@ export function buscar(texto: string) {
     return palabras.every((palabra) => donde.includes(palabra));
   });
 }
+
+/** Lo mínimo de cada producto para el presupuesto (se manda al navegador). */
+export type ProductoPresupuesto = {
+  codigo: string;
+  nombre: string;
+  slug: string;
+  catalogo: string;
+  catalogoTitulo: string;
+  foto: FotoProducto;
+  colores: string[];
+};
+
+// Títulos de los catálogos que todavía no están en catalogos.ts.
+const TITULOS_EXTRA: Record<string, string> = { paraguas: "Paraguas" };
+
+/** Todos los productos de la web, en el orden de la web, para el presupuesto. */
+export function indicePresupuesto(): ProductoPresupuesto[] {
+  return PRODUCTOS.map((p) => ({
+    codigo: p.codigo,
+    nombre: p.nombre,
+    slug: p.slug,
+    catalogo: p.catalogo,
+    catalogoTitulo: CATALOGOS.find((c) => c.slug === p.catalogo)?.titulo ?? TITULOS_EXTRA[p.catalogo] ?? p.catalogo,
+    foto: p.fotos[0],
+    colores: p.colores,
+  }));
+}

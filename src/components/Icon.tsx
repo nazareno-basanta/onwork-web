@@ -9,6 +9,11 @@ const PATHS = {
   "flecha-derecha": "M5 12h14M13 6l6 6-6 6",
   "flecha-izquierda": "M19 12H5M11 6l-6 6 6 6",
   mas: "M12 5v14M5 12h14",
+  menos: "M5 12h14",
+  // Tablilla con lista: el presupuesto.
+  presupuesto: "M9 3.5h6v3H9zM9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8.5 11.5h7M8.5 15.5h4.5",
+  "flecha-abajo": "M6 9l6 6 6-6",
+  check: "M5 12.5l4.5 4.5L19 7.5",
   documento: "M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4",
   cerrar: "M6 6l12 12M18 6 6 18",
   instagram:

@@ -247,6 +247,17 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 ### Preguntas frecuentes
 - Acordeón con `<details>` y `<summary>`, separado por filetes de 2 px en tinta. Pregunta en Montserrat 800; respuesta en body con el gris texto o con tinta al 75 %. El control es un círculo amarillo con un "+" en SVG que gira a "×" al abrirse. Las respuestas quedan en el HTML.
 
+### Presupuesto
+El "carrito" sin precios: se suma cada producto con cantidad y color, y se manda armado por WhatsApp (`src/components/presupuesto/`). Es una superficie para hacer una tarea: menos ruido, la marca en los detalles.
+- **Selector de cantidad:** cápsula outline de 2 px en tinta, "− número +". 44 px de alto; en pantallas táctiles, botones de 44 px. El número se escribe a mano, con las flechas suma o resta, y va de 1 a 99.999 (sin mínimo de pedido).
+- **Contador en el header:** en escritorio, pastilla outline "Presupuesto" de 44 px con el número en un círculo amarillo; el lugar del número queda siempre reservado, para que el header no se mueva. En el celular, botón redondo con el ícono de tablilla, solo cuando hay productos.
+- **Lista:** una fila por producto y color, separadas por filetes de 2 px: foto en marco blanco, pastilla amarilla con el código, nombre, color y cantidad. Se apila según el ancho de su columna, no de la pantalla.
+- **Panel de envío:** tarjeta crema suave fija al costado (en el celular, sin tarjeta y debajo de la lista): el campo "Otro", el resumen y la franja de consultas junto al botón amarillo de enviar. Sin efecto imán: el botón no se mueve al confirmar.
+- **Barras fijas del celular:** en tinta, abajo. En los catálogos, "Presupuesto · N productos · Ver" reemplaza al botón flotante de WhatsApp; en /presupuesto, "Enviar por WhatsApp" aparece solo cuando el botón del panel no está a la vista.
+- **Aviso al sumar:** pastilla tinta con borde crema de 2 px (así se separa del pie sin sombra), que se va sola. Sin modales.
+- **The Quitar Rule.** Las acciones que sacan algo (Quitar, Vaciar) van con subrayado tinta tenue; el subrayado amarillo queda para las que suman o resuelven (Sumar otro color, Copiar la lista, Ver presupuesto). Vaciar se confirma en el mismo lugar ("¿Vaciar? Sí · No") con el foco en "No".
+- **Animación:** una sola, el salto del número del contador al sumar.
+
 ### Logo (signature)
 - **Isotipo inalterable:** el isotipo (diana con signo) se usa tal cual el archivo original, solo y sin agregarle gráficas (la de arcos de la pág. 18 de Elementos es una pieza artística, no el isotipo). Las ondas u otros recursos van de fondo, separados de él (Nachi, 2/11/2026).
 - **Archivos:** siempre los originales de `public/brand/` (o convertidos desde `On Work/Elementos OW/` con `pdftocairo -svg`). Nunca se dibuja, se tipea ni se aproxima.

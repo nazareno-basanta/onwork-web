@@ -8,7 +8,11 @@ import { organizacion, sitioWeb } from "@/lib/datosEstructurados";
 import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
-import MedicionWhatsApp from "@/components/MedicionWhatsApp";
+import Medicion from "@/components/Medicion";
+import AvisoPresupuesto from "@/components/presupuesto/AvisoPresupuesto";
+import BarraPresupuesto from "@/components/presupuesto/BarraPresupuesto";
+import PresupuestoInicio from "@/components/presupuesto/PresupuestoInicio";
+import { PRODUCTOS } from "@/data/productos";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -78,10 +82,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <WhatsAppFloat />
+        {/* Presupuesto: códigos válidos, aviso al sumar y barra del celular. */}
+        <PresupuestoInicio codigos={PRODUCTOS.map((p) => p.codigo)} />
+        <AvisoPresupuesto />
+        <BarraPresupuesto />
         {/* Datos estructurados: le explican a Google qué es On Work. */}
         <JsonLd datos={organizacion} />
         <JsonLd datos={sitioWeb} />
-        {GA_ID && <MedicionWhatsApp />}
+        {GA_ID && <Medicion />}
         {/* Visitas y Core Web Vitals reales, desde Vercel (sin cookies). */}
         <Analytics />
         <SpeedInsights />
