@@ -55,16 +55,18 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 ## Cómo cargar lo que falta
 
 1. **Catálogos PDF**: copiar cada PDF a `public/catalogos/` con el nombre del catálogo (`drinkware.pdf`) y sumar `pdf: "/catalogos/drinkware.pdf"` en `src/data/catalogos.ts`. Para usar la portada real en vez de la armada, guardar la página 1 como `public/catalogos/portadas/drinkware.webp` y sumar `portada`.
-2. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`.
-3. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con un pedido cargado aparecen solos el carrusel del Inicio, la página del pedido y su lugar en el sitemap.
-4. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar, y se ve así en la web.
+2. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`. La franja de clientes muestra solo las marcas con logo; sin ninguna, no aparece en la web.
+3. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con el primer pedido cargado aparecen solos "Pedidos reales" en el menú y el pie, el carrusel del Inicio, la página del pedido y su lugar en el sitemap, y `/pedidos` se empieza a indexar.
+4. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar. Se ve en `npm run dev` y **no** en la web publicada (si un párrafo es todo marcador, no se muestra). Para ver la lista con archivo y línea: `npm run marcadores`.
+5. **Regalos de fin de año** (`/regalos-empresariales-fin-de-ano`): los textos van en `src/data/regalos.ts`. Mientras quede algún marcador la página no se publica; con todo completo aparece sola, en el sitemap y con su franja en `/catalogos`.
 
 ## Pendientes antes de publicar
 
 1. Los PDF, los logos de clientes y al menos 3 pedidos reales (ver arriba).
 2. Completar los marcadores de `src/data/` (secciones de catálogos, horario, pagos, hitos, técnicas).
 3. **Dominio**: confirmar que `url` en `src/lib/site.ts` sea el dominio final y elegir `onworkba.com` o `www.onworkba.com` en Vercel.
-4. **GA4**: falta el ID de medición para registrar los clics a WhatsApp y las descargas de PDF.
+4. **GA4**: crear la propiedad y cargar el ID (`G-…`) como `NEXT_PUBLIC_GA_ID` en Vercel (ver `.env.example`). Sin ID no se carga Google Analytics. Con ID se mide cada clic a WhatsApp (`whatsapp_click`) y GA4 mide solo las descargas de PDF.
+   En Vercel, activar también **Analytics** y **Speed Insights** en el proyecto (visitas y Core Web Vitals reales, sin cookies).
 5. **Tipografía Dunbar Tall**: hoy se usan Montserrat y Nunito. Dunbar Tall es solo para merch propio.
 
 ## Publicar en Vercel
@@ -73,5 +75,6 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 2. En https://vercel.com crear un proyecto nuevo e importar ese repositorio (Vercel detecta Next.js solo).
 3. Cada vez que se suban cambios a GitHub, el sitio se actualiza solo.
 4. Después de publicar: `curl -I https://onworkba.com/catalogos/drinkware.pdf` tiene que mostrar el encabezado `Link` canonical, y en Search Console hay que mandar el sitemap.
+5. La dirección `onwork-web.vercel.app` (y las vistas previas `*.vercel.app`) responde con `X-Robots-Tag: noindex`, para que Google no la indexe como copia del sitio; en `onworkba.com` no aparece.
 
 > Nota: el plan gratuito de Vercel (Hobby) está pensado para uso no comercial. Para el sitio de una empresa conviene revisar sus condiciones vigentes o usar el plan Pro.
