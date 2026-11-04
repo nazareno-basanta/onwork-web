@@ -1,12 +1,29 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/nunito";
+import { Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+
+// Tipografías de marca, servidas desde el propio sitio (next/font): sin pedidos
+// a Google al abrir la página y con una fuente de reemplazo ajustada a la misma
+// medida, así el titular no se mueve cuando termina de cargar.
+// Montserrat (titulares y textos) se precarga; Nunito es acompañamiento puntual.
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
+  variable: "--font-montserrat",
+});
+const nunito = Nunito({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
+  preload: false,
+  variable: "--font-nunito",
+});
 
 // Título y descripción del Inicio (../Web OW/04-SEO-Y-REDIRECCIONES.md).
 // Las demás páginas definen los suyos y se completan con " | On Work".
@@ -60,7 +77,7 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-AR" className="h-full">
+    <html lang="es-AR" className={`${montserrat.variable} ${nunito.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         <a
           href="#contenido"

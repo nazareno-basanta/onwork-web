@@ -22,10 +22,11 @@
   --color-ow-gray: var(--ow-gray);
 
   /* Montserrat en todo (titulares 800, nombres 700, textos 500).
-     Nunito solo como acompañamiento puntual: font-accent. */
-  --font-display: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-accent: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+     Nunito solo como acompañamiento puntual: font-accent.
+     Las cargan next/font en layout.tsx (--font-montserrat y --font-nunito). */
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 
   /* Relieve suave: sombras bajas y difusas en tono tinta (ver DESIGN.md).
      Van debajo de tarjetas, portadas y fotos; nunca en texto ni en botones. */

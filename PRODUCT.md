@@ -48,7 +48,7 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 
 ## Capabilities and Constraints
 
-- Proyecto existente: Next.js 16 + React 19 + Tailwind 4, con `motion`, `gsap` y `lenis`. Se publica en Vercel.
+- Proyecto existente: Next.js 16 + React 19 + Tailwind 4, con `motion` y `lenis` (GSAP se sacó en noviembre de 2026: no lo usaba ninguna animación). Se publica en Vercel.
 - Menú de cinco entradas: Inicio · Nosotros · Catálogos · Pedidos reales · Contacto. Las páginas de cada catálogo y de cada pedido van fuera del menú.
 - `/merchandising` se elimina y redirige a `/`: la home es la página de merchandising.
 - Datos editables en `src/data/` (catálogos, pedidos, clientes, preguntas) y datos centrales en `src/lib/site.ts`.
