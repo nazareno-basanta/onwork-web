@@ -7,7 +7,7 @@ import WhatsAppLink from "@/components/WhatsAppLink";
 import Preguntas from "@/components/sections/Preguntas";
 import { CONTACTO } from "@/data/contacto";
 import { MENSAJE_GENERAL, SITE } from "@/lib/site";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: CONTACTO.seo.titulo,
@@ -27,7 +27,7 @@ export default function ContactoPage() {
             <Titular as="h1" className="text-[clamp(2.4rem,6.4vw,5.25rem)]">
               {CONTACTO.h1}
             </Titular>
-            <p className="mt-7 text-lg leading-relaxed text-ow-black/80 md:text-xl">{sinViuda(CONTACTO.texto)}</p>
+            <p className="mt-7 text-lg leading-relaxed text-ow-black/80 md:text-xl">{textoWeb(CONTACTO.texto)}</p>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
               <WhatsAppLink tone="yellow" message={MENSAJE_GENERAL} magnetic className="px-8 py-4 text-base">
                 {CONTACTO.boton}
@@ -49,13 +49,15 @@ export default function ContactoPage() {
               </ul>
             </div>
             <div className="space-y-8">
-              <div>
-                <h2 className="font-display text-lg font-bold">{CONTACTO.horarioTitulo}</h2>
-                <p className="mt-2 text-ow-black/80">{CONTACTO.horario}</p>
-              </div>
+              {textoWeb(CONTACTO.horario) && (
+                <div>
+                  <h2 className="font-display text-lg font-bold">{CONTACTO.horarioTitulo}</h2>
+                  <p className="mt-2 text-ow-black/80">{textoWeb(CONTACTO.horario)}</p>
+                </div>
+              )}
               <div>
                 <h2 className="font-display text-lg font-bold">{CONTACTO.pagosTitulo}</h2>
-                <p className="mt-2 text-ow-black/80">{sinViuda(CONTACTO.pagos)}</p>
+                <p className="mt-2 text-ow-black/80">{textoWeb(CONTACTO.pagos)}</p>
               </div>
             </div>
             <div className="space-y-8">
@@ -70,7 +72,7 @@ export default function ContactoPage() {
                   <Icon name="instagram" size={18} />
                   {SITE.instagramUsuario}
                 </a>
-                <p className="text-ow-black/80">{CONTACTO.mail}</p>
+                {textoWeb(CONTACTO.mail) && <p className="text-ow-black/80">{textoWeb(CONTACTO.mail)}</p>}
               </div>
               <p className="font-semibold text-ow-gray">{SITE.ubicacion}</p>
             </div>

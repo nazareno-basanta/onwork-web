@@ -3,7 +3,7 @@ import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import Marquee from "@/components/ui/Marquee";
 import { BUSQUEDAS } from "@/data/servicios";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /**
  * "¿No está en el catálogo? Lo buscamos." Una cinta amarilla con productos
@@ -26,7 +26,7 @@ export default function Busquedas({
           {titulo}
         </Titular>
         <div>
-          <p className="text-lg text-ow-black/80">{sinViuda(texto)}</p>
+          <p className="text-lg text-ow-black/80">{textoWeb(texto)}</p>
           <WhatsAppLink tone="black" message={BUSQUEDAS.mensaje} className="mt-7">
             {BUSQUEDAS.boton}
           </WhatsAppLink>

@@ -1,14 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CATALOGOS } from "@/data/catalogos";
-import { SITE, whatsappUrl, MENSAJE_GENERAL } from "@/lib/site";
+import { NAV, SITE, whatsappUrl, MENSAJE_GENERAL } from "@/lib/site";
 import Icon from "./Icon";
 
-const ON_WORK = [
-  { href: "/nosotros", label: "Nosotros" },
-  { href: "/pedidos", label: "Pedidos reales" },
-  { href: "/contacto", label: "Contacto" },
-];
+// Los mismos links del menú principal, sin Inicio ni Catálogos (que tiene su columna).
+const ON_WORK = NAV.filter((item) => item.href !== "/" && item.href !== "/catalogos");
 
 const link = "inline-flex min-h-11 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
 

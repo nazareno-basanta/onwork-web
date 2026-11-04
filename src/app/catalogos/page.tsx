@@ -6,7 +6,7 @@ import Titular from "@/components/Titular";
 import Busquedas from "@/components/sections/Busquedas";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS, CATALOGOS_HUB } from "@/data/catalogos";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: CATALOGOS_HUB.seo.titulo,
@@ -26,7 +26,7 @@ export default function CatalogosPage() {
               {CATALOGOS_HUB.h1}
             </Titular>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ow-black/80 md:text-xl">
-              {sinViuda(CATALOGOS_HUB.bajada)}
+              {textoWeb(CATALOGOS_HUB.bajada)}
             </p>
           </div>
 

@@ -15,7 +15,7 @@ import { CATALOGOS, CATALOGO_PAGINA, mensajePedirPdf } from "@/data/catalogos";
 import { PEDIDOS } from "@/data/pedidos";
 import { PREGUNTAS } from "@/data/preguntas";
 import { btn } from "@/lib/ui";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /** Una sola plantilla para los siete catálogos, generada desde src/data/catalogos.ts. */
 export function generateStaticParams() {
@@ -72,7 +72,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
                 {catalogo.h1}
               </Titular>
               <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ow-black/80 md:text-xl">
-                {sinViuda(catalogo.bajada)}
+                {textoWeb(catalogo.bajada)}
               </p>
               <p className="mt-5 text-sm font-semibold text-ow-gray">
                 Catálogo {catalogo.titulo} {catalogo.anio} · {catalogo.paginas} páginas · {catalogo.modelos} modelos
@@ -112,7 +112,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
                     {paginas(s.paginas)}
                   </span>
                 </div>
-                {s.texto && <p className="mt-2 max-w-md text-ow-black/80">{sinViuda(s.texto)}</p>}
+                {textoWeb(s.texto) && <p className="mt-2 max-w-md text-ow-black/80">{textoWeb(s.texto)}</p>}
               </li>
             ))}
           </ol>
@@ -126,7 +126,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
               <Titular id="kit" className="text-[clamp(1.9rem,4vw,3.25rem)]">
                 {catalogo.kit.titulo}
               </Titular>
-              <p className="mt-4 text-lg text-ow-black/80">{catalogo.kit.texto}</p>
+              <p className="mt-4 text-lg text-ow-black/80">{textoWeb(catalogo.kit.texto)}</p>
             </div>
             <WhatsAppLink tone="black" message={catalogo.mensaje}>
               {CATALOGO_PAGINA.botonKit}

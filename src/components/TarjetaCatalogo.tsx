@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { mensajePedirPdf, type Catalogo } from "@/data/catalogos";
 import { whatsappUrl } from "@/lib/site";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 import Icon from "./Icon";
 import PortadaCatalogo from "./PortadaCatalogo";
 import TiltedCard from "./ui/TiltedCard";
@@ -27,7 +27,7 @@ export default function TarjetaCatalogo({ catalogo, priority }: { catalogo: Cata
       </Link>
 
       <h3 className="mt-5 font-display text-lg leading-tight font-bold sm:mt-6 sm:text-2xl">{catalogo.titulo}</h3>
-      <p className="mt-2 text-sm text-ow-black/80 sm:text-base">{sinViuda(catalogo.tarjeta)}</p>
+      <p className="mt-2 text-sm text-ow-black/80 sm:text-base">{textoWeb(catalogo.tarjeta)}</p>
       <p className="mt-2 text-xs text-ow-gray sm:text-sm">
         {catalogo.paginas} páginas · {catalogo.modelos} modelos · PDF · edición {catalogo.anio}
       </p>

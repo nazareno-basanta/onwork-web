@@ -46,6 +46,13 @@ export const mensajePedido = (cliente: string) =>
 
 export const PEDIDOS: Pedido[] = [];
 
+/**
+ * Mientras no haya pedidos, "Pedidos reales" no aparece en el menú, el pie, el
+ * Inicio ni el sitemap, y /pedidos no se indexa. Todo vuelve solo al cargar el
+ * primero.
+ */
+export const HAY_PEDIDOS = PEDIDOS.length > 0;
+
 /** Textos de /pedidos y de la página de cada pedido (03-CONTENIDO-PAGINAS.md). */
 export const PEDIDOS_PAGINA = {
   h1: "Pedidos reales.",

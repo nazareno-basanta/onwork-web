@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import { CIERRE } from "@/data/inicio";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 type Props = {
   titulo?: string;
@@ -28,7 +28,7 @@ export default function Cierre({ titulo = CIERRE.titulo, texto = CIERRE.texto, m
           <Titular id="cierre-titulo" className="max-w-3xl text-[clamp(2.4rem,6.5vw,5.25rem)]">
             {titulo}
           </Titular>
-          <p className="mt-6 max-w-lg text-lg text-white/75">{sinViuda(texto)}</p>
+          <p className="mt-6 max-w-lg text-lg text-white/75">{textoWeb(texto)}</p>
           <div className="mt-10">
             <WhatsAppLink tone="yellow" message={mensaje} magnetic className="px-8 py-4 text-base">
               {CIERRE.boton}

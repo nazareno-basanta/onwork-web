@@ -2,7 +2,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import Titular from "@/components/Titular";
 import { DESDE_1990 } from "@/data/inicio";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /** "Una empresa familiar, desde 1990." con link a Nosotros. */
 export default function Desde1990() {
@@ -13,7 +13,7 @@ export default function Desde1990() {
           {DESDE_1990.titulo}
         </Titular>
         <div>
-          <p className="text-lg text-ow-black/80">{sinViuda(DESDE_1990.texto)}</p>
+          <p className="text-lg text-ow-black/80">{textoWeb(DESDE_1990.texto)}</p>
           <Link
             href="/nosotros"
             className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm font-display font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"

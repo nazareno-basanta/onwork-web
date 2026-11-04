@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { CATALOGOS } from "@/data/catalogos";
-import { PEDIDOS } from "@/data/pedidos";
+import { HAY_PEDIDOS, PEDIDOS } from "@/data/pedidos";
 import { SITE } from "@/lib/site";
 
 // Mapa del sitio para Google: todas las páginas, los catálogos, los pedidos
@@ -21,7 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.5,
     })),
-    { url: url("/pedidos"), changeFrequency: "monthly", priority: 0.7 },
+    // /pedidos entra recién cuando hay pedidos cargados (antes no se indexa).
+    ...(HAY_PEDIDOS ? [{ url: url("/pedidos"), changeFrequency: "monthly" as const, priority: 0.7 }] : []),
     ...PEDIDOS.map((p) => ({
       url: url(`/pedidos/${p.slug}`),
       changeFrequency: "yearly" as const,

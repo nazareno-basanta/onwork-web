@@ -3,6 +3,8 @@
  * (nombre, dominio, WhatsApp, navegación) vive acá: se cambia una vez y se
  * actualiza en todo el sitio.
  */
+import { HAY_PEDIDOS } from "@/data/pedidos";
+
 export const SITE = {
   name: "On Work",
   tagline: "Comunicación & merchandising",
@@ -30,10 +32,11 @@ export function whatsappUrl(message?: string) {
 /** Mensaje que llega precargado cuando no hay uno propio de la página. */
 export const MENSAJE_GENERAL = "Hola, vi On Work en la web. Necesito:";
 
+/** Menú principal. "Pedidos reales" aparece solo cuando hay pedidos cargados. */
 export const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/catalogos", label: "Catálogos" },
   { href: "/pedidos", label: "Pedidos reales" },
   { href: "/contacto", label: "Contacto" },
-] as const;
+].filter((item) => item.href !== "/pedidos" || HAY_PEDIDOS);

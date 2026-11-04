@@ -5,7 +5,7 @@ import CardsCarousel from "@/components/ui/CardsCarousel";
 import { PEDIDOS_INICIO } from "@/data/inicio";
 import { PEDIDOS } from "@/data/pedidos";
 import { btn } from "@/lib/ui";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /**
  * Pedidos reales en carrusel (3 a 6). Si todavía no hay pedidos cargados en
@@ -21,7 +21,7 @@ export default function PedidosInicio() {
           <Titular id="pedidos-inicio" className="text-[clamp(2.1rem,4.8vw,4rem)]">
             {PEDIDOS_INICIO.titulo}
           </Titular>
-          <p className="mt-6 text-lg text-ow-black/80">{sinViuda(PEDIDOS_INICIO.bajada)}</p>
+          <p className="mt-6 text-lg text-ow-black/80">{textoWeb(PEDIDOS_INICIO.bajada)}</p>
         </div>
         <div className="mt-12">
           <CardsCarousel label="Pedidos reales">

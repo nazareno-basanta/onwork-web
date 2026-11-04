@@ -52,7 +52,9 @@ export default function StickyScroll({ pasos, className }: { pasos: Paso[]; clas
             data-paso={i}
             className={cn(
               'transition-opacity duration-500 ease-ow lg:flex lg:min-h-[70vh] lg:flex-col lg:justify-center',
-              activo === i ? 'lg:opacity-100' : 'lg:opacity-35',
+              // El paso inactivo se atenúa, pero sigue pasando contraste AA:
+              // texto 4,6:1 y números 3,7:1 sobre tinta (antes, con 35 %, no).
+              activo === i ? 'lg:opacity-100' : 'lg:opacity-55',
             )}
           >
             <p className="font-display text-6xl font-extrabold leading-none text-ow-yellow md:text-7xl">
@@ -61,7 +63,7 @@ export default function StickyScroll({ pasos, className }: { pasos: Paso[]; clas
             <Titular as="h3" className="mt-5 text-[clamp(1.6rem,3vw,2.4rem)] !leading-tight">
               {paso.titulo}
             </Titular>
-            <p className="mt-3 max-w-md text-lg text-white/75">{paso.texto}</p>
+            <p className="mt-3 max-w-md text-lg text-white/85">{paso.texto}</p>
             <div className="mt-8 lg:hidden" aria-hidden>
               {paso.panel}
             </div>

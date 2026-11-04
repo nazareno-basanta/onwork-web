@@ -18,11 +18,23 @@ const nextConfig: NextConfig = {
   // Cada PDF le dice a Google cuál es su página (la del catálogo), así no
   // compiten entre sí. Verificar después de publicar con:
   // curl -I https://onworkba.com/catalogos/drinkware.pdf
+  //
+  // Además, la dirección de Vercel (onwork-web.vercel.app y las vistas previas
+  // *.vercel.app) le pide a Google que no la indexe: si no, duplicaría todo el
+  // sitio. En onworkba.com no aparece. Verificar con:
+  // curl -I -H "Host: onwork-web.vercel.app" http://localhost:3000/
   async headers() {
-    return CATALOGOS_PDF.map((slug) => ({
-      source: `/catalogos/${slug}.pdf`,
-      headers: [{ key: "Link", value: `<https://onworkba.com/catalogos/${slug}>; rel="canonical"` }],
-    }));
+    return [
+      ...CATALOGOS_PDF.map((slug) => ({
+        source: `/catalogos/${slug}.pdf`,
+        headers: [{ key: "Link", value: `<https://onworkba.com/catalogos/${slug}>; rel="canonical"` }],
+      })),
+      {
+        source: "/:path*",
+        has: [{ type: "host" as const, value: "(?:.+\\.)?vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
   },
 
   // Redirecciones permanentes desde las URLs de la web de Wix (y desde

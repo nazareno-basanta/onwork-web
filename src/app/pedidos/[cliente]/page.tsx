@@ -8,7 +8,7 @@ import Titular from "@/components/Titular";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS } from "@/data/catalogos";
 import { PEDIDOS, PEDIDOS_PAGINA, mensajePedido } from "@/data/pedidos";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /*
  * Una plantilla para todos los pedidos. Next.js (con Cache Components) pide al
@@ -72,11 +72,11 @@ export default async function PedidoPage({ params }: PageProps<"/pedidos/[client
         <div className="container-ow grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
             <Titular className="text-[clamp(1.7rem,3.4vw,2.6rem)]">{PEDIDOS_PAGINA.necesitaba}</Titular>
-            <p className="mt-5 text-lg text-ow-black/80">{sinViuda(pedido.necesitaba)}</p>
+            <p className="mt-5 text-lg text-ow-black/80">{textoWeb(pedido.necesitaba)}</p>
           </div>
           <div>
             <Titular className="text-[clamp(1.7rem,3.4vw,2.6rem)]">{PEDIDOS_PAGINA.hicimos}</Titular>
-            <p className="mt-5 text-lg text-ow-black/80">{sinViuda(pedido.hicimos)}</p>
+            <p className="mt-5 text-lg text-ow-black/80">{textoWeb(pedido.hicimos)}</p>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import Titular from "@/components/Titular";
 import { CATALOGOS } from "@/data/catalogos";
 import { CATALOGOS_INICIO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /** Los siete catálogos como objetos: la portada se inclina con el mouse. */
 export default function CatalogosInicio() {
@@ -15,7 +15,7 @@ export default function CatalogosInicio() {
           <Titular id="catalogos-inicio" className="text-[clamp(2.1rem,4.8vw,4rem)]">
             {CATALOGOS_INICIO.titulo}
           </Titular>
-          <p className="mt-6 text-lg text-ow-black/80">{sinViuda(CATALOGOS_INICIO.bajada)}</p>
+          <p className="mt-6 text-lg text-ow-black/80">{textoWeb(CATALOGOS_INICIO.bajada)}</p>
         </div>
 
         <ul className="mt-14 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 sm:gap-y-14 lg:grid-cols-4">

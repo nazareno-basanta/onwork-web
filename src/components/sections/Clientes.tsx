@@ -1,5 +1,6 @@
 import Marquee from "@/components/ui/Marquee";
 import { CLIENTES, CLIENTES_ROTULO, type Cliente } from "@/data/clientes";
+import { mostrarMarcadores } from "@/lib/utils";
 
 function Logo({ cliente }: { cliente: Cliente }) {
   return (
@@ -25,11 +26,19 @@ function Logo({ cliente }: { cliente: Cliente }) {
  * Franja de logos en loop (Magic UI · Marquee). Los logos van en una sola
  * tinta y recuperan su color al pasar el mouse; se frena al pasar el mouse.
  * Dos filas en sentidos opuestos solo si hay más de 12 marcas.
+ *
+ * Solo se muestran las marcas que ya tienen logo. Mientras no haya ninguna,
+ * la franja no aparece en la web publicada (mientras trabajamos se ven los
+ * marcadores, para saber dónde van).
  */
 export default function Clientes() {
-  const dosFilas = CLIENTES.length > 12;
-  const mitad = Math.ceil(CLIENTES.length / 2);
-  const filas = dosFilas ? [CLIENTES.slice(0, mitad), CLIENTES.slice(mitad)] : [CLIENTES];
+  const conLogo = CLIENTES.filter((c) => c.logo);
+  const marcas = conLogo.length > 0 ? conLogo : mostrarMarcadores ? CLIENTES : [];
+  if (marcas.length === 0) return null;
+
+  const dosFilas = marcas.length > 12;
+  const mitad = Math.ceil(marcas.length / 2);
+  const filas = dosFilas ? [marcas.slice(0, mitad), marcas.slice(mitad)] : [marcas];
 
   return (
     <section aria-label={CLIENTES_ROTULO} className="border-y border-ow-black/10 py-10 md:py-14">

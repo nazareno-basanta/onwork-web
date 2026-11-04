@@ -4,14 +4,17 @@ import TarjetaPedido from "@/components/TarjetaPedido";
 import Titular from "@/components/Titular";
 import Busquedas from "@/components/sections/Busquedas";
 import Cierre from "@/components/sections/Cierre";
-import { PEDIDOS, PEDIDOS_PAGINA } from "@/data/pedidos";
-import { sinViuda } from "@/lib/utils";
+import { HAY_PEDIDOS, PEDIDOS, PEDIDOS_PAGINA } from "@/data/pedidos";
+import { mostrarMarcadores, textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: PEDIDOS_PAGINA.seo.titulo,
   description: PEDIDOS_PAGINA.seo.descripcion,
   alternates: { canonical: "/pedidos" },
   openGraph: { url: "/pedidos" },
+  // Mientras no haya pedidos cargados, Google no indexa la página (sí sigue
+  // sus links). Se indexa sola cuando se suma el primero.
+  ...(!HAY_PEDIDOS && { robots: { index: false, follow: true } }),
 };
 
 export default function PedidosPage() {
@@ -25,7 +28,7 @@ export default function PedidosPage() {
               {PEDIDOS_PAGINA.h1}
             </Titular>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ow-black/80 md:text-xl">
-              {sinViuda(PEDIDOS_PAGINA.bajada)}
+              {textoWeb(PEDIDOS_PAGINA.bajada)}
             </p>
           </div>
 
@@ -38,9 +41,11 @@ export default function PedidosPage() {
               ))}
             </ul>
           ) : (
-            <p className="mt-16 rounded-3xl border-2 border-dashed border-ow-black/30 p-8 font-display font-bold text-ow-gray">
-              {PEDIDOS_PAGINA.vacio}
-            </p>
+            mostrarMarcadores && (
+              <p className="mt-16 rounded-3xl border-2 border-dashed border-ow-black/30 p-8 font-display font-bold text-ow-gray">
+                {PEDIDOS_PAGINA.vacio}
+              </p>
+            )
           )}
         </div>
       </section>

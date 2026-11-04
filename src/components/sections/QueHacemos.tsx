@@ -3,7 +3,7 @@ import Titular from "@/components/Titular";
 import { QUE_HACEMOS } from "@/data/inicio";
 import { SERVICIOS } from "@/data/servicios";
 import { MENSAJE_GENERAL, whatsappUrl } from "@/lib/site";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 /**
  * "Qué hacemos" como índice, no como cinco tarjetas iguales: el titular queda
@@ -33,7 +33,7 @@ export default function QueHacemos() {
                   <span className="block font-display text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight font-bold">
                     {s.titulo}
                   </span>
-                  <span className="mt-2 block max-w-lg text-ow-black/75">{sinViuda(s.texto)}</span>
+                  <span className="mt-2 block max-w-lg text-ow-black/75">{textoWeb(s.texto)}</span>
                 </span>
                 <span
                   aria-hidden

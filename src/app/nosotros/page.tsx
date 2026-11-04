@@ -6,9 +6,10 @@ import Titular from "@/components/Titular";
 import Cierre from "@/components/sections/Cierre";
 import Clientes from "@/components/sections/Clientes";
 import { NOSOTROS, QUE_HACEMOS_NOSOTROS, TECNICAS, VALORES } from "@/data/nosotros";
+import { HAY_PEDIDOS } from "@/data/pedidos";
 import { SERVICIOS } from "@/data/servicios";
 import { btn } from "@/lib/ui";
-import { sinViuda } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: NOSOTROS.seo.titulo,
@@ -32,9 +33,9 @@ export default function NosotrosPage() {
             <div>
               <Trio className="h-9 w-auto" />
               <p className="mt-6 font-display text-xl leading-snug font-bold md:text-2xl">
-                {sinViuda(NOSOTROS.bajada)}
+                {textoWeb(NOSOTROS.bajada)}
               </p>
-              <p className="mt-5 text-lg leading-relaxed text-ow-black/80">{sinViuda(NOSOTROS.historia)}</p>
+              <p className="mt-5 text-lg leading-relaxed text-ow-black/80">{textoWeb(NOSOTROS.historia)}</p>
             </div>
           </div>
         </div>
@@ -51,7 +52,7 @@ export default function NosotrosPage() {
             {VALORES.items.map((v) => (
               <li key={v.titulo} className="border-b-2 border-ow-black py-7">
                 <h3 className="font-display text-xl font-bold md:text-2xl">{v.titulo}</h3>
-                <p className="mt-2 max-w-md text-ow-black/80">{sinViuda(v.texto)}</p>
+                <p className="mt-2 max-w-md text-ow-black/80">{textoWeb(v.texto)}</p>
               </li>
             ))}
           </ul>
@@ -63,7 +64,9 @@ export default function NosotrosPage() {
           <Titular id="tecnicas" className={tituloSeccion}>
             {TECNICAS.titulo}
           </Titular>
-          <p className="mt-4 text-sm font-semibold text-ow-gray">{TECNICAS.nota}</p>
+          {textoWeb(TECNICAS.nota) && (
+            <p className="mt-4 text-sm font-semibold text-ow-gray">{textoWeb(TECNICAS.nota)}</p>
+          )}
           <ul className="mt-10 flex flex-wrap gap-3">
             {TECNICAS.lista.map((t) => (
               <li
@@ -87,16 +90,18 @@ export default function NosotrosPage() {
               <Link href="/catalogos" className={btn.black}>
                 {QUE_HACEMOS_NOSOTROS.botonCatalogos}
               </Link>
-              <Link href="/pedidos" className={btn.line}>
-                {QUE_HACEMOS_NOSOTROS.botonPedidos}
-              </Link>
+              {HAY_PEDIDOS && (
+                <Link href="/pedidos" className={btn.line}>
+                  {QUE_HACEMOS_NOSOTROS.botonPedidos}
+                </Link>
+              )}
             </div>
           </div>
           <ul className="border-t-2 border-ow-black">
             {SERVICIOS.map((s) => (
               <li key={s.id} className="border-b-2 border-ow-black py-6">
                 <h3 className="font-display text-xl font-bold">{s.titulo}</h3>
-                <p className="mt-1.5 text-ow-black/80">{sinViuda(s.texto)}</p>
+                <p className="mt-1.5 text-ow-black/80">{textoWeb(s.texto)}</p>
               </li>
             ))}
           </ul>
