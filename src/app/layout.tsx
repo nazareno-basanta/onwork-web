@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Nunito } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { organizacion, sitioWeb } from "@/lib/datosEstructurados";
 import { SITE } from "@/lib/site";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
+import MedicionWhatsApp from "@/components/MedicionWhatsApp";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -26,6 +30,10 @@ const nunito = Nunito({
   preload: false,
   variable: "--font-nunito",
 });
+
+// Google Analytics 4: se carga solo si está el ID (NEXT_PUBLIC_GA_ID en Vercel,
+// ver .env.example). Sin ID, la web no carga nada de Google.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 // Título y descripción del Inicio (../Web OW/04-SEO-Y-REDIRECCIONES.md).
 // Las demás páginas definen los suyos y se completan con " | On Work".
@@ -73,7 +81,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Datos estructurados: le explican a Google qué es On Work. */}
         <JsonLd datos={organizacion} />
         <JsonLd datos={sitioWeb} />
+        {GA_ID && <MedicionWhatsApp />}
+        {/* Visitas y Core Web Vitals reales, desde Vercel (sin cookies). */}
+        <Analytics />
+        <SpeedInsights />
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
