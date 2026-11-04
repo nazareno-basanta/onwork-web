@@ -58,7 +58,7 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
   - Formas de pago, horario de atención y si se publica el mail.
   - Hitos de la historia entre 1990 y 2026.
   - Qué PDF de Oficina se publica (completo o "-selection").
-  - Si se hace la página de temporada `/regalos-empresariales-fin-de-ano`.
+  - (La página de temporada `/regalos-empresariales-fin-de-ano` no se hace: decisión de Nachi, 4/11/2026.)
 
 ## Brand Commitments
 

@@ -16,6 +16,8 @@
  * (sets materos), Abertec (taza mágica), cliente patagónico (indumentaria de
  * nieve y fundas para gafas de ski).
  */
+import { mensajeWeb } from "@/lib/mensajes";
+
 export type Pedido = {
   slug: string;
   /** Nombre del cliente, como se escribe. */
@@ -42,7 +44,7 @@ export type Pedido = {
 };
 
 export const mensajePedido = (cliente: string) =>
-  `Hola, vi el pedido de ${cliente} en la web. Necesito:`;
+  mensajeWeb(`el pedido de ${cliente}`);
 
 export const PEDIDOS: Pedido[] = [];
 

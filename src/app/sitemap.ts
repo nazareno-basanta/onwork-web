@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { CATALOGOS } from "@/data/catalogos";
 import { HAY_PEDIDOS, PEDIDOS } from "@/data/pedidos";
-import { REGALOS_LISTA } from "@/data/regalos";
 import { SITE } from "@/lib/site";
 
 /**
@@ -17,7 +16,6 @@ const EDICION = {
   pedidos: "2026-11-03",
   nosotros: "2026-11-03",
   contacto: "2026-11-03",
-  regalos: "2026-11-03",
 };
 
 // Mapa del sitio para Google: todas las páginas, los catálogos, los pedidos
@@ -31,8 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pagina("/catalogos", EDICION.catalogos),
     ...CATALOGOS.map((c) => pagina(`/catalogos/${c.slug}`, EDICION.catalogo)),
     ...CATALOGOS.filter((c) => c.pdf).map((c) => pagina(c.pdf!, EDICION.pdf)),
-    // Regalos de fin de año entra recién cuando tiene todos sus textos.
-    ...(REGALOS_LISTA ? [pagina("/regalos-empresariales-fin-de-ano", EDICION.regalos)] : []),
     // /pedidos entra recién cuando hay pedidos cargados (antes no se indexa).
     ...(HAY_PEDIDOS ? [pagina("/pedidos", EDICION.pedidos)] : []),
     ...PEDIDOS.map((p) => pagina(`/pedidos/${p.slug}`, EDICION.pedidos)),

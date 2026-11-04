@@ -14,6 +14,8 @@
  * ⚠️ Antes de publicar un PDF, revisá que no tenga precios internos ni códigos
  * de proveedor.
  */
+import { mensajeWeb } from "@/lib/mensajes";
+
 export type SeccionCatalogo = {
   nombre: string;
   /** Páginas del PDF donde está la sección, como se muestran: "03" o "04–06". */
@@ -48,7 +50,7 @@ export type Catalogo = {
 };
 
 const mensaje = (titulo: string) =>
-  `Hola, vi el catálogo ${titulo} en la web. Necesito:`;
+  mensajeWeb(`el catálogo ${titulo}`);
 
 export const CATALOGOS: Catalogo[] = [
   {
@@ -117,7 +119,7 @@ export const CATALOGOS: Catalogo[] = [
     modelos: 35,
     secciones: [
       {
-        nombre: "Línea Lanín",
+        nombre: "Línea Gardel",
         paginas: "03",
         texto: "Plata, color, blanco y con puntero táctil. [2 líneas por sección: completar]",
       },

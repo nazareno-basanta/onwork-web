@@ -4,6 +4,7 @@
  * actualiza en todo el sitio.
  */
 import { HAY_PEDIDOS } from "@/data/pedidos";
+import { mensajeWeb } from "@/lib/mensajes";
 
 export const SITE = {
   name: "On Work",
@@ -33,7 +34,7 @@ export function whatsappUrl(message?: string) {
 }
 
 /** Mensaje que llega precargado cuando no hay uno propio de la página. */
-export const MENSAJE_GENERAL = "Hola, vi On Work en la web. Necesito:";
+export const MENSAJE_GENERAL = mensajeWeb();
 
 /** Menú principal. "Pedidos reales" aparece solo cuando hay pedidos cargados. */
 export const NAV = [

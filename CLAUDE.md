@@ -1,7 +1,7 @@
 # On Work — Web (instrucciones para Claude)
 
 ## Qué es este proyecto
-Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires), hecho con Next.js + Tailwind y pensado para publicarse en Vercel. Sin carrito ni ecommerce: el contacto es siempre por WhatsApp.
+Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires), hecho con Next.js + Tailwind y pensado para publicarse en Vercel. Hay un carrito de presupuesto, sin precios ni pagos: el pedido se envía armado por WhatsApp. El contacto sigue siendo solo por WhatsApp.
 
 ## Marca
 - Amarillo `#FEB600` (Pantone 7549 C) y negro `#231F20`.

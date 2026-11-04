@@ -58,7 +58,6 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 2. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`. La franja de clientes muestra solo las marcas con logo; sin ninguna, no aparece en la web.
 3. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con el primer pedido cargado aparecen solos "Pedidos reales" en el menú y el pie, el carrusel del Inicio, la página del pedido y su lugar en el sitemap, y `/pedidos` se empieza a indexar.
 4. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar. Se ve en `npm run dev` y **no** en la web publicada (si un párrafo es todo marcador, no se muestra). Para ver la lista con archivo y línea: `npm run marcadores`.
-5. **Regalos de fin de año** (`/regalos-empresariales-fin-de-ano`): los textos van en `src/data/regalos.ts`. Mientras quede algún marcador la página no se publica; con todo completo aparece sola, en el sitemap y con su franja en `/catalogos`.
 
 ## Pendientes antes de publicar
 
