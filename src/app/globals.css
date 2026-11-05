@@ -83,11 +83,18 @@ summary {
   color: var(--ow-black);
 }
 
-/* Foco visible de teclado en todo lo que se puede tocar. Toma el color del
-   texto, así se ve tanto sobre crema como sobre tinta. */
-:where(a, button, summary, select, [tabindex]):focus-visible {
-  outline: 2px solid currentColor;
+/* Foco visible de teclado en todo lo que se puede tocar: contorno tinta
+   separado 4 px (se ve sobre crema también en los botones tinta, que tienen el
+   texto blanco). Sobre superficies tinta (cierre, pie, aviso, barras del
+   celular), el contorno va en blanco. Lo que dibuja su propio foco (la tarjeta
+   de producto, alrededor de toda la tarjeta) lleva la clase foco-propio.
+   (Estas reglas no van en @layer: así no las pisa ninguna clase de Tailwind.) */
+:where(a, button, summary, select, [tabindex]):not(.foco-propio):focus-visible {
+  outline: 2px solid var(--ow-black);
   outline-offset: 4px;
+}
+.bg-ow-black :where(a, button, summary, select, [tabindex]):not(.foco-propio):focus-visible {
+  outline-color: #ffffff;
 }
 
 /* Lenis: reglas recomendadas para que el scroll suave no pelee con el navegador */
@@ -143,34 +150,6 @@ html.lenis body {
   }
 }
 
-/* Hero: ondas de fondo que nacen en el centro de la pantalla y se abren hasta
-   salir por los bordes, una tras otra (la "onda expansiva" de la animación
-   del logo). Con menos movimiento no se muestran. */
-.onda {
-  transform-box: fill-box;
-  transform-origin: center;
-  opacity: 0;
-  animation: onda 10s cubic-bezier(0.25, 0.5, 0.4, 1) infinite;
-}
-@keyframes onda {
-  0% {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(3.6);
-    opacity: 0;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .onda {
-    display: none;
-  }
-}
-
 /* Presupuesto: el número del contador da un salto al sumar un producto (la
    única animación del presupuesto), y el aviso y la barra del celular entran
    desde abajo. Con menos movimiento, aparecen quietos. */
@@ -180,6 +159,21 @@ html.lenis body {
 @keyframes salto {
   40% {
     transform: scale(1.45);
+  }
+}
+/* Al llegar la foto que vuela al presupuesto (lib/vuelo.ts), el número deja
+   una onda amarilla que se abre y se apaga. */
+.impacto {
+  animation: impacto 0.6s var(--ease-ow) both;
+}
+@keyframes impacto {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(2.6);
+    opacity: 0;
   }
 }
 .entra {

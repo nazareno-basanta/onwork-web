@@ -1,5 +1,8 @@
+import Link from "next/link";
 import Titular from "@/components/Titular";
+import Icon from "@/components/Icon";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import { PRESUPUESTO } from "@/data/presupuesto";
 import { BUSQUEDAS } from "@/data/servicios";
 import { textoWeb } from "@/lib/utils";
 
@@ -12,10 +15,13 @@ export default function Busquedas({
   id = "busquedas",
   titulo = BUSQUEDAS.titulo,
   texto = BUSQUEDAS.texto,
+  conPresupuesto = false,
 }: {
   id?: string;
   titulo?: string;
   texto?: string;
+  /** Suma el link al campo "Otro" del presupuesto (en el hub de catálogos). */
+  conPresupuesto?: boolean;
 }) {
   return (
     <section aria-labelledby={id} className="py-24 md:py-32">
@@ -25,9 +31,20 @@ export default function Busquedas({
         </Titular>
         <div>
           <p className="text-lg text-ow-black/80">{textoWeb(texto)}</p>
-          <WhatsAppLink tone="black" message={BUSQUEDAS.mensaje} className="mt-7">
-            {BUSQUEDAS.boton}
-          </WhatsAppLink>
+          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <WhatsAppLink tone="black" message={BUSQUEDAS.mensaje}>
+              {BUSQUEDAS.boton}
+            </WhatsAppLink>
+            {conPresupuesto && (
+              <Link
+                href="/presupuesto#presupuesto-otro"
+                className="inline-flex min-h-11 items-center gap-1.5 rounded-sm font-display text-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+              >
+                {PRESUPUESTO.sumarOtro}
+                <Icon name="flecha-derecha" size={18} />
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </section>

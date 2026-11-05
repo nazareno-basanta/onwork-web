@@ -169,6 +169,16 @@ export const presupuesto = {
     actualizar({ lineas: cambiarColor(estado.lineas, codigo, color, nuevo) }),
   quitar: (codigo: string, color: string) => actualizar({ lineas: quitar(estado.lineas, codigo, color) }),
   cambiarOtro: (otro: string) => actualizar({ otro }),
+  /**
+   * Suma un texto a "Otro" (una línea que está solo en el PDF, como "Cintas
+   * sublimadas (catálogo Cintas e identificación)"), sin repetirlo, y avisa
+   * como al sumar un producto.
+   */
+  sumarAOtro(texto: string, { aviso }: { aviso?: string } = {}) {
+    const actual = estado.otro.trim();
+    if (!actual.includes(texto)) actualizar({ otro: (actual ? `${actual}, ${texto}` : texto).slice(0, 300) });
+    if (aviso) alSumarOyentes.forEach((f) => f({ codigo: "", nombre: aviso }));
+  },
   vaciar: () => actualizar({ lineas: [], otro: "" }),
   /** Se tocó "Enviar presupuesto por WhatsApp". */
   marcarEnviado: () => actualizar({ enviado: true }),

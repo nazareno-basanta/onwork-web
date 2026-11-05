@@ -32,6 +32,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-01-apostoles-compartir.jpg",
     "orden": 1
   },
   {
@@ -54,6 +55,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-02-garupa-compartir.jpg",
     "orden": 2
   },
   {
@@ -82,6 +84,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-03-aristobulo-compartir.jpg",
     "orden": 3
   },
   {
@@ -104,6 +107,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-04-alem-compartir.jpg",
     "orden": 4
   },
   {
@@ -159,6 +163,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-05-lujan-compartir.jpg",
     "orden": 5
   },
   {
@@ -195,6 +200,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-06-iguazu-compartir.jpg",
     "orden": 6
   },
   {
@@ -231,6 +237,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-07-parana-compartir.jpg",
     "orden": 7
   },
   {
@@ -253,6 +260,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-08-parana-termico-compartir.jpg",
     "orden": 8
   },
   {
@@ -289,6 +297,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-09-bermejo-compartir.jpg",
     "orden": 9
   },
   {
@@ -311,6 +320,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-10-areco-compartir.jpg",
     "orden": 10
   },
   {
@@ -333,6 +343,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-11-colorado-compartir.jpg",
     "orden": 11
   },
   {
@@ -373,6 +384,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-12-set-ibera-compartir.jpg",
     "orden": 12
   },
   {
@@ -416,6 +428,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-13-arrecifes-compartir.jpg",
     "orden": 13
   },
   {
@@ -452,6 +465,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-14-limay-compartir.jpg",
     "orden": 14
   },
   {
@@ -474,6 +488,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-15-atuel-compartir.jpg",
     "orden": 15
   },
   {
@@ -496,18 +511,13 @@
         "alto": 1200
       },
       {
-        "n": 2,
-        "src": "/productos/drinkware/ow-drk-16-montecarlo-2.webp",
-        "ancho": 795,
-        "alto": 1198
-      },
-      {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-16-montecarlo-3.webp",
         "ancho": 1200,
         "alto": 687
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-16-montecarlo-compartir.jpg",
     "orden": 16
   },
   {
@@ -549,6 +559,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-17-obera-compartir.jpg",
     "orden": 17
   },
   {
@@ -584,6 +595,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-18-obera-con-manija-compartir.jpg",
     "orden": 18
   },
   {
@@ -625,6 +637,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-19-virasoro-compartir.jpg",
     "orden": 19
   },
   {
@@ -665,6 +678,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-20-santa-ana-compartir.jpg",
     "orden": 20
   },
   {
@@ -722,6 +736,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-22-trelew-compartir.jpg",
     "orden": 22
   },
   {
@@ -756,45 +771,9 @@
         "alto": 1200
       },
       {
-        "n": 4,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-4.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-5.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-6.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-7.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-8.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
         "n": 9,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-9.webp",
         "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 10,
-        "src": "/productos/drinkware/ow-drk-23-ushuaia-10.webp",
-        "ancho": 1200,
         "alto": 1200
       },
       {
@@ -816,6 +795,7 @@
         "alto": 1192
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-23-ushuaia-compartir.jpg",
     "orden": 23
   },
   {
@@ -859,6 +839,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-24-ushuaia-matte-compartir.jpg",
     "orden": 24
   },
   {
@@ -899,6 +880,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-25-moquehue-compartir.jpg",
     "orden": 25
   },
   {
@@ -948,6 +930,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-26-bolson-compartir.jpg",
     "orden": 26
   },
   {
@@ -972,6 +955,7 @@
         "alto": 864
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-27-trevelin-compartir.jpg",
     "orden": 27
   },
   {
@@ -1015,6 +999,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-28-angostura-compartir.jpg",
     "orden": 28
   },
   {
@@ -1072,6 +1057,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-30-recoleta-compartir.jpg",
     "orden": 30
   },
   {
@@ -1113,6 +1099,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-31-recoleta-con-manija-compartir.jpg",
     "orden": 31
   },
   {
@@ -1135,6 +1122,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-32-almagro-compartir.jpg",
     "orden": 32
   },
   {
@@ -1176,6 +1164,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-33-san-telmo-compartir.jpg",
     "orden": 33
   },
   {
@@ -1217,6 +1206,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-34-chacarita-compartir.jpg",
     "orden": 34
   },
   {
@@ -1257,6 +1247,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-35-belgrano-compartir.jpg",
     "orden": 35
   },
   {
@@ -1307,6 +1298,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-36-callao-compartir.jpg",
     "orden": 36
   },
   {
@@ -1353,6 +1345,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/drinkware/ow-drk-38-florida-compartir.jpg",
     "orden": 38
   },
   {
@@ -1711,6 +1704,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-01-gardel-silver-compartir.jpg",
     "orden": 1
   },
   {
@@ -1916,6 +1910,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-02-gardel-color-compartir.jpg",
     "orden": 2
   },
   {
@@ -2277,6 +2272,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-03-gardel-white-compartir.jpg",
     "orden": 3
   },
   {
@@ -2375,6 +2371,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-04-gardel-touch-compartir.jpg",
     "orden": 4
   },
   {
@@ -2555,6 +2552,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-05-pappo-compartir.jpg",
     "orden": 5
   },
   {
@@ -2650,12 +2648,6 @@
         "alto": 823
       },
       {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-06-cerati-13.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 14,
         "src": "/productos/escritura/ow-esc-06-cerati-14.webp",
         "ancho": 800,
@@ -2668,6 +2660,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-06-cerati-compartir.jpg",
     "orden": 6
   },
   {
@@ -2751,6 +2744,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-07-cerati-mix-compartir.jpg",
     "orden": 7
   },
   {
@@ -2849,6 +2843,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-08-prodan-compartir.jpg",
     "orden": 8
   },
   {
@@ -2947,6 +2942,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-09-moura-compartir.jpg",
     "orden": 9
   },
   {
@@ -2982,6 +2978,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-10-sandro-compartir.jpg",
     "orden": 10
   },
   {
@@ -3136,6 +3133,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-11-yupanqui-compartir.jpg",
     "orden": 11
   },
   {
@@ -3178,6 +3176,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-12-yupanqui-touch-compartir.jpg",
     "orden": 12
   },
   {
@@ -3213,6 +3212,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-13-sosa-compartir.jpg",
     "orden": 13
   },
   {
@@ -3247,6 +3247,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-14-falu-compartir.jpg",
     "orden": 14
   },
   {
@@ -3269,7 +3270,69 @@
       "Amarillo",
       "Verde"
     ],
-    "fotos": [],
+    "fotos": [
+      {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-15-cafrune-1.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-15-cafrune-2.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-15-cafrune-3.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-15-cafrune-4.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 5,
+        "src": "/productos/escritura/ow-esc-15-cafrune-5.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 6,
+        "src": "/productos/escritura/ow-esc-15-cafrune-6.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 7,
+        "src": "/productos/escritura/ow-esc-15-cafrune-7.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 8,
+        "src": "/productos/escritura/ow-esc-15-cafrune-8.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 9,
+        "src": "/productos/escritura/ow-esc-15-cafrune-9.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 10,
+        "src": "/productos/escritura/ow-esc-15-cafrune-10.webp",
+        "ancho": 1000,
+        "alto": 1000
+      }
+    ],
+    "compartir": "/productos/escritura/ow-esc-15-cafrune-compartir.jpg",
     "orden": 15
   },
   {
@@ -3284,7 +3347,39 @@
     "colores": [
       "Bamboo natural"
     ],
-    "fotos": [],
+    "fotos": [
+      {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-16-leguizamon-1.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-16-leguizamon-2.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-16-leguizamon-3.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-16-leguizamon-4.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 5,
+        "src": "/productos/escritura/ow-esc-16-leguizamon-5.webp",
+        "ancho": 1000,
+        "alto": 1000
+      }
+    ],
+    "compartir": "/productos/escritura/ow-esc-16-leguizamon-compartir.jpg",
     "orden": 16
   },
   {
@@ -3302,7 +3397,51 @@
       "Gris",
       "Negro"
     ],
-    "fotos": [],
+    "fotos": [
+      {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-17-ramirez-1.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-17-ramirez-2.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-17-ramirez-3.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-17-ramirez-4.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 5,
+        "src": "/productos/escritura/ow-esc-17-ramirez-5.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 6,
+        "src": "/productos/escritura/ow-esc-17-ramirez-6.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 7,
+        "src": "/productos/escritura/ow-esc-17-ramirez-7.webp",
+        "ancho": 1000,
+        "alto": 1000
+      }
+    ],
+    "compartir": "/productos/escritura/ow-esc-17-ramirez-compartir.jpg",
     "orden": 17
   },
   {
@@ -3318,7 +3457,33 @@
       "Blanco",
       "Negro"
     ],
-    "fotos": [],
+    "fotos": [
+      {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-18-guarany-1.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-18-guarany-2.webp",
+        "ancho": 887,
+        "alto": 887
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-18-guarany-3.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-18-guarany-4.webp",
+        "ancho": 1000,
+        "alto": 1000
+      }
+    ],
+    "compartir": "/productos/escritura/ow-esc-18-guarany-compartir.jpg",
     "orden": 18
   },
   {
@@ -3408,6 +3573,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-19-pugliese-compartir.jpg",
     "orden": 19
   },
   {
@@ -3542,6 +3708,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-20-salgan-compartir.jpg",
     "orden": 20
   },
   {
@@ -3595,6 +3762,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-21-goyeneche-compartir.jpg",
     "orden": 21
   },
   {
@@ -3647,6 +3815,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-22-d-arienzo-compartir.jpg",
     "orden": 22
   },
   {
@@ -3723,6 +3892,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-23-troilo-compartir.jpg",
     "orden": 23
   },
   {
@@ -3745,6 +3915,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-24-troilo-color-compartir.jpg",
     "orden": 24
   },
   {
@@ -3773,6 +3944,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-25-troilo-frost-compartir.jpg",
     "orden": 25
   },
   {
@@ -3807,6 +3979,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-26-troilo-cristal-compartir.jpg",
     "orden": 26
   },
   {
@@ -3835,6 +4008,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-27-spinetta-natural-compartir.jpg",
     "orden": 27
   },
   {
@@ -3857,6 +4031,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-28-spinetta-clasico-compartir.jpg",
     "orden": 28
   },
   {
@@ -3879,6 +4054,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-29-spinetta-negro-compartir.jpg",
     "orden": 29
   },
   {
@@ -3913,6 +4089,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-30-spinetta-eco-compartir.jpg",
     "orden": 30
   },
   {
@@ -3967,6 +4144,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-31-ginastera-compartir.jpg",
     "orden": 31
   },
   {
@@ -3995,6 +4173,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-32-barbieri-compartir.jpg",
     "orden": 32
   },
   {
@@ -4047,6 +4226,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-33-mores-compartir.jpg",
     "orden": 33
   },
   {
@@ -4081,6 +4261,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/escritura/ow-esc-34-merello-compartir.jpg",
     "orden": 34
   },
   {
@@ -4096,7 +4277,45 @@
       "Plata",
       "Negro"
     ],
-    "fotos": [],
+    "fotos": [
+      {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-1.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-2.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-3.webp",
+        "ancho": 756,
+        "alto": 756
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-4.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 5,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-5.webp",
+        "ancho": 815,
+        "alto": 815
+      },
+      {
+        "n": 6,
+        "src": "/productos/escritura/ow-esc-35-set-piazzolla-6.webp",
+        "ancho": 1000,
+        "alto": 1000
+      }
+    ],
+    "compartir": "/productos/escritura/ow-esc-35-set-piazzolla-compartir.jpg",
     "orden": 35
   },
   {
@@ -4126,142 +4345,10 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/cuadernos/ow-cua-01-borges-1.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-01-borges-2.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-01-borges-3.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/cuadernos/ow-cua-01-borges-4.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/cuadernos/ow-cua-01-borges-5.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-01-borges-6.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/cuadernos/ow-cua-01-borges-7.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 8,
-        "src": "/productos/cuadernos/ow-cua-01-borges-8.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
         "n": 9,
         "src": "/productos/cuadernos/ow-cua-01-borges-9.webp",
         "ancho": 1000,
         "alto": 1000
-      },
-      {
-        "n": 10,
-        "src": "/productos/cuadernos/ow-cua-01-borges-10.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 11,
-        "src": "/productos/cuadernos/ow-cua-01-borges-11.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 12,
-        "src": "/productos/cuadernos/ow-cua-01-borges-12.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 13,
-        "src": "/productos/cuadernos/ow-cua-01-borges-13.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 14,
-        "src": "/productos/cuadernos/ow-cua-01-borges-14.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 15,
-        "src": "/productos/cuadernos/ow-cua-01-borges-15.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 16,
-        "src": "/productos/cuadernos/ow-cua-01-borges-16.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 17,
-        "src": "/productos/cuadernos/ow-cua-01-borges-17.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 18,
-        "src": "/productos/cuadernos/ow-cua-01-borges-18.webp",
-        "ancho": 1133,
-        "alto": 1133
-      },
-      {
-        "n": 19,
-        "src": "/productos/cuadernos/ow-cua-01-borges-19.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 20,
-        "src": "/productos/cuadernos/ow-cua-01-borges-20.webp",
-        "ancho": 600,
-        "alto": 600
-      },
-      {
-        "n": 21,
-        "src": "/productos/cuadernos/ow-cua-01-borges-21.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 22,
-        "src": "/productos/cuadernos/ow-cua-01-borges-22.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 23,
-        "src": "/productos/cuadernos/ow-cua-01-borges-23.webp",
-        "ancho": 1171,
-        "alto": 1171
       },
       {
         "n": 24,
@@ -4270,50 +4357,14 @@
         "alto": 680
       },
       {
-        "n": 25,
-        "src": "/productos/cuadernos/ow-cua-01-borges-25.webp",
-        "ancho": 650,
-        "alto": 650
-      },
-      {
-        "n": 26,
-        "src": "/productos/cuadernos/ow-cua-01-borges-26.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
         "n": 27,
         "src": "/productos/cuadernos/ow-cua-01-borges-27.webp",
         "ancho": 800,
         "alto": 800
       },
       {
-        "n": 28,
-        "src": "/productos/cuadernos/ow-cua-01-borges-28.webp",
-        "ancho": 630,
-        "alto": 630
-      },
-      {
-        "n": 29,
-        "src": "/productos/cuadernos/ow-cua-01-borges-29.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 30,
-        "src": "/productos/cuadernos/ow-cua-01-borges-30.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 31,
-        "src": "/productos/cuadernos/ow-cua-01-borges-31.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 32,
-        "src": "/productos/cuadernos/ow-cua-01-borges-32.webp",
+        "n": 21,
+        "src": "/productos/cuadernos/ow-cua-01-borges-21.webp",
         "ancho": 800,
         "alto": 800
       },
@@ -4324,102 +4375,67 @@
         "alto": 800
       },
       {
-        "n": 34,
-        "src": "/productos/cuadernos/ow-cua-01-borges-34.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 28,
+        "src": "/productos/cuadernos/ow-cua-01-borges-28.webp",
+        "ancho": 630,
+        "alto": 630
       },
       {
-        "n": 35,
-        "src": "/productos/cuadernos/ow-cua-01-borges-35.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 25,
+        "src": "/productos/cuadernos/ow-cua-01-borges-25.webp",
+        "ancho": 650,
+        "alto": 650
       },
       {
-        "n": 36,
-        "src": "/productos/cuadernos/ow-cua-01-borges-36.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 20,
+        "src": "/productos/cuadernos/ow-cua-01-borges-20.webp",
+        "ancho": 600,
+        "alto": 600
       },
       {
-        "n": 38,
-        "src": "/productos/cuadernos/ow-cua-01-borges-38.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 22,
+        "src": "/productos/cuadernos/ow-cua-01-borges-22.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 39,
-        "src": "/productos/cuadernos/ow-cua-01-borges-39.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 32,
+        "src": "/productos/cuadernos/ow-cua-01-borges-32.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 40,
-        "src": "/productos/cuadernos/ow-cua-01-borges-40.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 26,
+        "src": "/productos/cuadernos/ow-cua-01-borges-26.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 41,
-        "src": "/productos/cuadernos/ow-cua-01-borges-41.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 31,
+        "src": "/productos/cuadernos/ow-cua-01-borges-31.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 42,
-        "src": "/productos/cuadernos/ow-cua-01-borges-42.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 30,
+        "src": "/productos/cuadernos/ow-cua-01-borges-30.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 43,
-        "src": "/productos/cuadernos/ow-cua-01-borges-43.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 29,
+        "src": "/productos/cuadernos/ow-cua-01-borges-29.webp",
+        "ancho": 800,
+        "alto": 800
       },
       {
-        "n": 44,
-        "src": "/productos/cuadernos/ow-cua-01-borges-44.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 45,
-        "src": "/productos/cuadernos/ow-cua-01-borges-45.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 46,
-        "src": "/productos/cuadernos/ow-cua-01-borges-46.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 47,
-        "src": "/productos/cuadernos/ow-cua-01-borges-47.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 48,
-        "src": "/productos/cuadernos/ow-cua-01-borges-48.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 49,
-        "src": "/productos/cuadernos/ow-cua-01-borges-49.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 50,
-        "src": "/productos/cuadernos/ow-cua-01-borges-50.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 11,
+        "src": "/productos/cuadernos/ow-cua-01-borges-11.webp",
+        "ancho": 1000,
+        "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-01-borges-compartir.jpg",
     "orden": 1
   },
   {
@@ -4512,6 +4528,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-02-borges-pocket-compartir.jpg",
     "orden": 2
   },
   {
@@ -4529,24 +4546,19 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/cuadernos/ow-cua-03-gran-borges-1.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 3,
+        "src": "/productos/cuadernos/ow-cua-03-gran-borges-3.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-03-gran-borges-2.webp",
         "ancho": 1200,
         "alto": 675
-      },
-      {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-03-gran-borges-3.webp",
-        "ancho": 1000,
-        "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-03-gran-borges-compartir.jpg",
     "orden": 3
   },
   {
@@ -4588,6 +4600,7 @@
         "alto": 900
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-04-borges-espresso-compartir.jpg",
     "orden": 4
   },
   {
@@ -4629,6 +4642,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-05-borges-pocket-set-compartir.jpg",
     "orden": 5
   },
   {
@@ -4664,6 +4678,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-06-borges-fenix-compartir.jpg",
     "orden": 6
   },
   {
@@ -4730,6 +4745,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-07-cortazar-compartir.jpg",
     "orden": 7
   },
   {
@@ -4753,6 +4769,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-08-marmol-compartir.jpg",
     "orden": 8
   },
   {
@@ -4794,6 +4811,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-09-bioy-compartir.jpg",
     "orden": 9
   },
   {
@@ -4829,6 +4847,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-10-arlt-compartir.jpg",
     "orden": 10
   },
   {
@@ -4921,6 +4940,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-11-sabato-compartir.jpg",
     "orden": 11
   },
   {
@@ -5000,6 +5020,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-12-lugones-compartir.jpg",
     "orden": 12
   },
   {
@@ -5055,6 +5076,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-13-ocampo-compartir.jpg",
     "orden": 13
   },
   {
@@ -5115,6 +5137,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-14-puig-compartir.jpg",
     "orden": 14
   },
   {
@@ -5255,6 +5278,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-15-quino-compartir.jpg",
     "orden": 15
   },
   {
@@ -5296,6 +5320,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-16-sarmiento-compartir.jpg",
     "orden": 16
   },
   {
@@ -5418,6 +5443,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-17-walsh-compartir.jpg",
     "orden": 17
   },
   {
@@ -5494,6 +5520,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-18-storni-flex-compartir.jpg",
     "orden": 18
   },
   {
@@ -5558,6 +5585,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-19-fontanarrosa-compartir.jpg",
     "orden": 19
   },
   {
@@ -5648,6 +5676,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-20-hernandez-compartir.jpg",
     "orden": 20
   },
   {
@@ -5701,6 +5730,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-21-guiraldes-compartir.jpg",
     "orden": 21
   },
   {
@@ -5736,6 +5766,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-22-saer-compartir.jpg",
     "orden": 22
   },
   {
@@ -5765,6 +5796,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-23-piglia-compartir.jpg",
     "orden": 23
   },
   {
@@ -5818,6 +5850,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-24-gelman-compartir.jpg",
     "orden": 24
   },
   {
@@ -5853,6 +5886,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/cuadernos/ow-cua-25-soriano-compartir.jpg",
     "orden": 25
   },
   {
@@ -5887,6 +5921,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-01-barolo-black-compartir.jpg",
     "orden": 1
   },
   {
@@ -5957,6 +5992,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-02-barolo-eco-compartir.jpg",
     "orden": 2
   },
   {
@@ -5997,6 +6033,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-03-molino-compartir.jpg",
     "orden": 3
   },
   {
@@ -6031,6 +6068,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-04-comega-compartir.jpg",
     "orden": 4
   },
   {
@@ -6077,6 +6115,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-05-duhau-compartir.jpg",
     "orden": 5
   },
   {
@@ -6123,6 +6162,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-06-fuentes-compartir.jpg",
     "orden": 6
   },
   {
@@ -6157,6 +6197,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-07-mihanovich-compartir.jpg",
     "orden": 7
   },
   {
@@ -6199,6 +6240,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-08-bencich-compartir.jpg",
     "orden": 8
   },
   {
@@ -6264,6 +6306,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-09-alas-compartir.jpg",
     "orden": 9
   },
   {
@@ -6317,6 +6360,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-10-roverano-compartir.jpg",
     "orden": 10
   },
   {
@@ -6370,6 +6414,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-11-catalinas-compartir.jpg",
     "orden": 11
   },
   {
@@ -6400,18 +6445,13 @@
         "alto": 1000
       },
       {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-12-minetti-3.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-12-minetti-4.webp",
         "ancho": 600,
         "alto": 400
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-12-minetti-compartir.jpg",
     "orden": 12
   },
   {
@@ -6440,6 +6480,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-13-guemes-black-compartir.jpg",
     "orden": 13
   },
   {
@@ -6480,6 +6521,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-14-guemes-kraft-compartir.jpg",
     "orden": 14
   },
   {
@@ -6547,6 +6589,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-15-correo-compartir.jpg",
     "orden": 15
   },
   {
@@ -6643,6 +6686,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-16-bolsa-compartir.jpg",
     "orden": 16
   },
   {
@@ -6659,20 +6703,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-17-planetario-1.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-17-planetario-2.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-17-planetario-3.webp",
         "ancho": 977,
         "alto": 1200
       },
@@ -6689,6 +6721,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-17-planetario-compartir.jpg",
     "orden": 17
   },
   {
@@ -6723,18 +6756,13 @@
         "alto": 823
       },
       {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-5.webp",
         "ancho": 800,
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-18-kavanagh-mini-compartir.jpg",
     "orden": 18
   },
   {
@@ -6771,24 +6799,13 @@
         "alto": 823
       },
       {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-19-kavanagh-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-19-kavanagh-5.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-19-kavanagh-6.webp",
         "ancho": 800,
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-19-kavanagh-compartir.jpg",
     "orden": 19
   },
   {
@@ -6825,24 +6842,13 @@
         "alto": 823
       },
       {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-5.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-6.webp",
         "ancho": 800,
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-20-gran-kavanagh-compartir.jpg",
     "orden": 20
   },
   {
@@ -6879,18 +6885,13 @@
         "alto": 823
       },
       {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-5.webp",
         "ancho": 800,
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-compartir.jpg",
     "orden": 21
   },
   {
@@ -6986,24 +6987,13 @@
         "alto": 823
       },
       {
-        "n": 13,
-        "src": "/productos/oficina/ow-ofi-22-colon-13.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 14,
-        "src": "/productos/oficina/ow-ofi-22-colon-14.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 15,
         "src": "/productos/oficina/ow-ofi-22-colon-15.webp",
         "ancho": 800,
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-22-colon-compartir.jpg",
     "orden": 22
   },
   {
@@ -7067,12 +7057,6 @@
         "alto": 823
       },
       {
-        "n": 8,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-8.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-23-cervantes-9.webp",
         "ancho": 800,
@@ -7085,6 +7069,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-23-cervantes-compartir.jpg",
     "orden": 23
   },
   {
@@ -7114,20 +7099,8 @@
         "alto": 823
       },
       {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-5.webp",
         "ancho": 800,
         "alto": 823
       },
@@ -7138,6 +7111,7 @@
         "alto": 823
       }
     ],
+    "compartir": "/productos/oficina/ow-ofi-24-colon-tarjetero-compartir.jpg",
     "orden": 24
   },
   {
@@ -7178,6 +7152,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-01-aconcagua-compartir.jpg",
     "orden": 1
   },
   {
@@ -7220,6 +7195,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-02-lanin-compartir.jpg",
     "orden": 2
   },
   {
@@ -7260,6 +7236,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-03-tronador-compartir.jpg",
     "orden": 3
   },
   {
@@ -7297,6 +7274,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-04-torre-compartir.jpg",
     "orden": 4
   },
   {
@@ -7339,6 +7317,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-05-domuyo-compartir.jpg",
     "orden": 5
   },
   {
@@ -7385,6 +7364,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-06-chalten-compartir.jpg",
     "orden": 6
   },
   {
@@ -7425,6 +7405,7 @@
         "alto": 900
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-07-payun-compartir.jpg",
     "orden": 7
   },
   {
@@ -7448,6 +7429,7 @@
         "alto": 600
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-08-castillo-compartir.jpg",
     "orden": 8
   },
   {
@@ -7457,7 +7439,6 @@
     "catalogo": "marroquineria",
     "seccion": "Mochilas Notebook",
     "tipo": "Mochila porta notebook",
-    "medidas": "Consultar",
     "colores": [
       "Negro (ver fotos)"
     ],
@@ -7475,18 +7456,13 @@
         "alto": 884
       },
       {
-        "n": 3,
-        "src": "/productos/marroquineria/ow-mar-09-huemul-3.webp",
-        "ancho": 679,
-        "alto": 679
-      },
-      {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-09-huemul-4.webp",
         "ancho": 874,
         "alto": 1094
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-09-huemul-compartir.jpg",
     "orden": 9
   },
   {
@@ -7521,6 +7497,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-10-bayo-compartir.jpg",
     "orden": 10
   },
   {
@@ -7563,6 +7540,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-11-mirador-compartir.jpg",
     "orden": 11
   },
   {
@@ -7573,29 +7551,10 @@
     "seccion": "Mochilas Livianas",
     "tipo": "Mochila plegable",
     "descripcion": "Mochila plegable que se guarda en su propio bolsito.",
-    "medidas": "Consultar",
     "colores": [
       "Ver fotos"
     ],
     "fotos": [
-      {
-        "n": 4,
-        "src": "/productos/marroquineria/ow-mar-12-belvedere-4.webp",
-        "ancho": 387,
-        "alto": 686
-      },
-      {
-        "n": 5,
-        "src": "/productos/marroquineria/ow-mar-12-belvedere-5.webp",
-        "ancho": 778,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/marroquineria/ow-mar-12-belvedere-6.webp",
-        "ancho": 787,
-        "alto": 868
-      },
       {
         "n": 8,
         "src": "/productos/marroquineria/ow-mar-12-belvedere-8.webp",
@@ -7603,6 +7562,7 @@
         "alto": 720
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-12-belvedere-compartir.jpg",
     "orden": 12
   },
   {
@@ -7643,6 +7603,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-13-catedral-compartir.jpg",
     "orden": 13
   },
   {
@@ -7684,6 +7645,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-14-chapelco-compartir.jpg",
     "orden": 14
   },
   {
@@ -7712,6 +7674,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-15-campanario-compartir.jpg",
     "orden": 15
   },
   {
@@ -7752,6 +7715,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-16-mermoz-compartir.jpg",
     "orden": 16
   },
   {
@@ -7786,6 +7750,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-17-guillaumet-compartir.jpg",
     "orden": 17
   },
   {
@@ -7826,6 +7791,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-18-poincenot-compartir.jpg",
     "orden": 18
   },
   {
@@ -7854,6 +7820,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-19-llao-llao-compartir.jpg",
     "orden": 19
   },
   {
@@ -7888,6 +7855,7 @@
         "alto": 932
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-20-martial-compartir.jpg",
     "orden": 20
   },
   {
@@ -7922,6 +7890,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-21-capilla-compartir.jpg",
     "orden": 21
   },
   {
@@ -7932,7 +7901,6 @@
     "seccion": "Neceseres y Organizadores",
     "tipo": "Organizador de cables",
     "descripcion": "Organizador de cables y accesorios tecnológicos, con correa para la muñeca.",
-    "medidas": "Consultar",
     "colores": [
       "Gris"
     ],
@@ -7950,6 +7918,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-22-lopez-compartir.jpg",
     "orden": 22
   },
   {
@@ -7960,7 +7929,6 @@
     "seccion": "Neceseres y Organizadores",
     "tipo": "Organizador de viaje x 6",
     "descripcion": "Set de seis organizadores de viaje: tres cubos y tres estuches.",
-    "medidas": "Consultar",
     "colores": [
       "Gris"
     ],
@@ -7990,6 +7958,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-23-inacayal-compartir.jpg",
     "orden": 23
   },
   {
@@ -8000,7 +7969,6 @@
     "seccion": "Neceseres y Organizadores",
     "tipo": "Set de viaje",
     "descripcion": "Set de viaje con almohada inflable para el cuello, antifaz, tapones para los oídos y estuche.",
-    "medidas": "Consultar",
     "colores": [
       "Ver fotos"
     ],
@@ -8012,6 +7980,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-24-castor-compartir.jpg",
     "orden": 24
   },
   {
@@ -8058,6 +8027,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-25-saint-exupery-compartir.jpg",
     "orden": 25
   },
   {
@@ -8141,6 +8111,7 @@
         "alto": 965
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-26-olivia-compartir.jpg",
     "orden": 26
   },
   {
@@ -8187,6 +8158,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-27-chenque-compartir.jpg",
     "orden": 27
   },
   {
@@ -8233,6 +8205,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-28-dedal-compartir.jpg",
     "orden": 28
   },
   {
@@ -8274,6 +8247,7 @@
         "alto": 900
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-29-perito-compartir.jpg",
     "orden": 29
   },
   {
@@ -8302,6 +8276,7 @@
         "alto": 800
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-30-fitz-roy-compartir.jpg",
     "orden": 30
   },
   {
@@ -8343,6 +8318,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/marroquineria/ow-mar-31-otto-compartir.jpg",
     "orden": 31
   },
   {
@@ -8449,6 +8425,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-compartir.jpg",
     "orden": 1
   },
   {
@@ -8516,6 +8493,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-compartir.jpg",
     "orden": 2
   },
   {
@@ -8582,6 +8560,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-compartir.jpg",
     "orden": 3
   },
   {
@@ -8648,6 +8627,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-compartir.jpg",
     "orden": 4
   },
   {
@@ -8724,6 +8704,7 @@
         "alto": 1100
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-compartir.jpg",
     "orden": 5
   },
   {
@@ -8790,6 +8771,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-06-paraguas-mini-manual-compartir.jpg",
     "orden": 6
   },
   {
@@ -8814,8 +8796,6 @@
     "catalogo": "paraguas",
     "seccion": "Plegables y otros formatos",
     "tipo": "Paraguas invertido",
-    "descripcion": "Paraguas invertido. El proveedor no publica descripción: completar.",
-    "medidas": "Consultar",
     "colores": [
       "Ver fotos"
     ],
@@ -8833,6 +8813,7 @@
         "alto": 1080
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-08-paraguas-invertido-compartir.jpg",
     "orden": 8
   },
   {
@@ -8889,6 +8870,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-compartir.jpg",
     "orden": 9
   },
   {
@@ -8961,6 +8943,7 @@
         "alto": 686
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-compartir.jpg",
     "orden": 10
   },
   {
@@ -9026,6 +9009,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-compartir.jpg",
     "orden": 11
   },
   {
@@ -9133,6 +9117,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-compartir.jpg",
     "orden": 12
   },
   {
@@ -9202,6 +9187,7 @@
         "alto": 1000
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-13-paraguas-golf-manual-compartir.jpg",
     "orden": 13
   },
   {
@@ -9268,6 +9254,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-compartir.jpg",
     "orden": 14
   },
   {
@@ -9337,6 +9324,7 @@
         "alto": 1200
       }
     ],
+    "compartir": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-compartir.jpg",
     "orden": 15
   }
 ]

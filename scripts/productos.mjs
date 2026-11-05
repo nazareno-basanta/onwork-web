@@ -72,7 +72,7 @@ const COLUMNAS = {
   "Hojas": "hojas",
   "Colores": "colores",
 };
-const CLAVES_PERMITIDAS = new Set(["codigo", "slug", "nombre", "catalogo", "seccion", "tipo", "descripcion", "medidas", "hojas", "colores", "fotos", "orden"]);
+const CLAVES_PERMITIDAS = new Set(["codigo", "slug", "nombre", "catalogo", "seccion", "tipo", "descripcion", "medidas", "hojas", "colores", "fotos", "compartir", "orden"]);
 
 // Proveedores y otras marcas: un texto del Excel que los nombre se descarta
 // (no pasa a la web) y queda en la lista para reescribirlo. Regla de Nachi,
@@ -83,6 +83,10 @@ const LISTA_PROHIBIDA = join(ON_WORK, "Documentos Internos OW/Proveedores y marc
 const SIMIL_MARCA = /\bs[ií]mil\s+[A-ZÁÉÍÓÚÑ]\p{L}+/u;
 let lista; // { marcas, codigos }: se lee al empezar (leerListaProhibida)
 const nombraMarca = (texto) => lista.marcas.test(sinTildes(texto).toLowerCase()) || SIMIL_MARCA.test(texto);
+// Notas internas que quedaron en el Excel ("El proveedor no publica
+// descripción: completar"): tampoco pasan a la web.
+const NOTA_INTERNA = /\bproveedor(es)?\b|\bcompletar\b/i;
+const descartable = (texto) => nombraMarca(texto) || NOTA_INTERNA.test(texto);
 const CAMPOS_CON_TEXTO = { tipo: "tipo", descripcion: "descripción", medidas: "medidas", hojas: "hojas" };
 
 const EXTENSIONES = /\.(jpe?g|png|webp|avif)$/i;
@@ -96,10 +100,10 @@ const ESQUINAS_BLANCAS = 3;
 
 // ---------------------------------------------------------------- utilidades
 
-// "—" en el Excel quiere decir "sin dato": no se publica.
+// "—" y "Consultar" en el Excel quieren decir "sin dato": no se publican.
 const limpiar = (v) => {
   const t = v === null || v === undefined ? "" : String(v).replace(/\s+/g, " ").trim();
-  return /^[-–—]+$/.test(t) ? "" : t;
+  return /^([-–—]+|consultar)$/i.test(t) ? "" : t;
 };
 const sinTildes = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
 const aSlug = (s) => sinTildes(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -259,6 +263,42 @@ function motivo(foto, anteriores) {
   return null;
 }
 
+// Imagen para compartir el link de cada producto (WhatsApp, LinkedIn…): JPG
+// de 1200 × 630 con el fondo crema, el logo original (el PNG de public/brand,
+// nunca tipeado), la foto principal en su marco blanco y el filete amarillo.
+// Sin texto: el nombre y la descripción los pone cada red desde la página.
+const LOGO_OG = join(PROYECTO, "public/brand/logo-onwork-og.png");
+const OG = { ancho: 1200, alto: 630, filete: 24, marco: 470, foto: 400 };
+
+async function imagenParaCompartir(foto, destino) {
+  if (existsSync(destino) && (await stat(destino)).mtimeMs >= (await stat(foto)).mtimeMs) return;
+  const { ancho, alto, filete, marco } = OG;
+  const marcoX = ancho - 72 - marco;
+  const marcoY = Math.round((alto - filete - marco) / 2);
+  const fondo = Buffer.from(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}">` +
+      `<rect width="${ancho}" height="${alto}" fill="#FFFCEF"/>` +
+      `<rect y="${alto - filete}" width="${ancho}" height="${filete}" fill="#FEB600"/>` +
+      `<rect x="${marcoX}" y="${marcoY + 10}" width="${marco}" height="${marco}" rx="32" fill="#231F20" fill-opacity="0.07"/>` +
+      `<rect x="${marcoX}" y="${marcoY}" width="${marco}" height="${marco}" rx="32" fill="#FFFFFF"/>` +
+      `</svg>`,
+  );
+  const producto = await sharp(foto).resize(OG.foto, OG.foto, { fit: "inside" }).toBuffer({ resolveWithObject: true });
+  const logo = await sharp(LOGO_OG).resize(440).toBuffer({ resolveWithObject: true });
+  await sharp(fondo)
+    .composite([
+      { input: logo.data, left: 72, top: Math.round((alto - filete - logo.info.height) / 2) },
+      {
+        input: producto.data,
+        left: marcoX + Math.round((marco - producto.info.width) / 2),
+        top: marcoY + Math.round((marco - producto.info.height) / 2),
+      },
+    ])
+    .flatten({ background: "#FFFCEF" })
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(destino);
+}
+
 async function convertir(origen, destino) {
   if (existsSync(destino) && (await stat(destino)).mtimeMs >= (await stat(origen)).mtimeMs) {
     const m = await sharp(destino).metadata();
@@ -327,12 +367,14 @@ function chequearSalida(productos, archivos) {
   const precio = /\$|U\$S|\bUSD\b|\bARS\b|\b\d{1,3}(?:\.\d{3})+(?:,\d{1,2})?\b|\b\d+,\d{2}\b/;
   for (const p of productos) {
     for (const clave of Object.keys(p)) if (!CLAVES_PERMITIDAS.has(clave)) errores.push(`${p.codigo}: campo no permitido "${clave}"`);
-    const { fotos, ...textos } = p;
+    const { fotos, compartir, ...textos } = p;
+    if (compartir && codigoProveedor.test(compartir.split("/").pop().replace(/^ow-[a-z]{3}-\d+-/, ""))) errores.push(`${p.codigo}: código de proveedor en ${compartir}`);
     for (const [clave, valor] of Object.entries(textos)) {
       const t = Array.isArray(valor) ? valor.join(", ") : String(valor);
       if (clave !== "codigo" && codigoProveedor.test(t)) errores.push(`${p.codigo} · ${clave}: código de proveedor en «${t}»`);
       if (clave !== "orden" && precio.test(t)) errores.push(`${p.codigo} · ${clave}: parece un precio en «${t}»`);
       if (clave !== "nombre" && nombraMarca(t)) errores.push(`${p.codigo} · ${clave}: nombra a un proveedor o una marca en «${t}»`);
+      if (NOTA_INTERNA.test(t)) errores.push(`${p.codigo} · ${clave}: nota interna en «${t}»`);
     }
     for (const f of fotos) if (codigoProveedor.test(f.src.split("/").pop().replace(/^ow-[a-z]{3}-\d+-/, ""))) errores.push(`${p.codigo}: código de proveedor en la foto ${f.src}`);
   }
@@ -348,7 +390,7 @@ function hojaDeContactos(porCatalogo, ajustes) {
   const desdeHoja = dirname(HOJA_CONTACTOS);
   const bloques = porCatalogo.map(({ cat, productos }) => {
     const tarjetas = productos.map(({ p, origen, principal, va, descartados }) => {
-      const notas = [ajustes[p.codigo]?.nota, descartados.length && `Texto descartado por nombrar a un proveedor o una marca (reescribilo): ${descartados.join(" · ")}`].filter(Boolean);
+      const notas = [ajustes[p.codigo]?.nota, descartados.length && `Texto descartado por nombrar a un proveedor o una marca, o por ser una nota interna (reescribilo): ${descartados.join(" · ")}`].filter(Boolean);
       const nota = notas.join(" — ");
       const fotos = origen.length
         ? origen
@@ -434,12 +476,12 @@ for (const cat of CATALOGOS) {
 
     const descartados = [];
     for (const [campo, rotulo] of Object.entries(CAMPOS_CON_TEXTO)) {
-      if (datos[campo] && nombraMarca(datos[campo])) {
+      if (datos[campo] && descartable(datos[campo])) {
         descartados.push(`${rotulo}: «${datos[campo]}»`);
         delete datos[campo];
       }
     }
-    if (datos.colores && nombraMarca(datos.colores)) {
+    if (datos.colores && descartable(datos.colores)) {
       descartados.push(`colores: «${datos.colores}»`);
       delete datos.colores;
     }
@@ -467,6 +509,16 @@ for (const cat of CATALOGOS) {
     });
     fotosCopiadas += fotos.length;
 
+    const principal = ajuste.foto ?? elegidas[0];
+    const fotoPrincipal = fotos.find((f) => f.n === principal) ?? fotos[0];
+    let compartir;
+    if (fotoPrincipal) {
+      const archivo = `${datos.codigo.toLowerCase()}-${slug}-compartir.jpg`;
+      archivosEscritos.add(join(cat.slug, archivo));
+      await imagenParaCompartir(join(PROYECTO, "public", fotoPrincipal.src), join(dirSalida, archivo));
+      compartir = `/productos/${cat.slug}/${archivo}`;
+    }
+
     const producto = {
       codigo: datos.codigo,
       slug,
@@ -479,11 +531,11 @@ for (const cat of CATALOGOS) {
       ...(datos.hojas && { hojas: datos.hojas }),
       colores: datos.colores ? separarColores(datos.colores) : [],
       fotos,
+      ...(compartir && { compartir }),
       orden: i + 1,
     };
     salida.push(producto);
 
-    const principal = ajuste.foto ?? elegidas[0];
     for (const f of analizadas) f.va = elegidas.includes(f.n);
     filas.push({ p: producto, origen: analizadas, principal, va: fotos.length, descartados });
     const avisos = revisar(producto);
@@ -525,7 +577,7 @@ const total = resumen.reduce((a, r) => ({ p: a.p + r.productos, w: a.w + r.enLaW
 console.log(`  Total: ${total.p} productos, ${total.w} en la web · ${total.f} fotos de ${total.o}`);
 
 if (textosDescartados.length) {
-  console.log("\nTextos descartados por nombrar a un proveedor o una marca (no pasan a la web)");
+  console.log("\nTextos descartados por nombrar a un proveedor o una marca, o por ser notas internas (no pasan a la web)");
   for (const [producto, campos] of textosDescartados) console.log(`  ${producto}: ${campos.join(" · ")}`);
 }
 

@@ -199,7 +199,7 @@ Relieve suave: las tarjetas, las portadas de catálogo y los paneles flotantes p
 ### Shadow Vocabulary
 - **Apoyado** (`box-shadow: 0 1px 2px rgba(35, 31, 32, 0.06), 0 10px 30px -12px rgba(35, 31, 32, 0.18)`): estado de reposo de tarjetas y marcos de foto.
 - **Levantado** (`box-shadow: 0 2px 4px rgba(35, 31, 32, 0.08), 0 22px 44px -16px rgba(35, 31, 32, 0.26)`): hover o foco de una tarjeta que es un link.
-- **Portada** (`box-shadow: 0 24px 48px -20px rgba(35, 31, 32, 0.35)`): portada de catálogo inclinada en 3D, como un objeto sobre la mesa.
+- **Portada** (`box-shadow: 0 24px 48px -20px rgba(35, 31, 32, 0.35)`): portada A4 de un catálogo cuando se muestra sola, como un objeto sobre la mesa. En las tarjetas cuadradas del hub y del Inicio va con "Apoyado".
 
 ### Named Rules
 **The Objeto Apoyado Rule.** La sombra dice "esto es un objeto". Va debajo de tarjetas, portadas y fotos; nunca en texto, en íconos ni en botones, y nunca como brillo de color alrededor de algo.
@@ -253,10 +253,27 @@ El "carrito" sin precios: se suma cada producto con cantidad y color, y se manda
 - **Contador en el header:** en escritorio, pastilla outline "Presupuesto" de 44 px con el número en un círculo amarillo; el lugar del número queda siempre reservado, para que el header no se mueva. En el celular, botón redondo con el ícono de tablilla, solo cuando hay productos.
 - **Lista:** una fila por producto y color, separadas por filetes de 2 px: foto en marco blanco, pastilla amarilla con el código, nombre, color y cantidad. Se apila según el ancho de su columna, no de la pantalla.
 - **Panel de envío:** tarjeta crema suave fija al costado (en el celular, sin tarjeta y debajo de la lista): el campo "Otro", el resumen y la franja de consultas junto al botón amarillo de enviar. Sin efecto imán: el botón no se mueve al confirmar.
-- **Barras fijas del celular:** en tinta, abajo. En los catálogos, "Presupuesto · N productos · Ver" reemplaza al botón flotante de WhatsApp; en /presupuesto, "Enviar por WhatsApp" aparece solo cuando el botón del panel no está a la vista.
-- **Aviso al sumar:** pastilla tinta con borde crema de 2 px (así se separa del pie sin sombra), que se va sola. Sin modales.
+- **Barras fijas del celular:** en tinta, abajo, y nunca dos a la vez. En los catálogos, "Presupuesto · N productos · Ver" reemplaza al botón flotante de WhatsApp y, al sumar, muestra unos segundos "Sumaste … al presupuesto."; en la página de un producto, cuando su "Sumar" queda fuera de la pantalla, la reemplaza "Sumar" de ese producto (con el color elegido); en /presupuesto, "Enviar por WhatsApp" aparece solo cuando el botón del panel no está a la vista.
+- **Aviso al sumar:** pastilla tinta con borde crema de 2 px (así se separa del pie sin sombra), que se va sola. Sin modales. En el celular, si hay una barra abajo, confirma la barra (no se apilan).
 - **The Quitar Rule.** Las acciones que sacan algo (Quitar, Vaciar) van con subrayado tinta tenue; el subrayado amarillo queda para las que suman o resuelven (Sumar otro color, Copiar la lista, Ver presupuesto). Vaciar se confirma en el mismo lugar ("¿Vaciar? Sí · No") con el foco en "No".
-- **Animación:** una sola, el salto del número del contador al sumar.
+- **Animación:** una sola, la protagonista de los catálogos ("dar en el blanco"): al tocar "Sumar al presupuesto" en la página del producto, una copia chica de la foto que se está viendo vuela en arco hasta el número del presupuesto en el header (650 ms); al llegar, el número salta y deja una onda amarilla, como el signo del logo que cae sobre la diana (`src/lib/vuelo.ts`). Con menos movimiento no hay vuelo: cambia el número y el aviso confirma.
+
+### Catálogos
+La tienda sin precios: cada catálogo muestra sus productos y cada producto tiene su página (`src/components/catalogo/`).
+- **Tarjeta de catálogo (hub e Inicio):** cuadrada, con la foto de un producto en marco blanco ("Apoyado", "Levantado" al pasar el mouse), nombre, una línea y "N modelos". Toda la tarjeta es un solo link. Los catálogos sin productos en la web (Cintas, Llaveros) muestran la portada en tinta, también cuadrada.
+- **Tarjeta de producto:** foto entera en marco blanco, pastilla amarilla con el código, nombre, tipo y "N colores". Sin "Sumar" (Nachi, 5/11/2026): los clientes comparan antes de pedir, así que se suma desde la página del producto, con los detalles y el color a la vista. Toda la tarjeta lleva al producto (el link está en el nombre y se estira sobre la tarjeta).
+- **Grillas:** 2 columnas en el celular, 3 en tablet y 4 en escritorio. Sin animación de entrada por tarjeta.
+- **Barra de secciones:** pastillas fijas debajo del header mientras se recorren los productos; la activa en tinta. En el celular se desliza de costado (y la activa se centra sola); desde tablet, si no entran, pasan a dos líneas.
+- **Encabezados acotados:** en el hub y en cada catálogo, titular más chico y, en escritorio, la bajada y los botones al costado: los productos asoman en la primera pantalla.
+- **Color en la página del producto:** grupo de opciones (radio) en pastillas, "A definir" marcado de entrada; la elegida en tinta. Se suma con ese color. Con un solo color, no hay opciones. Si el producto tiene una foto por color (fotoDeColor en productos-ajustes.ts), al elegirlo la galería pasa a esa foto.
+- **Galería del producto:** la foto grande se desliza (dedo, trackpad o teclado), con miniaturas abajo, contador "2 / 5" y, en escritorio, flechas redondas. Sin zoom. En escritorio queda fija mientras se leen los datos.
+- **Buscador:** campo en cápsula con lupa, sin esperar al servidor (nombre, tipo, sección, código, catálogo o descripción, sin importar tildes; entiende plurales y sinónimos como "lapicera" o "libreta"; ordena por relevancia). La búsqueda queda en la dirección (?q=). Si lo buscado está en un catálogo o una sección solo en PDF, lo dice ("Está en el catálogo Llaveros."); sin resultados, un recuadro crema suave ofrece sumarlo a "Otro" del presupuesto o escribir por WhatsApp.
+- **Sección sin productos en la web:** título, su línea y un recuadro crema suave con "Sumar al presupuesto" (la anota en "Otro") y el PDF (o WhatsApp si el PDF no está subido). En Cintas y Llaveros, cada sección de la lista tiene el mismo "Sumar al presupuesto".
+- **Foco:** contorno tinta de 2 px separado 4 px en todo lo que se toca (también en los botones tinta); en blanco sobre superficies tinta. La regla va en globals.css fuera de las capas de Tailwind, así no la pisa ninguna clase.
+
+### Hero del Inicio
+- Crema liso: titular centrado, el isotipo original debajo (sin agregados) y dos botones: "Ver catálogos" (amarillo, el principal, más grande) y "Conocenos" (outline, a Nosotros). Sin ondas ni productos de fondo (Nachi, 5/11/2026).
+- Al bajar, el isotipo crece hasta entrar en el punto amarillo y aparece "Tu marca, en cada ___.": las palabras pasan parejas, con lugar para leer cada una, y "detalle" se marca al final con un golpe y una onda. Con menos movimiento, todo queda quieto.
 
 ### Logo (signature)
 - **Isotipo inalterable:** el isotipo (diana con signo) se usa tal cual el archivo original, solo y sin agregarle gráficas (la de arcos de la pág. 18 de Elementos es una pieza artística, no el isotipo). Las ondas u otros recursos van de fondo, separados de él (Nachi, 2/11/2026).
@@ -290,7 +307,7 @@ El "carrito" sin precios: se suma cada producto con cantidad y color, y se manda
 - **Do** dar relieve suave a tarjetas, portadas y fotos con las sombras "Apoyado", "Levantado" y "Portada", en tono tinta.
 - **Do** sacar las formas, el logo y los íconos de los archivos de la marca, en SVG; íconos de línea con trazo de 2 px, puntas redondas, en tinta dentro de un círculo amarillo.
 - **Do** limitar cada sección a una sola animación protagonista, hecha con `transform` y `opacity`, y dejar todo visible y quieto con `prefers-reduced-motion`.
-- **Do** apagar en pantallas táctiles los efectos que dependen del mouse (inclinación 3D, imán).
+- **Do** apagar en pantallas táctiles los efectos que dependen del mouse (como el imán de los botones de cierre).
 
 ### Don't:
 - **Don't** poner texto amarillo sobre crema, crema suave o blanco (1,7:1), ni texto blanco sobre amarillo (1,8:1).

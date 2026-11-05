@@ -1,3 +1,13 @@
+/** "Botellas y vasos térmicos" → "botellas-y-vasos-termicos" (para ids y links). */
+export function aSlug(texto: string) {
+  return texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 /** Une clases de Tailwind ignorando las vacías: cn("a", cond && "b"). */
 export function cn(...clases: (string | false | null | undefined)[]) {
   return clases.filter(Boolean).join(" ");

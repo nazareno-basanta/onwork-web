@@ -13,15 +13,19 @@ export default function PortadaCatalogo({
   catalogo,
   className,
   priority = false,
+  cuadrada = false,
 }: {
   catalogo: Catalogo;
   className?: string;
   priority?: boolean;
+  /** Cuadrada, para ir en la misma grilla que las fotos de producto (hub e Inicio). */
+  cuadrada?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "relative aspect-[210/297] w-full overflow-hidden rounded-xl bg-ow-black shadow-portada [container-type:inline-size]",
+        "relative w-full overflow-hidden bg-ow-black [container-type:inline-size]",
+        cuadrada ? "aspect-square rounded-3xl" : "aspect-[210/297] rounded-xl shadow-portada",
         className,
       )}
     >
@@ -41,7 +45,8 @@ export default function PortadaCatalogo({
             alt=""
             width={698}
             height={111}
-            className="h-auto w-[34cqw]"
+            // Nunca menos de 64 px: el mínimo del wordmark (DESIGN.md).
+            className="h-auto w-[max(34cqw,64px)]"
           />
           <div>
             <p className="font-display text-[15cqw] leading-[0.95] font-extrabold tracking-tight">

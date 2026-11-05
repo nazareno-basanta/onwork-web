@@ -25,7 +25,7 @@ npm run lint     # revisa el código
 
 | Ruta | Qué contiene |
 |---|---|
-| `src/app/` | Las páginas. Cada carpeta es una URL: `nosotros/`, `catalogos/`, `catalogos/[slug]/` (los 7 catálogos), `pedidos/`, `pedidos/[cliente]/`, `contacto/` |
+| `src/app/` | Las páginas. Cada carpeta es una URL: `nosotros/`, `catalogos/`, `catalogos/[slug]/` (los 8 catálogos), `pedidos/`, `pedidos/[cliente]/`, `contacto/` |
 | `src/components/` | Piezas reutilizables: encabezado, menú, pie, titular, botones, formas de la marca |
 | `src/components/sections/` | Las secciones del Inicio y el cierre de las páginas |
 | `src/components/ui/` | Componentes de terceros adaptados a la marca (ver abajo) |
@@ -47,17 +47,18 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 | Menú en pastilla y menú del celular | React Bits · Pill Nav y Staggered Menu (comportamiento) | Encabezado |
 | Cinta infinita | Magic UI · Marquee | Logos de clientes y búsquedas a medida |
 | Frase rotativa | React Bits · Rotating Text | Inicio |
-| Portada que se inclina | React Bits · Tilted Card | Catálogos |
 | Carrusel de pedidos | Aceternity · Apple Cards Carousel (sin modal) | Inicio, cuando haya pedidos |
 | Pasos con scroll | Aceternity · Sticky Scroll Reveal | Inicio |
 | Botón con imán | Motion Primitives · Magnetic | Cierres y Contacto |
+| Ícono de WhatsApp | Tabler Icons · brand-whatsapp (licencia MIT, solo el dibujo) | Botones de WhatsApp |
 
 ## Cómo cargar lo que falta
 
-1. **Catálogos PDF**: copiar cada PDF a `public/catalogos/` con el nombre del catálogo (`drinkware.pdf`) y sumar `pdf: "/catalogos/drinkware.pdf"` en `src/data/catalogos.ts`. Para usar la portada real en vez de la armada, guardar la página 1 como `public/catalogos/portadas/drinkware.webp` y sumar `portada`.
-2. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`. La franja de clientes muestra solo las marcas con logo; sin ninguna, no aparece en la web.
-3. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con el primer pedido cargado aparecen solos "Pedidos reales" en el menú y el pie, el carrusel del Inicio, la página del pedido y su lugar en el sitemap, y `/pedidos` se empieza a indexar.
-4. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar. Se ve en `npm run dev` y **no** en la web publicada (si un párrafo es todo marcador, no se muestra). Para ver la lista con archivo y línea: `npm run marcadores`.
+1. **Catálogos PDF**: copiar cada PDF a `public/catalogos/` con el nombre del catálogo (`drinkware.pdf`). La web lo encuentra sola al publicar y muestra el botón "Descargar catálogo PDF" (en la compu, reiniciar `npm run dev`). Para usar la portada real en vez de la armada, guardar la página 1 como `public/catalogos/portadas/drinkware.webp` y sumar `portada`.
+2. **Productos de los catálogos**: salen de los Excel de cada catálogo con `npm run productos`. El script copia las fotos buenas a `public/productos/` (WebP de 1200 px y, por producto, la imagen para compartir el link, `…-compartir.jpg`), arma `src/data/productos.generated.json` y la hoja de contactos `../Web OW/fotos-productos.html` para elegir fotos. Las correcciones a mano (foto principal, fotos que no van, ocultar un producto, corregir un texto) van en `src/data/productos-ajustes.ts`, que el script nunca pisa. Un texto que nombra a un proveedor u otra marca, o una nota interna, no pasa a la web.
+3. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`. La franja de clientes muestra solo las marcas con logo; sin ninguna, no aparece en la web.
+4. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con el primer pedido cargado aparecen solos "Pedidos reales" en el menú y el pie, el carrusel del Inicio, la página del pedido y su lugar en el sitemap, y `/pedidos` se empieza a indexar.
+5. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar. Se ve en `npm run dev` y **no** en la web publicada (si un párrafo es todo marcador, no se muestra). Para ver la lista con archivo y línea: `npm run marcadores`.
 
 ## Pendientes antes de publicar
 

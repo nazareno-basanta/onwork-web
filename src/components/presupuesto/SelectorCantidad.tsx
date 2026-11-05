@@ -11,8 +11,15 @@ type Props = {
   onCambiar: (cantidad: number) => void;
   /** Nombre del producto, para las etiquetas ("Cantidad de Apóstoles"). */
   nombre: string;
-  /** Pone el foco en el número al aparecer (recién sumado). */
-  autoFocus?: boolean;
+  /**
+   * Recién sumado: "numero" (con el teclado) pone el foco en el número;
+   * "grupo" (con mouse, dedo o lector de pantalla) en el grupo, sin abrir el
+   * teclado del celular. alEnfocar avisa que ya se hizo (así no se repite).
+   */
+  enfocar?: "numero" | "grupo" | null;
+  alEnfocar?: () => void;
+  /** Con cantidad 1, el "−" pasa a ser "Quitar" (un tacho): así entra en una sola fila en las tarjetas. */
+  onQuitar?: () => void;
   className?: string;
 };
 
@@ -26,7 +33,15 @@ const boton =
  * confirma al salir del campo o con Enter) y las flechas del teclado suman o
  * restan de a uno. Sin mínimo de pedido: va de 1 a 99.999.
  */
-export default function SelectorCantidad({ valor, onCambiar, nombre, autoFocus, className }: Props) {
+export default function SelectorCantidad({ valor, onCambiar, nombre, enfocar, alEnfocar, onQuitar, className }: Props) {
+  const grupo = useRef<HTMLDivElement>(null);
+  const numero = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (!enfocar) return;
+    (enfocar === "numero" ? numero.current : grupo.current)?.focus({ preventScroll: true });
+    alEnfocar?.();
+  }, [enfocar, alEnfocar]);
+  const quitarAca = valor <= 1 && onQuitar;
   // Lo que la persona está escribiendo; null cuando no está editando.
   const [borrador, setBorrador] = useState<string | null>(null);
   // Si escribe 0, la cantidad vuelve a la anterior y se explica cómo sacarlo.
@@ -62,18 +77,26 @@ export default function SelectorCantidad({ valor, onCambiar, nombre, autoFocus, 
   return (
     <>
       <div
+        ref={grupo}
+        tabIndex={-1}
         role="group"
         aria-label={`Cantidad de ${nombre}`}
         className={cn("inline-flex h-11 max-w-full items-center gap-0.5 rounded-full border-2 border-ow-black bg-white px-0.5 pointer-coarse:h-12", className)}
       >
-        <button type="button" className={boton} onClick={() => onCambiar(valor - 1)} disabled={valor <= 1} aria-label={`Uno menos de ${nombre}`}>
-          <Icon name="menos" size={16} strokeWidth={2.5} />
-        </button>
+        {quitarAca ? (
+          <button type="button" className={boton} onClick={onQuitar} aria-label={`${PRESUPUESTO.quitar} ${nombre} del presupuesto`}>
+            <Icon name="quitar" size={16} />
+          </button>
+        ) : (
+          <button type="button" className={boton} onClick={() => onCambiar(valor - 1)} disabled={valor <= 1} aria-label={`Uno menos de ${nombre}`}>
+            <Icon name="menos" size={16} strokeWidth={2.5} />
+          </button>
+        )}
         <input
           type="text"
           inputMode="numeric"
           autoComplete="off"
-          autoFocus={autoFocus}
+          ref={numero}
           aria-label={`Cantidad de ${nombre}`}
           value={borrador ?? String(valor)}
           onChange={(e) => setBorrador(e.target.value.replace(/\D/g, "").slice(0, String(CANTIDAD_MAXIMA).length))}

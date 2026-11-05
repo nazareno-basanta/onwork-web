@@ -2,7 +2,7 @@
  * Datos estructurados (schema.org) que le explican a Google y a los buscadores
  * con IA qué es On Work. Se validan con los tipos de schema-dts.
  */
-import type { FAQPage, Organization, WebSite, WithContext } from "schema-dts";
+import type { FAQPage, ItemList, Organization, WebSite, WithContext } from "schema-dts";
 import type { Pregunta } from "@/data/preguntas";
 import { SITE } from "@/lib/site";
 import { tieneMarcador } from "@/lib/utils";
@@ -45,6 +45,26 @@ export const sitioWeb: WithContext<WebSite> = {
   inLanguage: "es-AR",
   publisher: { "@id": ORGANIZACION_ID },
 };
+
+/**
+ * Los productos de la página de un catálogo, en el orden en que se ven (cada
+ * uno con el link a su página). Sin "Product": Google lo pide con precio,
+ * reseñas o calificación, y la web no tiene ninguno de los tres.
+ */
+export function listaDeProductos(nombre: string, productos: { nombre: string; url: string }[]): WithContext<ItemList> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: nombre,
+    numberOfItems: productos.length,
+    itemListElement: productos.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.nombre,
+      url: `${SITE.url}${p.url}`,
+    })),
+  };
+}
 
 /**
  * Preguntas frecuentes de una página. Solo van las que ya están completas (sin

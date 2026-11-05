@@ -23,6 +23,8 @@ export const PRESUPUESTO = {
   quitar: "Quitar",
 
   otroTitulo: "¿Buscás algo que no está en los catálogos?",
+  /** ✏️ Borrador: link al campo "Otro" desde la banda de búsquedas y el buscador del hub. */
+  sumarOtro: "Sumalo a tu presupuesto",
   otroEjemplo: "Ej.: gorras trucker, delantales, frisbees",
 
   enviar: "Enviar presupuesto por WhatsApp",
@@ -57,6 +59,12 @@ export const PRESUPUESTO = {
   sumarCorto: "Sumar",
   sumarEtiqueta: (nombre: string) => `Sumar ${nombre} al presupuesto`,
   enVariosColores: (n: number) => `En tu presupuesto, en ${n} colores.`,
+  /** ✏️ Borrador: en la barra del producto (celular) y en las líneas que están solo en el PDF, cuando ya se sumó. */
+  enTuPresupuesto: "En tu presupuesto",
+  /** ✏️ Borrador: cómo queda en "Otro" una línea que está solo en el PDF. */
+  lineaEnOtro: (seccion: string, catalogo: string) => `${seccion} (catálogo ${catalogo})`,
+  /** ✏️ Borrador: en la página del producto, los otros colores que ya están en el presupuesto. */
+  tambienEnColores: (colores: string[]) => `También en tu presupuesto: ${colores.join(", ")}.`,
   verPresupuesto: "Ver presupuesto",
 
   /** Header, barra del celular y aviso. */

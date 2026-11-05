@@ -25,7 +25,7 @@ export const HITOS = [
   { anio: "1990", texto: "Empezamos con serigrafía." },
   { anio: "[año]", texto: "[hito: técnica, servicio o cliente que marcó un cambio]" },
   { anio: "[año]", texto: "[hito]" },
-  { anio: "2026", texto: "Catálogos propios en siete líneas." },
+  { anio: "2026", texto: "Catálogos propios en ocho líneas." },
 ];
 
 export const VALORES = {

@@ -3,17 +3,17 @@
 /**
  * Hero del Inicio: "dar en el blanco" con el scroll.
  *
- * Arranca simple y centrado: el titular y, debajo, el isotipo original de
- * On Work (la diana con el signo), sin ningún agregado. De fondo, ondas finas
- * salen del centro de la pantalla una y otra vez (la "onda expansiva" de la
- * animación del logo), separadas del isotipo.
+ * Arranca simple y centrado: el titular, el isotipo original de On Work (la
+ * diana con el signo), sin ningún agregado, y los dos botones: "Ver
+ * catálogos" (el principal, en amarillo) y "Conocenos". (Sin ondas ni
+ * productos de fondo: Nachi, 5/11/2026.)
  *
  * Al bajar, la pantalla queda fija: el isotipo crece, viaja al centro y se
  * entra en el punto amarillo, que llena la pantalla. Adentro aparece
- * "Tu marca, en cada ___." y las palabras pasan cada vez más rápido hasta
- * frenar en "detalle", que se marca con un golpe y una onda.
+ * "Tu marca, en cada ___." y las palabras pasan parejas, con lugar para
+ * leer cada una, hasta "detalle", que se marca con un golpe y una onda.
  *
- * Con menos movimiento no hay scroll fijo ni ondas: todo queda quieto y la
+ * Con menos movimiento no hay scroll fijo: todo queda quieto y la
  * frase va debajo, en una franja amarilla, ya en "detalle".
  */
 
@@ -28,53 +28,22 @@ import {
   useScroll,
   useTransform,
 } from "motion/react";
+import Icon from "@/components/Icon";
 import RotatingText from "@/components/ui/RotatingText";
 import { ISO_ARO, ISO_CAJA, ISO_PUNTO, ISO_SIGNO } from "@/components/Isotipo";
 import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
 import { sinViuda } from "@/lib/utils";
 
-// Tramos del scroll (0 = arranca el hero fijo, 1 = se suelta).
-const ZOOM: [number, number] = [0.03, 0.45];
-const CENTRADO: [number, number] = [0.03, 0.32];
-const FRASE: [number, number] = [0.45, 0.5];
-const PALABRAS: [number, number] = [0.5, 0.9]; // de 0,9 a 1 queda "detalle"
-/** Cuánto se aceleran las palabras: 1 = parejo; más alto = arranca lento y termina rápido. */
-const RAMPA = 1.8;
-const ONDAS = 4;
+// Tramos del scroll (0 = arranca el hero fijo, 1 = se suelta). El hero mide
+// 520vh: el isotipo crece en unos 120vh, la frase entra y cada palabra queda
+// unos 25vh (se lee bien) hasta "detalle", que queda fija al final.
+const ZOOM: [number, number] = [0.02, 0.3];
+const CENTRADO: [number, number] = [0.02, 0.22];
+const FRASE: [number, number] = [0.3, 0.34];
+const PALABRAS: [number, number] = [0.34, 0.93]; // de 0,93 a 1 queda "detalle"
 
 const tramo = (v: number, [a, b]: [number, number]) => Math.min(1, Math.max(0, (v - a) / (b - a)));
-
-/**
- * Fondo: ondas finas que nacen en el centro de la pantalla y se abren hasta
- * salir por los bordes, una tras otra. No dependen del isotipo.
- */
-function Ondas({ opacidad }: { opacidad?: MotionValue<number> }) {
-  return (
-    <motion.svg
-      aria-hidden
-      focusable="false"
-      className="pointer-events-none absolute inset-0 h-full w-full"
-      style={opacidad ? { opacity: opacidad } : undefined}
-    >
-      {Array.from({ length: ONDAS }, (_, i) => (
-        <circle
-          key={i}
-          className="onda"
-          style={{ animationDelay: `${i * 2.5}s` }}
-          cx="50%"
-          cy="50%"
-          r="22%"
-          fill="none"
-          stroke="var(--ow-black)"
-          strokeOpacity="0.16"
-          strokeWidth="1.5"
-          vectorEffect="non-scaling-stroke"
-        />
-      ))}
-    </motion.svg>
-  );
-}
 
 /** El isotipo original (paths del archivo de marca, sin cambios). */
 function Isotipo() {
@@ -142,9 +111,14 @@ function Escena({ isotipo, opacidad }: { isotipo: React.ReactNode; opacidad?: Mo
         <TitularHero />
       </motion.div>
       {isotipo}
-      <motion.div style={opacidad ? { opacity: opacidad } : undefined}>
-        <Link href="/catalogos" className={btn.black}>
+      {/* "Ver catálogos" es la acción principal (amarillo, más grande); "Conocenos", la segunda. */}
+      <motion.div style={opacidad ? { opacity: opacidad } : undefined} className="flex flex-wrap justify-center gap-3">
+        <Link href="/catalogos" className={`${btn.yellow} !min-h-14 !px-8 !text-base`}>
           {HERO.botonCatalogos}
+          <Icon name="flecha-derecha" size={20} />
+        </Link>
+        <Link href="/nosotros" className={`${btn.line} !min-h-14 !px-8 !text-base`}>
+          {HERO.botonConocenos}
         </Link>
       </motion.div>
     </div>
@@ -265,14 +239,13 @@ export default function HeroScroll() {
     if (geo) aplicar(transform.get());
   });
 
-  const textoOpacidad = useTransform(p, [0.01, 0.1], [1, 0]);
-  const ondasOpacidad = useTransform(p, [0.01, 0.08], [1, 0]);
+  const textoOpacidad = useTransform(p, [0.01, 0.07], [1, 0]);
   const fraseOpacidad = useTransform(p, FRASE, [0, 1]);
   const fraseY = useTransform(p, FRASE, [36, 0]);
 
-  // Las palabras pasan cada vez más rápido (rampa) y la última queda fija.
+  // Las palabras pasan parejas (cada una el mismo tramo de scroll) y la última queda fija.
   useMotionValueEvent(p, "change", (v) => {
-    const i = Math.min(ultima, Math.floor(ultima * tramo(v, PALABRAS) ** RAMPA + 1e-6));
+    const i = Math.min(ultima, Math.floor((ultima + 1) * tramo(v, PALABRAS)));
     if (i !== indice) setIndice(i);
   });
 
@@ -292,9 +265,8 @@ export default function HeroScroll() {
   }
 
   return (
-    <section ref={contRef} className="relative h-[380vh]">
+    <section ref={contRef} className="relative h-[520vh]">
       <div ref={stageRef} className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden">
-        <Ondas opacidad={ondasOpacidad} />
         <Escena opacidad={textoOpacidad} isotipo={<IsotipoReposo oculto={!!geo} refCaja={cajaRef} />} />
 
         {geo && (

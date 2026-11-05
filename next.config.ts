@@ -1,9 +1,17 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { NextConfig } from "next";
 
-// Slugs de los catálogos PDF (public/catalogos/<slug>.pdf).
-const CATALOGOS_PDF = ["drinkware", "escritura", "cuadernos", "oficina", "marroquineria", "cintas", "llaveros"];
+// Slugs de los catálogos (los mismos de src/data/catalogos.ts). El PDF de
+// cada uno va en public/catalogos/<slug>.pdf.
+const CATALOGOS = ["drinkware", "escritura", "cuadernos", "oficina", "marroquineria", "paraguas", "cintas", "llaveros"];
+
+// Qué PDF están subidos: la web muestra el botón "Descargar catálogo PDF"
+// solo en esos. Se revisa al publicar (y al arrancar npm run dev).
+const CATALOGOS_PDF = CATALOGOS.filter((slug) => existsSync(join(process.cwd(), "public", "catalogos", `${slug}.pdf`)));
 
 const nextConfig: NextConfig = {
+  env: { CATALOGOS_PDF: CATALOGOS_PDF.join(",") },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

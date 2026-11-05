@@ -1,3 +1,8 @@
-Guardá acá los PDF de los catálogos que quieras publicar.
+Guardá acá los PDF de los catálogos con el nombre del catálogo, sin año:
+drinkware.pdf, escritura.pdf, cuadernos.pdf, oficina.pdf, marroquineria.pdf,
+paraguas.pdf, cintas.pdf, llaveros.pdf.
+
+La web los encuentra sola al publicar y muestra el botón "Descargar catálogo
+PDF" (en la compu, reiniciá npm run dev). Si un PDF no está, el botón no aparece.
+
 Antes de subirlos, revisá que no tengan precios internos ni códigos de proveedor.
-Después agregalos en src/data/catalogos.ts

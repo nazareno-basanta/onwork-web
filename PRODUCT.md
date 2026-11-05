@@ -28,7 +28,7 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 
 ## Positioning
 
-- **Los catálogos son una base, no el total.** On Work trabaja con un catálogo muy amplio: lo que no está en los siete PDF, lo busca y lo consigue para cada marca (búsquedas a medida). Ejemplos reales: indumentaria de nieve, fundas para gafas de ski, almohadas de viaje, frisbees, delantales, gorras trucker, mochilas.
+- **Los catálogos son una base, no el total.** On Work trabaja con un catálogo muy amplio: lo que no está en los ocho PDF, lo busca y lo consigue para cada marca (búsquedas a medida). Ejemplos reales: indumentaria de nieve, fundas para gafas de ski, almohadas de viaje, frisbees, delantales, gorras trucker, mochilas.
 - **Desde 1990, empresa familiar.** Nació de la mano de dos amigos recién egresados del colegio que eligieron las ventas; empezó con serigrafía y fue sumando técnicas, productos y servicios.
 - **Oferta completa alrededor de la imagen de una marca:** merchandising, indumentaria, cartelería y tarjetería. (La fotografía de producto no es un servicio de On Work: confirmado por Nachi el 2/11/2026.)
 - **A medida de cada pedido:** sin mínimos ni plazos fijos; atención personalizada.
@@ -42,7 +42,7 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 - **Proceso:** el cliente cuenta su proyecto → On Work asesora y cotiza (producto y personalización según la marca, la cantidad y la fecha) → produce y envía a toda la Argentina.
 - **Antes de producir:** qué pasa con el logo (adaptación del archivo, prueba para aprobar) depende de cada pedido. No prometer un paso fijo.
 - **Todo producto lleva el logo del cliente.** Si el diseño lo trajo el cliente, On Work lo produce: no lo diseña.
-- **Siete catálogos PDF 2026:** Drinkware, Escritura, Cuadernos y anotadores, Oficina y escritorio, Marroquinería, Cintas e identificación, Llaveros. Cada uno tiene su página con texto propio en `/catalogos/<slug>` y el botón al PDF.
+- **Ocho catálogos PDF 2026:** Drinkware, Escritura, Cuadernos y anotadores, Oficina y escritorio, Marroquinería, Paraguas, Cintas e identificación, Llaveros. Cada uno tiene su página en `/catalogos/<slug>` con sus productos (solo los que tienen buenas fotos; Cintas y Llaveros, solo en el PDF) y el botón para descargar el PDF cuando está subido. Cada producto tiene su página en `/catalogos/<slug>/<producto>`.
 - **Pedidos reales:** una página por pedido en `/pedidos/<cliente>`.
 - **Redes:** Instagram @onworkba.
 - La web de Wix tiene URLs indexadas en Google que se redirigen (301) a las nuevas.

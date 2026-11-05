@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { CATALOGOS } from "@/data/catalogos";
+import { PRODUCTOS } from "@/data/productos";
 import { HAY_PEDIDOS, PEDIDOS } from "@/data/pedidos";
+import { urlProducto } from "@/lib/rutas";
 import { SITE } from "@/lib/site";
 
 /**
@@ -9,17 +11,19 @@ import { SITE } from "@/lib/site";
  * (Sin priority ni changeFrequency: Google los ignora.)
  */
 const EDICION = {
-  inicio: "2026-11-03",
-  catalogos: "2026-11-03",
-  catalogo: "2026-11-03",
+  inicio: "2026-11-04",
+  catalogos: "2026-11-04",
+  catalogo: "2026-11-04",
+  producto: "2026-11-04",
   pdf: "2026-11-03",
   pedidos: "2026-11-03",
   nosotros: "2026-11-03",
   contacto: "2026-11-03",
 };
 
-// Mapa del sitio para Google: todas las páginas, los catálogos, los pedidos
-// y los PDF que ya estén publicados.
+// Mapa del sitio para Google: todas las páginas, los catálogos, cada producto,
+// los pedidos y los PDF que ya estén publicados. /presupuesto no va (es de
+// cada persona y no se indexa).
 export default function sitemap(): MetadataRoute.Sitemap {
   const url = (path: string) => `${SITE.url}${path}`;
   const pagina = (path: string, fecha: string) => ({ url: url(path), lastModified: fecha });
@@ -28,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pagina("/", EDICION.inicio),
     pagina("/catalogos", EDICION.catalogos),
     ...CATALOGOS.map((c) => pagina(`/catalogos/${c.slug}`, EDICION.catalogo)),
+    ...PRODUCTOS.map((p) => pagina(urlProducto(p), EDICION.producto)),
     ...CATALOGOS.filter((c) => c.pdf).map((c) => pagina(c.pdf!, EDICION.pdf)),
     // /pedidos entra recién cuando hay pedidos cargados (antes no se indexa).
     ...(HAY_PEDIDOS ? [pagina("/pedidos", EDICION.pedidos)] : []),

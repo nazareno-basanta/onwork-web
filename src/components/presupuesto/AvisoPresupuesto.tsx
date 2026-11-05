@@ -5,7 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import { PRESUPUESTO } from "@/data/presupuesto";
+import { useCelular } from "@/lib/barras";
 import { presupuesto } from "@/lib/presupuesto";
+import { useBarraPresupuesto } from "./BarraPresupuesto";
 
 const DURACION = 4500;
 
@@ -52,8 +54,14 @@ export default function AvisoPresupuesto() {
 
   useEffect(() => () => clearTimeout(temporizador.current), []);
 
-  // En /presupuesto no hace falta: la persona ya está viendo la lista.
-  const visible = aviso !== null && pathname !== "/presupuesto" ? aviso : null;
+  // En /presupuesto no hace falta: la persona ya está viendo la lista. En el
+  // celular, si hay una barra abajo, confirma la barra (no se apilan).
+  const barra = useBarraPresupuesto();
+  const celular = useCelular();
+  const corresponde = aviso !== null && pathname !== "/presupuesto";
+  const visible = corresponde && !(barra && celular) ? aviso : null;
+  // Cuando confirma la barra, el lector de pantalla igual lo escucha desde acá.
+  const soloAnuncio = corresponde && barra && celular ? aviso : null;
 
   return (
     <>
@@ -61,6 +69,7 @@ export default function AvisoPresupuesto() {
         {anuncio}
       </p>
       <div role="status" className="pointer-events-none fixed inset-x-4 bottom-24 z-[55] flex justify-center lg:inset-x-auto lg:top-20 lg:right-6 lg:bottom-auto">
+        {soloAnuncio && <span className="sr-only">{PRESUPUESTO.aviso(soloAnuncio.nombre)}</span>}
         {visible && (
           <div
             key={visible.id}

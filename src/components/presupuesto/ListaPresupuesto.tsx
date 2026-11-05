@@ -260,6 +260,14 @@ function CampoOtro({ otro }: { otro: string }) {
     el.style.height = `${el.scrollHeight + 4}px`;
   };
   useEffect(ajustar, [otro]);
+  // Si se llega con el link "Sumalo a tu presupuesto" (#presupuesto-otro), el
+  // cursor queda al final del campo, listo para seguir escribiendo.
+  useEffect(() => {
+    const el = campo.current;
+    if (!el || window.location.hash !== "#presupuesto-otro") return;
+    el.focus();
+    el.setSelectionRange(el.value.length, el.value.length);
+  }, []);
 
   return (
     <>
@@ -270,6 +278,8 @@ function CampoOtro({ otro }: { otro: string }) {
         ref={campo}
         id="presupuesto-otro"
         rows={2}
+        // Que el header fijo no lo tape al llegar con #presupuesto-otro.
+        style={{ scrollMarginTop: "8rem" }}
         maxLength={300}
         value={otro}
         placeholder={PRESUPUESTO.otroEjemplo}
@@ -307,7 +317,7 @@ function Enviar({ texto, filas }: { texto: string; filas: Fila[] }) {
     <>
       {/* Lo que tranquiliza antes de enviar va junto al botón: qué se manda y que todo se consulta. */}
       <div className="mt-7 border-t-2 border-ow-black pt-5">
-        <p className="font-display font-bold">{PRESUPUESTO.resumen(filas.length, unidades)}</p>
+        {filas.length > 0 && <p className="font-display font-bold">{PRESUPUESTO.resumen(filas.length, unidades)}</p>}
         <p className="mt-1.5 text-sm text-ow-gray">{textoWeb(FRANJA_CATALOGOS)}</p>
       </div>
       <div ref={boton} className="mt-6">
@@ -321,18 +331,20 @@ function Enviar({ texto, filas }: { texto: string; filas: Fila[] }) {
       {createPortal(<div aria-hidden className="h-20 lg:hidden" />, document.body)}
       {!aLaVista && (
         <div className="entra fixed inset-x-0 bottom-0 z-40 flex items-center justify-between gap-4 bg-ow-black px-5 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-white lg:hidden">
-          <p className="font-display text-sm leading-tight font-bold">
-            {PRESUPUESTO.productos(filas.length)}
-            <span className="block text-xs font-semibold text-white/75">
-              {PRESUPUESTO.unidades(unidades)}
-            </span>
-          </p>
+          {filas.length > 0 && (
+            <p className="font-display text-sm leading-tight font-bold">
+              {PRESUPUESTO.productos(filas.length)}
+              <span className="block text-xs font-semibold text-white/75">
+                {PRESUPUESTO.unidades(unidades)}
+              </span>
+            </p>
+          )}
           <a
             href={whatsappUrl(texto)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={alEnviar}
-            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-ow-yellow px-5 font-display text-sm font-bold text-ow-black"
+            className="ml-auto inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-ow-yellow px-5 font-display text-sm font-bold text-ow-black"
           >
             <Icon name="whatsapp" size={18} />
             {PRESUPUESTO.enviarCorto}
@@ -369,15 +381,31 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
   );
 
   if (filas.length === 0) {
+    // Sin productos igual se puede pedir algo que no está en los catálogos
+    // ("Otro"): el campo queda al costado y, si tiene algo, el botón para mandarlo.
+    const soloOtro = armarMensajePresupuesto([], otro);
     return (
-      <div data-vacio className="mt-10 max-w-xl">
-        {region}
-        {avisoDescartados}
-        <p className="mt-5 text-lg text-ow-black/80">{textoWeb(PRESUPUESTO.vacio)}</p>
-        <Link href="/catalogos" className={`${btn.black} mt-7`}>
-          {PRESUPUESTO.verCatalogos}
-        </Link>
-        {/* Acá va la versión compacta de "Cómo pedir" (Prompt 4). */}
+      <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16">
+        <div data-vacio className="max-w-xl">
+          {region}
+          {avisoDescartados}
+          <p className="mt-5 text-lg text-ow-black/80">{textoWeb(PRESUPUESTO.vacio)}</p>
+          <Link href="/catalogos" className={`${btn.black} mt-7`}>
+            {PRESUPUESTO.verCatalogos}
+          </Link>
+          {/* Acá va la versión compacta de "Cómo pedir" (Prompt 4). */}
+        </div>
+        <aside className="self-start sm:rounded-3xl sm:bg-ow-paper-soft sm:p-9">
+          <CampoOtro otro={otro} />
+          {otro.trim() && (
+            <>
+              <Enviar texto={soloOtro.texto} filas={[]} />
+              <div className="mt-4">
+                <CopiarLista texto={soloOtro.completo} />
+              </div>
+            </>
+          )}
+        </aside>
       </div>
     );
   }

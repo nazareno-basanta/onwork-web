@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Franja from "@/components/Franja";
-import TarjetaCatalogo from "@/components/TarjetaCatalogo";
 import Titular from "@/components/Titular";
+import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
+import TarjetaCatalogo from "@/components/catalogo/TarjetaCatalogo";
 import Busquedas from "@/components/sections/Busquedas";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS, CATALOGOS_HUB } from "@/data/catalogos";
-import { textoWeb } from "@/lib/utils";
+import { fotoDeCatalogo, indiceBusqueda, indiceLugares } from "@/data/productos";
 
 export const metadata: Metadata = {
   title: CATALOGOS_HUB.seo.titulo,
@@ -15,25 +16,29 @@ export const metadata: Metadata = {
   openGraph: { url: "/catalogos" },
 };
 
+/**
+ * /catalogos: el buscador de productos de todos los catálogos, una tarjeta
+ * por catálogo y la banda de búsquedas a medida (lo que no está, lo
+ * conseguimos).
+ */
 export default function CatalogosPage() {
   return (
     <>
-      <section className="pt-10 pb-20 md:pt-14 md:pb-28">
+      {/* Encabezado acotado, como el de cada catálogo: el buscador y las tarjetas suben. */}
+      <section className="pt-8 pb-20 md:pt-10 md:pb-28">
         <div className="container-ow">
           <Breadcrumb items={[{ label: "Catálogos", href: "/catalogos" }]} />
-          <div className="mt-10 max-w-4xl">
-            <Titular as="h1" className="text-[clamp(2.4rem,6.4vw,5.25rem)]">
-              {CATALOGOS_HUB.h1}
-            </Titular>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ow-black/80 md:text-xl">
-              {textoWeb(CATALOGOS_HUB.bajada)}
-            </p>
-          </div>
+          {/* Sin bajada (Nachi, 5/11/2026): el titular, el buscador y los catálogos. */}
+          <Titular as="h1" className="mt-6 max-w-4xl text-[clamp(2rem,4.2vw,3.5rem)] md:mt-8">
+            {CATALOGOS_HUB.h1}
+          </Titular>
 
-          <ul className="mt-16 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 sm:gap-y-16 lg:grid-cols-3 xl:grid-cols-4">
+          <BuscadorProductos productos={indiceBusqueda()} lugares={indiceLugares()} />
+
+          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 sm:gap-y-16 lg:grid-cols-4">
             {CATALOGOS.map((c, i) => (
               <li key={c.slug}>
-                <TarjetaCatalogo catalogo={c} priority={i < 2} />
+                <TarjetaCatalogo catalogo={c} foto={fotoDeCatalogo(c.slug)} prioridad={i < 4} nivel="h2" />
               </li>
             ))}
           </ul>
@@ -42,7 +47,7 @@ export default function CatalogosPage() {
 
       <Franja />
 
-      <Busquedas id="busquedas-catalogos" titulo={CATALOGOS_HUB.banda.titulo} texto={CATALOGOS_HUB.banda.texto} />
+      <Busquedas id="busquedas-catalogos" conPresupuesto />
 
       <Cierre />
     </>

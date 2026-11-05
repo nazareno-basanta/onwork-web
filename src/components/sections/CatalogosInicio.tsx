@@ -1,12 +1,16 @@
 import Link from "next/link";
-import TarjetaCatalogo from "@/components/TarjetaCatalogo";
+import TarjetaCatalogo from "@/components/catalogo/TarjetaCatalogo";
 import Titular from "@/components/Titular";
 import { CATALOGOS } from "@/data/catalogos";
 import { CATALOGOS_INICIO } from "@/data/inicio";
+import { fotoDeCatalogo } from "@/data/productos";
 import { btn } from "@/lib/ui";
 import { textoWeb } from "@/lib/utils";
 
-/** Los siete catálogos como objetos: la portada se inclina con el mouse. */
+/**
+ * La puerta de entrada a los ocho catálogos: cada tarjeta lleva a la página
+ * del catálogo (sus productos y el PDF), con la foto de un producto.
+ */
 export default function CatalogosInicio() {
   return (
     <section aria-labelledby="catalogos-inicio" className="py-24 md:py-32">
@@ -21,7 +25,7 @@ export default function CatalogosInicio() {
         <ul className="mt-14 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 sm:gap-y-14 lg:grid-cols-4">
           {CATALOGOS.map((c) => (
             <li key={c.slug}>
-              <TarjetaCatalogo catalogo={c} />
+              <TarjetaCatalogo catalogo={c} foto={fotoDeCatalogo(c.slug)} />
             </li>
           ))}
         </ul>

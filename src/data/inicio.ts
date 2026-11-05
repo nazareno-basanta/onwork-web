@@ -10,6 +10,8 @@ export const HERO = {
   subrayados: ["se vea", "se use", "se recuerde"],
   botonWhatsApp: "Escribinos por WhatsApp",
   botonCatalogos: "Ver catálogos",
+  /** Segundo botón del hero (Nachi, 5/11/2026): lleva a Nosotros. */
+  botonConocenos: "Conocenos",
 };
 
 /**
@@ -42,7 +44,7 @@ export const QUE_HACEMOS = {
 export const CATALOGOS_INICIO = {
   titulo: "Una base para arrancar.",
   bajada:
-    "Siete catálogos con lo que más trabajamos. Son una parte de lo que hacemos: si lo que buscás no está, lo conseguimos.",
+    "Ocho catálogos con lo que más trabajamos. Son una parte de lo que hacemos: si lo que buscás no está, lo conseguimos.",
   boton: "Ver todos los catálogos",
 };
 

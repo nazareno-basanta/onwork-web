@@ -27,15 +27,22 @@ export default function SmoothScroll() {
     };
     window.addEventListener("ow:scroll-lock", onLock);
 
+    // La barra de secciones de los catálogos pide bajar hasta una sección.
+    const onScrollTo = (e: Event) => lenis.scrollTo((e as CustomEvent<number>).detail);
+    window.addEventListener("ow:scroll-to", onScrollTo);
+
     return () => {
       window.removeEventListener("ow:scroll-lock", onLock);
+      window.removeEventListener("ow:scroll-to", onScrollTo);
       lenis.destroy();
       lenisRef.current = null;
     };
   }, []);
 
-  // Al cambiar de página, volver arriba sin animación.
+  // Al cambiar de página, volver arriba sin animación (salvo que el link
+  // apunte a una parte de la página, como /catalogos/drinkware#seccion-termos).
   useEffect(() => {
+    if (window.location.hash) return;
     lenisRef.current?.scrollTo(0, { immediate: true });
   }, [pathname]);
 
