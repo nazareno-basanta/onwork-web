@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { ID_CAMPO_BUSCAR } from "@/components/BotonBuscar";
 import Icon from "@/components/Icon";
 import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
 import { CATALOGOS_HUB, CATALOGO_PAGINA } from "@/data/catalogos";
@@ -38,9 +39,15 @@ const dondeEsta = (lugares: LugarBuscable[]) =>
  * La búsqueda queda en la dirección (?q=…), así al volver de un producto sigue ahí.
  */
 export default function BuscadorProductos({ productos, lugares }: { productos: ProductoBuscable[]; lugares: LugarBuscable[] }) {
-  const id = useId();
+  const idResultados = useId();
+  const id = ID_CAMPO_BUSCAR;
   const campo = useRef<HTMLInputElement>(null);
   const [texto, setTexto] = useState("");
+
+  // Con la lupa del header (/catalogos#buscar), el cursor queda en el campo.
+  useEffect(() => {
+    if (window.location.hash === "#buscar") campo.current?.focus({ preventScroll: true });
+  }, []);
 
   // Al volver de un producto (o con un link a /catalogos?q=…), la búsqueda sigue escrita.
   useEffect(() => {
@@ -117,7 +124,7 @@ export default function BuscadorProductos({ productos, lugares }: { productos: P
   );
 
   return (
-    <div className="mt-8 md:mt-10">
+    <div id="buscar" className="mt-8 scroll-mt-28 md:mt-10">
       {/* Con "Buscar" en el teclado del celular, se cierra el teclado y quedan los resultados a la vista. */}
       <form role="search" onSubmit={(e) => (e.preventDefault(), campo.current?.blur())}>
         <label htmlFor={id} className="font-display text-lg leading-snug font-bold">
@@ -158,8 +165,8 @@ export default function BuscadorProductos({ productos, lugares }: { productos: P
       </p>
 
       {activo && (
-        <section aria-labelledby={`${id}-resultados`} className="mt-6">
-          <h2 id={`${id}-resultados`} className="sr-only">
+        <section aria-labelledby={`${idResultados}-resultados`} className="mt-6">
+          <h2 id={`${idResultados}-resultados`} className="sr-only">
             {TEXTOS.resultadosTitulo}
           </h2>
 

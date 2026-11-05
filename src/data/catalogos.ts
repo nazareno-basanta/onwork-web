@@ -475,6 +475,8 @@ export const CATALOGOS_HUB = {
     enCatalogoTexto: "Sus modelos no están en la web: sumalo a tu presupuesto o escribinos y te pasamos las opciones.",
     tambienEn: "También en:",
     borrar: "Borrar la búsqueda",
+    /** La lupa del header (se lee en lectores de pantalla y al pasar el mouse). */
+    botonHeader: "Buscar productos",
     /** Título (solo para lectores de pantalla) de los resultados. */
     resultadosTitulo: "Resultados de la búsqueda",
     mensaje: (q: string) => mensajeWeb(`un producto que no está en los catálogos: ${q}`),

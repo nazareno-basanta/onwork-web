@@ -91,9 +91,11 @@ export default function MobileNav() {
         aria-expanded={open}
         aria-controls="menu-movil"
         onClick={() => setOpen(true)}
-        className="flex min-h-11 items-center gap-2.5 rounded-full border-2 border-ow-black px-4 font-display text-sm font-bold"
+        className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2.5 rounded-full border-2 border-ow-black font-display text-sm font-bold sm:px-4"
       >
-        Menú
+        {/* En el teléfono no entra junto a la lupa y el presupuesto: queda el
+            círculo con las dos rayas (la palabra la sigue leyendo el lector de pantalla). */}
+        <span className="sr-only sm:not-sr-only">Menú</span>
         <span aria-hidden className="flex w-5 flex-col gap-1.5">
           <span className="h-0.5 w-full bg-ow-black" />
           <span className="h-0.5 w-3/4 self-end bg-ow-black" />

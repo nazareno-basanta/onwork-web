@@ -949,10 +949,10 @@
     ],
     "fotos": [
       {
-        "n": 2,
-        "src": "/productos/drinkware/ow-drk-27-trevelin-2.webp",
-        "ancho": 869,
-        "alto": 864
+        "n": 3,
+        "src": "/productos/drinkware/ow-drk-27-trevelin-3.webp",
+        "ancho": 960,
+        "alto": 960
       }
     ],
     "compartir": "/productos/drinkware/ow-drk-27-trevelin-compartir.jpg",
@@ -1422,88 +1422,10 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-1.webp",
-        "ancho": 977,
+        "n": 26,
+        "src": "/productos/escritura/ow-esc-01-gardel-silver-26.webp",
+        "ancho": 1200,
         "alto": 1200
-      },
-      {
-        "n": 2,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-2.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-3.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-4.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-5.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-6.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-7.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-8.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-9.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 10,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-10.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-11.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-12.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-13.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 14,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-14.webp",
-        "ancho": 800,
-        "alto": 823
       },
       {
         "n": 15,
@@ -1512,80 +1434,8 @@
         "alto": 1000
       },
       {
-        "n": 16,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-16.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 17,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-17.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-18.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 19,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-19.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 20,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-20.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 21,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-21.webp",
-        "ancho": 600,
-        "alto": 600
-      },
-      {
-        "n": 22,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-22.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 23,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-23.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 24,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-24.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 25,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-25.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 26,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-26.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 27,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-27.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 28,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-28.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -1596,20 +1446,8 @@
         "alto": 1200
       },
       {
-        "n": 30,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-30.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 31,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-31.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 32,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-32.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -1620,20 +1458,8 @@
         "alto": 1200
       },
       {
-        "n": 34,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-34.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 35,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-35.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 36,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-36.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -1644,20 +1470,8 @@
         "alto": 1200
       },
       {
-        "n": 38,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-38.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 39,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-39.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 40,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-40.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -1668,38 +1482,8 @@
         "alto": 1200
       },
       {
-        "n": 42,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-42.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 43,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-43.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 44,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-44.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 45,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-45.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 46,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-46.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 47,
-        "src": "/productos/escritura/ow-esc-01-gardel-silver-47.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1730,80 +1514,14 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 2,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-2.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-5.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 6,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-6.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 7,
         "src": "/productos/escritura/ow-esc-02-gardel-color-7.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-8.webp",
-        "ancho": 600,
-        "alto": 600
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-9.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 10,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-10.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-11.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-12.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-13.webp",
+        "n": 15,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-15.webp",
         "ancho": 1000,
         "alto": 1000
       },
@@ -1814,8 +1532,14 @@
         "alto": 1000
       },
       {
-        "n": 15,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-15.webp",
+        "n": 10,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-10.webp",
+        "ancho": 1200,
+        "alto": 1200
+      },
+      {
+        "n": 9,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-9.webp",
         "ancho": 1000,
         "alto": 1000
       },
@@ -1832,82 +1556,22 @@
         "alto": 1000
       },
       {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-18.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 11,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-11.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 19,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-19.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 13,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-13.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 20,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-20.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 21,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-21.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 22,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-22.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 23,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-23.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 24,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-24.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 25,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-25.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 26,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-26.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 27,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-27.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 28,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-28.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 29,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-29.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 30,
-        "src": "/productos/escritura/ow-esc-02-gardel-color-30.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 12,
+        "src": "/productos/escritura/ow-esc-02-gardel-color-12.webp",
+        "ancho": 1000,
+        "alto": 1000
       }
     ],
     "compartir": "/productos/escritura/ow-esc-02-gardel-color-compartir.jpg",
@@ -1936,62 +1600,14 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-1.webp",
-        "ancho": 977,
-        "alto": 1200
+        "n": 30,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-30.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 2,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-2.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-3.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-4.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-5.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-6.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-7.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-8.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-9.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 10,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-10.webp",
+        "n": 17,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-17.webp",
         "ancho": 800,
         "alto": 823
       },
@@ -2002,44 +1618,8 @@
         "alto": 823
       },
       {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-12.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-13.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 14,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-14.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 15,
         "src": "/productos/escritura/ow-esc-03-gardel-white-15.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 16,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-16.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 17,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-17.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-18.webp",
         "ancho": 800,
         "alto": 823
       },
@@ -2050,226 +1630,40 @@
         "alto": 823
       },
       {
-        "n": 20,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-20.webp",
+        "n": 16,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-16.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 21,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-21.webp",
+        "n": 10,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-10.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 22,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-22.webp",
+        "n": 12,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-12.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 23,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-23.webp",
+        "n": 14,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-14.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 24,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-24.webp",
+        "n": 13,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-13.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 25,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-25.webp",
+        "n": 18,
+        "src": "/productos/escritura/ow-esc-03-gardel-white-18.webp",
         "ancho": 800,
         "alto": 823
-      },
-      {
-        "n": 26,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-26.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 27,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-27.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 28,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-28.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 29,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-29.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 30,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-30.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 31,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-31.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 32,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-32.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 33,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-33.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 35,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-35.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 36,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-36.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 37,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-37.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 38,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-38.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 39,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-39.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 40,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-40.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 41,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-41.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 42,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-42.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 43,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-43.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 44,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-44.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 45,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-45.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 46,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-46.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 47,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-47.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 48,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-48.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 49,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-49.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 50,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-50.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 51,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-51.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 52,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-52.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 53,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-53.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 54,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-54.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 55,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-55.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 56,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-56.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 57,
-        "src": "/productos/escritura/ow-esc-03-gardel-white-57.webp",
-        "ancho": 1200,
-        "alto": 1200
       }
     ],
     "compartir": "/productos/escritura/ow-esc-03-gardel-white-compartir.jpg",
@@ -2396,10 +1790,10 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/escritura/ow-esc-05-pappo-1.webp",
-        "ancho": 977,
-        "alto": 1200
+        "n": 17,
+        "src": "/productos/escritura/ow-esc-05-pappo-17.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
         "n": 2,
@@ -2410,12 +1804,6 @@
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-05-pappo-3.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-05-pappo-4.webp",
         "ancho": 977,
         "alto": 1200
       },
@@ -2444,6 +1832,12 @@
         "alto": 1200
       },
       {
+        "n": 1,
+        "src": "/productos/escritura/ow-esc-05-pappo-1.webp",
+        "ancho": 977,
+        "alto": 1200
+      },
+      {
         "n": 9,
         "src": "/productos/escritura/ow-esc-05-pappo-9.webp",
         "ancho": 977,
@@ -2454,102 +1848,6 @@
         "src": "/productos/escritura/ow-esc-05-pappo-10.webp",
         "ancho": 977,
         "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-05-pappo-11.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-05-pappo-12.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-05-pappo-13.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 14,
-        "src": "/productos/escritura/ow-esc-05-pappo-14.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 15,
-        "src": "/productos/escritura/ow-esc-05-pappo-15.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 16,
-        "src": "/productos/escritura/ow-esc-05-pappo-16.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 17,
-        "src": "/productos/escritura/ow-esc-05-pappo-17.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-05-pappo-18.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 19,
-        "src": "/productos/escritura/ow-esc-05-pappo-19.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 20,
-        "src": "/productos/escritura/ow-esc-05-pappo-20.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 21,
-        "src": "/productos/escritura/ow-esc-05-pappo-21.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 22,
-        "src": "/productos/escritura/ow-esc-05-pappo-22.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 23,
-        "src": "/productos/escritura/ow-esc-05-pappo-23.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 24,
-        "src": "/productos/escritura/ow-esc-05-pappo-24.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 25,
-        "src": "/productos/escritura/ow-esc-05-pappo-25.webp",
-        "ancho": 800,
-        "alto": 800
-      },
-      {
-        "n": 26,
-        "src": "/productos/escritura/ow-esc-05-pappo-26.webp",
-        "ancho": 800,
-        "alto": 800
       }
     ],
     "compartir": "/productos/escritura/ow-esc-05-pappo-compartir.jpg",
@@ -3001,74 +2299,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 2,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-2.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-5.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 6,
         "src": "/productos/escritura/ow-esc-11-yupanqui-6.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 7,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-7.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-8.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-9.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 10,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-10.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-11.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-12.webp",
         "ancho": 1000,
         "alto": 1000
       },
@@ -3079,58 +2311,40 @@
         "alto": 1000
       },
       {
-        "n": 14,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-14.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 12,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-12.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 15,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-15.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 11,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-11.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 16,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-16.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 10,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-10.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 17,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-17.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 9,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-9.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-18.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 8,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-8.webp",
+        "ancho": 1000,
+        "alto": 1000
       },
       {
-        "n": 19,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-19.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 20,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-20.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 21,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-21.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 22,
-        "src": "/productos/escritura/ow-esc-11-yupanqui-22.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 7,
+        "src": "/productos/escritura/ow-esc-11-yupanqui-7.webp",
+        "ancho": 1000,
+        "alto": 1000
       }
     ],
     "compartir": "/productos/escritura/ow-esc-11-yupanqui-compartir.jpg",
@@ -3411,12 +2625,6 @@
         "alto": 1000
       },
       {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-17-ramirez-3.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
         "n": 4,
         "src": "/productos/escritura/ow-esc-17-ramirez-4.webp",
         "ancho": 1000,
@@ -3507,50 +2715,8 @@
         "alto": 1200
       },
       {
-        "n": 2,
-        "src": "/productos/escritura/ow-esc-19-pugliese-2.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-19-pugliese-3.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-19-pugliese-4.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 5,
         "src": "/productos/escritura/ow-esc-19-pugliese-5.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/escritura/ow-esc-19-pugliese-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/escritura/ow-esc-19-pugliese-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-19-pugliese-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-19-pugliese-9.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -3561,14 +2727,20 @@
         "alto": 1200
       },
       {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-19-pugliese-11.webp",
+        "n": 2,
+        "src": "/productos/escritura/ow-esc-19-pugliese-2.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-19-pugliese-12.webp",
+        "n": 8,
+        "src": "/productos/escritura/ow-esc-19-pugliese-8.webp",
+        "ancho": 1200,
+        "alto": 1200
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-19-pugliese-4.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3606,86 +2778,8 @@
         "alto": 1200
       },
       {
-        "n": 3,
-        "src": "/productos/escritura/ow-esc-20-salgan-3.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/escritura/ow-esc-20-salgan-4.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/escritura/ow-esc-20-salgan-5.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/escritura/ow-esc-20-salgan-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/escritura/ow-esc-20-salgan-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/escritura/ow-esc-20-salgan-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 9,
         "src": "/productos/escritura/ow-esc-20-salgan-9.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 10,
-        "src": "/productos/escritura/ow-esc-20-salgan-10.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/escritura/ow-esc-20-salgan-11.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 12,
-        "src": "/productos/escritura/ow-esc-20-salgan-12.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 13,
-        "src": "/productos/escritura/ow-esc-20-salgan-13.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 14,
-        "src": "/productos/escritura/ow-esc-20-salgan-14.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 15,
-        "src": "/productos/escritura/ow-esc-20-salgan-15.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 16,
-        "src": "/productos/escritura/ow-esc-20-salgan-16.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -3696,14 +2790,32 @@
         "alto": 1200
       },
       {
-        "n": 18,
-        "src": "/productos/escritura/ow-esc-20-salgan-18.webp",
+        "n": 8,
+        "src": "/productos/escritura/ow-esc-20-salgan-8.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
-        "n": 19,
-        "src": "/productos/escritura/ow-esc-20-salgan-19.webp",
+        "n": 14,
+        "src": "/productos/escritura/ow-esc-20-salgan-14.webp",
+        "ancho": 1200,
+        "alto": 1200
+      },
+      {
+        "n": 5,
+        "src": "/productos/escritura/ow-esc-20-salgan-5.webp",
+        "ancho": 1200,
+        "alto": 1200
+      },
+      {
+        "n": 3,
+        "src": "/productos/escritura/ow-esc-20-salgan-3.webp",
+        "ancho": 1200,
+        "alto": 1200
+      },
+      {
+        "n": 4,
+        "src": "/productos/escritura/ow-esc-20-salgan-4.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3882,12 +2994,6 @@
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-23-troilo-8.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 9,
-        "src": "/productos/escritura/ow-esc-23-troilo-9.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -4456,26 +3562,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-1.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-2.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-3.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-4.webp",
+        "n": 11,
+        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-11.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -4486,14 +3574,8 @@
         "alto": 1200
       },
       {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-7.webp",
+        "n": 1,
+        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-1.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -4504,26 +3586,8 @@
         "alto": 1200
       },
       {
-        "n": 9,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-9.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 10,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-10.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-11.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 12,
-        "src": "/productos/cuadernos/ow-cua-02-borges-pocket-12.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4550,12 +3614,6 @@
         "src": "/productos/cuadernos/ow-cua-03-gran-borges-3.webp",
         "ancho": 1000,
         "alto": 1000
-      },
-      {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-03-gran-borges-2.webp",
-        "ancho": 1200,
-        "alto": 675
       }
     ],
     "compartir": "/productos/cuadernos/ow-cua-03-gran-borges-compartir.jpg",
@@ -4874,14 +3932,8 @@
         "alto": 1200
       },
       {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-2.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-3.webp",
+        "n": 10,
+        "src": "/productos/cuadernos/ow-cua-11-sabato-10.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -4892,50 +3944,14 @@
         "alto": 1200
       },
       {
-        "n": 5,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-5.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-11-sabato-7.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
-        "n": 8,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-9.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 10,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-10.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-11.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 12,
-        "src": "/productos/cuadernos/ow-cua-11-sabato-12.webp",
+        "n": 3,
+        "src": "/productos/cuadernos/ow-cua-11-sabato-3.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5158,98 +4174,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/cuadernos/ow-cua-15-quino-1.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-15-quino-2.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-15-quino-3.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 4,
-        "src": "/productos/cuadernos/ow-cua-15-quino-4.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 5,
-        "src": "/productos/cuadernos/ow-cua-15-quino-5.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-15-quino-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-15-quino-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/cuadernos/ow-cua-15-quino-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/cuadernos/ow-cua-15-quino-9.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 10,
-        "src": "/productos/cuadernos/ow-cua-15-quino-10.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/cuadernos/ow-cua-15-quino-11.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 12,
-        "src": "/productos/cuadernos/ow-cua-15-quino-12.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 13,
-        "src": "/productos/cuadernos/ow-cua-15-quino-13.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 14,
-        "src": "/productos/cuadernos/ow-cua-15-quino-14.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 15,
-        "src": "/productos/cuadernos/ow-cua-15-quino-15.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 16,
-        "src": "/productos/cuadernos/ow-cua-15-quino-16.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -5260,20 +4186,26 @@
         "alto": 1200
       },
       {
-        "n": 18,
-        "src": "/productos/cuadernos/ow-cua-15-quino-18.webp",
+        "n": 12,
+        "src": "/productos/cuadernos/ow-cua-15-quino-12.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
-        "n": 19,
-        "src": "/productos/cuadernos/ow-cua-15-quino-19.webp",
+        "n": 2,
+        "src": "/productos/cuadernos/ow-cua-15-quino-2.webp",
+        "ancho": 1000,
+        "alto": 1000
+      },
+      {
+        "n": 8,
+        "src": "/productos/cuadernos/ow-cua-15-quino-8.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
-        "n": 20,
-        "src": "/productos/cuadernos/ow-cua-15-quino-20.webp",
+        "n": 9,
+        "src": "/productos/cuadernos/ow-cua-15-quino-9.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5341,16 +4273,10 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-1.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 2,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-2.webp",
-        "ancho": 1000,
-        "alto": 1000
+        "n": 4,
+        "src": "/productos/cuadernos/ow-cua-17-walsh-4.webp",
+        "ancho": 1200,
+        "alto": 1200
       },
       {
         "n": 3,
@@ -5359,44 +4285,8 @@
         "alto": 1000
       },
       {
-        "n": 4,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-4.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-5.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-6.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 7,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-17-walsh-8.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 9,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-9.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 10,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-10.webp",
         "ancho": 1000,
         "alto": 1000
       },
@@ -5407,40 +4297,16 @@
         "alto": 1000
       },
       {
-        "n": 13,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-13.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 14,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-14.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 15,
         "src": "/productos/cuadernos/ow-cua-17-walsh-15.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
-        "n": 16,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-16.webp",
+        "n": 2,
+        "src": "/productos/cuadernos/ow-cua-17-walsh-2.webp",
         "ancho": 1000,
         "alto": 1000
-      },
-      {
-        "n": 17,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-17.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 18,
-        "src": "/productos/cuadernos/ow-cua-17-walsh-18.webp",
-        "ancho": 1200,
-        "alto": 1200
       }
     ],
     "compartir": "/productos/cuadernos/ow-cua-17-walsh-compartir.jpg",
@@ -5616,46 +4482,10 @@
         "alto": 700
       },
       {
-        "n": 3,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-3.webp",
-        "ancho": 700,
-        "alto": 700
-      },
-      {
-        "n": 4,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-4.webp",
-        "ancho": 860,
-        "alto": 860
-      },
-      {
-        "n": 5,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-5.webp",
-        "ancho": 875,
-        "alto": 875
-      },
-      {
-        "n": 6,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-6.webp",
-        "ancho": 900,
-        "alto": 900
-      },
-      {
-        "n": 7,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-7.webp",
-        "ancho": 700,
-        "alto": 700
-      },
-      {
-        "n": 8,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-9.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 11,
+        "src": "/productos/cuadernos/ow-cua-20-hernandez-11.webp",
+        "ancho": 940,
+        "alto": 940
       },
       {
         "n": 10,
@@ -5664,16 +4494,10 @@
         "alto": 850
       },
       {
-        "n": 11,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-11.webp",
-        "ancho": 940,
-        "alto": 940
-      },
-      {
-        "n": 12,
-        "src": "/productos/cuadernos/ow-cua-20-hernandez-12.webp",
-        "ancho": 800,
-        "alto": 800
+        "n": 8,
+        "src": "/productos/cuadernos/ow-cua-20-hernandez-8.webp",
+        "ancho": 1200,
+        "alto": 1200
       }
     ],
     "compartir": "/productos/cuadernos/ow-cua-20-hernandez-compartir.jpg",
@@ -6132,32 +4956,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-06-fuentes-1.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 2,
-        "src": "/productos/oficina/ow-ofi-06-fuentes-2.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-06-fuentes-3.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-06-fuentes-4.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-06-fuentes-5.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6620,40 +5420,10 @@
         "alto": 1200
       },
       {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-3.webp",
+        "n": 10,
+        "src": "/productos/oficina/ow-ofi-16-bolsa-10.webp",
         "ancho": 1200,
         "alto": 1200
-      },
-      {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-4.webp",
-        "ancho": 1000,
-        "alto": 1000
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-5.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-6.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 7,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-8.webp",
-        "ancho": 1000,
-        "alto": 1000
       },
       {
         "n": 9,
@@ -6662,28 +5432,10 @@
         "alto": 1000
       },
       {
-        "n": 10,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-10.webp",
+        "n": 3,
+        "src": "/productos/oficina/ow-ofi-16-bolsa-3.webp",
         "ancho": 1200,
         "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-11.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 12,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-12.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 13,
-        "src": "/productos/oficina/ow-ofi-16-bolsa-13.webp",
-        "ancho": 1000,
-        "alto": 1000
       }
     ],
     "compartir": "/productos/oficina/ow-ofi-16-bolsa-compartir.jpg",
@@ -6738,26 +5490,8 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-2.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-5.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -6781,12 +5515,6 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-19-kavanagh-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-19-kavanagh-2.webp",
         "ancho": 800,
@@ -6795,12 +5523,6 @@
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-19-kavanagh-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 6,
-        "src": "/productos/oficina/ow-ofi-19-kavanagh-6.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -6824,12 +5546,6 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-2.webp",
         "ancho": 800,
@@ -6838,12 +5554,6 @@
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 6,
-        "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-6.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -6867,12 +5577,6 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-2.webp",
         "ancho": 800,
@@ -6881,12 +5585,6 @@
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 5,
-        "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-5.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -6914,12 +5612,6 @@
       "Eco beige"
     ],
     "fotos": [
-      {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-22-colon-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-22-colon-2.webp",
@@ -6985,12 +5677,6 @@
         "src": "/productos/oficina/ow-ofi-22-colon-12.webp",
         "ancho": 800,
         "alto": 823
-      },
-      {
-        "n": 15,
-        "src": "/productos/oficina/ow-ofi-22-colon-15.webp",
-        "ancho": 800,
-        "alto": 823
       }
     ],
     "compartir": "/productos/oficina/ow-ofi-22-colon-compartir.jpg",
@@ -7015,56 +5701,14 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 2,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-2.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 3,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-3.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 4,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-23-cervantes-5.webp",
         "ancho": 800,
         "alto": 823
       },
       {
-        "n": 6,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-6.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 7,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-7.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-23-cervantes-9.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 10,
-        "src": "/productos/oficina/ow-ofi-23-cervantes-10.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -7087,12 +5731,6 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-1.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-2.webp",
         "ancho": 800,
@@ -7101,12 +5739,6 @@
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-4.webp",
-        "ancho": 800,
-        "alto": 823
-      },
-      {
-        "n": 6,
-        "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-6.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -8045,10 +6677,10 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-1.webp",
-        "ancho": 1200,
-        "alto": 1200
+        "n": 11,
+        "src": "/productos/marroquineria/ow-mar-26-olivia-11.webp",
+        "ancho": 1170,
+        "alto": 965
       },
       {
         "n": 2,
@@ -8057,8 +6689,8 @@
         "alto": 1200
       },
       {
-        "n": 3,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-3.webp",
+        "n": 7,
+        "src": "/productos/marroquineria/ow-mar-26-olivia-7.webp",
         "ancho": 1200,
         "alto": 1200
       },
@@ -8069,46 +6701,10 @@
         "alto": 1200
       },
       {
-        "n": 5,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-5.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-6.webp",
-        "ancho": 1200,
-        "alto": 1199
-      },
-      {
-        "n": 7,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-7.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 8,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-8.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
-        "n": 9,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-9.webp",
-        "ancho": 1200,
-        "alto": 1200
-      },
-      {
         "n": 10,
         "src": "/productos/marroquineria/ow-mar-26-olivia-10.webp",
         "ancho": 1200,
         "alto": 1200
-      },
-      {
-        "n": 11,
-        "src": "/productos/marroquineria/ow-mar-26-olivia-11.webp",
-        "ancho": 1170,
-        "alto": 965
       }
     ],
     "compartir": "/productos/marroquineria/ow-mar-26-olivia-compartir.jpg",
@@ -8128,12 +6724,6 @@
     ],
     "fotos": [
       {
-        "n": 1,
-        "src": "/productos/marroquineria/ow-mar-27-chenque-1.webp",
-        "ancho": 668,
-        "alto": 1200
-      },
-      {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-27-chenque-2.webp",
         "ancho": 977,
@@ -8142,18 +6732,6 @@
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-27-chenque-3.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 5,
-        "src": "/productos/marroquineria/ow-mar-27-chenque-5.webp",
-        "ancho": 977,
-        "alto": 1200
-      },
-      {
-        "n": 6,
-        "src": "/productos/marroquineria/ow-mar-27-chenque-6.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -8229,12 +6807,6 @@
         "alto": 900
       },
       {
-        "n": 2,
-        "src": "/productos/marroquineria/ow-mar-29-perito-2.webp",
-        "ancho": 900,
-        "alto": 900
-      },
-      {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-29-perito-3.webp",
         "ancho": 900,
@@ -8266,12 +6838,6 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-30-fitz-roy-1.webp",
-        "ancho": 1200,
-        "alto": 800
-      },
-      {
-        "n": 3,
-        "src": "/productos/marroquineria/ow-mar-30-fitz-roy-3.webp",
         "ancho": 1200,
         "alto": 800
       }

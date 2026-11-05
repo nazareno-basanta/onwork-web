@@ -29,7 +29,7 @@ export default function NavDesktop() {
               <Link
                 href={item.href}
                 aria-current={activo ? "page" : undefined}
-                className="group relative isolate flex min-h-10 items-center overflow-hidden rounded-full px-4 font-display text-sm font-bold text-ow-black"
+                className="group relative isolate flex min-h-10 items-center overflow-hidden rounded-full px-3 font-display xl:px-4 text-sm font-bold text-ow-black"
               >
                 {/* Círculo que sube y rellena */}
                 <span
