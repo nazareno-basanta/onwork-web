@@ -5,7 +5,8 @@ import { Trio } from "@/components/Formas";
 import Titular from "@/components/Titular";
 import Cierre from "@/components/sections/Cierre";
 import Clientes from "@/components/sections/Clientes";
-import { NOSOTROS, QUE_HACEMOS_NOSOTROS, TECNICAS, VALORES } from "@/data/nosotros";
+import Tecnicas from "@/components/sections/Tecnicas";
+import { NOSOTROS, QUE_HACEMOS_NOSOTROS, VALORES } from "@/data/nosotros";
 import { HAY_PEDIDOS } from "@/data/pedidos";
 import { SERVICIOS } from "@/data/servicios";
 import { btn } from "@/lib/ui";
@@ -59,26 +60,7 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      <section aria-labelledby="tecnicas" className="bg-ow-paper-soft py-20 md:py-28">
-        <div className="container-ow">
-          <Titular id="tecnicas" className={tituloSeccion}>
-            {TECNICAS.titulo}
-          </Titular>
-          {textoWeb(TECNICAS.nota) && (
-            <p className="mt-4 text-sm font-semibold text-ow-gray">{textoWeb(TECNICAS.nota)}</p>
-          )}
-          <ul className="mt-10 flex flex-wrap gap-3">
-            {TECNICAS.lista.map((t) => (
-              <li
-                key={t}
-                className="rounded-full border-2 border-ow-black px-5 py-2.5 font-display text-sm font-bold md:text-base"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <Tecnicas tituloClassName={tituloSeccion} />
 
       <section aria-labelledby="que-hacemos-nosotros" className="py-20 md:py-28">
         <div className="container-ow grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">

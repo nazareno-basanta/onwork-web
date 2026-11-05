@@ -3,7 +3,7 @@ import Busquedas from "@/components/sections/Busquedas";
 import CatalogosInicio from "@/components/sections/CatalogosInicio";
 import Cierre from "@/components/sections/Cierre";
 import Clientes from "@/components/sections/Clientes";
-import ComoTrabajamos from "@/components/sections/ComoTrabajamos";
+import ComoPedir from "@/components/sections/ComoPedir";
 import Desde1990 from "@/components/sections/Desde1990";
 import Hero from "@/components/sections/Hero";
 import PedidosInicio from "@/components/sections/PedidosInicio";
@@ -24,7 +24,7 @@ export default function Home() {
       <CatalogosInicio />
       <Busquedas />
       <PedidosInicio />
-      <ComoTrabajamos />
+      <ComoPedir cortoEnCelular />
       <Desde1990 />
       <Preguntas className="border-t border-ow-black/10" datosEstructurados />
       <Cierre />

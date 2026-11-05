@@ -39,8 +39,8 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 - **Contacto solo por WhatsApp:** +54 9 11 3157-9402, lo atiende el asesor de ventas. Cada página tiene su propio mensaje precargado, con la frase de Nachi: `Hola, vi en la web de On Work y me interesaría saber sobre…` (completada según la página). Sin formularios ni widget de chat.
 - **Presupuesto, no compra:** los productos de los catálogos se suman a un presupuesto (cantidad y color), sin precios ni pagos, y la web arma el mensaje de WhatsApp con la lista. Nunca "comprar" ni "carrito de compras".
 - **Sin precios en la web ni en los catálogos:** el precio depende de la cantidad y la personalización, y se cotiza por WhatsApp.
-- **Proceso:** el cliente cuenta su proyecto → On Work asesora y cotiza (producto y personalización según la marca, la cantidad y la fecha) → produce y envía a toda la Argentina.
-- **Antes de producir:** qué pasa con el logo (adaptación del archivo, prueba para aprobar) depende de cada pedido. No prometer un paso fijo.
+- **Proceso (Cómo pedir, 5 pasos):** el cliente elige productos y los suma al presupuesto → lo manda por WhatsApp → On Work asesora y cotiza (según la cantidad, la personalización y la fecha) → el cliente aprueba la prueba digital → On Work produce y envía a toda la Argentina. Todo pasa por WhatsApp: la web no tiene aprobación ni seguimiento de pedidos.
+- **Antes de producir:** On Work adapta el logo del cliente si hace falta y muestra una prueba digital para aprobar (Nachi, 4 y 5/11/2026).
 - **Todo producto lleva el logo del cliente.** Si el diseño lo trajo el cliente, On Work lo produce: no lo diseña.
 - **Ocho catálogos PDF 2026:** Drinkware, Escritura, Cuadernos y anotadores, Oficina y escritorio, Marroquinería, Paraguas, Cintas e identificación, Llaveros. Cada uno tiene su página en `/catalogos/<slug>` con sus productos (solo los que tienen buenas fotos; Cintas y Llaveros, solo en el PDF) y el botón para descargar el PDF cuando está subido. Cada producto tiene su página en `/catalogos/<slug>/<producto>`.
 - **Pedidos reales:** una página por pedido en `/pedidos/<cliente>`.
@@ -55,7 +55,6 @@ La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajo
 - Datos editables en `src/data/` (catálogos, pedidos, clientes, preguntas) y datos centrales en `src/lib/site.ts`.
 - **Los textos los escribe Nachi.** Nada de texto inventado: lo que falta va como marcador `[dato]` y cualquier cambio a un texto existente se consulta.
 - Datos sin confirmar (no inventar, dejar marcados):
-  - Técnicas vigentes (la lista sale de la web de Wix).
   - Formas de pago, horario de atención y si se publica el mail.
   - Hitos de la historia entre 1990 y 2026.
   - Qué PDF de Oficina se publica (completo o "-selection").

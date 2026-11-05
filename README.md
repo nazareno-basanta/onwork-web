@@ -48,7 +48,6 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 | Cinta infinita | Magic UI · Marquee | Logos de clientes y búsquedas a medida |
 | Frase rotativa | React Bits · Rotating Text | Inicio |
 | Carrusel de pedidos | Aceternity · Apple Cards Carousel (sin modal) | Inicio, cuando haya pedidos |
-| Pasos con scroll | Aceternity · Sticky Scroll Reveal | Inicio |
 | Botón con imán | Motion Primitives · Magnetic | Cierres y Contacto |
 | Ícono de WhatsApp | Tabler Icons · brand-whatsapp (licencia MIT, solo el dibujo) | Botones de WhatsApp |
 

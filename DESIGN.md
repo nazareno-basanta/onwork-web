@@ -242,6 +242,7 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 - **Desktop:** logo con bajada a la izquierda, en colores originales sobre crema, de 120 px de ancho o más. Links en Montserrat 700 de 0,875 rem. Botón de WhatsApp siempre visible. El link activo lleva el punto amarillo.
 - **Celular:** panel a pantalla completa en tinta, links grandes en blanco que entran en cascada, sin numerar, con el activo marcado por el punto amarillo. Wordmark en blanco, nunca el isotipo.
 - **Header:** crema sólido, sin desenfoque ni transparencia, 64 px de alto, fijo.
+- **Lupa del header:** círculo outline de 44 px, antes del presupuesto, en todas las páginas: lleva al buscador de /catalogos (`#buscar`) con el cursor en el campo; si ya se está en /catalogos, sube hasta el campo. En el teléfono la lupa, el presupuesto y "Menú" son tres círculos de 44 px (la palabra "Menú" vuelve desde 640 px y queda para el lector de pantalla), así entran en 375 px. Entre 1024 y 1279 px los links del menú y "Escribinos" van con menos relleno para que entre todo.
 - **Accesibilidad:** `aria-expanded`, cierre con Escape, foco atrapado en el panel abierto, área táctil de 44 px o más.
 
 ### Preguntas frecuentes
@@ -274,6 +275,17 @@ La tienda sin precios: cada catálogo muestra sus productos y cada producto tien
 ### Hero del Inicio
 - Crema liso: titular centrado, el isotipo original debajo (sin agregados) y dos botones: "Ver catálogos" (amarillo, el principal, más grande) y "Conocenos" (outline, a Nosotros). Sin ondas ni productos de fondo (Nachi, 5/11/2026).
 - Al bajar, el isotipo crece hasta entrar en el punto amarillo y aparece "Tu marca, en cada ___.": las palabras pasan parejas, con lugar para leer cada una, y "detalle" se marca al final con un golpe y una onda. Con menos movimiento, todo queda quieto.
+
+### Cómo pedir
+Línea de tiempo de 5 pasos sobre tinta (`src/components/como-pedir/`): en el Inicio, en el lugar de "Cómo trabajamos", y en /como-pedir. En el Inicio, en el celular, va la versión corta (con las cinco maquetas eran más de cinco pantallas; Nachi, 5/11/2026); en la compu, la línea completa.
+- **Cada paso:** número grande en amarillo, titular con punto amarillo, texto y una maqueta hecha en código con los colores y la letra de la marca, nunca capturas. En la compu, el texto a la izquierda (hasta 36 rem, alineado con el titular y la barra) y la maqueta de 26 rem a la derecha, donde termina la línea; 128 px entre pasos. El paso 1 es el presupuesto de la web con tres productos reales; los pasos 2 a 5, el chat de WhatsApp (mensaje armado, asesor, prueba con "LOGO AQUÍ" y aviso de envío). La web no tiene botón de aprobar ni seguimiento: no se muestran funciones que no existen.
+- **Maquetas como ilustración, no como interfaz:** cada una va en un marco de teléfono (borde tinta clara y la "isla" negra arriba) y todo adentro es plano: globos sin sombra (On Work en blanco, el cliente en amarillo claro, sobre crema suave), fotos sin sombra y botones y cantidades más finos que los reales. Así nadie intenta tocar el "Enviar" de la maqueta. Usan una escala de letra en miniatura (13, 11 y 10 px) que no es la de la web.
+- **Avance:** scroll normal, sin clavar la sección. En la compu, una barra fija debajo del header con los números y los títulos (cada uno lleva a su paso) sobre una línea que se completa en amarillo; en el celular, línea vertical a la izquierda con un punto por paso. Un paso queda activo cuando su comienzo pasa la mitad de la pantalla. Es la única animación de la sección, junto con un solo gesto: el mensaje del paso 2 que se escribe solo la primera vez que aparece.
+- **Menos movimiento:** la línea completa desde el principio y el mensaje ya escrito.
+- **LOGO AQUÍ:** las O son dianas con el alto y el trazo de la O de Montserrat ExtraBold (aro y punto amarillo), no con las proporciones del logo.
+- **Versión corta:** los cinco títulos con su número en un círculo, unidos por una línea fina, más "Ver cómo pedir". En el presupuesto vacío, sobre crema, el 1 en amarillo (es el paso en el que está la persona) y los demás en contorno; en el Inicio del celular, sobre tinta, todos en amarillo.
+- **Links a /como-pedir:** en el pie (columna On Work, después de Nosotros), en la franja "Consultanos por cantidades…" (hub, cada catálogo y cada producto; sobre crema suave el subrayado va en tinta suave) y en el presupuesto, debajo de la bajada.
+- **Página /como-pedir** (fuera del menú): título y bajada sobre crema, la misma línea de tiempo sin titular propio, "Cómo mandarnos tu logo" (filetes de 2 px con los formatos en pastillas amarillas, como los códigos), las técnicas (el mismo bloque de Nosotros), las preguntas frecuentes y el cierre.
 
 ### Logo (signature)
 - **Isotipo inalterable:** el isotipo (diana con signo) se usa tal cual el archivo original, solo y sin agregarle gráficas (la de arcos de la pág. 18 de Elementos es una pieza artística, no el isotipo). Las ondas u otros recursos van de fondo, separados de él (Nachi, 2/11/2026).

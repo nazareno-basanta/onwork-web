@@ -5,9 +5,10 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import ComoPedirCorto from "@/components/como-pedir/ComoPedirCorto";
 import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
-import { FRANJA_CATALOGOS } from "@/data/inicio";
+import { COMO_PEDIR, FRANJA_CATALOGOS } from "@/data/inicio";
 import { PRESUPUESTO } from "@/data/presupuesto";
 import type { ProductoPresupuesto } from "@/data/productos";
 import { armarMensajePresupuesto } from "@/lib/mensajePresupuesto";
@@ -393,7 +394,7 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
           <Link href="/catalogos" className={`${btn.black} mt-7`}>
             {PRESUPUESTO.verCatalogos}
           </Link>
-          {/* Acá va la versión compacta de "Cómo pedir" (Prompt 4). */}
+          <ComoPedirCorto className="mt-14" />
         </div>
         <aside className="self-start sm:rounded-3xl sm:bg-ow-paper-soft sm:p-9">
           <CampoOtro otro={otro} />
@@ -425,6 +426,11 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
       {filas.some((f) => !f.color && f.producto.colores.length > 0) && (
         <p className="mt-3 max-w-2xl text-ow-gray">{textoWeb(PRESUPUESTO.aDefinirAyuda)}</p>
       )}
+      {/* Qué pasa después de mandarlo: la página con los cinco pasos. */}
+      <Link href="/como-pedir" className={`${link} mt-2`}>
+        {COMO_PEDIR.linkPagina}
+        <Icon name="flecha-derecha" size={18} />
+      </Link>
       {avisoDescartados}
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16">

@@ -11,14 +11,15 @@ import { SITE } from "@/lib/site";
  * (Sin priority ni changeFrequency: Google los ignora.)
  */
 const EDICION = {
-  inicio: "2026-11-04",
-  catalogos: "2026-11-04",
-  catalogo: "2026-11-04",
-  producto: "2026-11-04",
+  inicio: "2026-11-05",
+  catalogos: "2026-11-05",
+  catalogo: "2026-11-05",
+  producto: "2026-11-05",
   pdf: "2026-11-03",
   pedidos: "2026-11-03",
-  nosotros: "2026-11-03",
-  contacto: "2026-11-03",
+  nosotros: "2026-11-05",
+  contacto: "2026-11-05",
+  comoPedir: "2026-11-05",
 };
 
 // Mapa del sitio para Google: todas las páginas, los catálogos, cada producto,
@@ -39,5 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...PEDIDOS.map((p) => pagina(`/pedidos/${p.slug}`, EDICION.pedidos)),
     pagina("/nosotros", EDICION.nosotros),
     pagina("/contacto", EDICION.contacto),
+    pagina("/como-pedir", EDICION.comoPedir),
   ];
 }

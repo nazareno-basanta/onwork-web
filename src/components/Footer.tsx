@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CATALOGOS } from "@/data/catalogos";
+import { COMO_PEDIR } from "@/data/inicio";
 import { NAV, SITE, whatsappUrl, MENSAJE_GENERAL } from "@/lib/site";
 import Icon from "./Icon";
 
-// Los mismos links del menú principal, sin Inicio ni Catálogos (que tiene su columna).
-const ON_WORK = NAV.filter((item) => item.href !== "/" && item.href !== "/catalogos");
+// Los mismos links del menú principal, sin Inicio ni Catálogos (que tiene su
+// columna), y "Cómo pedir" después de Nosotros (no está en el menú).
+const ON_WORK = NAV.filter((item) => item.href !== "/" && item.href !== "/catalogos").flatMap((item) =>
+  item.href === "/nosotros" ? [item, { href: "/como-pedir", label: COMO_PEDIR.pie }] : [item],
+);
 
 const link = "inline-flex min-h-11 items-center rounded-sm transition-colors duration-300 hover:text-ow-yellow";
 

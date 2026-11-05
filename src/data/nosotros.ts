@@ -44,9 +44,9 @@ export const VALORES = {
   ],
 };
 
+/** Lista confirmada por Nachi el 5/11/2026. */
 export const TECNICAS = {
   titulo: "Técnicas con las que trabajamos.",
-  nota: "[confirmar que siguen vigentes: sale de la web actual]",
   lista: [
     "Serigrafía",
     "Tampografía",
@@ -56,7 +56,8 @@ export const TECNICAS = {
     "Bordado",
     "Grabado láser",
     "Impresión UV",
-    "Pantógrafo",
+    "DTF UV",
+    "Pantografía",
   ],
 };
 
