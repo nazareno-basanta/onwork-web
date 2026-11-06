@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import Image from "next/image";
 import type { MotionValue } from "motion/react";
 
@@ -9,6 +9,18 @@ export type ProductoHero = { codigo: string; nombre: string; src: string; url: s
 /** Dónde está el centro del aro dentro del isotipo y cuánto mide (proporciones del archivo de marca). */
 const ARO_CENTRO_Y = (197.95 - 49.89) / 232.46;
 const ARO_RADIO = 84.4 / 232.46;
+
+/**
+ * Solo desde 640 px (tablet y compu): en el celular el hero queda con el
+ * isotipo solo (Nachi, 6/11/2026: ahí se trababa y no se apreciaba). En el
+ * celular no se dibuja nada: ni fotos ni animación.
+ */
+const CON_CARRUSEL = "(min-width: 640px)";
+const suscribir = (aviso: () => void) => {
+  const mq = window.matchMedia(CON_CARRUSEL);
+  mq.addEventListener("change", aviso);
+  return () => mq.removeEventListener("change", aviso);
+};
 
 const tramo = (v: number, a: number, b: number) => Math.min(1, Math.max(0, (v - a) / (b - a)));
 const suave = (t: number) => (t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 / 2);
@@ -63,8 +75,14 @@ export default function CarruselHero({
   const banda = useRef<HTMLDivElement>(null);
   const disco = useRef<HTMLDivElement>(null);
   const tarjetas = useRef<(HTMLAnchorElement | null)[]>([]);
+  const conCarrusel = useSyncExternalStore(
+    suscribir,
+    () => window.matchMedia(CON_CARRUSEL).matches,
+    () => false,
+  );
 
   useEffect(() => {
+    if (!conCarrusel) return;
     const iso = caja.current?.parentElement;
     if (!iso || !banda.current || productos.length === 0) return;
     const n = productos.length;
@@ -185,7 +203,9 @@ export default function CarruselHero({
       io.disconnect();
       sinScroll?.();
     };
-  }, [productos, progreso, quieto]);
+  }, [productos, progreso, quieto, conCarrusel]);
+
+  if (!conCarrusel) return null;
 
   return (
     <div ref={caja} aria-hidden="true" className="pointer-events-none absolute inset-0">
