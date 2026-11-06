@@ -89,9 +89,13 @@ export default function CarruselHero({
     const dibujar = () => {
       const ancho = m.ancho; // se mide al cambiar el tamaño, no en cada cuadro
       const largo = n * m.paso;
-      const abrir = progreso ? tramo(progreso.get(), 0, 0.07) : 0;
+      // Al bajar, la fila se abre y se va en el primer 3 % del scroll, antes de
+      // que el isotipo empiece a moverse y crecer (si no, por el hueco del aro
+      // se veía la tarjeta de atrás). El círculo crema queda siempre opaco: no
+      // se ve (es del color del fondo) y tapa lo que pasa por detrás.
+      const abrir = progreso ? tramo(progreso.get(), 0, 0.03) : 0;
       if (banda.current) banda.current.style.opacity = String(1 - abrir);
-      if (disco.current) disco.current.style.opacity = String(1 - abrir);
+      if (abrir >= 1) return; // ya no se ve: no hay nada que mover
       const desplazamiento = (lugar + suave(avance)) * m.paso;
       tarjetas.current.forEach((t, i) => {
         if (!t) return;
@@ -103,7 +107,8 @@ export default function CarruselHero({
         // Mismo tamaño en toda la fila; detrás del isotipo baja hasta un 70 %
         // (así las puntas de la tarjeta no asoman por los costados del aro).
         const escala = 0.7 + 0.3 * tramo(lejos, 0, m.pegada) ** 1.2;
-        const x = Math.sign(u) * (lejos + abrir * ancho * 0.6);
+        // La que está detrás del isotipo también sale (hacia la derecha).
+        const x = (u < 0 ? -1 : 1) * (lejos + abrir * ancho * 0.6);
         const mitad = (m.lado / 2) * escala;
         t.style.transform = `translate3d(${x}px, 0, 0)`;
         const marco = t.firstElementChild as HTMLElement | null;
@@ -120,9 +125,11 @@ export default function CarruselHero({
     const paso = (ahora: number) => {
       const dt = Math.min(0.05, (ahora - antes) / 1000);
       antes = ahora;
+      // Mientras se baja por el hero, el carrusel no avanza (vuelve a andar arriba de todo).
+      const bajando = !!progreso && progreso.get() > 0.001;
       if (!moviendo) {
         // Con el mouse encima no arranca el próximo paso (el que está en curso termina).
-        if (!frenado) reloj += dt;
+        if (!frenado && !bajando) reloj += dt;
         if (reloj >= PAUSA) {
           moviendo = true;
           reloj = 0;
