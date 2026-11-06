@@ -23,6 +23,8 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 // Montserrat (titulares y textos) se precarga; Nunito es acompañamiento puntual.
 const montserrat = Montserrat({
   subsets: ["latin"],
+  // La itálica es para el juego de pesos del titular del Inicio ("se use").
+  style: ["normal", "italic"],
   display: "swap",
   adjustFontFallback: true,
   variable: "--font-montserrat",

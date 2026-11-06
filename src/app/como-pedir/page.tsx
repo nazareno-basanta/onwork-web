@@ -43,9 +43,11 @@ export default function ComoPedirPage() {
 
       <section aria-labelledby="logo" className="py-20 md:py-28">
         <div className="container-ow grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
-          <Titular id="logo" className={tituloSeccion}>
-            {T.logo.titulo}
-          </Titular>
+          <div>
+            <Titular id="logo" className={`${tituloSeccion} lg:sticky lg:top-28`}>
+              {T.logo.titulo}
+            </Titular>
+          </div>
           <div>
             <dl className="border-t-2 border-ow-black">
               {T.logo.formas.map((f) => (

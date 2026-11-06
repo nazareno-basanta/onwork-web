@@ -4,14 +4,34 @@
  * Lo que está entre [corchetes] falta confirmar.
  */
 export const HERO = {
-  // Frase de Nachi (30/10/2026).
-  titulo: "Merchandising que hace que tu marca se vea, se use, y se recuerde.",
+  // Frase de Nachi (30/10/2026); sin la coma antes de la "y" (6/11/2026), como en Nosotros.
+  titulo: "Merchandising que hace que tu marca se vea, se use y se recuerde.",
   /** Partes del titular que se subrayan en amarillo al pasar el mouse. */
   subrayados: ["se vea", "se use", "se recuerde"],
   botonWhatsApp: "Escribinos por WhatsApp",
   botonCatalogos: "Ver catálogos",
   /** Segundo botón del hero (Nachi, 5/11/2026): lleva a Nosotros. */
   botonConocenos: "Conocenos",
+  /**
+   * ✏️ Para que Nachi elija: los productos que pasan en el carrusel del hero,
+   * por detrás del isotipo (código y, si hace falta, qué foto: el número de
+   * la foto en su página). Arrancan así: los tres primeros a la izquierda,
+   * el cuarto escondido detrás del isotipo y del quinto al séptimo a la
+   * derecha; el resto entra después.
+   */
+  destacados: [
+    { codigo: "OW-DRK-01" }, // Apóstoles
+    { codigo: "OW-MAR-01" }, // Aconcagua
+    { codigo: "OW-ESC-01", foto: 33 }, // Gardel Silver, la roja
+    { codigo: "OW-MAR-13" }, // Catedral
+    { codigo: "OW-CUA-01", foto: 11 }, // Borges abierto
+    { codigo: "OW-OFI-01" }, // Barolo Black
+    { codigo: "OW-PAR-01" }, // Paraguas ejecutivo de madera
+    { codigo: "OW-ESC-35" }, // Set Piazzolla
+    { codigo: "OW-CUA-12" }, // Lugones
+    { codigo: "OW-PAR-10" }, // Paraguas golf automático
+    // Sin Trevelin ni Bolsa (Nachi, 6/11/2026): sus fotos no van con el resto.
+  ] as { codigo: string; foto?: number }[],
 };
 
 /**

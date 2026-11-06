@@ -65,18 +65,21 @@ export default function NosotrosPage() {
       <section aria-labelledby="que-hacemos-nosotros" className="py-20 md:py-28">
         <div className="container-ow grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
-            <Titular id="que-hacemos-nosotros" className={tituloSeccion}>
-              {QUE_HACEMOS_NOSOTROS.titulo}
-            </Titular>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/catalogos" className={btn.black}>
-                {QUE_HACEMOS_NOSOTROS.botonCatalogos}
-              </Link>
-              {HAY_PEDIDOS && (
-                <Link href="/pedidos" className={btn.line}>
-                  {QUE_HACEMOS_NOSOTROS.botonPedidos}
+            {/* En la compu, el titular y los botones quedan fijos mientras se recorre la lista (como en el Inicio). */}
+            <div className="lg:sticky lg:top-28">
+              <Titular id="que-hacemos-nosotros" className={tituloSeccion}>
+                {QUE_HACEMOS_NOSOTROS.titulo}
+              </Titular>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/catalogos" className={btn.black}>
+                  {QUE_HACEMOS_NOSOTROS.botonCatalogos}
                 </Link>
-              )}
+                {HAY_PEDIDOS && (
+                  <Link href="/pedidos" className={btn.line}>
+                    {QUE_HACEMOS_NOSOTROS.botonPedidos}
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
           <ul className="border-t-2 border-ow-black">

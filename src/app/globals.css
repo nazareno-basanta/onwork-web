@@ -109,44 +109,35 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* Subrayado amarillo de una frase (hero del Inicio): al pasar el mouse, la
-   barra se dibuja de izquierda a derecha, como una pasada de serigrafía, y al
-   salir se retira hacia la derecha. En pantallas táctiles (sin hover) se
-   dibuja sola una vez, con las frases una tras otra (--i = orden). */
+/* Subrayado amarillo de una frase (hero del Inicio): al cargar, la barra se
+   dibuja sola de izquierda a derecha, como una pasada de serigrafía, con las
+   frases una tras otra (--i = orden), en la compu y en el celular (Nachi,
+   6/11/2026). Es el fondo del propio texto, no una capa aparte detrás: así la
+   letra queda siempre por delante (Safari del iPhone dibujaba la barra encima
+   mientras se animaba y recién la pasaba atrás al hacer scroll). */
 .subrayado {
-  position: relative;
-  isolation: isolate;
   white-space: nowrap;
-}
-.subrayado::before {
-  content: "";
-  position: absolute;
-  left: -0.04em;
-  right: -0.04em;
+  /* La barra sobresale apenas de la palabra, sin correr el texto. */
+  padding-inline: 0.04em;
+  margin-inline: -0.04em;
+  background-image: linear-gradient(var(--ow-yellow), var(--ow-yellow));
+  background-repeat: no-repeat;
   /* El borde de abajo de un texto en línea está en el descendente (~0,25em
      bajo la línea de base): la barra arranca apenas debajo de la base. */
-  bottom: 0.2em;
-  height: 0.34em;
-  z-index: -1;
-  background: var(--ow-yellow);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.55s var(--ease-ow);
-}
-.subrayado:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-@media (hover: none) {
-  .subrayado::before {
-    transform-origin: left;
-    animation: subrayar 0.7s var(--ease-ow) forwards;
-    animation-delay: calc(0.5s + var(--i, 0) * 0.35s);
-  }
+  background-position: left calc(100% - 0.2em);
+  background-size: 0% 0.34em;
+  animation: subrayar 0.7s var(--ease-ow) forwards;
+  animation-delay: calc(0.5s + var(--i, 0) * 0.35s);
 }
 @keyframes subrayar {
   to {
-    transform: scaleX(1);
+    background-size: 100% 0.34em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .subrayado {
+    animation: none;
+    background-size: 100% 0.34em;
   }
 }
 
