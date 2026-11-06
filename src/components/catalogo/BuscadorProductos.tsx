@@ -63,7 +63,8 @@ export default function BuscadorProductos({ productos, lugares }: { productos: P
   // Catálogos o secciones donde está lo buscado (sin repetir las secciones de un catálogo que ya coincide entero).
   const enLugares = useMemo(() => {
     if (!activo) return [];
-    const todos = ordenar(lugares, buscado);
+    // En el texto de cada sección (pesa 1) solo cuentan palabras enteras.
+    const todos = ordenar(lugares, buscado, 2);
     const enteros = new Set(todos.filter((l) => !l.seccion).map((l) => l.catalogo));
     const sinRepetir = todos.filter((l) => !l.seccion || !enteros.has(l.catalogo));
     // Con productos, solo interesan los que están solo en el PDF ("También en:").

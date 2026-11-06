@@ -19,15 +19,15 @@ type Props = {
  * El link está en el nombre y se estira sobre la tarjeta (así hay un solo
  * link, que se lee bien con lector de pantalla).
  *
- * Las fotos ya salen chicas del script (WebP de 1200 px, la mitad pesa menos
- * de 16 KB): se sirven tal cual, sin que Vercel las vuelva a procesar.
+ * Usa la foto chica del script (WebP de 480 px): se sirve tal cual, sin que
+ * Vercel la vuelva a procesar.
  */
 export default function TarjetaProducto({ producto, prioridad = false }: Props) {
   return (
     <article className="group relative flex h-full flex-col">
       <div className="relative aspect-square overflow-hidden rounded-3xl bg-white shadow-apoyado transition-[translate,box-shadow] duration-300 ease-ow group-hover:-translate-y-0.5 group-hover:shadow-levantado">
         <Image
-          src={producto.foto.src}
+          src={producto.foto.chica}
           alt=""
           fill
           unoptimized

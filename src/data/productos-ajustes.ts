@@ -43,7 +43,7 @@ export type AjusteProducto = {
 };
 
 const MARCA_DE_AGUA =
-  "Marca de agua o gráfica del proveedor: no va hasta que elijas las fotos limpias (fotos: [...]).";
+  "Marca de agua o gráfica del proveedor: no va hasta que elijas las fotos limpias (con «fotos» en este archivo).";
 
 export const AJUSTES: Record<string, AjusteProducto> = {
   // Marca de agua o gráfica del proveedor (aviso de Nachi). "Gaiman"

@@ -49,3 +49,11 @@ test("primero lo que coincide en el nombre y el tipo", () => {
 test("sin palabras no trae nada", () => {
   assert.equal(puntaje(apostoles.campos, palabrasDe("   ")), null);
 });
+
+test("en los recuadros de secciones, el texto solo coincide con palabras enteras", () => {
+  const cintas = { nombre: "Cintas sublimadas", campos: [[textoDeBusqueda(["Cintas sublimadas"]), 4], [textoDeBusqueda(["Cinta gros o raso según modelo y material."]), 1]] as Campo[] };
+  const mates = { nombre: "Mates", campos: [[textoDeBusqueda(["Mates"]), 4], [textoDeBusqueda(["Para el mate de todos los días."]), 1]] as Campo[] };
+  assert.deepEqual(ordenar([cintas, mates], "mate", 2).map((l) => l.nombre), ["Mates"]);
+  // Sin la opción (los productos), el comienzo de una palabra sí cuenta.
+  assert.deepEqual(ordenar([cintas, mates], "mate").map((l) => l.nombre), ["Mates", "Cintas sublimadas"]);
+});

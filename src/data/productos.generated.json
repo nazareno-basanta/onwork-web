@@ -16,18 +16,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-01-apostoles-1.webp",
+        "chica": "/productos/drinkware/ow-drk-01-apostoles-1-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-01-apostoles-2.webp",
+        "chica": "/productos/drinkware/ow-drk-01-apostoles-2-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-01-apostoles-4.webp",
+        "chica": "/productos/drinkware/ow-drk-01-apostoles-4-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -51,6 +54,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-02-garupa-1.webp",
+        "chica": "/productos/drinkware/ow-drk-02-garupa-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -74,12 +78,14 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-03-aristobulo-1.webp",
+        "chica": "/productos/drinkware/ow-drk-03-aristobulo-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-03-aristobulo-2.webp",
+        "chica": "/productos/drinkware/ow-drk-03-aristobulo-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -103,6 +109,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-04-alem-1.webp",
+        "chica": "/productos/drinkware/ow-drk-04-alem-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -129,36 +136,42 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-05-lujan-1.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-05-lujan-2.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-05-lujan-3.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-05-lujan-4.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/drinkware/ow-drk-05-lujan-5.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/drinkware/ow-drk-05-lujan-6.webp",
+        "chica": "/productos/drinkware/ow-drk-05-lujan-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -184,18 +197,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-06-iguazu-1.webp",
+        "chica": "/productos/drinkware/ow-drk-06-iguazu-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-06-iguazu-2.webp",
+        "chica": "/productos/drinkware/ow-drk-06-iguazu-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-06-iguazu-3.webp",
+        "chica": "/productos/drinkware/ow-drk-06-iguazu-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -221,18 +237,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-07-parana-1.webp",
+        "chica": "/productos/drinkware/ow-drk-07-parana-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-07-parana-2.webp",
+        "chica": "/productos/drinkware/ow-drk-07-parana-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-07-parana-3.webp",
+        "chica": "/productos/drinkware/ow-drk-07-parana-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -256,6 +275,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-08-parana-termico-1.webp",
+        "chica": "/productos/drinkware/ow-drk-08-parana-termico-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -281,18 +301,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-09-bermejo-1.webp",
+        "chica": "/productos/drinkware/ow-drk-09-bermejo-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-09-bermejo-2.webp",
+        "chica": "/productos/drinkware/ow-drk-09-bermejo-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-09-bermejo-3.webp",
+        "chica": "/productos/drinkware/ow-drk-09-bermejo-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -316,6 +339,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-10-areco-1.webp",
+        "chica": "/productos/drinkware/ow-drk-10-areco-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -339,6 +363,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-11-colorado-1.webp",
+        "chica": "/productos/drinkware/ow-drk-11-colorado-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -362,24 +387,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-12-set-ibera-1.webp",
+        "chica": "/productos/drinkware/ow-drk-12-set-ibera-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-12-set-ibera-2.webp",
+        "chica": "/productos/drinkware/ow-drk-12-set-ibera-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-12-set-ibera-3.webp",
+        "chica": "/productos/drinkware/ow-drk-12-set-ibera-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-12-set-ibera-4.webp",
+        "chica": "/productos/drinkware/ow-drk-12-set-ibera-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -406,24 +435,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-13-arrecifes-1.webp",
+        "chica": "/productos/drinkware/ow-drk-13-arrecifes-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-13-arrecifes-2.webp",
+        "chica": "/productos/drinkware/ow-drk-13-arrecifes-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-13-arrecifes-3.webp",
+        "chica": "/productos/drinkware/ow-drk-13-arrecifes-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-13-arrecifes-4.webp",
+        "chica": "/productos/drinkware/ow-drk-13-arrecifes-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -449,18 +482,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-14-limay-1.webp",
+        "chica": "/productos/drinkware/ow-drk-14-limay-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-14-limay-2.webp",
+        "chica": "/productos/drinkware/ow-drk-14-limay-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-14-limay-3.webp",
+        "chica": "/productos/drinkware/ow-drk-14-limay-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -484,6 +520,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-15-atuel-1.webp",
+        "chica": "/productos/drinkware/ow-drk-15-atuel-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -507,12 +544,14 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-16-montecarlo-1.webp",
+        "chica": "/productos/drinkware/ow-drk-16-montecarlo-1-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-16-montecarlo-3.webp",
+        "chica": "/productos/drinkware/ow-drk-16-montecarlo-3-chica.webp",
         "ancho": 1200,
         "alto": 687
       }
@@ -537,24 +576,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-17-obera-1.webp",
+        "chica": "/productos/drinkware/ow-drk-17-obera-1-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-17-obera-2.webp",
+        "chica": "/productos/drinkware/ow-drk-17-obera-2-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-17-obera-3.webp",
+        "chica": "/productos/drinkware/ow-drk-17-obera-3-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-17-obera-4.webp",
+        "chica": "/productos/drinkware/ow-drk-17-obera-4-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -579,18 +622,21 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-18-obera-con-manija-1.webp",
+        "chica": "/productos/drinkware/ow-drk-18-obera-con-manija-1-chica.webp",
         "ancho": 1000,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-18-obera-con-manija-2.webp",
+        "chica": "/productos/drinkware/ow-drk-18-obera-con-manija-2-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-18-obera-con-manija-3.webp",
+        "chica": "/productos/drinkware/ow-drk-18-obera-con-manija-3-chica.webp",
         "ancho": 800,
         "alto": 1200
       }
@@ -615,24 +661,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-19-virasoro-1.webp",
+        "chica": "/productos/drinkware/ow-drk-19-virasoro-1-chica.webp",
         "ancho": 1080,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-19-virasoro-2.webp",
+        "chica": "/productos/drinkware/ow-drk-19-virasoro-2-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-19-virasoro-3.webp",
+        "chica": "/productos/drinkware/ow-drk-19-virasoro-3-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-19-virasoro-4.webp",
+        "chica": "/productos/drinkware/ow-drk-19-virasoro-4-chica.webp",
         "ancho": 800,
         "alto": 1200
       }
@@ -656,24 +706,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-20-santa-ana-1.webp",
+        "chica": "/productos/drinkware/ow-drk-20-santa-ana-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-20-santa-ana-2.webp",
+        "chica": "/productos/drinkware/ow-drk-20-santa-ana-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-20-santa-ana-3.webp",
+        "chica": "/productos/drinkware/ow-drk-20-santa-ana-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-20-santa-ana-4.webp",
+        "chica": "/productos/drinkware/ow-drk-20-santa-ana-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -714,24 +768,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-22-trelew-1.webp",
+        "chica": "/productos/drinkware/ow-drk-22-trelew-1-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-22-trelew-3.webp",
+        "chica": "/productos/drinkware/ow-drk-22-trelew-3-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-22-trelew-4.webp",
+        "chica": "/productos/drinkware/ow-drk-22-trelew-4-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 5,
         "src": "/productos/drinkware/ow-drk-22-trelew-5.webp",
+        "chica": "/productos/drinkware/ow-drk-22-trelew-5-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -761,36 +819,42 @@
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-2.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-2-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-3.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-9.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-9-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-12.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-12-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 13,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-13.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-13-chica.webp",
         "ancho": 1200,
         "alto": 1192
       },
       {
         "n": 14,
         "src": "/productos/drinkware/ow-drk-23-ushuaia-14.webp",
+        "chica": "/productos/drinkware/ow-drk-23-ushuaia-14-chica.webp",
         "ancho": 1200,
         "alto": 1192
       }
@@ -817,24 +881,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-24-ushuaia-matte-1.webp",
+        "chica": "/productos/drinkware/ow-drk-24-ushuaia-matte-1-chica.webp",
         "ancho": 1200,
         "alto": 898
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-24-ushuaia-matte-2.webp",
+        "chica": "/productos/drinkware/ow-drk-24-ushuaia-matte-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-24-ushuaia-matte-3.webp",
+        "chica": "/productos/drinkware/ow-drk-24-ushuaia-matte-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-24-ushuaia-matte-4.webp",
+        "chica": "/productos/drinkware/ow-drk-24-ushuaia-matte-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -858,24 +926,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-25-moquehue-1.webp",
+        "chica": "/productos/drinkware/ow-drk-25-moquehue-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-25-moquehue-2.webp",
+        "chica": "/productos/drinkware/ow-drk-25-moquehue-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-25-moquehue-3.webp",
+        "chica": "/productos/drinkware/ow-drk-25-moquehue-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-25-moquehue-4.webp",
+        "chica": "/productos/drinkware/ow-drk-25-moquehue-4-chica.webp",
         "ancho": 1020,
         "alto": 1200
       }
@@ -902,30 +974,35 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-26-bolson-1.webp",
+        "chica": "/productos/drinkware/ow-drk-26-bolson-1-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-26-bolson-2.webp",
+        "chica": "/productos/drinkware/ow-drk-26-bolson-2-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-26-bolson-3.webp",
+        "chica": "/productos/drinkware/ow-drk-26-bolson-3-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-26-bolson-4.webp",
+        "chica": "/productos/drinkware/ow-drk-26-bolson-4-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 5,
         "src": "/productos/drinkware/ow-drk-26-bolson-5.webp",
+        "chica": "/productos/drinkware/ow-drk-26-bolson-5-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -951,6 +1028,7 @@
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-27-trevelin-3.webp",
+        "chica": "/productos/drinkware/ow-drk-27-trevelin-3-chica.webp",
         "ancho": 960,
         "alto": 960
       }
@@ -977,24 +1055,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-28-angostura-1.webp",
+        "chica": "/productos/drinkware/ow-drk-28-angostura-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-28-angostura-2.webp",
+        "chica": "/productos/drinkware/ow-drk-28-angostura-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-28-angostura-3.webp",
+        "chica": "/productos/drinkware/ow-drk-28-angostura-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-28-angostura-4.webp",
+        "chica": "/productos/drinkware/ow-drk-28-angostura-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1035,24 +1117,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-30-recoleta-1.webp",
+        "chica": "/productos/drinkware/ow-drk-30-recoleta-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-30-recoleta-2.webp",
+        "chica": "/productos/drinkware/ow-drk-30-recoleta-2-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-30-recoleta-3.webp",
+        "chica": "/productos/drinkware/ow-drk-30-recoleta-3-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-30-recoleta-4.webp",
+        "chica": "/productos/drinkware/ow-drk-30-recoleta-4-chica.webp",
         "ancho": 800,
         "alto": 1200
       }
@@ -1077,24 +1163,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-31-recoleta-con-manija-1.webp",
+        "chica": "/productos/drinkware/ow-drk-31-recoleta-con-manija-1-chica.webp",
         "ancho": 1000,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-31-recoleta-con-manija-2.webp",
+        "chica": "/productos/drinkware/ow-drk-31-recoleta-con-manija-2-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-31-recoleta-con-manija-3.webp",
+        "chica": "/productos/drinkware/ow-drk-31-recoleta-con-manija-3-chica.webp",
         "ancho": 800,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-31-recoleta-con-manija-4.webp",
+        "chica": "/productos/drinkware/ow-drk-31-recoleta-con-manija-4-chica.webp",
         "ancho": 1000,
         "alto": 1200
       }
@@ -1118,6 +1208,7 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-32-almagro-1.webp",
+        "chica": "/productos/drinkware/ow-drk-32-almagro-1-chica.webp",
         "ancho": 800,
         "alto": 1200
       }
@@ -1142,24 +1233,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-33-san-telmo-1.webp",
+        "chica": "/productos/drinkware/ow-drk-33-san-telmo-1-chica.webp",
         "ancho": 1200,
         "alto": 900
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-33-san-telmo-2.webp",
+        "chica": "/productos/drinkware/ow-drk-33-san-telmo-2-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-33-san-telmo-3.webp",
+        "chica": "/productos/drinkware/ow-drk-33-san-telmo-3-chica.webp",
         "ancho": 960,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-33-san-telmo-4.webp",
+        "chica": "/productos/drinkware/ow-drk-33-san-telmo-4-chica.webp",
         "ancho": 900,
         "alto": 1200
       }
@@ -1184,24 +1279,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-34-chacarita-1.webp",
+        "chica": "/productos/drinkware/ow-drk-34-chacarita-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-34-chacarita-2.webp",
+        "chica": "/productos/drinkware/ow-drk-34-chacarita-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-34-chacarita-3.webp",
+        "chica": "/productos/drinkware/ow-drk-34-chacarita-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-34-chacarita-4.webp",
+        "chica": "/productos/drinkware/ow-drk-34-chacarita-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1225,24 +1324,28 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-35-belgrano-1.webp",
+        "chica": "/productos/drinkware/ow-drk-35-belgrano-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-35-belgrano-2.webp",
+        "chica": "/productos/drinkware/ow-drk-35-belgrano-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-35-belgrano-3.webp",
+        "chica": "/productos/drinkware/ow-drk-35-belgrano-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-35-belgrano-4.webp",
+        "chica": "/productos/drinkware/ow-drk-35-belgrano-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1270,30 +1373,35 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-36-callao-1.webp",
+        "chica": "/productos/drinkware/ow-drk-36-callao-1-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-36-callao-2.webp",
+        "chica": "/productos/drinkware/ow-drk-36-callao-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/drinkware/ow-drk-36-callao-3.webp",
+        "chica": "/productos/drinkware/ow-drk-36-callao-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/drinkware/ow-drk-36-callao-4.webp",
+        "chica": "/productos/drinkware/ow-drk-36-callao-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/drinkware/ow-drk-36-callao-5.webp",
+        "chica": "/productos/drinkware/ow-drk-36-callao-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -1335,12 +1443,14 @@
       {
         "n": 1,
         "src": "/productos/drinkware/ow-drk-38-florida-1.webp",
+        "chica": "/productos/drinkware/ow-drk-38-florida-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/drinkware/ow-drk-38-florida-2.webp",
+        "chica": "/productos/drinkware/ow-drk-38-florida-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -1424,66 +1534,77 @@
       {
         "n": 26,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-26.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-26-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 15,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-15.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-15-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 27,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-27.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-27-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 29,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-29.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-29-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 31,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-31.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-31-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 33,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-33.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-33-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 35,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-35.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-35-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 37,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-37.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-37-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 39,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-39.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-39-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 41,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-41.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-41-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 46,
         "src": "/productos/escritura/ow-esc-01-gardel-silver-46.webp",
+        "chica": "/productos/escritura/ow-esc-01-gardel-silver-46-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1516,60 +1637,70 @@
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-02-gardel-color-7.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 15,
         "src": "/productos/escritura/ow-esc-02-gardel-color-15.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-15-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 14,
         "src": "/productos/escritura/ow-esc-02-gardel-color-14.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-14-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-02-gardel-color-10.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-02-gardel-color-9.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-9-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 16,
         "src": "/productos/escritura/ow-esc-02-gardel-color-16.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-16-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 17,
         "src": "/productos/escritura/ow-esc-02-gardel-color-17.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-17-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-02-gardel-color-11.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-11-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-02-gardel-color-13.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-13-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-02-gardel-color-12.webp",
+        "chica": "/productos/escritura/ow-esc-02-gardel-color-12-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -1602,66 +1733,77 @@
       {
         "n": 30,
         "src": "/productos/escritura/ow-esc-03-gardel-white-30.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-30-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 17,
         "src": "/productos/escritura/ow-esc-03-gardel-white-17.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-17-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-03-gardel-white-11.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-11-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 15,
         "src": "/productos/escritura/ow-esc-03-gardel-white-15.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-15-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 19,
         "src": "/productos/escritura/ow-esc-03-gardel-white-19.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-19-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 16,
         "src": "/productos/escritura/ow-esc-03-gardel-white-16.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-16-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-03-gardel-white-10.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-10-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-03-gardel-white-12.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-12-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 14,
         "src": "/productos/escritura/ow-esc-03-gardel-white-14.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-14-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-03-gardel-white-13.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-13-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 18,
         "src": "/productos/escritura/ow-esc-03-gardel-white-18.webp",
+        "chica": "/productos/escritura/ow-esc-03-gardel-white-18-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -1689,78 +1831,91 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-1.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-2.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-3.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-4.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-5.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-6.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-7.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-8.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-9.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-10.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-11.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-11-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-12.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-12-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-04-gardel-touch-13.webp",
+        "chica": "/productos/escritura/ow-esc-04-gardel-touch-13-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -1792,60 +1947,70 @@
       {
         "n": 17,
         "src": "/productos/escritura/ow-esc-05-pappo-17.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-17-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-05-pappo-2.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-05-pappo-3.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-05-pappo-5.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-05-pappo-6.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-6-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-05-pappo-7.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-7-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-05-pappo-8.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-8-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-05-pappo-1.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-05-pappo-9.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-9-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-05-pappo-10.webp",
+        "chica": "/productos/escritura/ow-esc-05-pappo-10-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -1876,84 +2041,98 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-06-cerati-1.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-06-cerati-2.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-06-cerati-3.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-06-cerati-4.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-06-cerati-5.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-06-cerati-6.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-6-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-06-cerati-7.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-7-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-06-cerati-8.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-8-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-06-cerati-9.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-9-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-06-cerati-10.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-10-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-06-cerati-11.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-11-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-06-cerati-12.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-12-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 14,
         "src": "/productos/escritura/ow-esc-06-cerati-14.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-14-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 15,
         "src": "/productos/escritura/ow-esc-06-cerati-15.webp",
+        "chica": "/productos/escritura/ow-esc-06-cerati-15-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -1984,60 +2163,70 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-1.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-1-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-2.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-3.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-3-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-4.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-4-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-5.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-5-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-6.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-6-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-7.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-7-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-8.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-8-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-9.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-9-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-07-cerati-mix-10.webp",
+        "chica": "/productos/escritura/ow-esc-07-cerati-mix-10-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -2065,78 +2254,91 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-08-prodan-1.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-08-prodan-2.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-08-prodan-3.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-08-prodan-4.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-08-prodan-5.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-08-prodan-6.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-08-prodan-7.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-08-prodan-8.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-08-prodan-9.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-08-prodan-10.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-10-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-08-prodan-11.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-11-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-08-prodan-12.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-12-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-08-prodan-13.webp",
+        "chica": "/productos/escritura/ow-esc-08-prodan-13-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2164,78 +2366,91 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-09-moura-1.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-09-moura-2.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-09-moura-3.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-09-moura-4.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-09-moura-5.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-09-moura-6.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-09-moura-7.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-09-moura-8.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-09-moura-9.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-09-moura-10.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-09-moura-11.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-11-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-09-moura-12.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-12-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-09-moura-13.webp",
+        "chica": "/productos/escritura/ow-esc-09-moura-13-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2260,18 +2475,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-10-sandro-1.webp",
+        "chica": "/productos/escritura/ow-esc-10-sandro-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-10-sandro-2.webp",
+        "chica": "/productos/escritura/ow-esc-10-sandro-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-10-sandro-3.webp",
+        "chica": "/productos/escritura/ow-esc-10-sandro-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -2301,48 +2519,56 @@
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-11-yupanqui-6.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 13,
         "src": "/productos/escritura/ow-esc-11-yupanqui-13.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-13-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 12,
         "src": "/productos/escritura/ow-esc-11-yupanqui-12.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-12-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 11,
         "src": "/productos/escritura/ow-esc-11-yupanqui-11.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-11-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-11-yupanqui-10.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-10-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-11-yupanqui-9.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-9-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-11-yupanqui-8.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-11-yupanqui-7.webp",
+        "chica": "/productos/escritura/ow-esc-11-yupanqui-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2368,24 +2594,28 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-12-yupanqui-touch-1.webp",
+        "chica": "/productos/escritura/ow-esc-12-yupanqui-touch-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-12-yupanqui-touch-2.webp",
+        "chica": "/productos/escritura/ow-esc-12-yupanqui-touch-2-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-12-yupanqui-touch-3.webp",
+        "chica": "/productos/escritura/ow-esc-12-yupanqui-touch-3-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-12-yupanqui-touch-4.webp",
+        "chica": "/productos/escritura/ow-esc-12-yupanqui-touch-4-chica.webp",
         "ancho": 800,
         "alto": 800
       }
@@ -2410,18 +2640,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-13-sosa-1.webp",
+        "chica": "/productos/escritura/ow-esc-13-sosa-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-13-sosa-2.webp",
+        "chica": "/productos/escritura/ow-esc-13-sosa-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-13-sosa-3.webp",
+        "chica": "/productos/escritura/ow-esc-13-sosa-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -2445,18 +2678,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-14-falu-1.webp",
+        "chica": "/productos/escritura/ow-esc-14-falu-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-14-falu-2.webp",
+        "chica": "/productos/escritura/ow-esc-14-falu-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-14-falu-3.webp",
+        "chica": "/productos/escritura/ow-esc-14-falu-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2488,60 +2724,70 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-15-cafrune-1.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-15-cafrune-2.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-15-cafrune-3.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-15-cafrune-4.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-15-cafrune-5.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-15-cafrune-6.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-15-cafrune-7.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-15-cafrune-8.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-15-cafrune-9.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-9-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-15-cafrune-10.webp",
+        "chica": "/productos/escritura/ow-esc-15-cafrune-10-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2565,30 +2811,35 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-16-leguizamon-1.webp",
+        "chica": "/productos/escritura/ow-esc-16-leguizamon-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-16-leguizamon-2.webp",
+        "chica": "/productos/escritura/ow-esc-16-leguizamon-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-16-leguizamon-3.webp",
+        "chica": "/productos/escritura/ow-esc-16-leguizamon-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-16-leguizamon-4.webp",
+        "chica": "/productos/escritura/ow-esc-16-leguizamon-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-16-leguizamon-5.webp",
+        "chica": "/productos/escritura/ow-esc-16-leguizamon-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2615,36 +2866,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-17-ramirez-1.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-17-ramirez-2.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-17-ramirez-4.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-17-ramirez-5.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-17-ramirez-6.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-17-ramirez-7.webp",
+        "chica": "/productos/escritura/ow-esc-17-ramirez-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2669,24 +2926,28 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-18-guarany-1.webp",
+        "chica": "/productos/escritura/ow-esc-18-guarany-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-18-guarany-2.webp",
+        "chica": "/productos/escritura/ow-esc-18-guarany-2-chica.webp",
         "ancho": 887,
         "alto": 887
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-18-guarany-3.webp",
+        "chica": "/productos/escritura/ow-esc-18-guarany-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-18-guarany-4.webp",
+        "chica": "/productos/escritura/ow-esc-18-guarany-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2711,36 +2972,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-19-pugliese-1.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-19-pugliese-5.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/escritura/ow-esc-19-pugliese-10.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-19-pugliese-2.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-19-pugliese-8.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-19-pugliese-4.webp",
+        "chica": "/productos/escritura/ow-esc-19-pugliese-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2768,54 +3035,63 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-20-salgan-1.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-20-salgan-2.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/escritura/ow-esc-20-salgan-9.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 17,
         "src": "/productos/escritura/ow-esc-20-salgan-17.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-17-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-20-salgan-8.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 14,
         "src": "/productos/escritura/ow-esc-20-salgan-14.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-14-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-20-salgan-5.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-20-salgan-3.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-20-salgan-4.webp",
+        "chica": "/productos/escritura/ow-esc-20-salgan-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2840,36 +3116,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-21-goyeneche-1.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-21-goyeneche-2.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-21-goyeneche-3.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-21-goyeneche-4.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-21-goyeneche-5.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-21-goyeneche-6.webp",
+        "chica": "/productos/escritura/ow-esc-21-goyeneche-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -2893,36 +3175,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-1.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-2.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-3.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-4.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-5.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-22-d-arienzo-6.webp",
+        "chica": "/productos/escritura/ow-esc-22-d-arienzo-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -2952,48 +3240,56 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-23-troilo-1.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-1-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-23-troilo-2.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-23-troilo-3.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-3-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-23-troilo-4.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-4-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-23-troilo-5.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-5-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-23-troilo-6.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-6-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 7,
         "src": "/productos/escritura/ow-esc-23-troilo-7.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-7-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 8,
         "src": "/productos/escritura/ow-esc-23-troilo-8.webp",
+        "chica": "/productos/escritura/ow-esc-23-troilo-8-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -3017,6 +3313,7 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-24-troilo-color-1.webp",
+        "chica": "/productos/escritura/ow-esc-24-troilo-color-1-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -3040,12 +3337,14 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-25-troilo-frost-1.webp",
+        "chica": "/productos/escritura/ow-esc-25-troilo-frost-1-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-25-troilo-frost-2.webp",
+        "chica": "/productos/escritura/ow-esc-25-troilo-frost-2-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -3069,18 +3368,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-26-troilo-cristal-1.webp",
+        "chica": "/productos/escritura/ow-esc-26-troilo-cristal-1-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-26-troilo-cristal-2.webp",
+        "chica": "/productos/escritura/ow-esc-26-troilo-cristal-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-26-troilo-cristal-3.webp",
+        "chica": "/productos/escritura/ow-esc-26-troilo-cristal-3-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -3104,12 +3406,14 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-27-spinetta-natural-1.webp",
+        "chica": "/productos/escritura/ow-esc-27-spinetta-natural-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-27-spinetta-natural-2.webp",
+        "chica": "/productos/escritura/ow-esc-27-spinetta-natural-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3133,6 +3437,7 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-28-spinetta-clasico-1.webp",
+        "chica": "/productos/escritura/ow-esc-28-spinetta-clasico-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3156,6 +3461,7 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-29-spinetta-negro-1.webp",
+        "chica": "/productos/escritura/ow-esc-29-spinetta-negro-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3179,18 +3485,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-30-spinetta-eco-1.webp",
+        "chica": "/productos/escritura/ow-esc-30-spinetta-eco-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-30-spinetta-eco-2.webp",
+        "chica": "/productos/escritura/ow-esc-30-spinetta-eco-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-30-spinetta-eco-3.webp",
+        "chica": "/productos/escritura/ow-esc-30-spinetta-eco-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -3216,36 +3525,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-31-ginastera-1.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-31-ginastera-2.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-31-ginastera-3.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-31-ginastera-4.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-31-ginastera-5.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-31-ginastera-6.webp",
+        "chica": "/productos/escritura/ow-esc-31-ginastera-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3269,12 +3584,14 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-32-barbieri-1.webp",
+        "chica": "/productos/escritura/ow-esc-32-barbieri-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-32-barbieri-2.webp",
+        "chica": "/productos/escritura/ow-esc-32-barbieri-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -3298,36 +3615,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-33-mores-1.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-33-mores-2.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-33-mores-3.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-33-mores-4.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-33-mores-5.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-33-mores-6.webp",
+        "chica": "/productos/escritura/ow-esc-33-mores-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3351,18 +3674,21 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-34-merello-1.webp",
+        "chica": "/productos/escritura/ow-esc-34-merello-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-34-merello-2.webp",
+        "chica": "/productos/escritura/ow-esc-34-merello-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-34-merello-3.webp",
+        "chica": "/productos/escritura/ow-esc-34-merello-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3387,36 +3713,42 @@
       {
         "n": 1,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-1.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-2.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-3.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-3-chica.webp",
         "ancho": 756,
         "alto": 756
       },
       {
         "n": 4,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-4.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-5.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-5-chica.webp",
         "ancho": 815,
         "alto": 815
       },
       {
         "n": 6,
         "src": "/productos/escritura/ow-esc-35-set-piazzolla-6.webp",
+        "chica": "/productos/escritura/ow-esc-35-set-piazzolla-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3453,90 +3785,105 @@
       {
         "n": 9,
         "src": "/productos/cuadernos/ow-cua-01-borges-9.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-9-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 24,
         "src": "/productos/cuadernos/ow-cua-01-borges-24.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-24-chica.webp",
         "ancho": 680,
         "alto": 680
       },
       {
         "n": 27,
         "src": "/productos/cuadernos/ow-cua-01-borges-27.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-27-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 21,
         "src": "/productos/cuadernos/ow-cua-01-borges-21.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-21-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 33,
         "src": "/productos/cuadernos/ow-cua-01-borges-33.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-33-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 28,
         "src": "/productos/cuadernos/ow-cua-01-borges-28.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-28-chica.webp",
         "ancho": 630,
         "alto": 630
       },
       {
         "n": 25,
         "src": "/productos/cuadernos/ow-cua-01-borges-25.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-25-chica.webp",
         "ancho": 650,
         "alto": 650
       },
       {
         "n": 20,
         "src": "/productos/cuadernos/ow-cua-01-borges-20.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-20-chica.webp",
         "ancho": 600,
         "alto": 600
       },
       {
         "n": 22,
         "src": "/productos/cuadernos/ow-cua-01-borges-22.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-22-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 32,
         "src": "/productos/cuadernos/ow-cua-01-borges-32.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-32-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 26,
         "src": "/productos/cuadernos/ow-cua-01-borges-26.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-26-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 31,
         "src": "/productos/cuadernos/ow-cua-01-borges-31.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-31-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 30,
         "src": "/productos/cuadernos/ow-cua-01-borges-30.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-30-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 29,
         "src": "/productos/cuadernos/ow-cua-01-borges-29.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-29-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 11,
         "src": "/productos/cuadernos/ow-cua-01-borges-11.webp",
+        "chica": "/productos/cuadernos/ow-cua-01-borges-11-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3564,30 +3911,35 @@
       {
         "n": 11,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-11.webp",
+        "chica": "/productos/cuadernos/ow-cua-02-borges-pocket-11-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-02-borges-pocket-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-02-borges-pocket-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-02-borges-pocket-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/cuadernos/ow-cua-02-borges-pocket-10.webp",
+        "chica": "/productos/cuadernos/ow-cua-02-borges-pocket-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3612,6 +3964,7 @@
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-03-gran-borges-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-03-gran-borges-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3636,24 +3989,28 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-04-borges-espresso-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-04-borges-espresso-1-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-04-borges-espresso-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-04-borges-espresso-2-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-04-borges-espresso-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-04-borges-espresso-3-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-04-borges-espresso-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-04-borges-espresso-4-chica.webp",
         "ancho": 900,
         "alto": 900
       }
@@ -3678,24 +4035,28 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-05-borges-pocket-set-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-05-borges-pocket-set-1-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-05-borges-pocket-set-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-05-borges-pocket-set-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-05-borges-pocket-set-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-05-borges-pocket-set-3-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-05-borges-pocket-set-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-05-borges-pocket-set-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3720,18 +4081,21 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-06-borges-fenix-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-06-borges-fenix-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-06-borges-fenix-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-06-borges-fenix-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-06-borges-fenix-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-06-borges-fenix-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3757,48 +4121,56 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-07-cortazar-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-07-cortazar-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3823,6 +4195,7 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-08-marmol-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-08-marmol-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3847,24 +4220,28 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-09-bioy-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-09-bioy-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-09-bioy-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-09-bioy-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-09-bioy-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-09-bioy-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-09-bioy-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-09-bioy-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3889,18 +4266,21 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-10-arlt-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-10-arlt-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-10-arlt-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-10-arlt-3-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-10-arlt-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-10-arlt-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -3928,30 +4308,35 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-11-sabato-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-11-sabato-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/cuadernos/ow-cua-11-sabato-10.webp",
+        "chica": "/productos/cuadernos/ow-cua-11-sabato-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-11-sabato-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-11-sabato-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-11-sabato-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-11-sabato-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-11-sabato-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-11-sabato-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -3978,60 +4363,70 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-12-lugones-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-12-lugones-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-12-lugones-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-12-lugones-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-12-lugones-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-12-lugones-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-12-lugones-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-12-lugones-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/cuadernos/ow-cua-12-lugones-9.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/cuadernos/ow-cua-12-lugones-10.webp",
+        "chica": "/productos/cuadernos/ow-cua-12-lugones-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4058,36 +4453,42 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-1-chica.webp",
         "ancho": 1050,
         "alto": 1050
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-2-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-3-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-4-chica.webp",
         "ancho": 851,
         "alto": 851
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-5-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-13-ocampo-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-13-ocampo-6-chica.webp",
         "ancho": 800,
         "alto": 800
       }
@@ -4113,42 +4514,49 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-14-puig-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-1-chica.webp",
         "ancho": 950,
         "alto": 950
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-14-puig-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-2-chica.webp",
         "ancho": 700,
         "alto": 700
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-14-puig-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-14-puig-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-4-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-14-puig-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-14-puig-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-7-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-14-puig-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-14-puig-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4176,36 +4584,42 @@
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-15-quino-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 17,
         "src": "/productos/cuadernos/ow-cua-15-quino-17.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-17-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/cuadernos/ow-cua-15-quino-12.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-12-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-15-quino-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-15-quino-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/cuadernos/ow-cua-15-quino-9.webp",
+        "chica": "/productos/cuadernos/ow-cua-15-quino-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4230,24 +4644,28 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-16-sarmiento-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-16-sarmiento-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-16-sarmiento-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-16-sarmiento-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-16-sarmiento-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-16-sarmiento-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-16-sarmiento-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-16-sarmiento-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4275,36 +4693,42 @@
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-17-walsh-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-17-walsh-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-17-walsh-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 12,
         "src": "/productos/cuadernos/ow-cua-17-walsh-12.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-12-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 15,
         "src": "/productos/cuadernos/ow-cua-17-walsh-15.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-15-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-17-walsh-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-17-walsh-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4334,54 +4758,63 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-1-chica.webp",
         "ancho": 1130,
         "alto": 1130
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-4-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-5-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-6-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-7-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-8-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 9,
         "src": "/productos/cuadernos/ow-cua-18-storni-flex-9.webp",
+        "chica": "/productos/cuadernos/ow-cua-18-storni-flex-9-chica.webp",
         "ancho": 800,
         "alto": 800
       }
@@ -4411,42 +4844,49 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/cuadernos/ow-cua-19-fontanarrosa-7.webp",
+        "chica": "/productos/cuadernos/ow-cua-19-fontanarrosa-7-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4472,30 +4912,35 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-20-hernandez-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-20-hernandez-1-chica.webp",
         "ancho": 700,
         "alto": 700
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-20-hernandez-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-20-hernandez-2-chica.webp",
         "ancho": 700,
         "alto": 700
       },
       {
         "n": 11,
         "src": "/productos/cuadernos/ow-cua-20-hernandez-11.webp",
+        "chica": "/productos/cuadernos/ow-cua-20-hernandez-11-chica.webp",
         "ancho": 940,
         "alto": 940
       },
       {
         "n": 10,
         "src": "/productos/cuadernos/ow-cua-20-hernandez-10.webp",
+        "chica": "/productos/cuadernos/ow-cua-20-hernandez-10-chica.webp",
         "ancho": 850,
         "alto": 850
       },
       {
         "n": 8,
         "src": "/productos/cuadernos/ow-cua-20-hernandez-8.webp",
+        "chica": "/productos/cuadernos/ow-cua-20-hernandez-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4520,36 +4965,42 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-21-guiraldes-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-21-guiraldes-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4574,18 +5025,21 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-22-saer-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-22-saer-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-22-saer-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-22-saer-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-22-saer-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-22-saer-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4610,12 +5064,14 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-23-piglia-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-23-piglia-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-23-piglia-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-23-piglia-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4640,36 +5096,42 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-24-gelman-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-24-gelman-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-24-gelman-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/cuadernos/ow-cua-24-gelman-4.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/cuadernos/ow-cua-24-gelman-5.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/cuadernos/ow-cua-24-gelman-6.webp",
+        "chica": "/productos/cuadernos/ow-cua-24-gelman-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4694,18 +5156,21 @@
       {
         "n": 1,
         "src": "/productos/cuadernos/ow-cua-25-soriano-1.webp",
+        "chica": "/productos/cuadernos/ow-cua-25-soriano-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/cuadernos/ow-cua-25-soriano-2.webp",
+        "chica": "/productos/cuadernos/ow-cua-25-soriano-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/cuadernos/ow-cua-25-soriano-3.webp",
+        "chica": "/productos/cuadernos/ow-cua-25-soriano-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4729,18 +5194,21 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-01-barolo-black-1.webp",
+        "chica": "/productos/oficina/ow-ofi-01-barolo-black-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-01-barolo-black-2.webp",
+        "chica": "/productos/oficina/ow-ofi-01-barolo-black-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-01-barolo-black-3.webp",
+        "chica": "/productos/oficina/ow-ofi-01-barolo-black-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4764,54 +5232,63 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-1.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-2.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-3.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-5.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-6.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-7.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-8.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-9.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-9-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/oficina/ow-ofi-02-barolo-eco-10.webp",
+        "chica": "/productos/oficina/ow-ofi-02-barolo-eco-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4835,24 +5312,28 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-03-molino-1.webp",
+        "chica": "/productos/oficina/ow-ofi-03-molino-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-03-molino-2.webp",
+        "chica": "/productos/oficina/ow-ofi-03-molino-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-03-molino-4.webp",
+        "chica": "/productos/oficina/ow-ofi-03-molino-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-03-molino-5.webp",
+        "chica": "/productos/oficina/ow-ofi-03-molino-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -4876,18 +5357,21 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-04-comega-1.webp",
+        "chica": "/productos/oficina/ow-ofi-04-comega-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-04-comega-2.webp",
+        "chica": "/productos/oficina/ow-ofi-04-comega-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-04-comega-3.webp",
+        "chica": "/productos/oficina/ow-ofi-04-comega-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4911,30 +5395,35 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-05-duhau-1.webp",
+        "chica": "/productos/oficina/ow-ofi-05-duhau-1-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-05-duhau-2.webp",
+        "chica": "/productos/oficina/ow-ofi-05-duhau-2-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-05-duhau-3.webp",
+        "chica": "/productos/oficina/ow-ofi-05-duhau-3-chica.webp",
         "ancho": 1200,
         "alto": 900
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-05-duhau-4.webp",
+        "chica": "/productos/oficina/ow-ofi-05-duhau-4-chica.webp",
         "ancho": 900,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-05-duhau-5.webp",
+        "chica": "/productos/oficina/ow-ofi-05-duhau-5-chica.webp",
         "ancho": 900,
         "alto": 1200
       }
@@ -4958,6 +5447,7 @@
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-06-fuentes-3.webp",
+        "chica": "/productos/oficina/ow-ofi-06-fuentes-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -4981,18 +5471,21 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-07-mihanovich-1.webp",
+        "chica": "/productos/oficina/ow-ofi-07-mihanovich-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-07-mihanovich-2.webp",
+        "chica": "/productos/oficina/ow-ofi-07-mihanovich-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-07-mihanovich-3.webp",
+        "chica": "/productos/oficina/ow-ofi-07-mihanovich-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5018,24 +5511,28 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-08-bencich-1.webp",
+        "chica": "/productos/oficina/ow-ofi-08-bencich-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-08-bencich-2.webp",
+        "chica": "/productos/oficina/ow-ofi-08-bencich-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-08-bencich-3.webp",
+        "chica": "/productos/oficina/ow-ofi-08-bencich-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-08-bencich-4.webp",
+        "chica": "/productos/oficina/ow-ofi-08-bencich-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5060,48 +5557,56 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-09-alas-1.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-09-alas-2.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-09-alas-3.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-09-alas-4.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-09-alas-5.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-09-alas-6.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/oficina/ow-ofi-09-alas-7.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/oficina/ow-ofi-09-alas-8.webp",
+        "chica": "/productos/oficina/ow-ofi-09-alas-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5126,36 +5631,42 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-10-roverano-1.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-10-roverano-2.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-10-roverano-3.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-10-roverano-4.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-10-roverano-5.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-10-roverano-6.webp",
+        "chica": "/productos/oficina/ow-ofi-10-roverano-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5180,36 +5691,42 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-11-catalinas-1.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-11-catalinas-2.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-11-catalinas-3.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-11-catalinas-4.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-11-catalinas-5.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-5-chica.webp",
         "ancho": 1200,
         "alto": 1140
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-11-catalinas-6.webp",
+        "chica": "/productos/oficina/ow-ofi-11-catalinas-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5235,18 +5752,21 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-12-minetti-1.webp",
+        "chica": "/productos/oficina/ow-ofi-12-minetti-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-12-minetti-2.webp",
+        "chica": "/productos/oficina/ow-ofi-12-minetti-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-12-minetti-4.webp",
+        "chica": "/productos/oficina/ow-ofi-12-minetti-4-chica.webp",
         "ancho": 600,
         "alto": 400
       }
@@ -5270,12 +5790,14 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-13-guemes-black-1.webp",
+        "chica": "/productos/oficina/ow-ofi-13-guemes-black-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-13-guemes-black-2.webp",
+        "chica": "/productos/oficina/ow-ofi-13-guemes-black-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5299,24 +5821,28 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-14-guemes-kraft-1.webp",
+        "chica": "/productos/oficina/ow-ofi-14-guemes-kraft-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-14-guemes-kraft-2.webp",
+        "chica": "/productos/oficina/ow-ofi-14-guemes-kraft-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-14-guemes-kraft-3.webp",
+        "chica": "/productos/oficina/ow-ofi-14-guemes-kraft-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-14-guemes-kraft-4.webp",
+        "chica": "/productos/oficina/ow-ofi-14-guemes-kraft-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5343,48 +5869,56 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-15-correo-1.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-15-correo-2.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-15-correo-3.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-15-correo-4.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-15-correo-5.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-15-correo-6.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-6-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 7,
         "src": "/productos/oficina/ow-ofi-15-correo-7.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/oficina/ow-ofi-15-correo-8.webp",
+        "chica": "/productos/oficina/ow-ofi-15-correo-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5410,30 +5944,35 @@
       {
         "n": 1,
         "src": "/productos/oficina/ow-ofi-16-bolsa-1.webp",
+        "chica": "/productos/oficina/ow-ofi-16-bolsa-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-16-bolsa-2.webp",
+        "chica": "/productos/oficina/ow-ofi-16-bolsa-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/oficina/ow-ofi-16-bolsa-10.webp",
+        "chica": "/productos/oficina/ow-ofi-16-bolsa-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-16-bolsa-9.webp",
+        "chica": "/productos/oficina/ow-ofi-16-bolsa-9-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-16-bolsa-3.webp",
+        "chica": "/productos/oficina/ow-ofi-16-bolsa-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5457,18 +5996,21 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-17-planetario-2.webp",
+        "chica": "/productos/oficina/ow-ofi-17-planetario-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-17-planetario-4.webp",
+        "chica": "/productos/oficina/ow-ofi-17-planetario-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-17-planetario-5.webp",
+        "chica": "/productos/oficina/ow-ofi-17-planetario-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -5492,6 +6034,7 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-18-kavanagh-mini-2.webp",
+        "chica": "/productos/oficina/ow-ofi-18-kavanagh-mini-2-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5517,12 +6060,14 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-19-kavanagh-2.webp",
+        "chica": "/productos/oficina/ow-ofi-19-kavanagh-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-19-kavanagh-3.webp",
+        "chica": "/productos/oficina/ow-ofi-19-kavanagh-3-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5548,12 +6093,14 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-2.webp",
+        "chica": "/productos/oficina/ow-ofi-20-gran-kavanagh-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-20-gran-kavanagh-3.webp",
+        "chica": "/productos/oficina/ow-ofi-20-gran-kavanagh-3-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5579,12 +6126,14 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-2.webp",
+        "chica": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-3.webp",
+        "chica": "/productos/oficina/ow-ofi-21-kavanagh-portalapiz-3-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5615,66 +6164,77 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-22-colon-2.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 3,
         "src": "/productos/oficina/ow-ofi-22-colon-3.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-3-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-22-colon-4.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-4-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-22-colon-5.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-5-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 6,
         "src": "/productos/oficina/ow-ofi-22-colon-6.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-6-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 7,
         "src": "/productos/oficina/ow-ofi-22-colon-7.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-7-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 8,
         "src": "/productos/oficina/ow-ofi-22-colon-8.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-8-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-22-colon-9.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-9-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 10,
         "src": "/productos/oficina/ow-ofi-22-colon-10.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-10-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 11,
         "src": "/productos/oficina/ow-ofi-22-colon-11.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-11-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 12,
         "src": "/productos/oficina/ow-ofi-22-colon-12.webp",
+        "chica": "/productos/oficina/ow-ofi-22-colon-12-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5703,12 +6263,14 @@
       {
         "n": 5,
         "src": "/productos/oficina/ow-ofi-23-cervantes-5.webp",
+        "chica": "/productos/oficina/ow-ofi-23-cervantes-5-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 9,
         "src": "/productos/oficina/ow-ofi-23-cervantes-9.webp",
+        "chica": "/productos/oficina/ow-ofi-23-cervantes-9-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5733,12 +6295,14 @@
       {
         "n": 2,
         "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-2.webp",
+        "chica": "/productos/oficina/ow-ofi-24-colon-tarjetero-2-chica.webp",
         "ancho": 800,
         "alto": 823
       },
       {
         "n": 4,
         "src": "/productos/oficina/ow-ofi-24-colon-tarjetero-4.webp",
+        "chica": "/productos/oficina/ow-ofi-24-colon-tarjetero-4-chica.webp",
         "ancho": 800,
         "alto": 823
       }
@@ -5762,24 +6326,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-01-aconcagua-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-01-aconcagua-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-01-aconcagua-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-01-aconcagua-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-01-aconcagua-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-01-aconcagua-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-01-aconcagua-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-01-aconcagua-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5805,24 +6373,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-02-lanin-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-02-lanin-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-02-lanin-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-02-lanin-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-02-lanin-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-02-lanin-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-02-lanin-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-02-lanin-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5846,24 +6418,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-03-tronador-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-03-tronador-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-03-tronador-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-03-tronador-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-03-tronador-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-03-tronador-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-03-tronador-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-03-tronador-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -5890,18 +6466,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-04-torre-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-04-torre-1-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-04-torre-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-04-torre-2-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-04-torre-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-04-torre-4-chica.webp",
         "ancho": 800,
         "alto": 800
       }
@@ -5927,24 +6506,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-05-domuyo-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-05-domuyo-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-05-domuyo-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-05-domuyo-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-05-domuyo-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-05-domuyo-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-05-domuyo-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-05-domuyo-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -5974,24 +6557,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-06-chalten-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-06-chalten-1-chica.webp",
         "ancho": 600,
         "alto": 600
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-06-chalten-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-06-chalten-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-06-chalten-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-06-chalten-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-06-chalten-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-06-chalten-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -6015,24 +6602,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-07-payun-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-07-payun-1-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-07-payun-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-07-payun-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-07-payun-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-07-payun-3-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-07-payun-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-07-payun-4-chica.webp",
         "ancho": 900,
         "alto": 900
       }
@@ -6057,6 +6648,7 @@
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-08-castillo-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-08-castillo-4-chica.webp",
         "ancho": 600,
         "alto": 600
       }
@@ -6078,18 +6670,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-09-huemul-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-09-huemul-1-chica.webp",
         "ancho": 1182,
         "alto": 1063
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-09-huemul-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-09-huemul-2-chica.webp",
         "ancho": 679,
         "alto": 884
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-09-huemul-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-09-huemul-4-chica.webp",
         "ancho": 874,
         "alto": 1094
       }
@@ -6113,18 +6708,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-10-bayo-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-10-bayo-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-10-bayo-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-10-bayo-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-10-bayo-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-10-bayo-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -6150,24 +6748,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-11-mirador-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-11-mirador-1-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-11-mirador-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-11-mirador-2-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-11-mirador-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-11-mirador-3-chica.webp",
         "ancho": 1080,
         "alto": 1080
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-11-mirador-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-11-mirador-4-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -6190,6 +6792,7 @@
       {
         "n": 8,
         "src": "/productos/marroquineria/ow-mar-12-belvedere-8.webp",
+        "chica": "/productos/marroquineria/ow-mar-12-belvedere-8-chica.webp",
         "ancho": 720,
         "alto": 720
       }
@@ -6213,24 +6816,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-13-catedral-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-13-catedral-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-13-catedral-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-13-catedral-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-13-catedral-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-13-catedral-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-13-catedral-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-13-catedral-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6255,24 +6862,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-14-chapelco-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-14-chapelco-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-14-chapelco-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-14-chapelco-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-14-chapelco-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-14-chapelco-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-14-chapelco-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-14-chapelco-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6296,12 +6907,14 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-15-campanario-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-15-campanario-1-chica.webp",
         "ancho": 1081,
         "alto": 1081
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-15-campanario-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-15-campanario-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -6325,24 +6938,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-16-mermoz-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-16-mermoz-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-16-mermoz-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-16-mermoz-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-16-mermoz-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-16-mermoz-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-16-mermoz-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-16-mermoz-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6366,18 +6983,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-17-guillaumet-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-17-guillaumet-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-17-guillaumet-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-17-guillaumet-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-17-guillaumet-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-17-guillaumet-4-chica.webp",
         "ancho": 1080,
         "alto": 1200
       }
@@ -6401,24 +7021,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-18-poincenot-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-18-poincenot-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-18-poincenot-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-18-poincenot-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-18-poincenot-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-18-poincenot-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-18-poincenot-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-18-poincenot-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6442,12 +7066,14 @@
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-19-llao-llao-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-19-llao-llao-2-chica.webp",
         "ancho": 1024,
         "alto": 1024
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-19-llao-llao-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-19-llao-llao-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6471,18 +7097,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-20-martial-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-20-martial-1-chica.webp",
         "ancho": 1126,
         "alto": 939
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-20-martial-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-20-martial-3-chica.webp",
         "ancho": 553,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-20-martial-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-20-martial-4-chica.webp",
         "ancho": 1135,
         "alto": 932
       }
@@ -6506,18 +7135,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-21-capilla-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-21-capilla-1-chica.webp",
         "ancho": 750,
         "alto": 750
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-21-capilla-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-21-capilla-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-21-capilla-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-21-capilla-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -6540,12 +7172,14 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-22-lopez-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-22-lopez-1-chica.webp",
         "ancho": 800,
         "alto": 800
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-22-lopez-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-22-lopez-4-chica.webp",
         "ancho": 800,
         "alto": 800
       }
@@ -6568,24 +7202,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-23-inacayal-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-23-inacayal-1-chica.webp",
         "ancho": 1200,
         "alto": 1154
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-23-inacayal-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-23-inacayal-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-23-inacayal-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-23-inacayal-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-23-inacayal-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-23-inacayal-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6608,6 +7246,7 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-24-castor-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-24-castor-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6631,30 +7270,35 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-25-saint-exupery-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-25-saint-exupery-1-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-25-saint-exupery-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-25-saint-exupery-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-25-saint-exupery-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-25-saint-exupery-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-25-saint-exupery-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-25-saint-exupery-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/marroquineria/ow-mar-25-saint-exupery-5.webp",
+        "chica": "/productos/marroquineria/ow-mar-25-saint-exupery-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6679,30 +7323,35 @@
       {
         "n": 11,
         "src": "/productos/marroquineria/ow-mar-26-olivia-11.webp",
+        "chica": "/productos/marroquineria/ow-mar-26-olivia-11-chica.webp",
         "ancho": 1170,
         "alto": 965
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-26-olivia-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-26-olivia-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/marroquineria/ow-mar-26-olivia-7.webp",
+        "chica": "/productos/marroquineria/ow-mar-26-olivia-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-26-olivia-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-26-olivia-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/marroquineria/ow-mar-26-olivia-10.webp",
+        "chica": "/productos/marroquineria/ow-mar-26-olivia-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -6726,12 +7375,14 @@
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-27-chenque-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-27-chenque-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-27-chenque-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-27-chenque-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -6755,30 +7406,35 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-28-dedal-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-28-dedal-1-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-28-dedal-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-28-dedal-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-28-dedal-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-28-dedal-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/marroquineria/ow-mar-28-dedal-5.webp",
+        "chica": "/productos/marroquineria/ow-mar-28-dedal-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/marroquineria/ow-mar-28-dedal-6.webp",
+        "chica": "/productos/marroquineria/ow-mar-28-dedal-6-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -6803,18 +7459,21 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-29-perito-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-29-perito-1-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-29-perito-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-29-perito-3-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-29-perito-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-29-perito-4-chica.webp",
         "ancho": 900,
         "alto": 900
       }
@@ -6838,6 +7497,7 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-30-fitz-roy-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-30-fitz-roy-1-chica.webp",
         "ancho": 1200,
         "alto": 800
       }
@@ -6862,24 +7522,28 @@
       {
         "n": 1,
         "src": "/productos/marroquineria/ow-mar-31-otto-1.webp",
+        "chica": "/productos/marroquineria/ow-mar-31-otto-1-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 2,
         "src": "/productos/marroquineria/ow-mar-31-otto-2.webp",
+        "chica": "/productos/marroquineria/ow-mar-31-otto-2-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 3,
         "src": "/productos/marroquineria/ow-mar-31-otto-3.webp",
+        "chica": "/productos/marroquineria/ow-mar-31-otto-3-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 4,
         "src": "/productos/marroquineria/ow-mar-31-otto-4.webp",
+        "chica": "/productos/marroquineria/ow-mar-31-otto-4-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -6909,84 +7573,98 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-1.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-1-chica.webp",
         "ancho": 1129,
         "alto": 1200
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-2.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-3.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-4.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-5.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-5-chica.webp",
         "ancho": 600,
         "alto": 737
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-6.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-6-chica.webp",
         "ancho": 600,
         "alto": 737
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-7.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-7-chica.webp",
         "ancho": 600,
         "alto": 737
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-8.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-8-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 9,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-9.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-9-chica.webp",
         "ancho": 752,
         "alto": 710
       },
       {
         "n": 10,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-10.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-10-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 11,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-11.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-11-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 12,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-12.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-12-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 13,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-13.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-13-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 14,
         "src": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-14.webp",
+        "chica": "/productos/paraguas/ow-par-01-paraguas-ejecutivo-de-madera-14-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -7013,48 +7691,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-1.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-1-chica.webp",
         "ancho": 1140,
         "alto": 1127
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-2.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-3.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-4.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-5.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-6.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-7.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-8.webp",
+        "chica": "/productos/paraguas/ow-par-02-paraguas-ejecutivo-con-mango-de-goma-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7080,48 +7766,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-1.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-1-chica.webp",
         "ancho": 1200,
         "alto": 1063
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-2.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-3.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-4.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-5.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-6.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-6-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-7.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-7-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-8.webp",
+        "chica": "/productos/paraguas/ow-par-03-paraguas-ejecutivo-con-mango-plastico-8-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -7147,48 +7841,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-1.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-1-chica.webp",
         "ancho": 1200,
         "alto": 1064
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-2.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-3.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-4.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-5.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-6.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-7.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-8.webp",
+        "chica": "/productos/paraguas/ow-par-04-paraguas-plegable-con-mosqueton-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7218,54 +7920,63 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-1.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-1-chica.webp",
         "ancho": 1004,
         "alto": 673
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-2.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-2-chica.webp",
         "ancho": 1004,
         "alto": 1004
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-3.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-3-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-4.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-4-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-5.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-5-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-6.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-6-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-7.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-7-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-8.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-8-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 9,
         "src": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-9.webp",
+        "chica": "/productos/paraguas/ow-par-05-paraguas-compacto-automatico-9-chica.webp",
         "ancho": 1100,
         "alto": 1100
       }
@@ -7291,48 +8002,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-1.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-1-chica.webp",
         "ancho": 1200,
         "alto": 1147
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-2.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-3.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-4.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-5.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-6.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-6-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-7.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-7-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-06-paraguas-mini-manual-8.webp",
+        "chica": "/productos/paraguas/ow-par-06-paraguas-mini-manual-8-chica.webp",
         "ancho": 977,
         "alto": 1200
       }
@@ -7369,12 +8088,14 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-08-paraguas-invertido-1.webp",
+        "chica": "/productos/paraguas/ow-par-08-paraguas-invertido-1-chica.webp",
         "ancho": 997,
         "alto": 991
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-08-paraguas-invertido-2.webp",
+        "chica": "/productos/paraguas/ow-par-08-paraguas-invertido-2-chica.webp",
         "ancho": 1080,
         "alto": 1080
       }
@@ -7402,36 +8123,42 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-1.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-1-chica.webp",
         "ancho": 1200,
         "alto": 1145
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-2.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-3.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-4.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-6.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-7.webp",
+        "chica": "/productos/paraguas/ow-par-09-paraguas-automatico-con-mango-soft-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7463,48 +8190,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-1.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-1-chica.webp",
         "ancho": 777,
         "alto": 658
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-2.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-2-chica.webp",
         "ancho": 1100,
         "alto": 1100
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-3.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-3-chica.webp",
         "ancho": 600,
         "alto": 390
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-4.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-4-chica.webp",
         "ancho": 600,
         "alto": 478
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-5.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-5-chica.webp",
         "ancho": 600,
         "alto": 478
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-6.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-6-chica.webp",
         "ancho": 600,
         "alto": 478
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-7.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-7-chica.webp",
         "ancho": 802,
         "alto": 686
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-8.webp",
+        "chica": "/productos/paraguas/ow-par-10-paraguas-golf-automatico-8-chica.webp",
         "ancho": 802,
         "alto": 686
       }
@@ -7529,48 +8264,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-1.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-1-chica.webp",
         "ancho": 1200,
         "alto": 980
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-2.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-3.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-4.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-5.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-6.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-7.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-8.webp",
+        "chica": "/productos/paraguas/ow-par-11-paraguas-golf-automatico-metalico-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7601,84 +8344,98 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-1.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-1-chica.webp",
         "ancho": 1059,
         "alto": 978
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-2.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-2-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-3.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-3-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-4.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-4-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-5.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-5-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-6.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-6-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-7.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-7-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-8.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-8-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 9,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-9.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-9-chica.webp",
         "ancho": 977,
         "alto": 1200
       },
       {
         "n": 10,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-10.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-10-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 11,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-11.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-11-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 12,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-12.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-12-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 13,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-13.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-13-chica.webp",
         "ancho": 1135,
         "alto": 1200
       },
       {
         "n": 14,
         "src": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-14.webp",
+        "chica": "/productos/paraguas/ow-par-12-paraguas-golf-antiviento-14-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7707,48 +8464,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-1.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-1-chica.webp",
         "ancho": 1198,
         "alto": 995
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-2.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-2-chica.webp",
         "ancho": 1200,
         "alto": 1002
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-3.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-3-chica.webp",
         "ancho": 1200,
         "alto": 1026
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-4.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-4-chica.webp",
         "ancho": 900,
         "alto": 900
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-5.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-5-chica.webp",
         "ancho": 1000,
         "alto": 1000
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-6.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-6-chica.webp",
         "ancho": 1200,
         "alto": 1093
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-7.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-7-chica.webp",
         "ancho": 1200,
         "alto": 1002
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-13-paraguas-golf-manual-8.webp",
+        "chica": "/productos/paraguas/ow-par-13-paraguas-golf-manual-8-chica.webp",
         "ancho": 1000,
         "alto": 1000
       }
@@ -7774,48 +8539,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-1.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-1-chica.webp",
         "ancho": 1200,
         "alto": 1193
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-2.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-3.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-4.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-5.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-6.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-7.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-8.webp",
+        "chica": "/productos/paraguas/ow-par-14-paraguas-golf-manual-con-mango-soft-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }
@@ -7844,48 +8617,56 @@
       {
         "n": 1,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-1.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-1-chica.webp",
         "ancho": 1177,
         "alto": 1050
       },
       {
         "n": 2,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-2.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-2-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 3,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-3.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-3-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 4,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-4.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-4-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 5,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-5.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-5-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 6,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-6.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-6-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 7,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-7.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-7-chica.webp",
         "ancho": 1200,
         "alto": 1200
       },
       {
         "n": 8,
         "src": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-8.webp",
+        "chica": "/productos/paraguas/ow-par-15-paraguas-golf-con-mango-de-foam-8-chica.webp",
         "ancho": 1200,
         "alto": 1200
       }

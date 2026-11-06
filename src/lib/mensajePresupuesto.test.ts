@@ -20,7 +20,7 @@ test("arma el mensaje con el formato de Nachi", () => {
   assert.equal(
     texto,
     [
-      "Hola, armé un presupuesto en la web de On Work (WEB):",
+      "Hola, armé un presupuesto en la web de On Work:",
       "",
       "Drinkware",
       "• 100 × Apóstoles (OW-DRK-01)",
@@ -31,7 +31,6 @@ test("arma el mensaje con el formato de Nachi", () => {
       "",
       "Otro: Gorras trucker",
       "",
-      "Fecha: ",
       "Comentarios: ",
     ].join("\n"),
   );
@@ -54,7 +53,8 @@ test("sin «Otro», no aparece la línea; los catálogos vacíos no se escriben"
   const { texto } = armarMensajePresupuesto([...EJEMPLO, { catalogo: "Paraguas", lineas: [] }], "   ");
   assert.doesNotMatch(texto, /Otro:/);
   assert.doesNotMatch(texto, /Paraguas/);
-  assert.ok(texto.endsWith("Fecha: \nComentarios: "));
+  assert.ok(texto.endsWith("Cuadernos y anotadores\n• 100 × Borges (OW-CUA-01)\n\nComentarios: "));
+  assert.doesNotMatch(texto, /Fecha/);
 });
 
 test("sin emojis ni tuteo en el texto fijo", () => {

@@ -91,6 +91,9 @@ const CAMPOS_CON_TEXTO = { tipo: "tipo", descripcion: "descripción", medidas: "
 
 const EXTENSIONES = /\.(jpe?g|png|webp|avif)$/i;
 const LADO_MAXIMO = 1200;
+// Versión chica (-chica.webp) para tarjetas, miniaturas y el presupuesto: en el
+// celular una tarjeta mide unos 160 px y bajar la de 1200 era 3 a 4 veces más peso.
+const LADO_CHICO = 480;
 const LADO_MINIMO = 600; // menos que esto se ve mal en la web
 const BLANCO = 235; // un píxel es "blanco" si sus tres canales superan este valor
 // Fondo blanco: casi todo el borde blanco, o al menos 3 de las 4 esquinas
@@ -299,7 +302,7 @@ async function imagenParaCompartir(foto, destino) {
     .toFile(destino);
 }
 
-async function convertir(origen, destino) {
+async function convertir(origen, destino, lado = LADO_MAXIMO) {
   if (existsSync(destino) && (await stat(destino)).mtimeMs >= (await stat(origen)).mtimeMs) {
     const m = await sharp(destino).metadata();
     return { ancho: m.width, alto: m.height };
@@ -307,7 +310,7 @@ async function convertir(origen, destino) {
   const info = await sharp(origen)
     .rotate()
     .flatten({ background: "#ffffff" })
-    .resize(LADO_MAXIMO, LADO_MAXIMO, { fit: "inside", withoutEnlargement: true })
+    .resize(lado, lado, { fit: "inside", withoutEnlargement: true })
     .webp({ quality: 80, effort: 5 })
     .toFile(destino);
   return { ancho: info.width, alto: info.height };
@@ -505,7 +508,10 @@ for (const cat of CATALOGOS) {
       const archivo = `${datos.codigo.toLowerCase()}-${slug}-${n}.webp`;
       archivosEscritos.add(join(cat.slug, archivo));
       const medida = await convertir(f.ruta, join(dirSalida, archivo));
-      return { n, src: `/productos/${cat.slug}/${archivo}`, ...medida };
+      const chica = archivo.replace(/\.webp$/, "-chica.webp");
+      archivosEscritos.add(join(cat.slug, chica));
+      await convertir(f.ruta, join(dirSalida, chica), LADO_CHICO);
+      return { n, src: `/productos/${cat.slug}/${archivo}`, chica: `/productos/${cat.slug}/${chica}`, ...medida };
     });
     fotosCopiadas += fotos.length;
 

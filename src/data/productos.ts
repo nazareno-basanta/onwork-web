@@ -12,7 +12,8 @@ import { CATALOGOS } from "./catalogos";
 import { AJUSTES } from "./productos-ajustes";
 import datos from "./productos.generated.json";
 
-export type FotoProducto = { n: number; src: string; ancho: number; alto: number };
+/** src: la foto de 1200 px (galería). chica: la de 480 px (tarjetas, miniaturas, presupuesto). */
+export type FotoProducto = { n: number; src: string; chica: string; ancho: number; alto: number };
 
 export type Producto = {
   codigo: string;
@@ -196,7 +197,7 @@ export type LugarBuscable = {
   campos: Campo[];
 };
 
-// Los [marcadores] de textos pendientes no se buscan.
+// Los marcadores de textos pendientes (lo que va entre corchetes) no se buscan.
 const sinCorchetes = (texto?: string) => texto?.replace(/\[[^\]]*\]/g, "");
 
 export function indiceLugares(): LugarBuscable[] {
@@ -242,6 +243,8 @@ export type ProductoPresupuesto = {
   catalogoTitulo: string;
   foto: FotoProducto;
   colores: string[];
+  /** La foto chica de cada color que tiene la suya (el Borges rojo se ve rojo en el presupuesto). */
+  fotoPorColor?: Record<string, string>;
 };
 
 /** Todos los productos de la web, en el orden de la web, para el presupuesto. */
@@ -254,5 +257,8 @@ export function indicePresupuesto(): ProductoPresupuesto[] {
     catalogoTitulo: tituloDe(p.catalogo),
     foto: p.fotos[0],
     colores: p.colores,
+    ...(p.fotoDeColor && {
+      fotoPorColor: Object.fromEntries(Object.entries(p.fotoDeColor).map(([color, i]) => [color, p.fotos[i]?.chica ?? p.fotos[0].chica])),
+    }),
   }));
 }

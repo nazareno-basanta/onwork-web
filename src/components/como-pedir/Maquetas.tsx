@@ -87,7 +87,7 @@ function MaquetaPresupuesto() {
         {productosDeEjemplo().map((p) => (
           <li key={p.codigo} className="flex flex-wrap items-center gap-x-3 gap-y-2 py-3">
             <span className="relative size-14 shrink-0 overflow-hidden rounded-xl bg-white">
-              <Image src={p.foto.src} alt="" fill unoptimized sizes="56px" className="object-contain p-1.5" />
+              <Image src={p.foto.chica} alt="" fill unoptimized className="object-contain p-1.5" />
             </span>
             <span className="min-w-[8.5rem] flex-1">
               <span className="inline-block rounded-full whitespace-nowrap bg-ow-yellow px-2 py-1 font-display text-[0.625rem] leading-none font-bold tracking-[0.14em] tabular-nums">
@@ -116,7 +116,7 @@ function MaquetaPresupuesto() {
   );
 }
 
-/** Paso 2: el mensaje armado por la web (el mismo formato de lib/mensajePresupuesto), con fecha y logo. */
+/** Paso 2: el mensaje armado por la web (el mismo formato de lib/mensajePresupuesto), con un comentario y el logo. */
 function MaquetaMensaje() {
   const grupos: GrupoMensaje[] = [];
   for (const p of productosDeEjemplo()) {
@@ -126,7 +126,6 @@ function MaquetaMensaje() {
     else grupos.push({ catalogo: p.catalogo, lineas: [linea] });
   }
   const texto = armarConNivel(grupos, "", 0)
-    .replace("Fecha: ", `Fecha: ${M.fecha}`)
     .replace("Comentarios: ", `Comentarios: ${M.comentarios}`)
     // En el globo angosto, que los códigos no se corten en el guion (OW-ESC-|02):
     // un "unidor" invisible después de cada guion.

@@ -188,7 +188,7 @@ export default function GaleriaProducto({ fotos, nombre }: { fotos: FotoProducto
                   i === actual ? "border-ow-black" : "border-ow-black/10 hover:border-ow-black/40",
                 )}
               >
-                <Image src={f.src} alt="" fill unoptimized loading="lazy" className="object-contain p-1.5" />
+                <Image src={f.chica} alt="" fill unoptimized loading="lazy" className="object-contain p-1.5" />
               </button>
             </li>
           ))}

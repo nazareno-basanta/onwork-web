@@ -121,7 +121,8 @@ function FilaPresupuesto({
       className="grid grid-cols-[4.5rem_minmax(0,1fr)] gap-x-4 gap-y-3 border-b-2 border-ow-black py-5 @2xl:grid-cols-[5.5rem_minmax(0,1fr)_auto] @2xl:items-center @2xl:gap-x-6"
     >
       <div className="relative aspect-square overflow-hidden rounded-2xl bg-white shadow-apoyado">
-        <Image src={producto.foto.src} alt="" fill sizes="88px" className="object-contain p-1.5" />
+        {/* La foto chica del color elegido, si tiene; sin pasar por el optimizador de Vercel (como las demás fotos de productos). */}
+        <Image src={producto.fotoPorColor?.[color] ?? producto.foto.chica} alt="" fill unoptimized className="object-contain p-1.5" />
       </div>
       <div className="min-w-0 self-center">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">

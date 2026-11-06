@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import { PRESUPUESTO } from "@/data/presupuesto";
@@ -44,6 +44,7 @@ export default function BotonPresupuesto({ producto, className, destacado = fals
   // Cómo se sumó: con el teclado el foco va al número; con mouse, dedo o lector de pantalla, al grupo.
   const [enfocar, setEnfocar] = useState<"numero" | "grupo" | null>(null);
   const yaEnfocado = useCallback(() => setEnfocar(null), []);
+  const caja = useRef<HTMLDivElement>(null);
   const mias = lineas.filter((l) => l.codigo === producto.codigo);
   const conColor = color !== undefined;
   const linea = conColor ? mias.find((l) => l.color === color) : mias.length === 1 ? mias[0] : undefined;
@@ -89,7 +90,12 @@ export default function BotonPresupuesto({ producto, className, destacado = fals
         <button
           type="button"
           className={linkQuitar}
-          onClick={() => presupuesto.quitar(l.codigo, l.color)}
+          onClick={() => {
+            presupuesto.quitar(l.codigo, l.color);
+            // El selector desaparece y vuelve "Sumar": el foco pasa a ese botón
+            // (si no, se pierde y con el teclado hay que recorrer la página de nuevo).
+            requestAnimationFrame(() => caja.current?.querySelector<HTMLButtonElement>("button")?.focus());
+          }}
           aria-label={`${PRESUPUESTO.quitar} ${producto.nombre} del presupuesto`}
         >
           {PRESUPUESTO.quitar}
@@ -102,7 +108,7 @@ export default function BotonPresupuesto({ producto, className, destacado = fals
   if (conColor) {
     const otras = mias.filter((l) => l.color !== color);
     return (
-      <div className={cn("space-y-3", className)}>
+      <div ref={caja} className={cn("space-y-3", className)}>
         {linea ? cantidad(linea, true) : sumar}
         {otras.length > 0 && (
           <p className="flex flex-wrap items-center gap-x-3 text-sm text-ow-gray">

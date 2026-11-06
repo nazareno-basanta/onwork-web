@@ -108,7 +108,6 @@ export const COMO_PEDIR = {
     ],
     chat: "On Work",
     hora: ["10:24", "10:41", "16:05", "11:30"],
-    fecha: "15 de diciembre",
     comentarios: "Te paso el logo.",
     archivo: "logo.pdf",
     asesor: ["¡Hola! Gracias por el presupuesto.", "¿Tu logo va a un color o a todo color? Así te pasamos la cotización."],

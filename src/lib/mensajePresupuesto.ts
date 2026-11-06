@@ -2,18 +2,18 @@
  * Arma el mensaje de WhatsApp del presupuesto. Formato de Nachi
  * (../Web OW/06-PROMPT-CATALOGO-PRESUPUESTO.md):
  *
- *   Hola, armé un presupuesto en la web de On Work (WEB):
+ *   Hola, armé un presupuesto en la web de On Work:
  *
  *   Drinkware
  *   • 100 × Apóstoles (OW-DRK-01) · Negro
  *
  *   Otro: …
  *
- *   Fecha:
  *   Comentarios:
  *
- * "(WEB)" marca de dónde viene la consulta. "Fecha" y "Comentarios" quedan
- * vacíos para que la persona los complete en WhatsApp antes de enviar.
+ * "Comentarios" queda vacío para que la persona lo complete en WhatsApp antes
+ * de enviar. Sin "Fecha" ni "(WEB)": Nachi los sacó del mensaje (5/11/2026).
+ * La web ya dice de dónde viene ("en la web de On Work").
  *
  * Si el link queda muy largo, se compacta por etapas y lo último que se pierde
  * son los colores (lo que la persona eligió):
@@ -42,7 +42,7 @@ export type NivelMensaje = 0 | 1 | 2 | 3;
 /** Largo máximo del texto codificado en el link antes de compactar. */
 export const LARGO_MAXIMO = 1800;
 
-const ENCABEZADO = "Hola, armé un presupuesto en la web de On Work (WEB):";
+const ENCABEZADO = "Hola, armé un presupuesto en la web de On Work:";
 
 function linea(l: LineaMensaje, nivel: NivelMensaje) {
   const color = nivel < 3 && l.color ? l.color : "";
@@ -60,7 +60,7 @@ export function armarConNivel(grupos: GrupoMensaje[], otro: string, nivel: Nivel
     bloques.push(conLineas.flatMap((g) => g.lineas.map((l) => linea(l, nivel))).join("\n"));
   }
   if (otro.trim()) bloques.push(`Otro: ${otro.trim().replace(/\s+/g, " ")}`);
-  bloques.push("Fecha: \nComentarios: ");
+  bloques.push("Comentarios: ");
   return bloques.join("\n\n");
 }
 

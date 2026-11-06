@@ -17,6 +17,12 @@ import { textoWeb } from "@/lib/utils";
  */
 const SIN_PEDIDOS = "__sin-pedidos__";
 
+// Estática del todo, como los catálogos: una dirección que no existe espera la
+// respuesta completa y da 404 (sin esto, Next manda primero una versión
+// provisoria con código 200 y Google la tomaría como una página válida).
+export const ensureStatic = "navigation";
+export const instant = false;
+
 export function generateStaticParams() {
   return PEDIDOS.length > 0 ? PEDIDOS.map((p) => ({ cliente: p.slug })) : [{ cliente: SIN_PEDIDOS }];
 }

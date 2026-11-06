@@ -1,6 +1,6 @@
 /**
  * Preguntas frecuentes del Inicio, Contacto y Cómo pedir (las cuatro primeras
- * también en cada catálogo).
+ * también en cada página de catálogo).
  * Textos de ../Web OW/03-CONTENIDO-PAGINAS.md, actualizados con el presupuesto
  * (aprobados por Nachi el 5/11/2026). Lo que está entre [corchetes]
  * falta confirmar y se ve así en la web hasta que lo completes.
@@ -14,7 +14,7 @@ export type Pregunta = {
 };
 
 export const PREGUNTAS: Pregunta[] = [
-  // Las cuatro primeras también van en cada catálogo (catalogos/[slug]/page.tsx).
+  // Las cuatro primeras también van en cada página de catálogo (PREGUNTAS_CATALOGO).
   {
     pregunta: "¿Cómo funciona el presupuesto?",
     respuesta:

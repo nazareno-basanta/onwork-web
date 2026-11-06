@@ -27,7 +27,7 @@ export default function TarjetaCatalogo({ catalogo, foto, prioridad = false, niv
         {foto ? (
           <div className="relative aspect-square overflow-hidden rounded-3xl bg-white shadow-apoyado transition-shadow duration-300 ease-ow group-hover:shadow-levantado">
             <Image
-              src={foto.src}
+              src={foto.chica}
               alt=""
               fill
               unoptimized

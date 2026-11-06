@@ -75,8 +75,11 @@ function multiplicador(texto: string, forma: string) {
  * Cuánto coincide algo con la búsqueda: suma, por cada palabra, el mejor
  * campo donde aparece (más si es la palabra entera o su comienzo). Si alguna
  * palabra no aparece en ningún campo, no coincide (null).
+ * enterasDebajoDe: en los campos que pesan menos que eso, solo cuenta la
+ * palabra entera (los recuadros de catálogos y secciones: "mate" no tiene que
+ * traer las Cintas por el "material" de su texto).
  */
-export function puntaje(campos: Campo[], palabras: string[]) {
+export function puntaje(campos: Campo[], palabras: string[], enterasDebajoDe = 0) {
   if (palabras.length === 0) return null;
   let total = 0;
   for (const palabra of palabras) {
@@ -88,6 +91,7 @@ export function puntaje(campos: Campo[], palabras: string[]) {
         // En los campos de poco peso (la descripción, el catálogo) no cuenta un pedazo del medio
         // de otra palabra: "lapicera" no tiene que traer los cuadernos con "portabolígrafo".
         if (veces === 1 && peso < 3) continue;
+        if (veces < 3 && peso < enterasDebajoDe) continue;
         mejor = Math.max(mejor, peso * veces);
       }
     }
@@ -98,10 +102,10 @@ export function puntaje(campos: Campo[], palabras: string[]) {
 }
 
 /** Los que coinciden, de mayor a menor puntaje (con el mismo puntaje, en el orden de los catálogos). */
-export function ordenar<T extends { campos: Campo[] }>(items: T[], texto: string) {
+export function ordenar<T extends { campos: Campo[] }>(items: T[], texto: string, enterasDebajoDe = 0) {
   const palabras = palabrasDe(texto);
   return items
-    .map((item, i) => ({ item, i, p: puntaje(item.campos, palabras) }))
+    .map((item, i) => ({ item, i, p: puntaje(item.campos, palabras, enterasDebajoDe) }))
     .filter((x): x is { item: T; i: number; p: number } => x.p !== null)
     .sort((a, b) => b.p - a.p || a.i - b.i)
     .map((x) => x.item);

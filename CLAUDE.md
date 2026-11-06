@@ -27,4 +27,5 @@ Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires),
 - In this project, when the diana symbol appears in text, adjust its stroke weight to match the surrounding text weight instead of using the exact logo version.
 - Never alter the original brand isotipo; keep it unchanged and centered, placing decorative effects like shockwaves only in the background.
 - Discard any product description text that names suppliers or other brands (e.g., Silverplate, Stanley) from catalog data.
+- Remove the 'Fecha:' line from the WhatsApp budget message template in all future messages.
 <!-- end claude-reflect -->
