@@ -58,6 +58,7 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 3. **Logos de clientes**: solo marcas confirmadas, en `public/clientes/` y en `src/data/clientes.ts`. La franja de clientes muestra solo las marcas con logo; sin ninguna, no aparece en la web.
 4. **Pedidos reales**: fotos en `public/pedidos/<cliente>/` y datos en `src/data/pedidos.ts`. Con el primer pedido cargado aparecen solos "Pedidos reales" en el menú y el pie, el carrusel del Inicio, la página del pedido y su lugar en el sitemap, y `/pedidos` se empieza a indexar.
 5. **Marcadores**: todo lo que está entre `[corchetes]` en `src/data/` es un dato a completar o confirmar. Se ve en `npm run dev` y **no** en la web publicada (si un párrafo es todo marcador, no se muestra). Para ver la lista con archivo y línea: `npm run marcadores`.
+6. **Notas de Ideas** (el blog; todavía sin página en la web): los datos de cada nota van en `src/data/ideas.ts`, su texto en `src/data/ideas/<slug>.mdx` y quién firma en `src/data/autores.ts`. Con `borrador: true` no se publica, y `npm test` avisa si a una nota publicada le falta algo.
 
 ## Pendientes antes de publicar
 

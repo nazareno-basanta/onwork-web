@@ -4,3 +4,4 @@
  */
 export const urlCatalogo = (catalogo: string) => `/catalogos/${catalogo}`;
 export const urlProducto = (p: { catalogo: string; slug: string }) => `/catalogos/${p.catalogo}/${p.slug}`;
+export const urlIdea = (slug: string) => `/ideas/${slug}`;

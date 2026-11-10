@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 // Slugs de los catálogos (los mismos de src/data/catalogos.ts). El PDF de
@@ -120,4 +121,11 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Textos de las notas de Ideas (src/data/ideas/*.mdx), escritos en Markdown.
+// remark-gfm suma las tablas (Markdown no las trae de base). Con Turbopack,
+// los plugins se nombran como texto.
+const withMDX = createMDX({
+  options: { remarkPlugins: ["remark-gfm"] },
+});
+
+export default withMDX(nextConfig);

@@ -28,4 +28,5 @@ Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires),
 - Never alter the original brand isotipo; keep it unchanged and centered, placing decorative effects like shockwaves only in the background.
 - Discard any product description text that names suppliers or other brands (e.g., Silverplate, Stanley) from catalog data.
 - Remove the 'Fecha:' line from the WhatsApp budget message template in all future messages.
+- For On Work blog posts, sign experience-based articles as Sergio Basanta (founder) and current-topics/innovation articles as Nazareno Basanta (graphic designer).
 <!-- end claude-reflect -->
