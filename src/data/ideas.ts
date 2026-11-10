@@ -66,13 +66,13 @@ export type Idea = {
 
 export const IDEAS: Idea[] = [
   {
-    // Borrador de Claude (10/11/2026) con la respuesta de la skill on-work-seo,
-    // los pasos de "Cómo pedir" y los tipos de producto de los catálogos.
-    // Para los ingresos de enero: conviene publicarla en diciembre.
+    // Texto de Claude con la respuesta de la skill on-work-seo, los pasos de
+    // "Cómo pedir" y los tipos de producto de los catálogos; aprobado por Nachi.
     slug: "que-poner-en-un-kit-de-bienvenida",
     tipo: "ideas",
     autor: "nazareno-basanta",
-    borrador: true,
+    publicado: "2026-11-10",
+    actualizado: "2026-11-10",
     titulo: "¿Qué poner en un kit de bienvenida?",
     respuesta:
       "Lo habitual es combinar algo para el escritorio, algo para tomar y algo para llevar: por ejemplo cuaderno, lapicera, botella o mate y una mochila o bolsa. En On Work armamos el kit con los productos que mejor representen a tu marca, para que quien llega se sienta parte del equipo desde el primer día.",
@@ -99,12 +99,13 @@ export const IDEAS: Idea[] = [
   },
   {
     // Sale del carrusel de Instagram "¿Por qué tu marca necesita un set matero?"
-    // (26/10/2026). Borrador de Claude con los textos del posteo y los datos del
-    // catálogo Drinkware, para que lo revisen Nachi y Sergio.
+    // (26/10/2026), con los textos del posteo y los datos del catálogo
+    // Drinkware; aprobado por Nachi.
     slug: "set-matero-con-tu-marca",
     tipo: "como-elegir",
     autor: "sergio-basanta",
-    borrador: true,
+    publicado: "2026-11-10",
+    actualizado: "2026-11-10",
     titulo: "¿Por qué tu marca necesita un set matero?",
     respuesta:
       "Porque el mate se comparte todos los días: en la oficina, en la ruta o en casa, pasa de mano en mano y tu marca va con él. Un set matero de On Work junta mate, bombilla, termo y matera, cada pieza con tu marca, y si la acción es compartida, entran las dos marcas.",

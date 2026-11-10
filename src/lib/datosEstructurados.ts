@@ -102,7 +102,7 @@ export function persona(id: AutorId): Person {
     jobTitle: autor.rol,
     url,
     worksFor: { "@id": ORGANIZACION_ID },
-    ...(!tieneMarcador(autor.bio) && { description: autor.bio }),
+    ...(autor.bio && !tieneMarcador(autor.bio) && { description: autor.bio }),
     ...(autor.foto && { image: `${SITE.url}${autor.foto}` }),
     ...(autor.perfiles?.length && { sameAs: autor.perfiles }),
   };

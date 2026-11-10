@@ -10,7 +10,7 @@ import { AUTORES, AUTOR_PAGINA, type AutorId } from "@/data/autores";
 import { IDEAS_PAGINA, IDEAS_VISIBLES } from "@/data/ideas";
 import { perfil } from "@/lib/datosEstructurados";
 import { urlAutor } from "@/lib/rutas";
-import { mostrarMarcadores, tieneMarcador, textoWeb } from "@/lib/utils";
+import { mostrarMarcadores, textoWeb } from "@/lib/utils";
 
 /*
  * Página de quien firma las notas: nombre, rol, bio y sus notas. Existe solo
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps<"/ideas/autores/[au
   if (!id) return {};
   const autor = AUTORES[id];
   const url = urlAutor(id);
-  const descripcion = tieneMarcador(autor.bio) ? AUTOR_PAGINA.descripcion(autor) : autor.bio;
+  const descripcion = AUTOR_PAGINA.descripcion(autor);
   return {
     title: `${autor.nombre}, ${autor.rol}`,
     description: descripcion,

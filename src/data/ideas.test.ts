@@ -61,10 +61,12 @@ test("cada nota tiene un slug único, en minúscula y con guiones", () => {
   assert.ok(!slugs.includes("autores"), 'ninguna nota puede llamarse "autores"');
 });
 
-test("quien firma una nota publicada tiene la bio completa", () => {
+test("quien firma una nota publicada tiene sus datos completos", () => {
   for (const idea of IDEAS_PUBLICADAS) {
     const autor = AUTORES[idea.autor];
-    assert.ok(!MARCADOR.test(autor.bio), `${idea.slug}: falta la bio de ${autor.nombre} (src/data/autores.ts)`);
+    for (const dato of [autor.rol, autor.bio ?? ""]) {
+      assert.ok(!MARCADOR.test(dato), `${idea.slug}: faltan datos de ${autor.nombre} (src/data/autores.ts)`);
+    }
   }
 });
 
