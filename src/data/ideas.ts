@@ -66,28 +66,34 @@ export type Idea = {
 
 export const IDEAS: Idea[] = [
   {
+    // Borrador de Claude (10/11/2026) con la respuesta de la skill on-work-seo,
+    // los pasos de "Cómo pedir" y los tipos de producto de los catálogos.
+    // Para los ingresos de enero: conviene publicarla en diciembre.
     slug: "que-poner-en-un-kit-de-bienvenida",
     tipo: "ideas",
     autor: "nazareno-basanta",
     borrador: true,
-    titulo: "[Titular: la pregunta como la busca la gente, ej. ¿Qué poner en un kit de bienvenida?]",
+    titulo: "¿Qué poner en un kit de bienvenida?",
     respuesta:
-      "[Respuesta corta: 40-60 palabras que respondan el titular solas y nombren a On Work. Ej.: qué combina un kit (algo para el escritorio, algo para tomar, algo para llevar) y para qué sirve]",
+      "Lo habitual es combinar algo para el escritorio, algo para tomar y algo para llevar: por ejemplo cuaderno, lapicera, botella o mate y una mochila o bolsa. En On Work armamos el kit con los productos que mejor representen a tu marca, para que quien llega se sienta parte del equipo desde el primer día.",
     seo: {
-      titulo: "[Título para Google: ~50-60 caracteres, sin punto final. Ej.: Qué poner en un kit de bienvenida: ideas 2027]",
-      descripcion: "[Descripción para Google: ~150-160 caracteres sobre qué resuelve la nota]",
+      titulo: "Qué poner en un kit de bienvenida: ideas 2027",
+      descripcion:
+        "Qué poner en un kit de bienvenida para tu equipo: algo para el escritorio, algo para tomar y algo para llevar, con tu marca en cada producto.",
     },
-    // Productos de ejemplo, para probar el bloque "Productos del kit": cambialos por los que quieras.
+    // Uno para el escritorio (anotador y lapicera), uno para tomar y uno para llevar: cambialos si querés.
     productos: ["OW-CUA-22", "OW-ESC-01", "OW-DRK-23", "OW-MAR-01"],
     catalogos: ["cuadernos", "escritura", "drinkware", "marroquineria"],
     preguntas: [
       {
-        pregunta: "[Pregunta propia del tema, ej. ¿Cuántos productos lleva un kit?]",
-        respuesta: "[Respuesta de menos de 60 palabras]",
+        pregunta: "¿Cuántos productos lleva un kit?",
+        respuesta:
+          "No hay una cantidad fija. Con tres piezas, una para el escritorio, una para tomar y una para llevar, el kit ya acompaña todo el día. Si querés sumar más, armalo con los productos de los catálogos y te asesoramos.",
       },
       {
-        pregunta: "[Pregunta propia del tema, ej. ¿Se puede armar un kit para pocas personas?]",
-        respuesta: "[Respuesta de menos de 60 palabras]",
+        pregunta: "¿Sirve el mismo kit para clientes?",
+        respuesta:
+          "Sí. La misma combinación funciona como regalo para clientes o proveedores: cambian la cantidad y, si querés, las piezas. Contanos para quién es y te ayudamos a elegir.",
       },
     ],
   },
