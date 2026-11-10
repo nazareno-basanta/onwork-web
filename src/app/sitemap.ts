@@ -12,12 +12,13 @@ import { SITE } from "@/lib/site";
  * (Sin priority ni changeFrequency: Google los ignora.)
  */
 const EDICION = {
-  inicio: "2026-11-05",
+  // 10/11: el Inicio suma el carrusel de pedidos y cada catálogo, sus pedidos y sus notas de Ideas.
+  inicio: "2026-11-10",
   catalogos: "2026-11-05",
-  catalogo: "2026-11-05",
+  catalogo: "2026-11-10",
   producto: "2026-11-05",
   pdf: "2026-11-03",
-  pedidos: "2026-11-03",
+  pedidos: "2026-11-10",
   nosotros: "2026-11-05",
   contacto: "2026-11-05",
   comoPedir: "2026-11-05",

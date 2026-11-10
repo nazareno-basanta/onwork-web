@@ -106,22 +106,20 @@ export const PEDIDOS: Pedido[] = [
       },
     ],
   },
-  // Datos de ../Web OW/pedidos-reales/cevt/datos.md: lo que se ve en las fotos
-  // (WhatsApp del 6/11/2026). Faltan los datos entre corchetes: hasta
-  // completarlos, este pedido no cuenta para publicar la sección.
+  // Datos de ../Web OW/pedidos-reales/cevt/datos.md (10/11/2026).
   {
     slug: "cevt",
     cliente: "CEVT",
-    rubro: "[Rubro de CEVT]",
-    producto: "Kit de viaje [confirmar]",
-    // [confirmar si el diseño lo trajeron ellos]
+    rubro: "Cooperativa eléctrica",
+    producto: "Kit de viaje",
     disenoDelCliente: "si",
-    uso: "[Para qué lo usaron]",
+    uso: "Regalo de fin de año",
     catalogo: "marroquineria",
-    necesitaba: "[Qué necesitaba CEVT: 1 o 2 líneas]",
+    necesitaba:
+      "La Cooperativa Eléctrica de Venado Tuerto buscaba un set completo de viaje para regalarles a sus trabajadores a fin de año.",
     hicimos:
-      "Producimos el kit con el logo de CEVT en cada pieza: mochila, bolsa de tela, botella y vaso térmicos, toalla de viaje, organizador para cables y porta documentos. [confirmar técnica]",
-    cierre: "Tu marca, en cada viaje. [confirmar]",
+      "Producimos el kit con el logo de CEVT en cada pieza, en grabado láser y sublimación: mochila, bolsa de tela, botella y vaso térmicos, toalla de viaje, organizador para cables y porta documentos.",
+    cierre: "Tu marca, en cada viaje.",
     fotos: [
       {
         src: "/pedidos/cevt/kit-completo.jpg",

@@ -21,7 +21,9 @@ export default function TarjetaPedido({ pedido }: { pedido: Pedido }) {
           alt={portada.alt}
           fill
           sizes="(min-width: 768px) 24rem, 78vw"
-          className="object-cover transition-transform duration-700 ease-ow group-hover:scale-[1.03]"
+          // Entera (sin recortar productos) y un poco hacia arriba, así la
+          // pastilla de abajo queda sobre el blanco y no sobre el producto.
+          className="object-contain object-[50%_30%] transition-transform duration-700 ease-ow group-hover:scale-[1.03]"
         />
       )}
       <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-ow-paper px-4 py-3">
