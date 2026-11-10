@@ -17,7 +17,7 @@ import Cierre from "@/components/sections/Cierre";
 import Preguntas from "@/components/sections/Preguntas";
 import { CATALOGOS, CATALOGO_PAGINA, type Catalogo } from "@/data/catalogos";
 import { IDEAS_PAGINA, ideasDeCatalogo } from "@/data/ideas";
-import { PEDIDOS } from "@/data/pedidos";
+import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { PREGUNTAS } from "@/data/preguntas";
 import { aTarjeta, secciones as seccionesDe, type SeccionConProductos } from "@/data/productos";
 import { listaDeProductos } from "@/lib/datosEstructurados";
@@ -79,7 +79,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
 
   const secciones = seccionesDe(catalogo.slug);
   const conProductos = secciones.some((s) => s.productos.length > 0);
-  const pedidos = PEDIDOS.filter((p) => p.catalogo === catalogo.slug);
+  const pedidos = PEDIDOS_VISIBLES.filter((p) => p.catalogo === catalogo.slug);
   const ideas = ideasDeCatalogo(catalogo.slug);
 
   return (

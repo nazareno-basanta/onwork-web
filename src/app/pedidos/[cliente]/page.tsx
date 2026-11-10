@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 import Titular from "@/components/Titular";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS } from "@/data/catalogos";
-import { PEDIDOS, PEDIDOS_PAGINA, mensajePedido } from "@/data/pedidos";
+import { PEDIDOS_PAGINA, PEDIDOS_VISIBLES, mensajePedido } from "@/data/pedidos";
 import { textoWeb } from "@/lib/utils";
 
 /*
@@ -24,12 +24,12 @@ export const ensureStatic = "navigation";
 export const instant = false;
 
 export function generateStaticParams() {
-  return PEDIDOS.length > 0 ? PEDIDOS.map((p) => ({ cliente: p.slug })) : [{ cliente: SIN_PEDIDOS }];
+  return PEDIDOS_VISIBLES.length > 0 ? PEDIDOS_VISIBLES.map((p) => ({ cliente: p.slug })) : [{ cliente: SIN_PEDIDOS }];
 }
 
 export async function generateMetadata({ params }: PageProps<"/pedidos/[cliente]">): Promise<Metadata> {
   const { cliente } = await params;
-  const pedido = PEDIDOS.find((p) => p.slug === cliente);
+  const pedido = PEDIDOS_VISIBLES.find((p) => p.slug === cliente);
   if (!pedido) return {};
   const titulo = `${pedido.producto} para ${pedido.cliente}`;
   const url = `/pedidos/${pedido.slug}`;
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps<"/pedidos/[cliente]
 
 export default async function PedidoPage({ params }: PageProps<"/pedidos/[cliente]">) {
   const { cliente } = await params;
-  const pedido = PEDIDOS.find((p) => p.slug === cliente);
+  const pedido = PEDIDOS_VISIBLES.find((p) => p.slug === cliente);
   if (!pedido) notFound();
 
   const catalogo = CATALOGOS.find((c) => c.slug === pedido.catalogo);

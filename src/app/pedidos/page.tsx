@@ -4,7 +4,7 @@ import TarjetaPedido from "@/components/TarjetaPedido";
 import Titular from "@/components/Titular";
 import Busquedas from "@/components/sections/Busquedas";
 import Cierre from "@/components/sections/Cierre";
-import { HAY_PEDIDOS, PEDIDOS, PEDIDOS_PAGINA } from "@/data/pedidos";
+import { HAY_PEDIDOS, PEDIDOS_PAGINA, PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { mostrarMarcadores, textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -32,9 +32,9 @@ export default function PedidosPage() {
             </p>
           </div>
 
-          {PEDIDOS.length > 0 ? (
+          {PEDIDOS_VISIBLES.length > 0 ? (
             <ul className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {PEDIDOS.map((p) => (
+              {PEDIDOS_VISIBLES.map((p) => (
                 <li key={p.slug}>
                   <TarjetaPedido pedido={p} />
                 </li>

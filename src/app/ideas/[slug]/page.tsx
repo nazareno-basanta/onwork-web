@@ -14,7 +14,7 @@ import Preguntas from "@/components/sections/Preguntas";
 import { AUTORES } from "@/data/autores";
 import { CATALOGOS } from "@/data/catalogos";
 import { IDEAS_PAGINA, IDEAS_VISIBLES } from "@/data/ideas";
-import { PEDIDOS } from "@/data/pedidos";
+import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { PRODUCTOS, aTarjeta } from "@/data/productos";
 import { articulo } from "@/lib/datosEstructurados";
 import { mensajeWeb } from "@/lib/mensajes";
@@ -77,7 +77,7 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
   const fecha = idea.actualizado ?? idea.publicado;
   const productos = (idea.productos ?? []).flatMap((codigo) => PRODUCTOS.filter((p) => p.codigo === codigo));
   const catalogos = (idea.catalogos ?? []).flatMap((slug) => CATALOGOS.filter((c) => c.slug === slug));
-  const pedido = PEDIDOS.find((p) => p.slug === idea.pedido);
+  const pedido = PEDIDOS_VISIBLES.find((p) => p.slug === idea.pedido);
   const mensaje = mensajeWeb(`la nota "${sinMarcadores(idea.seo.titulo)}"`);
   const respuesta = textoWeb(idea.respuesta);
 

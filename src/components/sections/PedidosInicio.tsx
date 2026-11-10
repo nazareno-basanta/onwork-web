@@ -3,7 +3,7 @@ import TarjetaPedido from "@/components/TarjetaPedido";
 import Titular from "@/components/Titular";
 import CardsCarousel from "@/components/ui/CardsCarousel";
 import { PEDIDOS_INICIO } from "@/data/inicio";
-import { PEDIDOS } from "@/data/pedidos";
+import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { btn } from "@/lib/ui";
 import { textoWeb } from "@/lib/utils";
 
@@ -12,7 +12,7 @@ import { textoWeb } from "@/lib/utils";
  * src/data/pedidos.ts, la sección no se muestra: no se inventan.
  */
 export default function PedidosInicio() {
-  if (PEDIDOS.length === 0) return null;
+  if (PEDIDOS_VISIBLES.length === 0) return null;
 
   return (
     <section aria-labelledby="pedidos-inicio" className="overflow-hidden py-24 md:py-32">
@@ -25,7 +25,7 @@ export default function PedidosInicio() {
         </div>
         <div className="mt-12">
           <CardsCarousel label="Pedidos reales">
-            {PEDIDOS.slice(0, 6).map((p) => (
+            {PEDIDOS_VISIBLES.slice(0, 6).map((p) => (
               <TarjetaPedido key={p.slug} pedido={p} />
             ))}
           </CardsCarousel>

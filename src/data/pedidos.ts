@@ -46,14 +46,79 @@ export type Pedido = {
 export const mensajePedido = (cliente: string) =>
   mensajeWeb(`el pedido de ${cliente}`);
 
-export const PEDIDOS: Pedido[] = [];
+export const PEDIDOS: Pedido[] = [
+  // Datos de ../Web OW/pedidos-reales/casa-fernandes/datos.md (10/11/2026).
+  {
+    slug: "casa-fernandes",
+    cliente: "Casa Fernandes",
+    rubro: "Productos para instalaciones sanitarias",
+    producto: "Sets materos y mochilas",
+    disenoDelCliente: "si",
+    uso: "Regalo de fin de año",
+    catalogo: "drinkware",
+    necesitaba:
+      "Un regalo de fin de año hecho en conjunto con marcas productoras del rubro, con las dos marcas en cada pieza.",
+    hicimos:
+      "Producimos sets materos y mochilas con los logos de Casa Fernandes y de cada marca. La matera y la mochila llevan los logos a todo color; el termo, el mate y la bombilla van grabados.",
+    cierre: "Tu marca, en cada ronda.",
+    fotos: [
+      {
+        src: "/pedidos/casa-fernandes/set-matero-con-porta-mates.jpg",
+        alt: "Set matero de Casa Fernandes: termo, mate con bombilla, matera y porta mates",
+      },
+      {
+        src: "/pedidos/casa-fernandes/set-matero-azul.jpg",
+        alt: "Set matero de Casa Fernandes con matera azul, termo, mate y bombilla",
+      },
+      {
+        src: "/pedidos/casa-fernandes/termo-mate-y-bombilla.jpg",
+        alt: "Termo, mate y bombilla grabados con el logo de Casa Fernandes, sobre las materas",
+      },
+      {
+        src: "/pedidos/casa-fernandes/mochilas.jpg",
+        alt: "Cuatro mochilas grises con el logo de Casa Fernandes y el de otra empresa en cada una",
+      },
+    ],
+  },
+  // Datos de ../Web OW/pedidos-reales/emprotur-fit/datos.md (10/11/2026).
+  {
+    slug: "emprotur-fit",
+    cliente: "Emprotur",
+    rubro: "Turismo",
+    producto: "Kit de feria",
+    disenoDelCliente: "mixto",
+    uso: "Feria Internacional de Turismo (FIT)",
+    catalogo: "marroquineria",
+    necesitaba:
+      "Un kit para presentar Las Grutas, Puerto del Este y San Antonio Oeste en la Feria Internacional de Turismo, con un solo diseño en cada pieza.",
+    hicimos:
+      "Adaptamos su diseño a cada pieza y armamos el kit en sublimación, tampografía y serigrafía: gorras, bolsos, botellas, mochilas, lapiceras, cintas para credencial y folletos. La almohada de viaje y el frisbee no estaban en el catálogo: los conseguimos para este pedido.",
+    cierre: "Tu marca, en cada stand.",
+    fotos: [
+      {
+        src: "/pedidos/emprotur-fit/stand-fit-la-rural.jpg",
+        alt: "Stand de Río Negro en la Feria Internacional de Turismo, con el kit de Las Grutas, Puerto del Este y San Antonio Oeste",
+      },
+      {
+        src: "/pedidos/emprotur-fit/kit-feria.jpg",
+        alt: "Kit de Las Grutas, Puerto del Este y San Antonio Oeste: gorra, mochila, almohada de viaje, botella, frisbee, bolsos, lapiceras, cintas para credencial y folletos",
+      },
+    ],
+  },
+];
+
+/** La sección sale con 3 pedidos (../Web OW/pedidos-reales/LEEME.md). */
+export const MINIMO_PEDIDOS = 3;
 
 /**
- * Mientras no haya pedidos, "Pedidos reales" no aparece en el menú, el pie, el
- * Inicio ni el sitemap, y /pedidos no se indexa. Todo vuelve solo al cargar el
- * primero.
+ * Hasta tener 3 pedidos, "Pedidos reales" no aparece en el menú, el pie, el
+ * Inicio ni el sitemap, /pedidos no se indexa y las páginas de cada pedido no
+ * están en la web publicada. Todo aparece solo al cargar el tercero.
  */
-export const HAY_PEDIDOS = PEDIDOS.length > 0;
+export const HAY_PEDIDOS = PEDIDOS.length >= MINIMO_PEDIDOS;
+
+/** Los que tienen página: en npm run dev, todos (para revisarlos); en la web publicada, solo cuando la sección ya salió. */
+export const PEDIDOS_VISIBLES = HAY_PEDIDOS || process.env.NODE_ENV !== "production" ? PEDIDOS : [];
 
 /** Textos de /pedidos y de la página de cada pedido (03-CONTENIDO-PAGINAS.md). */
 export const PEDIDOS_PAGINA = {

@@ -117,7 +117,8 @@ export const IDEAS: Idea[] = [
     // Parecidos al set del posteo (mate vasito, bombilla, termo con media manija y matera): cambialos si querés.
     productos: ["OW-DRK-04", "OW-DRK-15", "OW-DRK-18", "OW-DRK-07"],
     catalogos: ["drinkware"],
-    // Cuando se cargue el pedido de Casa Fernandes (con su OK), sumá acá: pedido: "<slug del pedido>".
+    // El pedido real de Casa Fernandes: se ve en la nota cuando la sección Pedidos reales ya salió.
+    pedido: "casa-fernandes",
     preguntas: [
       {
         pregunta: "¿Puedo elegir las piezas del set?",
