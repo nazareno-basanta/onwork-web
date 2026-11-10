@@ -190,7 +190,7 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
         <Preguntas preguntas={idea.preguntas} className="border-t border-ow-black/10" datosEstructurados />
       )}
 
-      <Cierre mensaje={mensaje} />
+      <Cierre titulo={idea.cierre} mensaje={mensaje} />
     </>
   );
 }

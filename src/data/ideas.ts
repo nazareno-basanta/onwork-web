@@ -60,6 +60,8 @@ export type Idea = {
   pedido?: string;
   /** 2 o 3 preguntas propias del tema, que no repitan las generales. */
   preguntas?: Pregunta[];
+  /** Titular del cierre en tinta ("Tu marca, en cada ___."). Sin esto, va el general. */
+  cierre?: string;
 };
 
 export const IDEAS: Idea[] = [
@@ -88,6 +90,40 @@ export const IDEAS: Idea[] = [
         respuesta: "[Respuesta de menos de 60 palabras]",
       },
     ],
+  },
+  {
+    // Sale del carrusel de Instagram "¿Por qué tu marca necesita un set matero?"
+    // (26/10/2026). Borrador de Claude con los textos del posteo y los datos del
+    // catálogo Drinkware, para que lo revisen Nachi y Sergio.
+    slug: "set-matero-con-tu-marca",
+    tipo: "como-elegir",
+    autor: "sergio-basanta",
+    borrador: true,
+    titulo: "¿Por qué tu marca necesita un set matero?",
+    respuesta:
+      "Porque el mate se comparte todos los días: en la oficina, en la ruta o en casa, pasa de mano en mano y tu marca va con él. Un set matero de On Work junta mate, bombilla, termo y matera, cada pieza con tu marca, y si la acción es compartida, entran las dos marcas.",
+    seo: {
+      titulo: "Set matero con tu marca: qué lleva y por qué funciona",
+      descripcion:
+        "Por qué un set matero funciona como regalo de empresa, qué piezas lleva y cómo va tu marca en el mate, la bombilla, el termo y la matera.",
+    },
+    // Parecidos al set del posteo (mate vasito, bombilla, termo con media manija y matera): cambialos si querés.
+    productos: ["OW-DRK-04", "OW-DRK-15", "OW-DRK-18", "OW-DRK-07"],
+    catalogos: ["drinkware"],
+    // Cuando se cargue el pedido de Casa Fernandes (con su OK), sumá acá: pedido: "<slug del pedido>".
+    preguntas: [
+      {
+        pregunta: "¿Puedo elegir las piezas del set?",
+        respuesta:
+          "Sí. Podés armarlo con el mate, el termo y la matera del catálogo Drinkware que elijas, o pedirnos algo que no esté: lo buscamos para tu marca. Sumá las piezas a tu presupuesto y mandalo por WhatsApp.",
+      },
+      {
+        pregunta: "¿Puede ir otra marca además de la nuestra?",
+        respuesta:
+          "Sí. En las acciones compartidas, cada pieza del set lleva las dos marcas. Mandanos los dos logos por WhatsApp y te mostramos cómo quedan antes de producir.",
+      },
+    ],
+    cierre: "Tu marca, en cada ronda.",
   },
 ];
 
