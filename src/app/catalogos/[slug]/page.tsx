@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import Franja from "@/components/Franja";
@@ -9,11 +10,13 @@ import WhatsAppLink from "@/components/WhatsAppLink";
 import NavSecciones from "@/components/catalogo/NavSecciones";
 import SumarLinea from "@/components/catalogo/SumarLinea";
 import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
+import ListaIdeas from "@/components/ideas/ListaIdeas";
 import JsonLd from "@/components/JsonLd";
 import Busquedas from "@/components/sections/Busquedas";
 import Cierre from "@/components/sections/Cierre";
 import Preguntas from "@/components/sections/Preguntas";
 import { CATALOGOS, CATALOGO_PAGINA, type Catalogo } from "@/data/catalogos";
+import { IDEAS_PAGINA, ideasDeCatalogo } from "@/data/ideas";
 import { PEDIDOS } from "@/data/pedidos";
 import { PREGUNTAS } from "@/data/preguntas";
 import { aTarjeta, secciones as seccionesDe, type SeccionConProductos } from "@/data/productos";
@@ -77,6 +80,7 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
   const secciones = seccionesDe(catalogo.slug);
   const conProductos = secciones.some((s) => s.productos.length > 0);
   const pedidos = PEDIDOS.filter((p) => p.catalogo === catalogo.slug);
+  const ideas = ideasDeCatalogo(catalogo.slug);
 
   return (
     <>
@@ -156,6 +160,27 @@ export default async function CatalogoPage({ params }: PageProps<"/catalogos/[sl
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Notas de Ideas que nombran este catálogo: llevan de la guía al producto y del producto a la guía. */}
+      {ideas.length > 0 && (
+        <section aria-labelledby="ideas-catalogo" className="border-t border-ow-black/10 py-20 md:py-28">
+          <div className="container-ow">
+            <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+              <Titular id="ideas-catalogo" className="text-[clamp(1.9rem,4vw,3.25rem)]">
+                {IDEAS_PAGINA.relacionadas}
+              </Titular>
+              <Link
+                href="/ideas"
+                className="inline-flex min-h-11 items-center gap-1.5 rounded-sm font-display text-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+              >
+                {IDEAS_PAGINA.verTodas}
+                <Icon name="flecha-derecha" size={18} />
+              </Link>
+            </div>
+            <ListaIdeas notas={ideas} titulos="h3" className="mt-12" />
           </div>
         </section>
       )}

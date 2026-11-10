@@ -136,6 +136,9 @@ export const HAY_IDEAS = IDEAS_PUBLICADAS.length > 0;
 /** Las que tienen página: en npm run dev, todas (también los borradores); en la web publicada, solo las publicadas. */
 export const IDEAS_VISIBLES = process.env.NODE_ENV === "production" ? IDEAS_PUBLICADAS : IDEAS;
 
+/** Las notas que nombran un catálogo (para "Ideas para elegir." en la página del catálogo). */
+export const ideasDeCatalogo = (catalogo: string) => IDEAS_VISIBLES.filter((i) => i.catalogos?.includes(catalogo));
+
 /**
  * Textos de /ideas, la lista de notas. Borrador de Claude (10/11/2026), para
  * revisar.
@@ -170,4 +173,7 @@ export const IDEAS_PAGINA = {
   },
   verCatalogo: (catalogo: string) => `Catálogo ${catalogo}`,
   pedido: "Así se ve en un pedido real.",
+  /** Titular del bloque de notas en la página de cada catálogo. */
+  relacionadas: "Ideas para elegir.",
+  verTodas: "Ver todas las ideas",
 };
