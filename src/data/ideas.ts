@@ -133,6 +133,40 @@ export const IDEAS: Idea[] = [
     ],
     cierre: "Tu marca, en cada ronda.",
   },
+  {
+    // Sale del carrusel de Instagram de Las Grutas en la FIT: el dato del
+    // estudio ASI 2026, "se vea, se use y se recuerde" y el kit de Emprotur.
+    // Borrador de Claude (10/11/2026), para que lo revise Nachi.
+    slug: "merchandising-para-un-stand",
+    tipo: "ideas",
+    autor: "nazareno-basanta",
+    borrador: true,
+    titulo: "¿Qué merchandising conviene llevar a un stand?",
+    respuesta:
+      "Lo que conviene llevar a un stand es lo que la gente usa después de la feria: una bolsa de tela, una botella, una gorra o una lapicera. En On Work armamos kits así para ferias y eventos, con un solo diseño en cada pieza, para que tu marca se vea en el stand, se use y se recuerde.",
+    seo: {
+      titulo: "Merchandising para un stand: qué conviene llevar a una feria",
+      descripcion:
+        "Qué merchandising llevar a un stand para que tu marca se vea, se use y se recuerde: productos que se usan después de la feria, con un solo diseño en cada pieza.",
+    },
+    // Una mochila, una botella y una lapicera del catálogo, como las del kit de Emprotur: cambialos si querés.
+    productos: ["OW-MAR-03", "OW-DRK-24", "OW-ESC-02"],
+    catalogos: ["marroquineria", "drinkware", "escritura", "cintas"],
+    pedido: "emprotur-fit",
+    preguntas: [
+      {
+        pregunta: "¿Sirve para eventos que no son ferias?",
+        respuesta:
+          "Sí. El mismo criterio sirve para congresos, lanzamientos, aperturas o acciones en la calle: elegí productos que se usen después del evento y repetí tu marca en cada uno. Contanos qué evento tenés en camino y te asesoramos.",
+      },
+      {
+        pregunta: "¿Conviene usar el mismo diseño en todas las piezas?",
+        respuesta:
+          "Sí: un diseño que se repite en cada pieza hace que la marca se reconozca en todo lo que alguien se lleva. Lo adaptamos a cada producto y a cada técnica para que se vea bien en todos.",
+      },
+    ],
+    cierre: "Tu marca, en cada stand.",
+  },
 ];
 
 /** Las notas que están en la web publicada. */
