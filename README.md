@@ -63,7 +63,7 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 
 1. Los PDF, los logos de clientes y al menos 3 pedidos reales (ver arriba).
 2. Completar los marcadores de `src/data/` (secciones de catálogos, horario, pagos, hitos, técnicas).
-3. **Dominio**: confirmar que `url` en `src/lib/site.ts` sea el dominio final y elegir `onworkba.com` o `www.onworkba.com` en Vercel.
+3. **Dominio**: el principal es `onwork.com.ar` (`url` en `src/lib/site.ts` y `DOMINIO` en `next.config.ts`). En Vercel, sumar también `www.onwork.com.ar`, `onworkba.com.ar` y `onworkba.com` con y sin `www` (el del Wix: hay que mantenerlo para no perder lo que Google ya conoce), todos redirigiendo a `onwork.com.ar`. Después, en Search Console, verificar `onworkba.com` y `onwork.com.ar` y usar "Cambio de dirección".
 4. **GA4**: crear la propiedad y cargar el ID (`G-…`) como `NEXT_PUBLIC_GA_ID` en Vercel (ver `.env.example`). Sin ID no se carga Google Analytics. Con ID se mide cada clic a WhatsApp (`whatsapp_click`) y GA4 mide solo las descargas de PDF.
    En Vercel, activar también **Analytics** y **Speed Insights** en el proyecto (visitas y Core Web Vitals reales, sin cookies).
 5. **Tipografía Dunbar Tall**: hoy se usan Montserrat y Nunito. Dunbar Tall es solo para merch propio.
@@ -73,7 +73,7 @@ Todos se leyeron antes de usarlos y se adaptaron a los colores, tipografías y r
 1. Subir el proyecto a un repositorio de GitHub.
 2. En https://vercel.com crear un proyecto nuevo e importar ese repositorio (Vercel detecta Next.js solo).
 3. Cada vez que se suban cambios a GitHub, el sitio se actualiza solo.
-4. Después de publicar: `curl -I https://onworkba.com/catalogos/drinkware.pdf` tiene que mostrar el encabezado `Link` canonical, y en Search Console hay que mandar el sitemap.
-5. La dirección `onwork-web.vercel.app` (y las vistas previas `*.vercel.app`) responde con `X-Robots-Tag: noindex`, para que Google no la indexe como copia del sitio; en `onworkba.com` no aparece.
+4. Después de publicar: `curl -I https://onwork.com.ar/catalogos/drinkware.pdf` tiene que mostrar el encabezado `Link` canonical, y en Search Console hay que mandar el sitemap.
+5. La dirección `onwork-web.vercel.app` (y las vistas previas `*.vercel.app`) responde con `X-Robots-Tag: noindex`, para que Google no la indexe como copia del sitio; en `onwork.com.ar` no aparece.
 
 > Nota: el plan gratuito de Vercel (Hobby) está pensado para uso no comercial. Para el sitio de una empresa conviene revisar sus condiciones vigentes o usar el plan Pro.

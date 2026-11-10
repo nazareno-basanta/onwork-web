@@ -9,8 +9,11 @@ import { mensajeWeb } from "@/lib/mensajes";
 export const SITE = {
   name: "On Work",
   tagline: "Comunicación & merchandising",
-  // Dominio final. Se usa para SEO (canonical, sitemap, Open Graph).
-  url: "https://onworkba.com",
+  // Dominio final (elegido el 10/11/2026). Se usa para SEO (canonical,
+  // sitemap, Open Graph). www.onwork.com.ar, onworkba.com.ar y onworkba.com
+  // (el del Wix) redirigen a este desde Vercel. Si cambia, cambiar también
+  // DOMINIO en next.config.ts.
+  url: "https://onwork.com.ar",
   locale: "es_AR",
   /**
    * WhatsApp del asesor de ventas, en formato internacional y SOLO dígitos

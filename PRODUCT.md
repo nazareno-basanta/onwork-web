@@ -19,7 +19,7 @@ Los catálogos PDF se abren sobre todo en el celular.
 
 ## Product Purpose
 
-La web de On Work (onworkba.com) reemplaza a la actual de Wix. Tiene dos trabajos:
+La web de On Work (onwork.com.ar) reemplaza a la actual de Wix (www.onworkba.com). Tiene dos trabajos:
 
 1. Posicionar a On Work en Google para búsquedas de merchandising en Buenos Aires y en Argentina.
 2. Convertir cada visita en una conversación por WhatsApp con el asesor de ventas.

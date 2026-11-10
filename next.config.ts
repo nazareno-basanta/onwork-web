@@ -10,6 +10,10 @@ const CATALOGOS = ["drinkware", "escritura", "cuadernos", "oficina", "marroquine
 // solo en esos. Se revisa al publicar (y al arrancar npm run dev).
 const CATALOGOS_PDF = CATALOGOS.filter((slug) => existsSync(join(process.cwd(), "public", "catalogos", `${slug}.pdf`)));
 
+// Dominio final: el mismo que SITE.url en src/lib/site.ts (este archivo no
+// puede importarlo, por eso se repite). Si cambia, cambiarlo en los dos.
+const DOMINIO = "https://onwork.com.ar";
+
 const nextConfig: NextConfig = {
   env: { CATALOGOS_PDF: CATALOGOS_PDF.join(",") },
   cacheComponents: true,
@@ -25,17 +29,17 @@ const nextConfig: NextConfig = {
 
   // Cada PDF le dice a Google cuál es su página (la del catálogo), así no
   // compiten entre sí. Verificar después de publicar con:
-  // curl -I https://onworkba.com/catalogos/drinkware.pdf
+  // curl -I https://onwork.com.ar/catalogos/drinkware.pdf
   //
   // Además, la dirección de Vercel (onwork-web.vercel.app y las vistas previas
   // *.vercel.app) le pide a Google que no la indexe: si no, duplicaría todo el
-  // sitio. En onworkba.com no aparece. Verificar con:
+  // sitio. En onwork.com.ar no aparece. Verificar con:
   // curl -I -H "Host: onwork-web.vercel.app" http://localhost:3000/
   async headers() {
     return [
       ...CATALOGOS_PDF.map((slug) => ({
         source: `/catalogos/${slug}.pdf`,
-        headers: [{ key: "Link", value: `<https://onworkba.com/catalogos/${slug}>; rel="canonical"` }],
+        headers: [{ key: "Link", value: `<${DOMINIO}/catalogos/${slug}>; rel="canonical"` }],
       })),
       {
         source: "/:path*",
