@@ -17,7 +17,7 @@ import { PEDIDOS } from "@/data/pedidos";
 import { PRODUCTOS, aTarjeta } from "@/data/productos";
 import { mensajeWeb } from "@/lib/mensajes";
 import { urlCatalogo, urlIdea } from "@/lib/rutas";
-import { mostrarMarcadores, sinMarcadores, textoWeb } from "@/lib/utils";
+import { fechaLarga, mostrarMarcadores, sinMarcadores, textoWeb } from "@/lib/utils";
 
 /*
  * Una plantilla para todas las notas de Ideas (orden de los bloques: ver el
@@ -38,12 +38,6 @@ async function buscar(params: PageProps<"/ideas/[slug]">["params"]) {
   const { slug } = await params;
   return IDEAS_VISIBLES.find((i) => i.slug === slug) ?? null;
 }
-
-/** "2026-12-01" → "1 de diciembre de 2026". */
-const fechaLarga = (fecha: string) =>
-  new Intl.DateTimeFormat("es-AR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(
-    new Date(`${fecha}T00:00:00Z`),
-  );
 
 const link =
   "inline-flex min-h-11 items-center gap-1.5 rounded-sm font-display text-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black";

@@ -8,6 +8,13 @@ export function aSlug(texto: string) {
     .replace(/^-|-$/g, "");
 }
 
+/** "2026-12-01" → "1 de diciembre de 2026". */
+export function fechaLarga(fecha: string) {
+  return new Intl.DateTimeFormat("es-AR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(
+    new Date(`${fecha}T00:00:00Z`),
+  );
+}
+
 /** Une clases de Tailwind ignorando las vacías: cn("a", cond && "b"). */
 export function cn(...clases: (string | false | null | undefined)[]) {
   return clases.filter(Boolean).join(" ");

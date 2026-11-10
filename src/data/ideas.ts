@@ -101,6 +101,22 @@ export const HAY_IDEAS = IDEAS_PUBLICADAS.length > 0;
 export const IDEAS_VISIBLES = process.env.NODE_ENV === "production" ? IDEAS_PUBLICADAS : IDEAS;
 
 /**
+ * Textos de /ideas, la lista de notas. Borrador de Claude (10/11/2026), para
+ * revisar.
+ */
+export const IDEAS_INDICE = {
+  h1: "Ideas para tu marca.",
+  bajada: "Guías para elegir productos, técnicas y kits según la ocasión y quién los va a usar.",
+  vacio: "[Ideas: publicá al menos una nota (en src/data/ideas.ts, borrá borrador: true)]",
+  borrador: "Borrador",
+  seo: {
+    titulo: "Ideas y guías de merchandising para empresas",
+    descripcion:
+      "Guías para elegir merchandising con el logo de tu marca: qué poner en un kit, qué técnica conviene y qué regalar en cada ocasión.",
+  },
+};
+
+/**
  * Textos fijos de la página de cada nota. Borrador de Claude (10/11/2026),
  * para revisar.
  */
