@@ -17,6 +17,7 @@
  * nieve y fundas para gafas de ski).
  */
 import { mensajeWeb } from "@/lib/mensajes";
+import { tieneMarcador } from "@/lib/utils";
 
 export type Pedido = {
   slug: string;
@@ -105,20 +106,68 @@ export const PEDIDOS: Pedido[] = [
       },
     ],
   },
+  // Datos de ../Web OW/pedidos-reales/cevt/datos.md: lo que se ve en las fotos
+  // (WhatsApp del 6/11/2026). Faltan los datos entre corchetes: hasta
+  // completarlos, este pedido no cuenta para publicar la sección.
+  {
+    slug: "cevt",
+    cliente: "CEVT",
+    rubro: "[Rubro de CEVT]",
+    producto: "Kit de viaje [confirmar]",
+    // [confirmar si el diseño lo trajeron ellos]
+    disenoDelCliente: "si",
+    uso: "[Para qué lo usaron]",
+    catalogo: "marroquineria",
+    necesitaba: "[Qué necesitaba CEVT: 1 o 2 líneas]",
+    hicimos:
+      "Producimos el kit con el logo de CEVT en cada pieza: mochila, bolsa de tela, botella y vaso térmicos, toalla de viaje, organizador para cables y porta documentos. [confirmar técnica]",
+    cierre: "Tu marca, en cada viaje. [confirmar]",
+    fotos: [
+      {
+        src: "/pedidos/cevt/kit-completo.jpg",
+        alt: "Kit de CEVT: bolsa de tela, botella y vaso térmicos, toalla de viaje, organizador y porta documentos",
+      },
+      {
+        src: "/pedidos/cevt/kit-con-mochila.jpg",
+        alt: "Kit de CEVT con mochila gris, organizadores, toalla de viaje, botellas y vaso térmicos",
+      },
+      {
+        src: "/pedidos/cevt/bolsa-de-tela.jpg",
+        alt: "Bolsa de tela gris con el logo de CEVT en naranja",
+      },
+      {
+        src: "/pedidos/cevt/mochila-y-organizadores.jpg",
+        alt: "Mochila gris con organizador y porta documentos, con el logo de CEVT",
+      },
+    ],
+  },
 ];
 
-/** La sección sale con 3 pedidos (../Web OW/pedidos-reales/LEEME.md). */
+/** La sección sale con 3 pedidos completos (../Web OW/pedidos-reales/LEEME.md). */
 export const MINIMO_PEDIDOS = 3;
 
-/**
- * Hasta tener 3 pedidos, "Pedidos reales" no aparece en el menú, el pie, el
- * Inicio ni el sitemap, /pedidos no se indexa y las páginas de cada pedido no
- * están en la web publicada. Todo aparece solo al cargar el tercero.
- */
-export const HAY_PEDIDOS = PEDIDOS.length >= MINIMO_PEDIDOS;
+/** Un pedido está completo cuando no le queda ningún [marcador] en sus textos. */
+const completo = (p: Pedido) =>
+  ![p.rubro, p.producto, p.uso, p.necesitaba, p.hicimos, p.cierre, ...p.fotos.map((f) => f.alt)].some((t) =>
+    tieneMarcador(t),
+  );
 
-/** Los que tienen página: en npm run dev, todos (para revisarlos); en la web publicada, solo cuando la sección ya salió. */
-export const PEDIDOS_VISIBLES = HAY_PEDIDOS || process.env.NODE_ENV !== "production" ? PEDIDOS : [];
+/** Los pedidos que ya pueden estar en la web publicada. */
+export const PEDIDOS_COMPLETOS = PEDIDOS.filter(completo);
+
+/**
+ * Hasta tener 3 pedidos completos, "Pedidos reales" no aparece en el menú, el
+ * pie, el Inicio ni el sitemap, /pedidos no se indexa y las páginas de cada
+ * pedido no están en la web publicada. Todo aparece solo con el tercero.
+ */
+export const HAY_PEDIDOS = PEDIDOS_COMPLETOS.length >= MINIMO_PEDIDOS;
+
+/**
+ * Los que tienen página: en npm run dev, todos (para revisarlos, con sus
+ * marcadores); en la web publicada, los completos y solo cuando la sección ya salió.
+ */
+export const PEDIDOS_VISIBLES =
+  process.env.NODE_ENV !== "production" ? PEDIDOS : HAY_PEDIDOS ? PEDIDOS_COMPLETOS : [];
 
 /** Textos de /pedidos y de la página de cada pedido (03-CONTENIDO-PAGINAS.md). */
 export const PEDIDOS_PAGINA = {
