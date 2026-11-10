@@ -16,7 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { NAV, SITE } from "@/lib/site";
+import { MENU_LARGO, NAV, SITE } from "@/lib/site";
 import Icon from "./Icon";
 import WhatsAppLink from "./WhatsAppLink";
 import { esActivo } from "./NavDesktop";
@@ -84,7 +84,8 @@ export default function MobileNav() {
         };
 
   return (
-    <div className="lg:hidden">
+    // Con más de 4 links, el botón "Menú" sigue hasta 1279 px (ver MENU_LARGO).
+    <div className={MENU_LARGO ? "xl:hidden" : "lg:hidden"}>
       <button
         ref={toggleRef}
         type="button"

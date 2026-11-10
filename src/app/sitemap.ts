@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { CATALOGOS } from "@/data/catalogos";
 import { PRODUCTOS } from "@/data/productos";
 import { HAY_PEDIDOS, PEDIDOS } from "@/data/pedidos";
-import { urlProducto } from "@/lib/rutas";
+import { IDEAS_PUBLICADAS } from "@/data/ideas";
+import { urlAutor, urlIdea, urlProducto } from "@/lib/rutas";
 import { SITE } from "@/lib/site";
 
 /**
@@ -29,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const url = (path: string) => `${SITE.url}${path}`;
   const pagina = (path: string, fecha: string) => ({ url: url(path), lastModified: fecha });
 
+  // Notas de Ideas publicadas: cada una con su fecha de actualización. /ideas y
+  // la página de cada autor toman la fecha de su nota más nueva.
+  const notas = IDEAS_PUBLICADAS.map((i) => ({ ...i, fecha: i.actualizado ?? i.publicado ?? EDICION.inicio }));
+  const masNueva = (lista: typeof notas) => lista.map((n) => n.fecha).sort().at(-1) ?? EDICION.inicio;
+  const autores = [...new Set(notas.map((n) => n.autor))];
+
   return [
     pagina("/", EDICION.inicio),
     pagina("/catalogos", EDICION.catalogos),
@@ -38,6 +45,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // /pedidos entra recién cuando hay pedidos cargados (antes no se indexa).
     ...(HAY_PEDIDOS ? [pagina("/pedidos", EDICION.pedidos)] : []),
     ...PEDIDOS.map((p) => pagina(`/pedidos/${p.slug}`, EDICION.pedidos)),
+    // /ideas entra recién con la primera nota publicada (antes no se indexa).
+    ...(notas.length > 0 ? [pagina("/ideas", masNueva(notas))] : []),
+    ...notas.map((n) => pagina(urlIdea(n.slug), n.fecha)),
+    ...autores.map((a) => pagina(urlAutor(a), masNueva(notas.filter((n) => n.autor === a)))),
     pagina("/nosotros", EDICION.nosotros),
     pagina("/contacto", EDICION.contacto),
     pagina("/como-pedir", EDICION.comoPedir),

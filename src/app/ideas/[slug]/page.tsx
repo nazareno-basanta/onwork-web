@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import Icon from "@/components/Icon";
+import JsonLd from "@/components/JsonLd";
 import TarjetaPedido from "@/components/TarjetaPedido";
 import Titular from "@/components/Titular";
 import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
@@ -15,8 +16,9 @@ import { CATALOGOS } from "@/data/catalogos";
 import { IDEAS_PAGINA, IDEAS_VISIBLES } from "@/data/ideas";
 import { PEDIDOS } from "@/data/pedidos";
 import { PRODUCTOS, aTarjeta } from "@/data/productos";
+import { articulo } from "@/lib/datosEstructurados";
 import { mensajeWeb } from "@/lib/mensajes";
-import { urlCatalogo, urlIdea } from "@/lib/rutas";
+import { urlAutor, urlCatalogo, urlIdea } from "@/lib/rutas";
 import { fechaLarga, mostrarMarcadores, sinMarcadores, textoWeb } from "@/lib/utils";
 
 /*
@@ -107,7 +109,13 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
               )}
               <p className="text-sm leading-snug text-ow-gray">
                 <span className="font-display font-bold text-ow-black">
-                  {IDEAS_PAGINA.por} {autor.nombre}
+                  {IDEAS_PAGINA.por}{" "}
+                  <Link
+                    href={urlAutor(idea.autor)}
+                    className="rounded-sm underline decoration-ow-yellow decoration-2 underline-offset-4 hover:decoration-ow-black"
+                  >
+                    {autor.nombre}
+                  </Link>
                 </span>
                 {", "}
                 {autor.rol}
@@ -129,6 +137,8 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
             </div>
           </div>
         </div>
+        {/* Datos del artículo para Google: titular, fechas, autor y On Work como editor. */}
+        <JsonLd datos={articulo(idea)} />
       </article>
 
       {productos.length > 0 && (

@@ -243,6 +243,7 @@ Directos y táctiles: una cápsula que se levanta medio punto al pasar el mouse.
 - **Celular:** panel a pantalla completa en tinta, links grandes en blanco que entran en cascada, sin numerar, con el activo marcado por el punto amarillo. Wordmark en blanco, nunca el isotipo.
 - **Header:** crema sólido, sin desenfoque ni transparencia, 64 px de alto, fijo.
 - **Lupa del header:** círculo outline de 44 px, antes del presupuesto, en todas las páginas: lleva al buscador de /catalogos (`#buscar`) con el cursor en el campo; si ya se está en /catalogos, sube hasta el campo. En el teléfono la lupa, el presupuesto y "Menú" son tres círculos de 44 px (la palabra "Menú" vuelve desde 640 px y queda para el lector de pantalla), así entran en 375 px. Entre 1024 y 1279 px los links del menú y "Escribinos" van con menos relleno para que entre todo.
+- **Menú largo:** con más de 4 links (cuando aparecen Pedidos reales o Ideas), la pastilla no entra entre 1024 y 1279 px: en ese ancho la reemplaza el botón "Menú" del celular, junto a la lupa, el presupuesto y "Escribinos", y la pastilla vuelve desde 1280 px (`MENU_LARGO` en `src/lib/site.ts`; decisión de Nachi, 10/11/2026). Los links de la pastilla nunca se parten en dos líneas.
 - **Accesibilidad:** `aria-expanded`, cierre con Escape, foco atrapado en el panel abierto, área táctil de 44 px o más.
 
 ### Preguntas frecuentes

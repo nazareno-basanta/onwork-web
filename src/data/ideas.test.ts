@@ -57,6 +57,15 @@ test("cada nota tiene un slug único, en minúscula y con guiones", () => {
   const slugs = IDEAS.map((i) => i.slug);
   assert.equal(new Set(slugs).size, slugs.length, "hay dos notas con el mismo slug");
   for (const slug of slugs) assert.match(slug, /^[a-z0-9]+(-[a-z0-9]+)*$/, `slug con formato raro: ${slug}`);
+  // /ideas/autores es la carpeta de las páginas de autor.
+  assert.ok(!slugs.includes("autores"), 'ninguna nota puede llamarse "autores"');
+});
+
+test("quien firma una nota publicada tiene la bio completa", () => {
+  for (const idea of IDEAS_PUBLICADAS) {
+    const autor = AUTORES[idea.autor];
+    assert.ok(!MARCADOR.test(autor.bio), `${idea.slug}: falta la bio de ${autor.nombre} (src/data/autores.ts)`);
+  }
 });
 
 test("cada nota tiene su texto en src/data/ideas/<slug>.mdx, y no sobra ningún texto", () => {

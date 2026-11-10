@@ -3,6 +3,7 @@
  * (nombre, dominio, WhatsApp, navegación) vive acá: se cambia una vez y se
  * actualiza en todo el sitio.
  */
+import { HAY_IDEAS } from "@/data/ideas";
 import { HAY_PEDIDOS } from "@/data/pedidos";
 import { mensajeWeb } from "@/lib/mensajes";
 
@@ -39,11 +40,23 @@ export function whatsappUrl(message?: string) {
 /** Mensaje que llega precargado cuando no hay uno propio de la página. */
 export const MENSAJE_GENERAL = mensajeWeb();
 
-/** Menú principal. "Pedidos reales" aparece solo cuando hay pedidos cargados. */
+/**
+ * Menú principal (también el del celular y el pie). "Pedidos reales" aparece
+ * solo cuando hay pedidos cargados, e "Ideas" con la primera nota publicada.
+ */
 export const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/catalogos", label: "Catálogos" },
   { href: "/pedidos", label: "Pedidos reales" },
+  { href: "/ideas", label: "Ideas" },
   { href: "/contacto", label: "Contacto" },
-].filter((item) => item.href !== "/pedidos" || HAY_PEDIDOS);
+].filter((item) => (item.href !== "/pedidos" || HAY_PEDIDOS) && (item.href !== "/ideas" || HAY_IDEAS));
+
+/**
+ * Con más de 4 links, la pastilla del menú no entra entre 1024 y 1279 px junto
+ * a la lupa, el presupuesto y "Escribinos": en ese ancho se usa el botón
+ * "Menú" del celular, y la pastilla aparece desde 1280 px (decisión de Nachi,
+ * 10/11/2026).
+ */
+export const MENU_LARGO = NAV.length > 4;

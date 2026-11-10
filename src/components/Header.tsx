@@ -12,12 +12,14 @@ import ContadorPresupuesto from "./presupuesto/ContadorPresupuesto";
  * en escritorio y menú a pantalla completa en el celular. La lupa (buscador
  * de productos) y el acceso al presupuesto van al lado de "Escribinos"
  * (escritorio) o de "Menú" (celular; en el teléfono, los tres son círculos
- * de 44 px para que entren en 375 px).
+ * de 44 px para que entren en 375 px). Con más de 4 links en el menú, entre
+ * 1024 y 1279 px van la lupa, el presupuesto, "Escribinos" y "Menú" (ver
+ * MENU_LARGO en src/lib/site.ts).
  */
 export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ow-black/10 bg-ow-paper">
-      <div className="container-ow flex h-16 items-center justify-between gap-6 lg:gap-4 xl:gap-6">
+      <div className="container-ow flex h-16 items-center justify-between gap-6 lg:gap-4">
         <Link
           href="/"
           aria-label="On Work, ir al inicio"
@@ -35,17 +37,17 @@ export default function Header() {
 
         <NavDesktop />
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="flex items-center gap-2">
           <BotonBuscar />
-          <ContadorPresupuesto variante="escritorio" />
-          <WhatsAppLink tone="black" className="!px-4 xl:!px-5">
+          <div className="lg:hidden">
+            <ContadorPresupuesto variante="celular" />
+          </div>
+          <div className="max-lg:hidden">
+            <ContadorPresupuesto variante="escritorio" />
+          </div>
+          <WhatsAppLink tone="black" className="max-lg:hidden !px-4 xl:!px-5">
             Escribinos
           </WhatsAppLink>
-        </div>
-
-        <div className="flex items-center gap-2 lg:hidden">
-          <BotonBuscar />
-          <ContadorPresupuesto variante="celular" />
           <MobileNav />
         </div>
       </div>

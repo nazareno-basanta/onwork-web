@@ -2,10 +2,13 @@
  * Datos estructurados (schema.org) que le explican a Google y a los buscadores
  * con IA qué es On Work. Se validan con los tipos de schema-dts.
  */
-import type { FAQPage, ItemList, Organization, WebSite, WithContext } from "schema-dts";
+import type { BlogPosting, FAQPage, ItemList, Organization, Person, ProfilePage, WebSite, WithContext } from "schema-dts";
+import { AUTORES, type AutorId } from "@/data/autores";
+import type { Idea } from "@/data/ideas";
 import type { Pregunta } from "@/data/preguntas";
+import { urlAutor, urlIdea } from "@/lib/rutas";
 import { SITE } from "@/lib/site";
-import { tieneMarcador } from "@/lib/utils";
+import { sinMarcadores, tieneMarcador } from "@/lib/utils";
 
 const ORGANIZACION_ID = `${SITE.url}/#organization`;
 
@@ -81,5 +84,55 @@ export function preguntasFrecuentes(preguntas: Pregunta[]): WithContext<FAQPage>
       name: q.pregunta,
       acceptedAnswer: { "@type": "Answer", text: q.respuesta },
     })),
+  };
+}
+
+/**
+ * Quién firma una nota de Ideas: nombre, rol y su relación con On Work. Con
+ * esto Google sabe que la guía la escribe una persona real del rubro. La bio
+ * va solo si ya está completa.
+ */
+export function persona(id: AutorId): Person {
+  const autor = AUTORES[id];
+  const url = `${SITE.url}${urlAutor(id)}`;
+  return {
+    "@type": "Person",
+    "@id": `${url}#persona`,
+    name: autor.nombre,
+    jobTitle: autor.rol,
+    url,
+    worksFor: { "@id": ORGANIZACION_ID },
+    ...(!tieneMarcador(autor.bio) && { description: autor.bio }),
+    ...(autor.foto && { image: `${SITE.url}${autor.foto}` }),
+    ...(autor.perfiles?.length && { sameAs: autor.perfiles }),
+  };
+}
+
+/** Una nota de Ideas como artículo: titular, fechas, autor y On Work como editor. */
+export function articulo(idea: Idea): WithContext<BlogPosting> {
+  const url = `${SITE.url}${urlIdea(idea.slug)}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#articulo`,
+    mainEntityOfPage: url,
+    headline: sinMarcadores(idea.titulo),
+    description: sinMarcadores(idea.seo.descripcion),
+    image: `${url}/opengraph-image`,
+    ...(idea.publicado && { datePublished: idea.publicado }),
+    ...(idea.actualizado && { dateModified: idea.actualizado }),
+    author: persona(idea.autor),
+    publisher: { "@id": ORGANIZACION_ID },
+    inLanguage: "es-AR",
+  };
+}
+
+/** La página de un autor: Google la reconoce como el perfil de esa persona. */
+export function perfil(id: AutorId): WithContext<ProfilePage> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${SITE.url}${urlAutor(id)}`,
+    mainEntity: persona(id),
   };
 }

@@ -9,7 +9,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV } from "@/lib/site";
+import { MENU_LARGO, NAV } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function esActivo(pathname: string, href: string) {
@@ -20,7 +20,8 @@ export default function NavDesktop() {
   const pathname = usePathname();
 
   return (
-    <nav aria-label="Principal" className="hidden lg:block">
+    // Con más de 4 links, la pastilla aparece desde 1280 px (ver MENU_LARGO).
+    <nav aria-label="Principal" className={MENU_LARGO ? "hidden xl:block" : "hidden lg:block"}>
       <ul className="flex items-center gap-1 rounded-full border-2 border-ow-black bg-ow-paper p-1">
         {NAV.map((item) => {
           const activo = esActivo(pathname, item.href);
@@ -29,7 +30,7 @@ export default function NavDesktop() {
               <Link
                 href={item.href}
                 aria-current={activo ? "page" : undefined}
-                className="group relative isolate flex min-h-10 items-center overflow-hidden rounded-full px-3 font-display xl:px-4 text-sm font-bold text-ow-black"
+                className="group relative isolate flex min-h-10 items-center overflow-hidden rounded-full px-3 font-display whitespace-nowrap xl:px-4 text-sm font-bold text-ow-black"
               >
                 {/* Círculo que sube y rellena */}
                 <span

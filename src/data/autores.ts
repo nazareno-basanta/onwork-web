@@ -35,3 +35,10 @@ export const AUTORES: Record<AutorId, Autor> = {
     bio: "[Bio de Nazareno: 2 o 3 líneas sobre qué hace en On Work]",
   },
 };
+
+/** Textos fijos de la página de cada autor (/ideas/autores/<id>). Borrador de Claude (10/11/2026), para revisar. */
+export const AUTOR_PAGINA = {
+  notas: (nombre: string) => `Notas de ${nombre.split(" ")[0]}.`,
+  /** Descripción para Google mientras la bio esté en marcadores. */
+  descripcion: (autor: Autor) => `${autor.nombre}, ${autor.rol.charAt(0).toLowerCase()}${autor.rol.slice(1)}. Sus notas en Ideas.`,
+};
