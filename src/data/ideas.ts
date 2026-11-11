@@ -167,6 +167,37 @@ export const IDEAS: Idea[] = [
     ],
     cierre: "Tu marca, en cada stand.",
   },
+  {
+    // Borrador de Claude (11/11/2026) con la lista de técnicas de Nosotros, los
+    // tres pedidos reales y "Cómo mandarnos tu logo". Lo que está entre
+    // corchetes lo completa Sergio: qué técnica usan para cada producto.
+    slug: "tecnicas-de-personalizacion",
+    tipo: "guia",
+    autor: "sergio-basanta",
+    borrador: true,
+    titulo: "¿Qué técnica conviene para personalizar cada producto?",
+    respuesta:
+      "Depende del material, de la forma del producto y del diseño de tu logo. En On Work empezamos con serigrafía y fuimos sumando técnicas: hoy trabajamos también con tampografía, sublimación, bordado, grabado láser, impresión UV y DTF UV, entre otras, y elegimos la que mejor se adapta a cada pieza.",
+    seo: {
+      titulo: "Serigrafía, sublimación, bordado o láser: cuál conviene",
+      descripcion:
+        "Qué es cada técnica de personalización, de la serigrafía al grabado láser, y cómo elegir la que conviene según el material, la forma y el diseño de tu logo.",
+    },
+    pedido: "emprotur-fit",
+    preguntas: [
+      {
+        pregunta: "¿Tengo que elegir yo la técnica?",
+        respuesta:
+          "No. Contanos qué producto querés y cómo es tu logo, y te recomendamos la técnica. Antes de producir te mostramos la prueba con tu marca en el producto.",
+      },
+      {
+        pregunta: "¿En qué formato mando mi logo?",
+        respuesta:
+          "Mejor en vector: .AI, .EPS, .PDF o .SVG. Si no lo tenés, mandalo en .PNG o .JPG en alta resolución. Si hace falta, adaptamos tu logo.",
+      },
+    ],
+    cierre: "Tu marca, en cada detalle.",
+  },
 ];
 
 /** Las notas que están en la web publicada. */
