@@ -44,7 +44,10 @@ export const VALORES = {
   ],
 };
 
-/** Lista confirmada por Nachi el 5/11/2026. */
+/**
+ * Lista confirmada por Nachi el 5/11/2026. El 11/11/2026 salió "Pantografía":
+ * era una confusión con la tampografía.
+ */
 export const TECNICAS = {
   titulo: "Técnicas con las que trabajamos.",
   lista: [
@@ -57,7 +60,6 @@ export const TECNICAS = {
     "Grabado láser",
     "Impresión UV",
     "DTF UV",
-    "Pantografía",
   ],
 };
 
