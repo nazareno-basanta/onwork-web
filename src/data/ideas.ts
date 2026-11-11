@@ -170,12 +170,12 @@ export const IDEAS: Idea[] = [
   {
     // Texto de Claude (11/11/2026) con la lista de técnicas de Nosotros, los
     // tres pedidos reales, "Cómo mandarnos tu logo" y qué técnica conviene
-    // para cada producto según Nachi. Los usos habituales de cada técnica
-    // (la tabla) los revisa Nachi antes de publicar.
+    // para cada producto según Nachi; aprobado por Nachi.
     slug: "tecnicas-de-personalizacion",
     tipo: "guia",
     autor: "sergio-basanta",
-    borrador: true,
+    publicado: "2026-11-11",
+    actualizado: "2026-11-11",
     titulo: "¿Qué técnica conviene para personalizar cada producto?",
     respuesta:
       "Depende del material, de la forma del producto y del diseño de tu logo. En On Work empezamos con serigrafía y fuimos sumando técnicas: hoy trabajamos también con tampografía, sublimación, bordado, grabado láser, impresión UV y DTF UV, entre otras, y elegimos la que mejor se adapta a cada pieza.",
