@@ -136,11 +136,11 @@ export const IDEAS: Idea[] = [
   {
     // Sale del carrusel de Instagram de Las Grutas en la FIT: el dato del
     // estudio ASI 2026, "se vea, se use y se recuerde" y el kit de Emprotur.
-    // Borrador de Claude (10/11/2026), para que lo revise Nachi.
     slug: "merchandising-para-un-stand",
     tipo: "ideas",
     autor: "nazareno-basanta",
-    borrador: true,
+    publicado: "2026-11-11",
+    actualizado: "2026-11-11",
     titulo: "¿Qué merchandising conviene llevar a un stand?",
     respuesta:
       "Lo que conviene llevar a un stand es lo que la gente usa después de la feria: una bolsa de tela, una botella, una gorra o una lapicera. En On Work armamos kits así para ferias y eventos, con un solo diseño en cada pieza, para que tu marca se vea en el stand, se use y se recuerde.",

@@ -29,4 +29,5 @@ Sitio web de On Work (empresa de comunicación y merchandising de Buenos Aires),
 - Discard any product description text that names suppliers or other brands (e.g., Silverplate, Stanley) from catalog data.
 - Remove the 'Fecha:' line from the WhatsApp budget message template in all future messages.
 - For On Work blog posts, sign experience-based articles as Sergio Basanta (founder) and current-topics/innovation articles as Nazareno Basanta (graphic designer).
+- When publishing each note from now on, set its publicado and actualizado dates and remove borrador: true.
 <!-- end claude-reflect -->
