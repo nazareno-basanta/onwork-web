@@ -168,9 +168,10 @@ export const IDEAS: Idea[] = [
     cierre: "Tu marca, en cada stand.",
   },
   {
-    // Borrador de Claude (11/11/2026) con la lista de técnicas de Nosotros, los
-    // tres pedidos reales y "Cómo mandarnos tu logo". Lo que está entre
-    // corchetes lo completa Sergio: qué técnica usan para cada producto.
+    // Texto de Claude (11/11/2026) con la lista de técnicas de Nosotros, los
+    // tres pedidos reales, "Cómo mandarnos tu logo" y qué técnica conviene
+    // para cada producto según Nachi. Los usos habituales de cada técnica
+    // (la tabla) los revisa Nachi antes de publicar.
     slug: "tecnicas-de-personalizacion",
     tipo: "guia",
     autor: "sergio-basanta",
