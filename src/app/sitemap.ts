@@ -43,11 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...CATALOGOS.map((c) => pagina(`/catalogos/${c.slug}`, EDICION.catalogo)),
     ...PRODUCTOS.map((p) => pagina(urlProducto(p), EDICION.producto)),
     ...CATALOGOS.filter((c) => c.pdf).map((c) => pagina(c.pdf!, EDICION.pdf)),
-    // /pedidos y cada pedido completo entran recién con 3 pedidos completos (antes no se indexan).
-    ...(HAY_PEDIDOS ? [pagina("/pedidos", EDICION.pedidos)] : []),
+    // Cada pedido completo entra recién con 3 pedidos completos (antes no se indexan). La lista está en /ideas.
     ...(HAY_PEDIDOS ? PEDIDOS_COMPLETOS : []).map((p) => pagina(`/pedidos/${p.slug}`, EDICION.pedidos)),
-    // /ideas entra recién con la primera nota publicada (antes no se indexa).
-    ...(notas.length > 0 ? [pagina("/ideas", masNueva(notas))] : []),
+    // /ideas entra recién con la primera nota publicada o los pedidos (antes no se indexa).
+    ...(notas.length > 0 || HAY_PEDIDOS ? [pagina("/ideas", masNueva(notas))] : []),
     ...notas.map((n) => pagina(urlIdea(n.slug), n.fecha)),
     ...autores.map((a) => pagina(urlAutor(a), masNueva(notas.filter((n) => n.autor === a)))),
     pagina("/nosotros", EDICION.nosotros),

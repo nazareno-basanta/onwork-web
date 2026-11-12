@@ -23,6 +23,8 @@ export const SITE = {
   whatsapp: "5491131579402",
   // El mismo número, como se muestra escrito en la web.
   whatsappVisible: "+54 9 11 3157-9402",
+  // Mail de la empresa (Nachi lo confirmó para publicar el 12/11/2026).
+  mail: "onworkba@gmail.com",
   instagram: "https://www.instagram.com/onworkba",
   instagramUsuario: "@onworkba",
   ubicacion: "Buenos Aires · Envíos a toda la Argentina",
@@ -37,21 +39,34 @@ export function whatsappUrl(message?: string) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
+/**
+ * Arma un link de mail (mailto:) al mail de On Work con el asunto y el texto
+ * ya escritos. Los saltos de línea van como \r\n, que es lo que esperan los
+ * programas de mail.
+ */
+export function mailUrl(asunto: string, cuerpo?: string) {
+  const partes = [`subject=${encodeURIComponent(asunto)}`];
+  if (cuerpo) partes.push(`body=${encodeURIComponent(cuerpo.replace(/\r?\n/g, "\r\n"))}`);
+  return `mailto:${SITE.mail}?${partes.join("&")}`;
+}
+
 /** Mensaje que llega precargado cuando no hay uno propio de la página. */
 export const MENSAJE_GENERAL = mensajeWeb();
 
 /**
- * Menú principal (también el del celular y el pie). "Pedidos reales" aparece
- * solo cuando hay pedidos cargados, e "Ideas" con la primera nota publicada.
+ * Menú principal (también el del celular y el pie). "Ideas" junta las notas y
+ * los pedidos reales (Nachi, 12/11/2026) y aparece cuando hay alguno de los dos.
  */
 export const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/catalogos", label: "Catálogos" },
-  { href: "/pedidos", label: "Pedidos reales" },
   { href: "/ideas", label: "Ideas" },
   { href: "/contacto", label: "Contacto" },
-].filter((item) => (item.href !== "/pedidos" || HAY_PEDIDOS) && (item.href !== "/ideas" || HAY_IDEAS));
+].filter((item) => item.href !== "/ideas" || HAY_IDEAS || HAY_PEDIDOS);
+
+/** La lista de Ideas con el filtro de pedidos puesto (adonde lleva /pedidos). */
+export const URL_PEDIDOS = "/ideas?ver=pedidos";
 
 /**
  * Con más de 4 links, la pastilla del menú no entra entre 1024 y 1279 px junto

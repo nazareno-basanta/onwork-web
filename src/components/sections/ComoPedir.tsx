@@ -2,7 +2,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
-import ComoPedirCorto from "@/components/como-pedir/ComoPedirCorto";
+import Acordeon from "@/components/como-pedir/Acordeon";
 import LineaDeTiempo from "@/components/como-pedir/LineaDeTiempo";
 import { maquetasComoPedir } from "@/components/como-pedir/Maquetas";
 import { COMO_PEDIR } from "@/data/inicio";
@@ -15,9 +15,10 @@ import { cn } from "@/lib/utils";
  * lugar de "Cómo trabajamos") y en /como-pedir. En /como-pedir va sin titular
  * propio (conTitulo={false}): el H1 de la página ya dice "Cómo pedir." y los
  * pasos pasan a ser H2.
- * En el Inicio, en el celular (cortoEnCelular), va la versión corta con el
- * link a /como-pedir: con las cinco maquetas eran más de cinco pantallas
- * (decisión de Nachi, 5/11/2026). En la compu, la línea completa.
+ * En el Inicio, en el celular (cortoEnCelular), va el acordeón: los cinco
+ * pasos cerrados salvo uno, y al tocar se abre cada maqueta (Nachi,
+ * 12/11/2026; antes era una lista quieta, porque con las cinco maquetas a la
+ * vista eran más de cinco pantallas). En la tablet y la compu, la línea completa.
  */
 export default function ComoPedir({
   id = "como-pedir",
@@ -42,8 +43,15 @@ export default function ComoPedir({
       )}
 
       {cortoEnCelular && (
-        <div className="container-ow lg:hidden">
-          <ComoPedirCorto tono="oscuro" className="mt-10" />
+        <div className="container-ow md:hidden">
+          <Acordeon pasos={pasos} nivelTitulo={conTitulo ? "h3" : "h2"} className="mt-10" />
+          <Link
+            href="/como-pedir"
+            className="mt-8 inline-flex min-h-11 items-center gap-1.5 rounded-sm font-display text-sm font-bold text-white underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-white"
+          >
+            {COMO_PEDIR.linkPagina}
+            <Icon name="flecha-derecha" size={18} />
+          </Link>
         </div>
       )}
 
@@ -51,10 +59,10 @@ export default function ComoPedir({
         pasos={pasos}
         etiqueta={COMO_PEDIR.navPasos}
         nivelTitulo={conTitulo ? "h3" : "h2"}
-        className={cn(conTitulo && "mt-12 md:mt-16", cortoEnCelular && "hidden lg:block")}
+        className={cn(conTitulo && "mt-12 md:mt-16", cortoEnCelular && "hidden md:block")}
       />
 
-      <div className={cn("container-ow flex flex-wrap items-center gap-4 lg:mt-8", cortoEnCelular ? "mt-10" : "mt-20")}>
+      <div className={cn("container-ow flex flex-wrap items-center gap-4 md:mt-8", cortoEnCelular ? "mt-10" : "mt-20")}>
         <Link href="/catalogos" className={btn.yellow}>
           {COMO_PEDIR.botonCatalogos}
           <Icon name="flecha-derecha" size={18} />

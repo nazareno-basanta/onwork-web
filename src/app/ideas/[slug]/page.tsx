@@ -7,6 +7,7 @@ import Icon from "@/components/Icon";
 import JsonLd from "@/components/JsonLd";
 import TarjetaPedido from "@/components/TarjetaPedido";
 import Titular from "@/components/Titular";
+import WhatsAppLink from "@/components/WhatsAppLink";
 import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
 import SumarKit from "@/components/ideas/SumarKit";
 import Cierre from "@/components/sections/Cierre";
@@ -18,8 +19,8 @@ import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { PRODUCTOS, aTarjeta } from "@/data/productos";
 import { articulo } from "@/lib/datosEstructurados";
 import { mensajeWeb } from "@/lib/mensajes";
-import { urlAutor, urlCatalogo, urlIdea } from "@/lib/rutas";
-import { fechaLarga, mostrarMarcadores, sinMarcadores, textoWeb } from "@/lib/utils";
+import { urlAutor, urlCatalogo, urlIdea, urlProducto } from "@/lib/rutas";
+import { cn, fechaLarga, mostrarMarcadores, sinMarcadores, textoWeb } from "@/lib/utils";
 
 /*
  * Una plantilla para todas las notas de Ideas (orden de los bloques: ver el
@@ -130,11 +131,62 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
           </div>
         </header>
 
+        {/* En la compu, al costado y fijo mientras se lee: el pedido real de la
+            nota o, si no tiene, los productos de su kit, siempre con WhatsApp.
+            Antes la mitad derecha quedaba vacía durante toda la nota (críticas
+            del 12/11/2026). */}
         <div className="pb-20 md:pb-28">
-          <div className="container-ow">
+          <div className={cn("container-ow", (pedido || productos.length > 0) && "lg:grid lg:grid-cols-[minmax(0,42rem)_minmax(0,20rem)] lg:justify-between lg:gap-16")}>
             <div className="max-w-[42rem]">
               <Texto />
             </div>
+            {pedido && (
+              <aside aria-labelledby="pedido-al-costado" className="hidden lg:block">
+                <div className="sticky top-28">
+                  <h2 id="pedido-al-costado" className="font-display text-xl leading-tight font-extrabold">
+                    {IDEAS_PAGINA.pedido}
+                  </h2>
+                  <div className="mt-6">
+                    <TarjetaPedido pedido={pedido} />
+                  </div>
+                  <WhatsAppLink tone="yellow" message={mensaje} className="mt-8">
+                    {IDEAS_PAGINA.botonWhatsApp}
+                  </WhatsAppLink>
+                </div>
+              </aside>
+            )}
+            {!pedido && productos.length > 0 && (
+              <aside aria-labelledby="kit-al-costado" className="hidden lg:block">
+                <div className="sticky top-28">
+                  <h2 id="kit-al-costado" className="font-display text-xl leading-tight font-extrabold">
+                    {IDEAS_PAGINA.kit.titulo}
+                  </h2>
+                  <ul className="mt-6 space-y-3">
+                    {productos.map((p) => (
+                      <li key={p.codigo}>
+                        <Link href={urlProducto(p)} className="group flex items-center gap-4 rounded-2xl">
+                          <span className="relative size-16 shrink-0 overflow-hidden rounded-2xl bg-white shadow-apoyado">
+                            <Image src={p.fotos[0].chica} alt="" fill unoptimized className="object-contain p-1.5" />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block font-display leading-tight font-bold decoration-ow-yellow decoration-2 underline-offset-4 group-hover:underline">
+                              {p.nombre}
+                            </span>
+                            <span className="block text-sm text-ow-gray">{p.tipo}</span>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6">
+                    <SumarKit codigos={productos.map((p) => p.codigo)} nota={idea.slug} />
+                  </div>
+                  <WhatsAppLink tone="yellow" message={mensaje} className="mt-3">
+                    {IDEAS_PAGINA.botonWhatsApp}
+                  </WhatsAppLink>
+                </div>
+              </aside>
+            )}
           </div>
         </div>
         {/* Datos del artículo para Google: titular, fechas, autor y On Work como editor. */}
@@ -173,14 +225,15 @@ export default async function IdeaPage({ params }: PageProps<"/ideas/[slug]">) {
         </section>
       )}
 
+      {/* En el celular y la tablet, el pedido va acá, con la foto al costado del texto. */}
       {pedido && (
-        <section aria-labelledby="pedido" className="border-t border-ow-black/10 py-20 md:py-28">
+        <section aria-labelledby="pedido" className="border-t border-ow-black/10 py-20 md:py-28 lg:hidden">
           <div className="container-ow">
             <Titular id="pedido" className="text-[clamp(1.9rem,4vw,3.25rem)]">
               {IDEAS_PAGINA.pedido}
             </Titular>
-            <div className="mt-10 max-w-md">
-              <TarjetaPedido pedido={pedido} />
+            <div className="mt-10 max-w-2xl">
+              <TarjetaPedido pedido={pedido} horizontal />
             </div>
           </div>
         </section>

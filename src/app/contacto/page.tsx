@@ -72,7 +72,13 @@ export default function ContactoPage() {
                   <Icon name="instagram" size={18} />
                   {SITE.instagramUsuario}
                 </a>
-                {textoWeb(CONTACTO.mail) && <p className="text-ow-black/80">{textoWeb(CONTACTO.mail)}</p>}
+                <a
+                  href={`mailto:${SITE.mail}`}
+                  className="mt-1 flex min-h-11 w-fit items-center gap-2 rounded-sm font-bold underline decoration-ow-yellow decoration-2 underline-offset-[6px] hover:decoration-ow-black"
+                >
+                  <Icon name="mail" size={18} />
+                  {SITE.mail}
+                </a>
               </div>
               <p className="font-semibold text-ow-gray">{SITE.ubicacion}</p>
             </div>

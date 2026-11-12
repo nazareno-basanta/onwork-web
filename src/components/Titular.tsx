@@ -8,6 +8,8 @@ type Props = {
   className?: string;
   /** Contenido extra antes del texto (por ejemplo, un resaltado). */
   antes?: ReactNode;
+  /** Color del signo final. Amarillo, salvo sobre fondo amarillo (ahí va en tinta, si no desaparece). */
+  claseSigno?: string;
 };
 
 /**
@@ -17,7 +19,7 @@ type Props = {
  * se pinta el signo de antes del marcador, y el marcador solo se ve mientras
  * trabajamos (en la web publicada no). Ver "The Punto Final Rule" en DESIGN.md.
  */
-export default function Titular({ children, as: Tag = "h2", id, className, antes }: Props) {
+export default function Titular({ children, as: Tag = "h2", id, className, antes, claseSigno = "text-ow-yellow" }: Props) {
   // En la web publicada, primero se sacan los marcadores (ver sinMarcadores).
   const texto = sinMarcadores(children).trim();
   const match = texto.match(/^([\s\S]*?)([.?!])(\s*\[[^\]]*\])?$/);
@@ -32,7 +34,7 @@ export default function Titular({ children, as: Tag = "h2", id, className, antes
     >
       {antes}
       {sinViuda(cuerpo + final).slice(0, final ? -1 : undefined)}
-      {final && <span className="text-ow-yellow">{final}</span>}
+      {final && <span className={claseSigno}>{final}</span>}
       {marcador && mostrarMarcadores && <span className="ml-[0.3em] text-[0.4em] font-bold tracking-normal opacity-60">{marcador}</span>}
     </Tag>
   );

@@ -65,10 +65,13 @@ function medidas(ancho: number, altoIso: number) {
 export default function CarruselHero({
   productos,
   progreso,
+  abreHasta = 0.03,
   quieto = false,
 }: {
   productos: ProductoHero[];
   progreso?: MotionValue<number>;
+  /** Hasta qué punto del progreso del hero terminan de abrirse y salir las tarjetas. */
+  abreHasta?: number;
   quieto?: boolean;
 }) {
   const caja = useRef<HTMLDivElement>(null);
@@ -107,11 +110,11 @@ export default function CarruselHero({
     const dibujar = () => {
       const ancho = m.ancho; // se mide al cambiar el tamaño, no en cada cuadro
       const largo = n * m.paso;
-      // Al bajar, la fila se abre y se va en el primer 3 % del scroll, antes de
-      // que el isotipo empiece a moverse y crecer (si no, por el hueco del aro
-      // se veía la tarjeta de atrás). El círculo crema queda siempre opaco: no
-      // se ve (es del color del fondo) y tapa lo que pasa por detrás.
-      const abrir = progreso ? tramo(progreso.get(), 0, 0.03) : 0;
+      // Al bajar, la fila se abre y se va en el primer tramo del scroll (unos
+      // 13vh), antes de que el isotipo empiece a moverse y crecer (si no, por
+      // el hueco del aro se veía la tarjeta de atrás). El círculo crema queda
+      // siempre opaco: no se ve (es del color del fondo) y tapa lo que pasa por detrás.
+      const abrir = progreso ? tramo(progreso.get(), 0, abreHasta) : 0;
       if (banda.current) banda.current.style.opacity = String(1 - abrir);
       if (abrir >= 1) return; // ya no se ve: no hay nada que mover
       const desplazamiento = (lugar + suave(avance)) * m.paso;
@@ -203,7 +206,7 @@ export default function CarruselHero({
       io.disconnect();
       sinScroll?.();
     };
-  }, [productos, progreso, quieto, conCarrusel]);
+  }, [productos, progreso, abreHasta, quieto, conCarrusel]);
 
   if (!conCarrusel) return null;
 

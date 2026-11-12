@@ -17,8 +17,10 @@ const menosMovimiento = () => window.matchMedia("(prefers-reduced-motion: reduce
  * completa en amarillo (la única animación de la sección): un paso queda
  * activo cuando su comienzo pasa por la mitad de la pantalla, y los
  * anteriores, completos.
- * - En la compu, la línea va arriba, fija debajo del header mientras se
- *   recorren los pasos, con los números y los títulos (cada uno lleva a su paso).
+ * - En la compu y en la tablet (Nachi, 12/11/2026: antes la tablet tenía la
+ *   versión del celular), la línea va arriba, fija debajo del header mientras
+ *   se recorren los pasos, con los números (cada uno lleva a su paso) y, desde
+ *   la compu, los títulos; en la tablet no entran.
  * - En el celular, es vertical, a la izquierda, con un punto por paso.
  * El scroll es el normal: no se frena ni se "clava" la sección.
  * Con menos movimiento, la línea está completa desde el principio.
@@ -100,7 +102,7 @@ export default function LineaDeTiempo({
 
   return (
     <div className={className}>
-      <nav ref={barra} aria-label={etiqueta} className="sticky top-16 z-20 hidden bg-ow-black lg:block">
+      <nav ref={barra} aria-label={etiqueta} className="sticky top-16 z-20 hidden bg-ow-black md:block">
         <div className="container-ow">
           <ol className="grid grid-cols-5 pt-5 pb-4">
             {pasos.map((paso, i) => {
@@ -123,9 +125,10 @@ export default function LineaDeTiempo({
                     >
                       {i + 1}
                     </span>
+                    {/* En la tablet, el título va solo para lectores de pantalla (no entra). */}
                     <span
                       className={cn(
-                        "text-balance transition-colors duration-300 ease-ow group-hover:text-white motion-reduce:transition-none",
+                        "max-lg:sr-only text-balance transition-colors duration-300 ease-ow group-hover:text-white motion-reduce:transition-none",
                         i === activo ? "text-white" : "text-white/60",
                       )}
                     >
@@ -143,9 +146,9 @@ export default function LineaDeTiempo({
       </nav>
 
       <div className="container-ow">
-        <ol ref={lista} className="relative mt-4 lg:mt-0">
+        <ol ref={lista} className="relative mt-4 md:mt-0">
           {/* La línea vertical del celular, del primer punto al final. */}
-          <span ref={pista} aria-hidden="true" className="absolute top-7 bottom-0 left-[7px] w-0.5 rounded-full bg-white/15 lg:hidden">
+          <span ref={pista} aria-hidden="true" className="absolute top-7 bottom-0 left-[7px] w-0.5 rounded-full bg-white/15 md:hidden">
             <span ref={rellenoVertical} className="absolute inset-0 origin-top scale-y-0 rounded-full bg-ow-yellow" />
           </span>
 
@@ -156,13 +159,13 @@ export default function LineaDeTiempo({
                 key={paso.titulo}
                 id={`paso-${i + 1}`}
                 tabIndex={-1}
-                className="relative grid gap-8 pb-20 pl-10 last:pb-0 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-center lg:gap-16 lg:py-16 lg:pl-0 lg:last:pb-16 xl:gap-20"
+                className="relative grid gap-8 pb-20 pl-10 last:pb-0 md:grid-cols-[minmax(0,1fr)_minmax(0,19rem)] md:items-center md:gap-10 md:py-12 md:pl-0 md:last:pb-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16 lg:py-16 lg:last:pb-16 xl:gap-20"
               >
                 {/* El punto del paso en la línea del celular. */}
                 <span
                   aria-hidden="true"
                   className={cn(
-                    "absolute top-[1.375rem] left-0 size-4 rounded-full md:top-7 border-2 transition-colors duration-300 ease-ow motion-reduce:transition-none lg:hidden",
+                    "absolute top-[1.375rem] left-0 size-4 rounded-full border-2 transition-colors duration-300 ease-ow motion-reduce:transition-none md:hidden",
                     hecho ? "border-ow-yellow bg-ow-yellow" : "border-white/40 bg-ow-black",
                   )}
                 />
@@ -175,7 +178,7 @@ export default function LineaDeTiempo({
                   </Titular>
                   <p className="mt-3 max-w-md text-lg text-pretty text-white/85 lg:max-w-xl">{textoWeb(paso.texto)}</p>
                 </div>
-                <div className="flex justify-center lg:justify-end">{paso.maqueta}</div>
+                <div className="flex justify-center md:justify-end">{paso.maqueta}</div>
               </li>
             );
           })}

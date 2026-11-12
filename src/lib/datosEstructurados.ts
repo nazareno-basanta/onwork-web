@@ -33,6 +33,7 @@ export const organizacion: WithContext<Organization> = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: SITE.whatsappVisible,
+    email: SITE.mail,
     contactType: "sales",
     areaServed: "AR",
     availableLanguage: "es",

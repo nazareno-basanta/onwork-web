@@ -4,6 +4,7 @@ import Titular from "@/components/Titular";
 import CardsCarousel from "@/components/ui/CardsCarousel";
 import { PEDIDOS_INICIO } from "@/data/inicio";
 import { PEDIDOS_VISIBLES } from "@/data/pedidos";
+import { URL_PEDIDOS } from "@/lib/site";
 import { btn } from "@/lib/ui";
 import { textoWeb } from "@/lib/utils";
 
@@ -30,7 +31,7 @@ export default function PedidosInicio() {
             ))}
           </CardsCarousel>
         </div>
-        <Link href="/pedidos" className={`${btn.line} mt-10`}>
+        <Link href={URL_PEDIDOS} className={`${btn.line} mt-10`}>
           {PEDIDOS_INICIO.boton}
         </Link>
       </div>

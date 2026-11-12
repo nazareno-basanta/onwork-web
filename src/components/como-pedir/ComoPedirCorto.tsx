@@ -9,8 +9,9 @@ import { cn } from "@/lib/utils";
  * por una línea, y el link a /como-pedir (donde están las maquetas).
  * - claro: en el presupuesto vacío, con su titular. El 1 va en amarillo: es
  *   el paso en el que está la persona (todavía no sumó nada).
- * - oscuro: en el Inicio, en el celular, sobre tinta (el titular ya lo pone
- *   la sección). Todos los números en amarillo, como en la línea completa.
+ * - oscuro: sobre tinta (el titular lo pone la sección). Hoy no se usa: el
+ *   Inicio en el celular pasó al acordeón (Acordeon.tsx, 12/11/2026); antes iba
+ *   ahí. Todos los números en amarillo, como en la línea completa.
  */
 export default function ComoPedirCorto({
   tono = "claro",

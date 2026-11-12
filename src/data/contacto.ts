@@ -19,8 +19,6 @@ export const CONTACTO = {
   pagosTitulo: "Formas de pago",
   pagos: "Efectivo, tarjeta, transferencia y Mercado Pago. [confirmar]",
   redesTitulo: "Instagram y mail",
-  // El mail no se muestra hasta confirmar que se publica.
-  mail: "[mail: confirmar si se publica]",
   seo: {
     titulo: "Contacto",
     descripcion:

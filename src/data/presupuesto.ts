@@ -38,6 +38,13 @@ export const PRESUPUESTO = {
   /** Para lectores de pantalla: el botón abre otra ventana. */
   abreWhatsApp: "(se abre WhatsApp)",
   copiar: "Copiar la lista",
+  /**
+   * ✏️ Borradores de Claude (12/11/2026): la otra forma de mandar el
+   * presupuesto, por mail (Nachi lo pidió el 12/11/2026). Abre el programa de
+   * mail con el mismo texto que el de WhatsApp.
+   */
+  porMail: "Mandarlo por mail",
+  asuntoMail: "Presupuesto desde la web de On Work",
   copiada: "Lista copiada",
   enviado: "Ya enviaste este presupuesto por WhatsApp.",
   enviadoAyuda: "¿No se abrió WhatsApp? Copiá la lista y pegala en el chat.",

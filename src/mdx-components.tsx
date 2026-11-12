@@ -1,8 +1,27 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Children, isValidElement, type ReactElement, type ReactNode } from "react";
 import Titular from "@/components/Titular";
 import { textoWeb } from "@/lib/utils";
+
+type ConHijos = ReactElement<{ children?: ReactNode }>;
+const hijos = (nodo: ReactNode) =>
+  Children.toArray(nodo).filter((n): n is ConHijos => isValidElement(n)).map((n) => n);
+
+/**
+ * Lee una tabla de Markdown (thead y tbody con sus filas) para armarla de
+ * nuevo: devuelve los títulos de las columnas y, por fila, lo que va en cada
+ * celda. Si la tabla no tiene esa forma, devuelve null.
+ */
+function leerTabla(children: ReactNode) {
+  const partes = hijos(children);
+  const cabeza = partes.find((p) => p.type === "thead");
+  const cuerpo = partes.find((p) => p.type === "tbody");
+  if (!cabeza || !cuerpo) return null;
+  const titulos = hijos(hijos(cabeza.props.children)[0]?.props.children).map((th) => th.props.children);
+  const filas = hijos(cuerpo.props.children).map((tr) => hijos(tr.props.children).map((td) => td.props.children));
+  return titulos.length ? { titulos, filas } : null;
+}
 
 /**
  * Cómo se ven los textos de las notas de Ideas (src/data/ideas/*.mdx): cada
@@ -48,12 +67,48 @@ const components: MDXComponents = {
     </ol>
   ),
   li: ({ children }) => <li>{texto(children)}</li>,
-  // Tablas de comparación: en el celular se deslizan de costado sin mover la página.
-  table: ({ children }) => (
-    <div className="mt-8 overflow-x-auto">
-      <table className="w-full min-w-[28rem] border-collapse text-left">{children}</table>
-    </div>
-  ),
+  // Tablas de comparación. Desde la tablet, tabla. En el celular cada fila es
+  // una ficha: la primera celda como título y las demás con el nombre de su
+  // columna arriba (ver .tabla-nota en globals.css). Antes la tabla se
+  // deslizaba de costado y en 335 px cortaba la última columna a mitad de
+  // palabra (crítica del 12/11/2026).
+  table: ({ children }) => {
+    const tabla = leerTabla(children);
+    if (!tabla)
+      return (
+        <div className="mt-8 overflow-x-auto">
+          <table className="w-full min-w-[28rem] border-collapse text-left">{children}</table>
+        </div>
+      );
+    return (
+      <table className="tabla-nota mt-8 w-full border-collapse text-left">
+        <thead>
+          <tr>
+            {tabla.titulos.map((t, i) => (
+              <th key={i} scope="col" className="border-b-2 border-ow-black py-3 pr-6 align-bottom font-display text-sm font-bold">
+                {texto(t)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {tabla.filas.map((celdas, f) => (
+            <tr key={f}>
+              {celdas.map((c, i) => (
+                <td
+                  key={i}
+                  data-columna={typeof tabla.titulos[i] === "string" ? tabla.titulos[i] : undefined}
+                  className="border-b border-ow-black/15 py-3 pr-6 align-top text-ow-black/80"
+                >
+                  {texto(c)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  },
   th: ({ children }) => (
     <th scope="col" className="border-b-2 border-ow-black py-3 pr-6 align-bottom font-display text-sm font-bold">
       {texto(children)}

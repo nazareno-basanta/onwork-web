@@ -20,12 +20,14 @@ type Props = {
   interval?: number;
   /** Si se pasa, la palabra la elige quien lo usa y no rota sola. */
   index?: number;
+  /** Segundos que tarda en entrar cada letra (la salida y el ancho van en proporción). */
+  duration?: number;
   className?: string;
 };
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function RotatingText({ words, interval = 2200, index: controlado, className }: Props) {
+export default function RotatingText({ words, interval = 2200, index: controlado, duration = 0.5, className }: Props) {
   const reduce = useReducedMotion();
   const [propio, setPropio] = useState(0);
 
@@ -37,11 +39,12 @@ export default function RotatingText({ words, interval = 2200, index: controlado
 
   const index = controlado ?? (reduce ? 0 : propio);
   const word = words[index];
+  const k = duration / 0.5;
 
   return (
     <motion.span
       layout={!reduce}
-      transition={{ layout: { duration: 0.45, ease: EASE } }}
+      transition={{ layout: { duration: 0.45 * k, ease: EASE } }}
       aria-hidden="true"
       className={cn('relative inline-flex overflow-hidden', className)}
     >
@@ -52,8 +55,8 @@ export default function RotatingText({ words, interval = 2200, index: controlado
               key={i}
               className="inline-block"
               initial={{ y: '110%' }}
-              animate={{ y: 0, transition: { duration: 0.5, ease: EASE, delay: i * 0.025 } }}
-              exit={{ y: '-120%', transition: { duration: 0.35, ease: EASE, delay: i * 0.015 } }}
+              animate={{ y: 0, transition: { duration, ease: EASE, delay: i * 0.025 * k } }}
+              exit={{ y: '-120%', transition: { duration: 0.35 * k, ease: EASE, delay: i * 0.015 * k } }}
             >
               {letter}
             </motion.span>

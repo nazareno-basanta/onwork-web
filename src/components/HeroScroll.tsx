@@ -11,8 +11,10 @@
  * Al bajar, los productos se abren hacia los costados y se van; la pantalla
  * queda fija: el isotipo crece, viaja al centro y se
  * entra en el punto amarillo, que llena la pantalla. Adentro aparece
- * "Tu marca, en cada ___." y las palabras pasan parejas, con lugar para
- * leer cada una, hasta "detalle", que se marca con un golpe y una onda.
+ * "Tu marca, en cada ___." y desde ahí las palabras pasan solas (por tiempo,
+ * no por scroll): la primera se deja leer y después van cada vez más rápido
+ * hasta "detalle", que se marca con un golpe y una onda (Nachi, 12/11/2026:
+ * antes cada palabra pedía su tramo de scroll y había mucho que bajar).
  *
  * Con menos movimiento no hay scroll fijo: todo queda quieto y la
  * frase va debajo, en una franja amarilla, ya en "detalle".
@@ -37,13 +39,31 @@ import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
 import { sinViuda } from "@/lib/utils";
 
-// Tramos del scroll (0 = arranca el hero fijo, 1 = se suelta). El hero mide
-// 520vh: el isotipo crece en unos 120vh, la frase entra y cada palabra queda
-// unos 25vh (se lee bien) hasta "detalle", que queda fija al final.
-const ZOOM: [number, number] = [0.02, 0.3];
-const CENTRADO: [number, number] = [0.02, 0.22];
-const FRASE: [number, number] = [0.3, 0.34];
-const PALABRAS: [number, number] = [0.34, 0.93]; // de 0,93 a 1 queda "detalle"
+// Tramos del scroll, medidos en vh de scroll mientras el hero queda fijo. El
+// hero mide RECORRIDO + 100vh. El isotipo crece en unos 120vh, la frase entra
+// y después queda fija unos 40vh mientras las palabras pasan solas: el hero se
+// suelta cuando cae "detalle" (Nachi, 12/11/2026, después de la segunda
+// crítica: con 120vh quedaba amarillo quieto, scroll sin nada; antes había
+// probado 70vh, y antes de que pasaran por tiempo eran 300vh).
+const RECORRIDO = 183;
+const vh = (a: number, b: number): [number, number] => [a / RECORRIDO, b / RECORRIDO];
+const ABRIR = vh(0, 12.6); // las tarjetas del carrusel se abren y se van
+const TEXTO = vh(4, 29); // el titular y los botones se apagan
+const ZOOM = vh(8, 126);
+const CENTRADO = vh(8, 92);
+const FRASE = vh(126, 143); // de 143 a 183 la frase queda fija
+
+/**
+ * Ritmo de las palabras, en milisegundos: la primera ("evento") queda 1,4 s
+ * para que se lea la frase entera; después cada una dura menos que la
+ * anterior, de 700 a 110 ms, hasta caer en "detalle" (en total, unos 4,4 s;
+ * antes eran 1000 / 480 / 70 ms y unos 3 s, y Nachi lo quería más lento).
+ */
+const PRIMERA = 1400;
+const LENTA = 700;
+const RAPIDA = 110;
+const espera = (i: number, ultima: number) =>
+  i === 0 ? PRIMERA : LENTA * (RAPIDA / LENTA) ** ((i - 1) / Math.max(1, ultima - 2));
 
 const tramo = (v: number, [a, b]: [number, number]) => Math.min(1, Math.max(0, (v - a) / (b - a)));
 
@@ -143,12 +163,14 @@ function Escena({
   opacidad,
   productos,
   progreso,
+  abreHasta,
   quieto,
 }: {
   isotipo: React.ReactNode;
   opacidad?: MotionValue<number>;
   productos: ProductoHero[];
   progreso?: MotionValue<number>;
+  abreHasta?: number;
   quieto?: boolean;
 }) {
   return (
@@ -158,7 +180,7 @@ function Escena({
       </motion.div>
       {/* El carrusel pasa por detrás del isotipo; abajo deja lugar para los nombres de los productos. */}
       <div className="relative sm:mb-8 lg:mb-10">
-        <CarruselHero productos={productos} progreso={progreso} quieto={quieto} />
+        <CarruselHero productos={productos} progreso={progreso} abreHasta={abreHasta} quieto={quieto} />
         <div className="relative">{isotipo}</div>
       </div>
       {/* "Ver catálogos" es la acción principal (amarillo, más grande); "Conocenos", la segunda. */}
@@ -178,6 +200,9 @@ function Escena({
 function Frase({ indice, final }: { indice: number; final: boolean }) {
   const reduce = useReducedMotion();
   const { inicio, palabras } = FRASE_ROTATIVA;
+  // Cuanto más rápido pasan, más corta es la animación de cada letra (si no,
+  // se pisan). "detalle" entra con el tiempo de siempre.
+  const duracion = final ? 0.5 : Math.min(0.5, Math.max(0.14, (espera(indice, palabras.length - 1) / 1000) * 1.2));
   return (
     <p className="text-center font-display text-[clamp(2.2rem,7vw,6.5rem)] leading-[1.02] font-extrabold tracking-tight text-ow-black">
       <span className="sr-only">
@@ -207,6 +232,7 @@ function Frase({ indice, final }: { indice: number; final: boolean }) {
           <RotatingText
             index={indice}
             words={palabras}
+            duration={duracion}
             className="rounded-[0.16em] bg-ow-black px-[0.16em] pb-[0.04em] align-bottom text-ow-yellow"
           />
         </motion.span>
@@ -289,15 +315,31 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
     if (geo) aplicar(transform.get());
   });
 
-  const textoOpacidad = useTransform(p, [0.01, 0.07], [1, 0]);
+  const textoOpacidad = useTransform(p, TEXTO, [1, 0]);
   const fraseOpacidad = useTransform(p, FRASE, [0, 1]);
   const fraseY = useTransform(p, FRASE, [36, 0]);
 
-  // Las palabras pasan parejas (cada una el mismo tramo de scroll) y la última queda fija.
+  // Las palabras arrancan solas cuando empieza a entrar la frase. Si se vuelve
+  // a subir hasta la diana, se reinician para que se vean de nuevo (con un
+  // margen, para que no se corte por un scroll chiquito justo en el borde).
+  const [andando, setAndando] = useState(false);
   useMotionValueEvent(p, "change", (v) => {
-    const i = Math.min(ultima, Math.floor((ultima + 1) * tramo(v, PALABRAS)));
-    if (i !== indice) setIndice(i);
+    if (!andando && v >= FRASE[0]) setAndando(true);
+    if (andando && v < FRASE[0] - 0.05) {
+      setAndando(false);
+      setIndice(0);
+    }
   });
+  useEffect(() => {
+    if (!andando) return;
+    const relojes: number[] = [];
+    let t = 0;
+    for (let i = 1; i <= ultima; i++) {
+      t += espera(i - 1, ultima);
+      relojes.push(window.setTimeout(() => setIndice(i), t));
+    }
+    return () => relojes.forEach((r) => window.clearTimeout(r));
+  }, [andando, ultima]);
 
   if (reduce) {
     return (
@@ -315,13 +357,14 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
   }
 
   return (
-    <section ref={contRef} className="relative h-[520vh]">
+    <section ref={contRef} className="relative" style={{ height: `${RECORRIDO + 100}vh` }}>
       <div ref={stageRef} className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden">
         <Escena
           opacidad={textoOpacidad}
           isotipo={<IsotipoReposo oculto={!!geo} refCaja={cajaRef} />}
           productos={productos}
           progreso={p}
+          abreHasta={ABRIR[1]}
         />
 
         {geo && (

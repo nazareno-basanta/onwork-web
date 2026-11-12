@@ -29,9 +29,12 @@ export default function Breadcrumb({ items }: { items: Miga[] }) {
         {todas.map((m, i) => {
           const ultima = i === todas.length - 1;
           return (
-            <li key={m.href} className="flex items-center gap-1.5">
+            <li key={m.href} className="flex min-w-0 items-center gap-1.5">
               {ultima ? (
-                <span aria-current="page" className="text-ow-black">
+                // En el celular, la página actual va en un renglón (con "…" si
+                // no entra): antes, en las notas, repetía el titular entero en
+                // dos renglones justo arriba del titular (crítica del 12/11/2026).
+                <span aria-current="page" className="text-ow-black max-sm:line-clamp-1">
                   {m.label}
                 </span>
               ) : (

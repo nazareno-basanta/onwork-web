@@ -14,7 +14,7 @@ import type { ProductoPresupuesto } from "@/data/productos";
 import { armarMensajePresupuesto } from "@/lib/mensajePresupuesto";
 import { medir } from "@/lib/medicion";
 import { presupuesto, type LineaPresupuesto } from "@/lib/presupuesto";
-import { whatsappUrl } from "@/lib/site";
+import { mailUrl, whatsappUrl } from "@/lib/site";
 import { btn } from "@/lib/ui";
 import { usePresupuesto } from "@/lib/usePresupuesto";
 import { textoWeb } from "@/lib/utils";
@@ -220,6 +220,29 @@ function Vaciar() {
   );
 }
 
+/**
+ * "Mandarlo por mail": abre el programa de mail con el presupuesto escrito,
+ * dirigido al mail de On Work (Nachi, 12/11/2026). Va el mensaje completo; si
+ * el link queda muy largo para algunos programas (más de ~1900 caracteres),
+ * el compactado, como en WhatsApp. No marca el presupuesto como enviado: ese
+ * aviso habla de WhatsApp.
+ */
+function PorMail({ completo, texto, filas }: { completo: string; texto: string; filas: Fila[] }) {
+  const largo = mailUrl(PRESUPUESTO.asuntoMail, completo);
+  const href = largo.length > 1900 ? mailUrl(PRESUPUESTO.asuntoMail, texto) : largo;
+  const unidades = filas.reduce((suma, f) => suma + f.cantidad, 0);
+  return (
+    <a
+      href={href}
+      className={`${link} gap-2`}
+      onClick={() => medir("enviar_presupuesto_mail", { productos: filas.length, unidades })}
+    >
+      <Icon name="mail" size={18} />
+      {PRESUPUESTO.porMail}
+    </a>
+  );
+}
+
 /** "Copiar la lista": el mensaje completo, por si WhatsApp no se abre o la lista es larga. */
 function CopiarLista({ texto }: { texto: string }) {
   const [copiada, setCopiada] = useState(false);
@@ -402,7 +425,8 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
           {otro.trim() && (
             <>
               <Enviar texto={soloOtro.texto} filas={[]} />
-              <div className="mt-4">
+              <div className="mt-4 flex flex-wrap items-center gap-x-6">
+                <PorMail completo={soloOtro.completo} texto={soloOtro.texto} filas={[]} />
                 <CopiarLista texto={soloOtro.completo} />
               </div>
             </>
@@ -479,6 +503,7 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
           )}
           <Enviar texto={texto} filas={filas} />
           <div className="mt-4 flex flex-wrap items-center gap-x-6">
+            <PorMail completo={completo} texto={texto} filas={filas} />
             <CopiarLista texto={completo} />
             <Vaciar />
           </div>

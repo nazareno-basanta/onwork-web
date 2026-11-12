@@ -75,6 +75,12 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a href={`mailto:${SITE.mail}`} className={`${link} gap-2`}>
+                <Icon name="mail" size={18} />
+                {SITE.mail}
+              </a>
+            </li>
+            <li>
               <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className={`${link} gap-2`}>
                 <Icon name="instagram" size={18} />
                 {SITE.instagramUsuario}

@@ -40,8 +40,19 @@ export type Pedido = {
   hicimos: string;
   /** Frase de cierre: "Tu marca, en cada ___." */
   cierre: string;
-  /** Rutas de las fotos en /public/pedidos/<slug>/; la primera es la portada. */
-  fotos: { src: string; alt: string }[];
+  /**
+   * Rutas de las fotos en /public/pedidos/<slug>/; la primera es la portada.
+   * ambiente: true en las fotos que no son de producto sobre blanco (un stand,
+   * gente usándolo): esas llenan su marco y se recortan un poco; las de
+   * producto van siempre enteras.
+   */
+  fotos: { src: string; alt: string; ambiente?: boolean }[];
+  /**
+   * Códigos OW de productos del catálogo que se usaron en el pedido, si están
+   * en la web (se muestran en su página). Sin esto, van los primeros del
+   * catálogo del pedido, con otro titular.
+   */
+  productos?: string[];
 };
 
 export const mensajePedido = (cliente: string) =>
@@ -73,6 +84,7 @@ export const PEDIDOS: Pedido[] = [
       },
       {
         src: "/pedidos/casa-fernandes/termo-mate-y-bombilla.jpg",
+        ambiente: true,
         alt: "Termo, mate y bombilla grabados con el logo de Casa Fernandes, sobre las materas",
       },
       {
@@ -95,14 +107,16 @@ export const PEDIDOS: Pedido[] = [
     hicimos:
       "Adaptamos su diseño a cada pieza y armamos el kit en sublimación, tampografía y serigrafía: gorras, bolsos, botellas, mochilas, lapiceras, cintas para credencial y folletos. La almohada de viaje y el frisbee no estaban en el catálogo: los conseguimos para este pedido.",
     cierre: "Tu marca, en cada stand.",
+    // Portada: el kit completo, como en los otros pedidos (Nachi, 12/11/2026).
     fotos: [
-      {
-        src: "/pedidos/emprotur-fit/stand-fit-la-rural.jpg",
-        alt: "Stand de Río Negro en la Feria Internacional de Turismo, con el kit de Las Grutas, Puerto del Este y San Antonio Oeste",
-      },
       {
         src: "/pedidos/emprotur-fit/kit-feria.jpg",
         alt: "Kit de Las Grutas, Puerto del Este y San Antonio Oeste: gorra, mochila, almohada de viaje, botella, frisbee, bolsos, lapiceras, cintas para credencial y folletos",
+      },
+      {
+        src: "/pedidos/emprotur-fit/stand-fit-la-rural.jpg",
+        ambiente: true,
+        alt: "Stand de Río Negro en la Feria Internacional de Turismo, con el kit de Las Grutas, Puerto del Este y San Antonio Oeste",
       },
     ],
   },
@@ -171,11 +185,17 @@ export const PEDIDOS_VISIBLES =
 export const PEDIDOS_PAGINA = {
   h1: "Pedidos reales.",
   bajada: "Así se ve la marca de nuestros clientes en cada producto.",
+  /** ✏️ Borrador de Claude (12/11/2026): marca los pedidos en la lista de /ideas, donde van mezclados con las notas. */
+  etiqueta: "Pedido real",
   vacio:
     "[Pedidos reales: sumá al menos 3 carpetas en Web OW/pedidos-reales/ con el OK de cada cliente]",
   necesitaba: "Qué necesitaba.",
   hicimos: "Qué hicimos.",
+  /** Botón de WhatsApp junto a lo que hicimos. Mismo texto que en el resto del sitio. */
+  botonWhatsApp: "Escribinos por WhatsApp",
   productos: "Productos de este pedido.",
+  /** ✏️ Borrador de Claude (12/11/2026): cuando el pedido no tiene sus productos cargados, van los primeros de su catálogo. */
+  productosLinea: "Productos de la misma línea.",
   verCatalogo: "Ver el catálogo",
   seo: {
     titulo: "Pedidos reales de merchandising",

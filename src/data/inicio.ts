@@ -61,10 +61,12 @@ export const QUE_HACEMOS = {
   titulo: "Todo lo que gira en torno a tu marca.",
 };
 
+// Elegido por Nachi el 12/11/2026 entre cuatro opciones. Antes: "Una base para
+// arrancar." / "Ocho catálogos con lo que más trabajamos. Son una parte de lo
+// que hacemos: si lo que buscás no está, lo conseguimos."
 export const CATALOGOS_INICIO = {
-  titulo: "Una base para arrancar.",
-  bajada:
-    "Ocho catálogos con lo que más trabajamos. Son una parte de lo que hacemos: si lo que buscás no está, lo conseguimos.",
+  titulo: "Ocho catálogos para tu marca.",
+  bajada: "Lo que más trabajamos, ordenado por tipo de producto. Si no está, lo conseguimos.",
   boton: "Ver todos los catálogos",
 };
 

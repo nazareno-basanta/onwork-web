@@ -18,13 +18,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* Orden de Nachi (12/11/2026): primero cómo se pide y la base de
+          catálogos; "Todo lo que gira en torno a tu marca" (que lleva directo
+          a WhatsApp) y las búsquedas van después, cuando ya se sabe cómo funciona. */}
       <Hero />
       <Clientes />
-      <QueHacemos />
+      <ComoPedir cortoEnCelular />
       <CatalogosInicio />
+      <QueHacemos />
       <Busquedas />
       <PedidosInicio />
-      <ComoPedir cortoEnCelular />
       <Desde1990 />
       <Preguntas className="border-t border-ow-black/10" datosEstructurados />
       <Cierre />

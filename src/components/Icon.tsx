@@ -20,6 +20,8 @@ const PATHS = {
   cerrar: "M6 6l12 12M18 6 6 18",
   // Tacho: quitar del presupuesto.
   quitar: "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3",
+  // Sobre: el mail.
+  mail: "M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3.5 7l8.5 6 8.5-6",
   instagram:
     "M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17.5 6.5h.01",
   // De Tabler Icons (brand-whatsapp, licencia MIT): el globo y el teléfono, en línea.

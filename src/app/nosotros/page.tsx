@@ -9,6 +9,7 @@ import Tecnicas from "@/components/sections/Tecnicas";
 import { NOSOTROS, QUE_HACEMOS_NOSOTROS, VALORES } from "@/data/nosotros";
 import { HAY_PEDIDOS } from "@/data/pedidos";
 import { SERVICIOS } from "@/data/servicios";
+import { URL_PEDIDOS } from "@/lib/site";
 import { btn } from "@/lib/ui";
 import { textoWeb } from "@/lib/utils";
 
@@ -75,7 +76,7 @@ export default function NosotrosPage() {
                   {QUE_HACEMOS_NOSOTROS.botonCatalogos}
                 </Link>
                 {HAY_PEDIDOS && (
-                  <Link href="/pedidos" className={btn.line}>
+                  <Link href={URL_PEDIDOS} className={btn.line}>
                     {QUE_HACEMOS_NOSOTROS.botonPedidos}
                   </Link>
                 )}

@@ -9,6 +9,8 @@ const base =
 export const btn = {
   yellow: `${base} bg-ow-yellow text-ow-black hover:bg-ow-black hover:text-ow-yellow`,
   black: `${base} bg-ow-black text-white hover:bg-ow-yellow hover:text-ow-black`,
+  /** Negro sobre fondos amarillos: al pasar el mouse va a blanco (en amarillo se perdería). */
+  blackOnYellow: `${base} bg-ow-black text-white hover:bg-white hover:text-ow-black`,
   line: `${base} border-2 border-ow-black text-ow-black hover:bg-ow-black hover:text-white`,
   /** Contorno sobre fondos tinta. */
   lineLight: `${base} border-2 border-white text-white hover:bg-white hover:text-ow-black`,

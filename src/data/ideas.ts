@@ -58,6 +58,14 @@ export type Idea = {
   catalogos?: string[];
   /** Slug de un pedido real del tema (src/data/pedidos.ts), si hay. */
   pedido?: string;
+  /**
+   * Foto de portada de la nota en /ideas: una de las fotos de su pedido real
+   * (la ruta, como figura en src/data/pedidos.ts). Sin esto va la segunda foto
+   * del pedido (la primera ya es la portada de la tarjeta del pedido), o la
+   * primera si tiene una sola. Sin pedido, o si esa foto ya la usa otra
+   * tarjeta de la lista, la tarjeta va clara, con la respuesta.
+   */
+  portada?: string;
   /** 2 o 3 preguntas propias del tema, que no repitan las generales. */
   preguntas?: Pregunta[];
   /** Titular del cierre en tinta ("Tu marca, en cada ___."). Sin esto, va el general. */
@@ -184,6 +192,8 @@ export const IDEAS: Idea[] = [
       descripcion:
         "Qué es cada técnica de personalización, de la serigrafía al grabado láser, y cómo elegir la que conviene según el material, la forma y el diseño de tu logo.",
     },
+    // Sin portada propia: las dos fotos de Emprotur ya son la tarjeta del
+    // pedido y la nota del stand, así que en /ideas va clara, con la respuesta.
     pedido: "emprotur-fit",
     preguntas: [
       {
@@ -219,13 +229,31 @@ export const ideasDeCatalogo = (catalogo: string) => IDEAS_VISIBLES.filter((i) =
  */
 export const IDEAS_INDICE = {
   h1: "Ideas para tu marca.",
-  bajada: "Guías para elegir productos, técnicas y kits según la ocasión y quién los va a usar.",
+  // Aprobada por Nachi (12/11/2026), ahora que Ideas junta las notas y los
+  // pedidos: une las dos bajadas que ya estaban. Antes decía solo
+  // "Guías para elegir productos, técnicas y kits según la ocasión y quién los va a usar."
+  bajada:
+    "Guías para elegir productos, técnicas y kits según la ocasión y quién los va a usar. Y pedidos reales: así se ve la marca de nuestros clientes en cada producto.",
   vacio: "[Ideas: publicá al menos una nota (en src/data/ideas.ts, borrá borrador: true)]",
   borrador: "Borrador",
+  /** Filtros de la lista, que junta notas y pedidos reales (Nachi, 12/11/2026). */
+  filtros: { todo: "Todo", notas: "Notas", pedidos: "Pedidos reales" },
+  /** ✏️ Borrador de Claude (12/11/2026): solo lo leen los lectores de pantalla. */
+  filtrar: "Qué mostrar",
+  /**
+   * ✏️ Borrador de Claude (12/11/2026): marca las notas en la lista, como
+   * "Pedido real" marca los pedidos ("Nota · Sergio Basanta"). Reemplaza al
+   * tipo (Guía, Ideas…), que en la lista confundía; el tipo sigue en cada nota.
+   */
+  etiqueta: "Nota",
+  // Aprobados por Nachi (12/11/2026) para sumar los pedidos, en la línea de
+  // la bajada. Antes: "Ideas y guías de merchandising para empresas" y
+  // "Guías para elegir merchandising con el logo de tu marca: qué poner en un
+  // kit, qué técnica conviene y qué regalar en cada ocasión."
   seo: {
-    titulo: "Ideas y guías de merchandising para empresas",
+    titulo: "Ideas, guías y pedidos reales de merchandising",
     descripcion:
-      "Guías para elegir merchandising con el logo de tu marca: qué poner en un kit, qué técnica conviene y qué regalar en cada ocasión.",
+      "Guías para elegir merchandising con el logo de tu marca según la ocasión, y pedidos reales: así se ve la marca de nuestros clientes en cada producto.",
   },
 };
 
@@ -247,6 +275,8 @@ export const IDEAS_PAGINA = {
   },
   verCatalogo: (catalogo: string) => `Catálogo ${catalogo}`,
   pedido: "Así se ve en un pedido real.",
+  /** Botón de WhatsApp junto al pedido, en la compu. Mismo texto que en el resto del sitio. */
+  botonWhatsApp: "Escribinos por WhatsApp",
   /** Titular del bloque de notas en la página de cada catálogo. */
   relacionadas: "Ideas para elegir.",
   verTodas: "Ver todas las ideas",

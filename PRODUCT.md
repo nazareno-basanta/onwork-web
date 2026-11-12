@@ -36,7 +36,8 @@ La web de On Work (onwork.com.ar) reemplaza a la actual de Wix (www.onworkba.com
 
 ## Operating Context
 
-- **Contacto solo por WhatsApp:** +54 9 11 3157-9402, lo atiende el asesor de ventas. Cada página tiene su propio mensaje precargado, con la frase de Nachi: `Hola, vi en la web de On Work y me interesaría saber sobre…` (completada según la página). Sin formularios ni widget de chat.
+- **Contacto principal por WhatsApp:** +54 9 11 3157-9402, lo atiende el asesor de ventas. Cada página tiene su propio mensaje precargado, con la frase de Nachi: `Hola, vi en la web de On Work y me interesaría saber sobre…` (completada según la página). Sin formularios ni widget de chat.
+- **Mail:** onworkba@gmail.com, publicado en Contacto y en el pie (Nachi, 12/11/2026). El presupuesto también se puede mandar por mail: "Mandarlo por mail" abre el programa de mail con el mismo texto que el de WhatsApp. WhatsApp sigue siendo la acción principal.
 - **Presupuesto, no compra:** los productos de los catálogos se suman a un presupuesto (cantidad y color), sin precios ni pagos, y la web arma el mensaje de WhatsApp con la lista. Nunca "comprar" ni "carrito de compras".
 - **Sin precios en la web ni en los catálogos:** el precio depende de la cantidad y la personalización, y se cotiza por WhatsApp.
 - **Proceso (Cómo pedir, 5 pasos):** el cliente elige productos y los suma al presupuesto → lo manda por WhatsApp → On Work asesora y cotiza (según la cantidad, la personalización y la fecha) → el cliente aprueba la prueba digital → On Work produce y envía a toda la Argentina. Todo pasa por WhatsApp: la web no tiene aprobación ni seguimiento de pedidos.
@@ -55,7 +56,7 @@ La web de On Work (onwork.com.ar) reemplaza a la actual de Wix (www.onworkba.com
 - Datos editables en `src/data/` (catálogos, pedidos, clientes, preguntas) y datos centrales en `src/lib/site.ts`.
 - **Los textos los escribe Nachi.** Nada de texto inventado: lo que falta va como marcador `[dato]` y cualquier cambio a un texto existente se consulta.
 - Datos sin confirmar (no inventar, dejar marcados):
-  - Formas de pago, horario de atención y si se publica el mail.
+  - Formas de pago y horario de atención.
   - Hitos de la historia entre 1990 y 2026.
   - Qué PDF de Oficina se publica (completo o "-selection").
   - (La página de temporada `/regalos-empresariales-fin-de-ano` no se hace: decisión de Nachi, 4/11/2026.)

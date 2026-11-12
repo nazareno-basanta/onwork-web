@@ -126,8 +126,12 @@ html.lenis body {
      bajo la línea de base): la barra arranca apenas debajo de la base. */
   background-position: left calc(100% - 0.2em);
   background-size: 0% 0.34em;
-  animation: subrayar 0.7s var(--ease-ow) forwards;
-  animation-delay: calc(0.5s + var(--i, 0) * 0.35s);
+  /* Acompaña la lectura del titular (Nachi, 12/11/2026): arranca cuando ya se
+     leyó hasta "se vea" y cada barra tarda un poco más, así la tercera
+     termina cerca de los 3,6 s, cuando se terminó de leer la frase.
+     Antes: 0,5 s de espera, 0,7 s por barra y 0,35 s entre una y otra. */
+  animation: subrayar 0.9s var(--ease-ow) forwards;
+  animation-delay: calc(1.3s + var(--i, 0) * 0.65s);
 }
 @keyframes subrayar {
   to {
@@ -139,6 +143,104 @@ html.lenis body {
     animation: none;
     background-size: 100% 0.34em;
   }
+}
+
+/* Tablas de las notas de Ideas en el celular: cada fila es una ficha
+   separada por un filete de 2 px en tinta; la primera celda es el título y
+   cada una de las otras lleva arriba el nombre de su columna (data-columna).
+   Los títulos de la tabla quedan solo para el lector de pantalla. */
+@media (max-width: 767px) {
+  .tabla-nota,
+  .tabla-nota tbody,
+  .tabla-nota tr,
+  .tabla-nota td {
+    display: block;
+  }
+  .tabla-nota thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .tabla-nota tr {
+    border-top: 2px solid var(--ow-black);
+    padding-block: 1.25rem;
+  }
+  .tabla-nota tr:last-child {
+    border-bottom: 2px solid var(--ow-black);
+  }
+  .tabla-nota td {
+    border: 0;
+    padding: 0;
+  }
+  .tabla-nota td + td {
+    margin-top: 0.75rem;
+  }
+  .tabla-nota td:first-child {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ow-black);
+  }
+  .tabla-nota td[data-columna]:not(:first-child)::before {
+    content: attr(data-columna);
+    display: block;
+    margin-bottom: 0.125rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--ow-black);
+  }
+}
+
+/* Radar de "¿No está en el catálogo? Lo buscamos.": desde la diana salen
+   anillos que se abren y se apagan, uno cada 2,5 s (la búsqueda, dicha con la
+   forma de la marca). Nachi lo pidió más lento (12/11/2026): antes, 4,5 s por
+   anillo y uno cada 1,5 s. Con menos movimiento, la diana queda sola. */
+.radar-onda {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--ow-black);
+  border-radius: 9999px;
+  opacity: 0;
+  animation: radar 7.5s var(--ease-ow) infinite;
+  animation-delay: calc(var(--i, 0) * 2.5s);
+}
+@keyframes radar {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .radar-onda {
+    animation: none;
+  }
+}
+
+/* Trío ■▲● de "Desde 1990": cada forma crece desde su centro, una detrás de
+   otra, cuando la sección entra en pantalla (ver Graficos1990.tsx). */
+.trio-aparece path {
+  transform: scale(0);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.6s var(--ease-ow);
+}
+.trio-aparece path:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.trio-aparece path:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.trio-aparece.trio-visible path {
+  transform: scale(1);
 }
 
 /* Presupuesto: el número del contador da un salto al sumar un producto (la
@@ -214,5 +316,46 @@ details.faq[open]::details-content {
 @media (min-width: 768px) {
   .container-ow {
     padding-inline: 2rem;
+  }
+}
+
+/* Fila con scroll horizontal dentro de .container-ow que llega hasta los
+   bordes de la pantalla: --borde es lo que hay entre el borde de la pantalla
+   y el contenido (el margen de afuera del contenedor más su relleno). La
+   sección que la contiene lleva overflow-hidden. */
+.carrusel-sangrado {
+  --borde: calc(max(0px, (100vw - 80rem) / 2) + 1.25rem);
+  /* Tarjetas enteras a la vista (--k) y cuánto asoma la siguiente: siempre
+     un 15 %, así nunca queda una cortada a la mitad (crítica del 12/11/2026). */
+  --k: 1;
+  --separacion: 1.25rem;
+  margin-inline: calc(-1 * var(--borde));
+  padding-inline: var(--borde);
+  scroll-padding-inline: var(--borde);
+}
+/* El ancho de cada tarjeta: el lugar que hay desde el margen del contenido
+   hasta el borde de la pantalla, repartido en k tarjetas y 0,15 de otra. */
+.carrusel-sangrado > * {
+  flex-shrink: 0;
+  width: calc((100% + var(--borde) - var(--k) * var(--separacion)) / (var(--k) + 0.15));
+}
+@media (min-width: 640px) {
+  .carrusel-sangrado {
+    --k: 2;
+  }
+}
+@media (min-width: 768px) {
+  .carrusel-sangrado {
+    --borde: calc(max(0px, (100vw - 80rem) / 2) + 2rem);
+  }
+}
+@media (min-width: 1024px) {
+  .carrusel-sangrado {
+    --k: 3;
+  }
+  /* Con tres tarjetas o menos, en la compu entran todas en el ancho del
+     contenido: no asoma nada ni hay flechas. */
+  .carrusel-sangrado[data-pocas] > * {
+    width: calc((100% - 2 * var(--separacion)) / 3);
   }
 }
