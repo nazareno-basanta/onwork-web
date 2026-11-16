@@ -50,6 +50,16 @@ export const BUSQUEDAS = {
   boton: "Contanos qué buscás",
   mensaje:
     mensajeWeb("un producto que no está en los catálogos"),
+  /**
+   * Chat de ejemplo de MaquetaBusqueda.tsx: el mensaje de arriba es el real
+   * (mensajeWeb, el mismo que manda el botón); la hora y la respuesta son
+   * invención de Claude como ejemplo, igual que las maquetas de "Cómo pedir"
+   * (revisar: Nachi, 16/11/2026).
+   */
+  maqueta: {
+    hora: "11:20",
+    respuesta: "Contanos qué necesitás: lo buscamos y personalizamos para tu marca.",
+  },
 };
 
 export type Caso = {

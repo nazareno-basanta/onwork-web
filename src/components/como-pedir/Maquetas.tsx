@@ -47,8 +47,10 @@ function ConPunto({ children }: { children: string }) {
  * Pantalla de teléfono: el borde y la "isla" de arriba hacen que se lea como
  * la foto de una pantalla y no como algo para tocar. Adentro, todo plano (sin
  * sombras): los botones de la maqueta no tienen que parecer botones de la web.
+ * Exportada junto con Chat: las reutiliza la maqueta corta de Búsquedas
+ * (MaquetaBusqueda.tsx).
  */
-function Pantalla({ fondoBarra = "bg-ow-paper", className, children }: { fondoBarra?: string; className?: string; children: ReactNode }) {
+export function Pantalla({ fondoBarra = "bg-ow-paper", className, children }: { fondoBarra?: string; className?: string; children: ReactNode }) {
   return (
     <div aria-hidden="true" className="w-full max-w-[25rem] cursor-default rounded-[2.25rem] bg-white/10 p-2 select-none lg:max-w-[26rem]">
       <div className="@container overflow-hidden rounded-[1.75rem] bg-ow-paper text-ow-black">
@@ -61,7 +63,7 @@ function Pantalla({ fondoBarra = "bg-ow-paper", className, children }: { fondoBa
   );
 }
 
-function Chat({ children }: { children: ReactNode }) {
+export function Chat({ children }: { children: ReactNode }) {
   return (
     <Pantalla fondoBarra="bg-white">
       <div className="flex items-center gap-3 border-b-2 border-ow-black/10 bg-white px-4 pt-1 pb-3">

@@ -20,13 +20,16 @@ export default function Home() {
     <>
       {/* Orden de Nachi (12/11/2026): primero cómo se pide y la base de
           catálogos; "Todo lo que gira en torno a tu marca" (que lleva directo
-          a WhatsApp) y las búsquedas van después, cuando ya se sabe cómo funciona. */}
+          a WhatsApp) y las búsquedas van después, cuando ya se sabe cómo
+          funciona. Clientes se corrió entre Búsquedas y Pedidos reales
+          (16/11/2026): la prueba de confianza queda pegada a los casos
+          reales, no como primera parada después del hero. */}
       <Hero />
-      <Clientes />
       <ComoPedir cortoEnCelular />
       <CatalogosInicio />
       <QueHacemos />
       <Busquedas />
+      <Clientes />
       <PedidosInicio />
       <Desde1990 />
       <Preguntas className="border-t border-ow-black/10" datosEstructurados />

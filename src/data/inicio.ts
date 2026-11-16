@@ -38,7 +38,10 @@ export const HERO = {
  * "Tu marca, en cada ___." Aparece dentro del amarillo al final del scroll
  * del hero; las palabras pasan cada vez más rápido y la frase termina
  * siempre en la última ("detalle"). Con menos movimiento queda fija en la
- * última. Palabras de Nachi (2/11/2026).
+ * última. Palabras de Nachi (2/11/2026). Vuelve el 16/11/2026 (probamos una
+ * frase sola, el "1" del primer paso y la insignia, y ninguna terminó de
+ * cerrar): sigue siendo la base, con el arranque más rápido. Las flechas del
+ * final se probaron y salieron el mismo día.
  */
 export const FRASE_ROTATIVA = {
   inicio: "Tu marca, en cada",

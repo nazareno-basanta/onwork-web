@@ -196,35 +196,6 @@ html.lenis body {
   }
 }
 
-/* Radar de "¿No está en el catálogo? Lo buscamos.": desde la diana salen
-   anillos que se abren y se apagan, uno cada 2,5 s (la búsqueda, dicha con la
-   forma de la marca). Nachi lo pidió más lento (12/11/2026): antes, 4,5 s por
-   anillo y uno cada 1,5 s. Con menos movimiento, la diana queda sola. */
-.radar-onda {
-  position: absolute;
-  inset: 0;
-  border: 2px solid var(--ow-black);
-  border-radius: 9999px;
-  opacity: 0;
-  animation: radar 7.5s var(--ease-ow) infinite;
-  animation-delay: calc(var(--i, 0) * 2.5s);
-}
-@keyframes radar {
-  from {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  to {
-    transform: scale(2.6);
-    opacity: 0;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .radar-onda {
-    animation: none;
-  }
-}
-
 /* Trío ■▲● de "Desde 1990": cada forma crece desde su centro, una detrás de
    otra, cuando la sección entra en pantalla (ver Graficos1990.tsx). */
 .trio-aparece path {

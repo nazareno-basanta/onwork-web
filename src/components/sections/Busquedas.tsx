@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Diana } from "@/components/Formas";
+import MaquetaBusqueda from "@/components/sections/MaquetaBusqueda";
+import Reveal from "@/components/Reveal";
 import Titular from "@/components/Titular";
 import Icon from "@/components/Icon";
 import WhatsAppLink from "@/components/WhatsAppLink";
@@ -13,10 +14,13 @@ import { textoWeb } from "@/lib/utils";
  * (Sin la cinta amarilla de ejemplos: la sacó Nachi el 4/11/2026.)
  *
  * Desde el 12/11/2026 va en franja amarilla, para que se distinga de las
- * secciones de al lado, con una diana grande cortada por el borde de la que
- * salen anillos, como un radar (ver .radar-onda en globals.css). Sobre
- * amarillo, el signo del titular va en tinta y el botón pasa a blanco al
- * pasar el mouse.
+ * secciones de al lado (antes probamos ahí una diana con radar, una cruz,
+ * un sol y un estallido: ninguno terminó de cerrarle a Nachi). Ahora, en vez
+ * de una forma decorativa, una maqueta corta del chat de WhatsApp (como las
+ * de "Cómo pedir", pero de un solo intercambio): el mensaje real que manda
+ * el botón y la respuesta de On Work (ver MaquetaBusqueda.tsx). El texto
+ * aparece con <Reveal>. Sobre amarillo, el signo del titular va en tinta y
+ * el botón pasa a blanco al pasar el mouse.
  */
 export default function Busquedas({
   id = "busquedas",
@@ -32,19 +36,8 @@ export default function Busquedas({
 }) {
   return (
     <section aria-labelledby={id} className="relative overflow-hidden bg-ow-yellow py-24 md:py-32">
-      {/* El radar: en el celular, chico en la esquina de abajo; desde la tablet, grande a la derecha. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-14 -bottom-16 size-40 md:top-1/2 md:bottom-auto md:-right-24 md:size-72 md:-translate-y-1/2 lg:-right-28 lg:size-[26rem]"
-      >
-        {[0, 1, 2].map((i) => (
-          <span key={i} className="radar-onda" style={{ "--i": i } as React.CSSProperties} />
-        ))}
-        <Diana className="relative size-full text-ow-black" />
-      </div>
-
-      <div className="container-ow relative">
-        <div className="max-w-2xl md:max-w-[58%] lg:max-w-[52%]">
+      <div className="container-ow relative grid gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,19rem)] md:items-center md:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)]">
+        <Reveal>
           <Titular id={id} claseSigno="text-ow-black" className="text-[clamp(2.1rem,4.8vw,4rem)]">
             {titulo}
           </Titular>
@@ -63,7 +56,9 @@ export default function Busquedas({
               </Link>
             )}
           </div>
-        </div>
+        </Reveal>
+
+        <MaquetaBusqueda className="flex justify-center md:justify-end" />
       </div>
     </section>
   );

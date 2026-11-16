@@ -9,15 +9,17 @@
  * principal, en amarillo) y "Conocenos". (Diseño "Soportes" de Nachi.)
  *
  * Al bajar, los productos se abren hacia los costados y se van; la pantalla
- * queda fija: el isotipo crece, viaja al centro y se
- * entra en el punto amarillo, que llena la pantalla. Adentro aparece
- * "Tu marca, en cada ___." y desde ahí las palabras pasan solas (por tiempo,
- * no por scroll): la primera se deja leer y después van cada vez más rápido
- * hasta "detalle", que se marca con un golpe y una onda (Nachi, 12/11/2026:
- * antes cada palabra pedía su tramo de scroll y había mucho que bajar).
+ * queda fija: el isotipo crece, viaja al centro y se entra en el punto
+ * amarillo, que llena la pantalla. Adentro aparece "Tu marca, en cada ___." y
+ * desde ahí las palabras pasan solas (por tiempo, no por scroll): la primera
+ * se deja leer y después van cada vez más rápido hasta "detalle", que se
+ * marca con un golpe y una onda circular. (Nachi, 16/11/2026: la primera
+ * palabra arranca más rápido y la onda final es circular, no el filete del
+ * globo. Las Flechas de la marca que entraban debajo de la frase se sacaron
+ * el mismo día, y el scroll volvió al largo que tenía antes de ellas.)
  *
- * Con menos movimiento no hay scroll fijo: todo queda quieto y la
- * frase va debajo, en una franja amarilla, ya en "detalle".
+ * Con menos movimiento no hay scroll fijo: todo queda quieto y la frase va
+ * debajo, en una franja amarilla, ya en "detalle".
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -33,18 +35,18 @@ import {
 } from "motion/react";
 import CarruselHero, { type ProductoHero } from "@/components/CarruselHero";
 import Icon from "@/components/Icon";
-import RotatingText from "@/components/ui/RotatingText";
 import { ISO_ARO, ISO_CAJA, ISO_PUNTO, ISO_SIGNO } from "@/components/Isotipo";
+import RotatingText from "@/components/ui/RotatingText";
 import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
 import { sinViuda } from "@/lib/utils";
 
 // Tramos del scroll, medidos en vh de scroll mientras el hero queda fijo. El
 // hero mide RECORRIDO + 100vh. El isotipo crece en unos 120vh, la frase entra
-// y después queda fija unos 40vh mientras las palabras pasan solas: el hero se
-// suelta cuando cae "detalle" (Nachi, 12/11/2026, después de la segunda
-// crítica: con 120vh quedaba amarillo quieto, scroll sin nada; antes había
-// probado 70vh, y antes de que pasaran por tiempo eran 300vh).
+// y después queda fija mientras las palabras pasan solas: el hero se suelta
+// recién ahí (Nachi, 16/11/2026: estuvo en 200 para hacerles lugar a las
+// flechas; sin ellas vuelve a 183 — si el final queda apretado o con mucho
+// aire, es RECORRIDO el número a tocar).
 const RECORRIDO = 183;
 const vh = (a: number, b: number): [number, number] => [a / RECORRIDO, b / RECORRIDO];
 const ABRIR = vh(0, 12.6); // las tarjetas del carrusel se abren y se van
@@ -54,12 +56,12 @@ const CENTRADO = vh(8, 92);
 const FRASE = vh(126, 143); // de 143 a 183 la frase queda fija
 
 /**
- * Ritmo de las palabras, en milisegundos: la primera ("evento") queda 1,4 s
+ * Ritmo de las palabras, en milisegundos: la primera ("evento") queda 900 ms
  * para que se lea la frase entera; después cada una dura menos que la
- * anterior, de 700 a 110 ms, hasta caer en "detalle" (en total, unos 4,4 s;
- * antes eran 1000 / 480 / 70 ms y unos 3 s, y Nachi lo quería más lento).
+ * anterior, de 700 a 110 ms, hasta caer en "detalle" (Nachi, 16/11/2026: la
+ * primera palabra pedía 1400 ms, la quiso más rápida).
  */
-const PRIMERA = 1400;
+const PRIMERA = 900;
 const LENTA = 700;
 const RAPIDA = 110;
 const espera = (i: number, ultima: number) =>
@@ -108,7 +110,7 @@ function TitularHero() {
   let peso = PESO_ANTES;
   for (const m of marcas) {
     // sinViuda pudo unir las dos últimas palabras con un espacio duro.
-    const buscada = resto.includes(m.frase) ? m.frase : m.frase.replace(" ", "\u00a0");
+    const buscada = resto.includes(m.frase) ? m.frase : m.frase.replace(" ", " ");
     const j = resto.indexOf(buscada);
     if (j === -1) continue;
     partes.push(
@@ -217,15 +219,17 @@ function Frase({ indice, final }: { indice: number; final: boolean }) {
           animate={final && !reduce ? { scale: [1.22, 0.96, 1], rotate: [-3, 1, 0] } : { scale: 1, rotate: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Al llegar a "detalle": dos ondas salen de la palabra. */}
+          {/* Al llegar a "detalle": una onda circular (Nachi, 16/11/2026: antes
+              calcaba la forma rectangular del globo; ahora es una onda redonda,
+              como una piedra que cae). */}
           {final &&
             !reduce &&
             [0, 0.15].map((d) => (
               <motion.span
                 key={d}
-                className="absolute inset-0 rounded-[0.16em] border-[0.06em] border-ow-black"
-                initial={{ scale: 1, opacity: 0.7 }}
-                animate={{ scale: 1.6, opacity: 0 }}
+                className="absolute inset-0 -m-[0.3em] rounded-full border-[0.06em] border-ow-black"
+                initial={{ scale: 0.6, opacity: 0.7 }}
+                animate={{ scale: 1.8, opacity: 0 }}
                 transition={{ duration: 0.9, delay: d, ease: [0.22, 1, 0.36, 1] }}
               />
             ))}
@@ -377,7 +381,7 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
 
         <motion.div
           style={{ opacity: fraseOpacidad, y: fraseY }}
-          className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-5"
+          className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center px-5"
         >
           <Frase indice={indice} final={indice === ultima} />
         </motion.div>
