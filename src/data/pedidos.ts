@@ -63,7 +63,7 @@ export const PEDIDOS: Pedido[] = [
   {
     slug: "casa-fernandes",
     cliente: "Casa Fernandes",
-    rubro: "Productos para instalaciones sanitarias",
+    rubro: "Distribuidores de instalaciones sanitarias",
     producto: "Sets materos y mochilas",
     disenoDelCliente: "si",
     uso: "Regalo de fin de año",
