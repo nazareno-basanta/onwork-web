@@ -3,7 +3,7 @@ import Link from "next/link";
 import BotonBuscar from "./BotonBuscar";
 import MobileNav from "./MobileNav";
 import NavDesktop from "./NavDesktop";
-import WhatsAppLink from "./WhatsAppLink";
+import WhatsAppDePagina from "./WhatsAppDePagina";
 import ContadorPresupuesto from "./presupuesto/ContadorPresupuesto";
 
 /**
@@ -45,9 +45,10 @@ export default function Header() {
           <div className="max-lg:hidden">
             <ContadorPresupuesto variante="escritorio" />
           </div>
-          <WhatsAppLink tone="black" className="max-lg:hidden !px-4 xl:!px-5">
+          {/* Con el mensaje de la página que se está viendo (ver lib/mensajePagina). */}
+          <WhatsAppDePagina tone="black" className="max-lg:hidden !px-4 xl:!px-5">
             Escribinos
-          </WhatsAppLink>
+          </WhatsAppDePagina>
           <MobileNav />
         </div>
       </div>

@@ -116,7 +116,7 @@ components:
 <!--
 Fuentes: skill on-work-marca (manda), ../Web OW/02-BRIEF-WEB.md y el código de onwork-web al 30/10/2026.
 Decisiones de Nachi en este documento: idea guía "Dar en el blanco", Montserrat 500 en los textos, superficies con relieve suave.
-El código todavía difiere en algunos puntos (fondo #F5F3EE y blanco, cuerpo en Nunito, .eyebrow, isotipo sobre tinta, logo tipeado en la imagen OG, flechas como caracteres, header con desenfoque). Se alinea a este documento en el paso 2 y en los pasos de cada página.
+Revisado el 18/11/2026: el código ya sigue este documento (no quedan el fondo #F5F3EE, el cuerpo en Nunito, .eyebrow ni el header con desenfoque).
 -->
 
 # Design System: On Work
@@ -156,7 +156,9 @@ Una paleta casi monocromática: papel crema, tinta casi negra y un amarillo que 
 ### Named Rules
 **The Punto de Mira Rule.** El amarillo es un acento: marca un punto, no llena un párrafo. Va en puntos, signos, números, filetes, pastillas y botones, y nunca pasa del 10 % de una pantalla. Si un bloque entero es amarillo, el texto encima es tinta.
 
-**The Contraste Rule.** No hay texto amarillo sobre crema, crema suave ni blanco en ningún tamaño, y no hay texto blanco sobre amarillo. Texto amarillo, solo sobre tinta.
+**The Contraste Rule.** No hay texto amarillo sobre crema, crema suave ni blanco en ningún tamaño, y no hay texto blanco sobre amarillo. Texto amarillo, solo sobre tinta. La única excepción, a propósito, es el punto final (o el signo) de los titulares (ver The Punto Final Rule): es puntuación grande que no lleva información propia, y es la firma de la marca.
+
+**The Solo Claro Rule.** La web es clara, sin modo oscuro: declara `color-scheme: light`, así el modo oscuro automático de algunos navegadores del celular no invierte los colores.
 
 **The Tinta Rule.** El negro de la marca es tinta (#231F20). Nunca #000, ni en texto, ni en fondos, ni en sombras.
 
@@ -275,7 +277,7 @@ La tienda sin precios: cada catálogo muestra sus productos y cada producto tien
 
 ### Hero del Inicio
 - Crema liso: titular centrado en tres renglones, el isotipo original debajo (sin agregados) y dos botones: "Ver catálogos" (amarillo, el principal, más grande) y "Conocenos" (outline, a Nosotros). Sin ondas.
-- **Carrusel de destacados** (diseño "Soportes" de Nachi, `CarruselHero.tsx`): una fila de productos a la altura del centro del aro, foto entera en marco blanco con la pastilla del código y el nombre. Solo desde 640 px: en el celular el hero queda con el isotipo solo (Nachi, 6/11/2026: ahí se trababa y no se apreciaba), sin cargar fotos ni animación. Corre de a un lugar, de derecha a izquierda (Nachi, 6/11/2026: la órbita continua no; por pasos, rápido): queda quieta 1,4 s con tres a cada lado y corre en 0,75 s. Todas tienen el mismo tamaño. Pasan por detrás del isotipo, que no se toca: detrás hay un círculo del crema del fondo que las tapa, y al meterse achican hasta un 70 % para no asomar por los costados del aro. En los bordes se esfuman. Con el mouse encima no arranca el próximo paso; cada tarjeta lleva a su producto. Los productos salen de `HERO.destacados`. Es decorativo para el lector de pantalla (los productos están en los catálogos). Con menos movimiento queda quieta, tres a cada lado.
+- **Carrusel de destacados** (diseño "Soportes" de Nachi, `CarruselHero.tsx`): una fila de productos a la altura del centro del aro, foto entera en marco blanco con la pastilla del código y el nombre. Solo desde 640 px: en el celular el hero queda con el isotipo solo (Nachi, 6/11/2026: ahí se trababa y no se apreciaba), sin cargar fotos ni animación. Corre de a un lugar, de derecha a izquierda (Nachi, 6/11/2026: la órbita continua no; por pasos, rápido): queda quieta 1,4 s con tres a cada lado y corre en 0,75 s. Todas tienen el mismo tamaño. Pasan por detrás del isotipo, que no se toca: detrás hay un círculo del crema del fondo que las tapa, y al meterse achican hasta un 70 % para no asomar por los costados del aro. En los bordes se esfuman. Con el mouse encima, o con el foco del teclado en el hero, no arranca el próximo paso; cada tarjeta lleva a su producto. Quieta no gasta nada: solo hay animación cuadro a cuadro mientras corre un lugar. Los productos salen de `HERO.destacados`. Es decorativo para el lector de pantalla (los productos están en los catálogos). Con menos movimiento queda quieta, tres a cada lado.
 - **Juego de pesos del titular** (Nachi, 6/11/2026; la única excepción a los titulares en ExtraBold): "Merchandising" en ExtraBold 800, "que hace que" en Medium 500, "tu marca" en Bold 700 itálica y "se vea, se use y se recuerde." en Black 900, sin itálica. Para eso se carga la itálica de Montserrat (misma familia).
 - **Subrayado del titular:** "se vea", "se use" y "se recuerde" se subrayan solos al cargar, uno tras otro, en la compu y en el celular. La barra es el fondo del propio texto (no una capa detrás), así la letra queda siempre por delante.
 - **Titulares que acompañan:** en las secciones con el titular a la izquierda y una lista a la derecha (Qué hacemos del Inicio y de Nosotros, Preguntas frecuentes, Cómo mandarnos tu logo), en la compu el titular queda fijo debajo del header mientras se recorre la lista.

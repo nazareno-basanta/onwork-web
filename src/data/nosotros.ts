@@ -34,7 +34,8 @@ export const VALORES = {
     { titulo: "Buen servicio", texto: "Respondemos rápido y cumplimos lo que acordamos." },
     {
       titulo: "Atención personalizada",
-      texto: "Cada pedido lo sigue una persona, de la consulta a la entrega. [confirmar]",
+      // Confirmado por Nachi el 18/11/2026.
+      texto: "Cada pedido lo sigue una persona, de la consulta a la entrega.",
     },
     { titulo: "Resolver", texto: "Si el producto no está en el catálogo, lo buscamos." },
     {

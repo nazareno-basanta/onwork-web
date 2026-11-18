@@ -75,6 +75,11 @@ export const AJUSTES: Record<string, AjusteProducto> = {
       Violeta: 30,
       "Violeta pastel": 29,
     },
+    // Sin "el más pedido": es una cifra de pedidos sin fuente (Nachi, 18/11/2026).
+    textos: {
+      descripcion:
+        "Cuaderno A5: tapa dura forrada en eco cuero soft mate, banda elástica al tono y señalador. Hojas lisas o rayadas.",
+    },
   },
   // Fotos con texto que no va en la web (revisadas con reconocimiento de
   // texto el 5/11/2026): nombre del proveedor, avisos del proveedor
@@ -144,4 +149,10 @@ export const AJUSTES: Record<string, AjusteProducto> = {
 
   // Gran Borges: la foto 1 tenía escritos los nombres del importador.
   "OW-CUA-03": { fotos: [3], nota: "La foto 1 tiene texto del importador y la 2, medidas: no van." },
+
+  // Textos del Excel que chocan con las reglas de marca (PRODUCT.md): sin
+  // "premium" (tono de proveedor) ni afirmaciones ambientales (Nachi, 18/11/2026).
+  "OW-DRK-01": { textos: { descripcion: "Mate térmico importado, de acero con boca de acero inoxidable." } }, // Apóstoles
+  "OW-ESC-15": { textos: { descripcion: "Cuerpo de bamboo con clip de fibra de trigo y ABS. Retráctil, tinta negra." } }, // Cafrune
+  "OW-MAR-01": { textos: { tipo: "Mochila porta notebook" } }, // Aconcagua
 };

@@ -6,6 +6,7 @@ import Titular from "@/components/Titular";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import { CATALOGOS_HUB } from "@/data/catalogos";
 import { NO_ENCONTRADA as T } from "@/data/no-encontrada";
+import { MensajeDePagina } from "@/lib/mensajePagina";
 import { btn } from "@/lib/ui";
 import { textoWeb } from "@/lib/utils";
 
@@ -23,6 +24,8 @@ export const metadata: Metadata = {
 export default function NoEncontrada() {
   return (
     <section className="relative isolate overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+      {/* El botón flotante y "Escribinos" también mandan "…un producto que no encontré". */}
+      <MensajeDePagina mensaje={T.mensaje} />
       <Diana className="absolute top-8 -right-56 -z-10 w-[28rem] text-ow-paper-soft md:top-16 md:-right-40 md:w-[38rem]" />
       <div className="container-ow">
         <div className="max-w-3xl">

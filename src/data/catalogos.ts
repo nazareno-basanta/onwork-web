@@ -83,7 +83,7 @@ const LISTA: Catalogo[] = [
       {
         nombre: "Mates",
         paginas: "03",
-        texto: "Mates térmicos, de acero y de algarrobo, ideales para eventos o kits de bienvenida con nivel premium.",
+        texto: "Mates térmicos, de acero y de algarrobo, ideales para eventos o kits de bienvenida.",
       },
       {
         nombre: "Accesorios materos",
@@ -144,12 +144,12 @@ const LISTA: Catalogo[] = [
       {
         nombre: "Ecológicos",
         paginas: "06",
-        texto: "Cartón reciclado, fibra de trigo y plástico reciclado para comunicar una marca responsable.",
+        texto: "Cartón reciclado, fibra de trigo y plástico reciclado.",
       },
       {
         nombre: "Bamboo y aluminio",
         paginas: "07",
-        texto: "Bamboo, fibra de trigo y aluminio reciclado: la versión premium de la línea ecológica.",
+        texto: "Bamboo, fibra de trigo y aluminio reciclado.",
       },
       {
         nombre: "Multifunción",
@@ -526,6 +526,13 @@ export const PRODUCTO_PAGINA = {
   colores: "Colores",
   /** ✏️ Borrador: debajo de los colores, si el producto tiene más de uno. */
   colorAyuda: "Si todavía no lo sabés, dejalo en «A definir»: lo ves después en tu presupuesto.",
+  /**
+   * ✏️ Borrador de Claude (18/11/2026), para revisar: debajo de "Sumar al
+   * presupuesto", igual en todas las fichas. Para quien llega desde Google sin
+   * conocer On Work: quiénes somos y que sumar no es comprar.
+   */
+  comoFunciona:
+    "Merchandising con tu marca, desde 1990. Sumalo al presupuesto y te cotizamos por WhatsApp: en la web no se paga nada.",
   dudas: "¿Dudas con este producto?",
   dudasLink: "Escribinos por WhatsApp",
   mensaje: (nombre: string, codigo: string) => mensajeWeb(`el producto ${nombre} (${codigo})`),

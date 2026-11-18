@@ -57,3 +57,11 @@ test("en los recuadros de secciones, el texto solo coincide con palabras enteras
   // Sin la opción (los productos), el comienzo de una palabra sí cuenta.
   assert.deepEqual(ordenar([cintas, mates], "mate").map((l) => l.nombre), ["Mates", "Cintas sublimadas"]);
 });
+
+test("en el nombre no cuenta un pedazo del medio; en el código sí", () => {
+  const cortazar = { nombre: "Cortázar", campos: [[textoDeBusqueda(["Cortázar"]), 5, false], ["ow-cua-04", 5], [textoDeBusqueda(["Cuaderno A5"]), 4]] as Campo[] };
+  const taza = { nombre: "Taza mágica", campos: [[textoDeBusqueda(["Taza mágica"]), 5, false], ["ow-drk-30", 5], [textoDeBusqueda(["Taza"]), 4]] as Campo[] };
+  assert.deepEqual(ordenar([cortazar, taza], "taza").map((p) => p.nombre), ["Taza mágica"]);
+  assert.deepEqual(ordenar([cortazar, taza], "cort").map((p) => p.nombre), ["Cortázar"], "el comienzo del nombre sí");
+  assert.deepEqual(ordenar([cortazar, taza], "drk-30").map((p) => p.nombre), ["Taza mágica"], "el código, aunque esté en el medio");
+});

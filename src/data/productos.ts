@@ -50,11 +50,12 @@ function nombreDeSeccion(catalogo: string, seccion: string) {
 }
 
 /**
- * "Ver fotos" en la columna Colores quiere decir que los colores están en las
- * fotos: en la web no se muestra como un color (ni en el presupuesto).
+ * "Ver fotos" (o "Ver web", la web del proveedor) en la columna Colores
+ * quiere decir que los colores están en otro lado: en la web no se muestra
+ * como un color (ni en el presupuesto).
  */
 const sinVerFotos = (colores: string[]) =>
-  colores.map((c) => c.replace(/\s*\(ver fotos\)/i, "").trim()).filter((c) => c && !/^ver fotos$/i.test(c));
+  colores.map((c) => c.replace(/\s*\(ver (fotos|web)\)/i, "").trim()).filter((c) => c && !/^ver (fotos|web)$/i.test(c));
 
 function conAjustes(p: Producto) {
   const ajuste = AJUSTES[p.codigo] ?? {};
@@ -172,7 +173,8 @@ export function indiceBusqueda(): ProductoBuscable[] {
   return PRODUCTOS.map((p) => ({
     ...aTarjeta(p),
     campos: [
-      [textoDeBusqueda([p.nombre]), 5],
+      // El nombre es un nombre propio (Cortázar, Spinetta): un pedazo del medio no cuenta ("taza" no trae Cortázar).
+      [textoDeBusqueda([p.nombre]), 5, false],
       [normalizar(p.codigo), 5],
       [textoDeBusqueda([p.tipo]), 4],
       [textoDeBusqueda([p.seccion]), 3],

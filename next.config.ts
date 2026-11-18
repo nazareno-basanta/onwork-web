@@ -66,6 +66,8 @@ const nextConfig: NextConfig = {
       // Pedidos reales se unió a Ideas (12/11/2026): la lista de pedidos es
       // /ideas con el filtro puesto. Cada pedido sigue en /pedidos/<cliente>.
       { source: "/pedidos", destination: "/ideas?ver=pedidos", permanent: true },
+      // /ideas/autores no tiene página propia (cada autor sí): lleva a las notas.
+      { source: "/ideas/autores", destination: "/ideas", permanent: true },
       ...a("/", "/merchandising", "/banners-vinilos", "/folletos-imanes"),
       ...a(
         "/catalogos/oficina",

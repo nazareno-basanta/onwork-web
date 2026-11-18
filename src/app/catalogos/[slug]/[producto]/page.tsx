@@ -130,6 +130,8 @@ export default async function ProductoPage({ params }: PageProps<"/catalogos/[sl
                   colores={producto.colores}
                   fotoDeColor={producto.fotoDeColor}
                 />
+                {/* Para quien llega desde Google: quiénes somos y que sumar no es comprar. */}
+                <p className="mt-4 max-w-md text-sm text-pretty text-ow-gray">{textoWeb(PRODUCTO_PAGINA.comoFunciona)}</p>
               </div>
 
               <div className="mt-8 flex flex-col items-start gap-y-1 border-t border-ow-black/10 pt-6">

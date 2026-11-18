@@ -61,8 +61,12 @@ export function alternativas(palabra: string) {
   return [...formas];
 }
 
-/** Un campo del índice: su texto (normalizado) y cuánto pesa una coincidencia ahí. */
-export type Campo = [texto: string, peso: number];
+/**
+ * Un campo del índice: su texto (normalizado), cuánto pesa una coincidencia
+ * ahí y si cuenta un pedazo del medio de una palabra (por defecto, sí en los
+ * campos de peso 3 o más: el código "drk-01" está en el medio de "ow-drk-01").
+ */
+export type Campo = [texto: string, peso: number, medio?: boolean];
 
 /** ×3 si es la palabra entera ("bolso"), ×2 si es el comienzo de una ("bolsón"), ×1 si está en el medio. */
 function multiplicador(texto: string, forma: string) {
@@ -85,12 +89,13 @@ export function puntaje(campos: Campo[], palabras: string[], enterasDebajoDe = 0
   for (const palabra of palabras) {
     let mejor = 0;
     for (const forma of alternativas(palabra)) {
-      for (const [texto, peso] of campos) {
+      for (const [texto, peso, medio = peso >= 3] of campos) {
         if (!texto.includes(forma)) continue;
         const veces = multiplicador(texto, forma);
-        // En los campos de poco peso (la descripción, el catálogo) no cuenta un pedazo del medio
-        // de otra palabra: "lapicera" no tiene que traer los cuadernos con "portabolígrafo".
-        if (veces === 1 && peso < 3) continue;
+        // En los campos de poco peso (la descripción, el catálogo) y en el nombre no cuenta un
+        // pedazo del medio de otra palabra: "lapicera" no tiene que traer los cuadernos con
+        // "portabolígrafo", ni "taza" el cuaderno Cortázar.
+        if (veces === 1 && !medio) continue;
         if (veces < 3 && peso < enterasDebajoDe) continue;
         mejor = Math.max(mejor, peso * veces);
       }

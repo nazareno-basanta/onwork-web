@@ -1,7 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { whatsappUrl, MENSAJE_GENERAL } from "@/lib/site";
+import { useMensajePagina } from "@/lib/mensajePagina";
+import { whatsappUrl } from "@/lib/site";
 import { usePresupuesto } from "@/lib/usePresupuesto";
 import { cn } from "@/lib/utils";
 import Icon from "./Icon";
@@ -13,16 +14,19 @@ import { useBarraPresupuesto } from "./presupuesto/BarraPresupuesto";
  * En el celular, en los catálogos, lo reemplaza la barra del presupuesto
  * mientras haya productos sumados. En /presupuesto con productos no aparece:
  * la página ya tiene su botón para enviar.
+ * Manda el mensaje de la página (en un producto, "…sobre el producto …"), o
+ * el general donde no hay uno propio (ver lib/mensajePagina).
  */
 export default function WhatsAppFloat() {
   const barra = useBarraPresupuesto();
   const pathname = usePathname();
   const { lineas } = usePresupuesto();
+  const mensaje = useMensajePagina();
   if (pathname === "/presupuesto" && lineas.length > 0) return null;
 
   return (
     <a
-      href={whatsappUrl(MENSAJE_GENERAL)}
+      href={whatsappUrl(mensaje)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribinos por WhatsApp"
