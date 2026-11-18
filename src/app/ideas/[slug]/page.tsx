@@ -15,6 +15,7 @@ import Preguntas from "@/components/sections/Preguntas";
 import { AUTORES } from "@/data/autores";
 import { CATALOGOS } from "@/data/catalogos";
 import { IDEAS_PAGINA, IDEAS_VISIBLES } from "@/data/ideas";
+import { NO_ENCONTRADA } from "@/data/no-encontrada";
 import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { PRODUCTOS, aTarjeta } from "@/data/productos";
 import { articulo } from "@/lib/datosEstructurados";
@@ -47,7 +48,7 @@ const link =
 
 export async function generateMetadata({ params }: PageProps<"/ideas/[slug]">): Promise<Metadata> {
   const idea = await buscar(params);
-  if (!idea) return {};
+  if (!idea) return { title: NO_ENCONTRADA.titulo };
   const url = urlIdea(idea.slug);
   const autor = AUTORES[idea.autor];
   return {

@@ -10,6 +10,7 @@ import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
 import SumarConColor from "@/components/catalogo/SumarConColor";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS, CATALOGO_PAGINA, PRODUCTO_PAGINA } from "@/data/catalogos";
+import { NO_ENCONTRADA } from "@/data/no-encontrada";
 import { PRODUCTOS, aTarjeta, producto as buscarProducto, relacionados } from "@/data/productos";
 import { urlProducto } from "@/lib/rutas";
 import { descripcionProducto, tituloProducto } from "@/lib/seoProducto";
@@ -40,7 +41,7 @@ async function datos(params: Params) {
 
 export async function generateMetadata({ params }: PageProps<"/catalogos/[slug]/[producto]">): Promise<Metadata> {
   const d = await datos(params);
-  if (!d) return {};
+  if (!d) return { title: NO_ENCONTRADA.titulo };
   const seo = { ...d.producto, colores: d.producto.colores.length, catalogo: d.catalogo.titulo };
   const titulo = tituloProducto(seo);
   const descripcion = descripcionProducto(seo);

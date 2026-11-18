@@ -7,7 +7,7 @@ import WhatsAppLink from "@/components/WhatsAppLink";
 import Preguntas from "@/components/sections/Preguntas";
 import { CONTACTO } from "@/data/contacto";
 import { MENSAJE_GENERAL, SITE } from "@/lib/site";
-import { textoWeb } from "@/lib/utils";
+import { cn, textoWeb } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: CONTACTO.seo.titulo,
@@ -17,6 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactoPage() {
+  // En la web publicada, solo si están confirmados (sin [marcador]).
+  const horario = textoWeb(CONTACTO.horario);
+  const pagos = textoWeb(CONTACTO.pagos);
+
   return (
     <>
       <section className="relative isolate overflow-hidden pt-10 pb-20 md:pt-14 md:pb-28">
@@ -36,7 +40,13 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-12 border-t-2 border-ow-black pt-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
+          <div
+            className={cn(
+              "mt-20 grid gap-12 border-t-2 border-ow-black pt-12 md:grid-cols-2",
+              // Sin horario ni formas de pago confirmados, la columna del medio no va.
+              horario || pagos ? "lg:grid-cols-[1.3fr_1fr_1fr]" : "lg:grid-cols-[1.3fr_1fr]",
+            )}
+          >
             <div>
               <Titular className="text-2xl">{CONTACTO.datosTitulo}</Titular>
               <ul className="mt-5 space-y-2.5">
@@ -48,18 +58,22 @@ export default function ContactoPage() {
                 ))}
               </ul>
             </div>
-            <div className="space-y-8">
-              {textoWeb(CONTACTO.horario) && (
-                <div>
-                  <h2 className="font-display text-lg font-bold">{CONTACTO.horarioTitulo}</h2>
-                  <p className="mt-2 text-ow-black/80">{textoWeb(CONTACTO.horario)}</p>
-                </div>
-              )}
-              <div>
-                <h2 className="font-display text-lg font-bold">{CONTACTO.pagosTitulo}</h2>
-                <p className="mt-2 text-ow-black/80">{textoWeb(CONTACTO.pagos)}</p>
+            {(horario || pagos) && (
+              <div className="space-y-8">
+                {horario && (
+                  <div>
+                    <h2 className="font-display text-lg font-bold">{CONTACTO.horarioTitulo}</h2>
+                    <p className="mt-2 text-ow-black/80">{horario}</p>
+                  </div>
+                )}
+                {pagos && (
+                  <div>
+                    <h2 className="font-display text-lg font-bold">{CONTACTO.pagosTitulo}</h2>
+                    <p className="mt-2 text-ow-black/80">{pagos}</p>
+                  </div>
+                )}
               </div>
-            </div>
+            )}
             <div className="space-y-8">
               <div>
                 <h2 className="font-display text-lg font-bold">{CONTACTO.redesTitulo}</h2>

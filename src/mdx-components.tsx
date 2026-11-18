@@ -30,7 +30,7 @@ function leerTabla(children: ReactNode) {
  * los .mdx.
  *
  * Como en el resto del sitio, los [marcadores] se ven en npm run dev y no en
- * la web publicada: un párrafo o subtítulo que es todo marcador no se muestra.
+ * la web publicada: un párrafo o subtítulo con un marcador no se muestra.
  */
 const texto = (children: ReactNode) => (typeof children === "string" ? textoWeb(children) : children);
 

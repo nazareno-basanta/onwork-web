@@ -3,7 +3,8 @@
  * también en cada página de catálogo).
  * Textos de ../Web OW/03-CONTENIDO-PAGINAS.md, actualizados con el presupuesto
  * (aprobados por Nachi el 5/11/2026). Lo que está entre [corchetes]
- * falta confirmar y se ve así en la web hasta que lo completes.
+ * falta confirmar: se ve en npm run dev, y en la web publicada esa pregunta no
+ * aparece hasta que lo completes y borres el marcador.
  *
  * Las respuestas quedan escritas en la página (no se cargan al abrir), así
  * Google también las lee.

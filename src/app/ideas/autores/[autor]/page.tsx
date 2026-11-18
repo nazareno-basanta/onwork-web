@@ -8,6 +8,7 @@ import ListaIdeas from "@/components/ideas/ListaIdeas";
 import Cierre from "@/components/sections/Cierre";
 import { AUTORES, AUTOR_PAGINA, type AutorId } from "@/data/autores";
 import { IDEAS_PAGINA, IDEAS_VISIBLES } from "@/data/ideas";
+import { NO_ENCONTRADA } from "@/data/no-encontrada";
 import { perfil } from "@/lib/datosEstructurados";
 import { urlAutor } from "@/lib/rutas";
 import { mostrarMarcadores, textoWeb } from "@/lib/utils";
@@ -36,7 +37,7 @@ async function buscar(params: PageProps<"/ideas/autores/[autor]">["params"]) {
 
 export async function generateMetadata({ params }: PageProps<"/ideas/autores/[autor]">): Promise<Metadata> {
   const id = await buscar(params);
-  if (!id) return {};
+  if (!id) return { title: NO_ENCONTRADA.titulo };
   const autor = AUTORES[id];
   const url = urlAutor(id);
   const descripcion = AUTOR_PAGINA.descripcion(autor);

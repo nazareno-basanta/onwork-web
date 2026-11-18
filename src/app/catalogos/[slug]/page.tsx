@@ -17,6 +17,7 @@ import Cierre from "@/components/sections/Cierre";
 import Preguntas from "@/components/sections/Preguntas";
 import { CATALOGOS, CATALOGO_PAGINA, type Catalogo } from "@/data/catalogos";
 import { IDEAS_PAGINA, ideasDeCatalogo } from "@/data/ideas";
+import { NO_ENCONTRADA } from "@/data/no-encontrada";
 import { PEDIDOS_VISIBLES } from "@/data/pedidos";
 import { PREGUNTAS } from "@/data/preguntas";
 import { aTarjeta, secciones as seccionesDe, type SeccionConProductos } from "@/data/productos";
@@ -42,7 +43,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/catalogos/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const catalogo = CATALOGOS.find((c) => c.slug === slug);
-  if (!catalogo) return {};
+  if (!catalogo) return { title: NO_ENCONTRADA.titulo };
   const url = `/catalogos/${catalogo.slug}`;
   return {
     title: catalogo.seo.titulo,

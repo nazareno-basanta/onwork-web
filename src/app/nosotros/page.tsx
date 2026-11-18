@@ -51,7 +51,8 @@ export default function NosotrosPage() {
             {VALORES.titulo}
           </Titular>
           <ul className="mt-12 grid border-t-2 border-ow-black md:grid-cols-2 md:gap-x-12">
-            {VALORES.items.map((v) => (
+            {/* En la web publicada, solo los valores con el texto confirmado (sin [marcador]). */}
+            {VALORES.items.filter((v) => textoWeb(v.texto)).map((v) => (
               <li key={v.titulo} className="border-b-2 border-ow-black py-7">
                 <h3 className="font-display text-xl font-bold md:text-2xl">{v.titulo}</h3>
                 <p className="mt-2 max-w-md text-ow-black/80">{textoWeb(v.texto)}</p>

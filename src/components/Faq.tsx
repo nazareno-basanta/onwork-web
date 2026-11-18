@@ -1,10 +1,10 @@
 import type { Pregunta } from "@/data/preguntas";
-import { esMarcador, mostrarMarcadores, textoWeb } from "@/lib/utils";
+import { textoWeb } from "@/lib/utils";
 import Icon from "./Icon";
 
-/** En la web publicada no van las preguntas cuya respuesta es todavía un marcador. */
+/** En la web publicada no van las preguntas con algo sin confirmar (un [marcador]). */
 export function preguntasVisibles(preguntas: Pregunta[]) {
-  return mostrarMarcadores ? preguntas : preguntas.filter((q) => !esMarcador(q.respuesta));
+  return preguntas.filter((q) => textoWeb(q.pregunta) && textoWeb(q.respuesta));
 }
 
 /**

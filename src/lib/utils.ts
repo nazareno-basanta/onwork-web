@@ -49,23 +49,22 @@ export function tieneMarcador(texto?: string) {
   return !!texto && /\[[^\]]*\]/.test(texto);
 }
 
-/** ¿Es todo marcador? ("[dato]", "[confirmar: …]"). Un texto vacío también cuenta. */
-export function esMarcador(texto?: string) {
-  return !texto || texto.replace(MARCADOR, "").trim() === "";
-}
-
-/** En la web publicada saca los marcadores; mientras trabajamos los deja. */
+/**
+ * En la web publicada saca los marcadores; mientras trabajamos los deja. Solo
+ * para titulares y textos para Google; los párrafos van con textoWeb.
+ */
 export function sinMarcadores(texto: string) {
   return mostrarMarcadores ? texto : texto.replace(MARCADOR, "").trim();
 }
 
 /**
- * Texto de src/data listo para la web: sin marcadores en producción y sin
- * viudas. Si no queda nada (era todo marcador), devuelve null y el párrafo no
- * se muestra.
+ * Texto de src/data listo para la web, sin viudas. Un texto con algún
+ * marcador ("[dato]", "[confirmar]") todavía no está confirmado: mientras
+ * trabajamos se ve con el marcador y en la web publicada no se muestra entero
+ * (devuelve null), así nunca se publica como hecho la mitad de una frase.
  */
 export function textoWeb(texto?: string) {
   if (!texto) return null;
-  const limpio = sinMarcadores(texto);
-  return limpio ? sinViuda(limpio) : null;
+  if (!mostrarMarcadores && tieneMarcador(texto)) return null;
+  return sinViuda(texto);
 }

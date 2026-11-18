@@ -10,6 +10,7 @@ import TarjetaProducto from "@/components/catalogo/TarjetaProducto";
 import Cierre from "@/components/sections/Cierre";
 import { CATALOGOS } from "@/data/catalogos";
 import { IDEAS_PAGINA } from "@/data/ideas";
+import { NO_ENCONTRADA } from "@/data/no-encontrada";
 import { PRODUCTOS, aTarjeta, productosDe } from "@/data/productos";
 import { PEDIDOS_PAGINA, PEDIDOS_VISIBLES, mensajePedido, type Pedido } from "@/data/pedidos";
 import { medidasFoto } from "@/lib/medidasFoto";
@@ -35,7 +36,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/pedidos/[cliente]">): Promise<Metadata> {
   const { cliente } = await params;
   const pedido = PEDIDOS_VISIBLES.find((p) => p.slug === cliente);
-  if (!pedido) return {};
+  if (!pedido) return { title: NO_ENCONTRADA.titulo };
   const titulo = `${pedido.producto} para ${pedido.cliente}`;
   const url = `/pedidos/${pedido.slug}`;
   return {
