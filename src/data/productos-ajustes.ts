@@ -122,13 +122,13 @@ export const AJUSTES: Record<string, AjusteProducto> = {
   "OW-OFI-20": { descartar: [1, 4, 5, 6], fotoDeColor: { Blanco: 2, Negro: 3 } }, // Gran Kavanagh: ídem
   // Kavanagh Portalápiz: "Impresión full color" y "LOGO AQUÍ" (Cristal: sin foto).
   "OW-OFI-21": { descartar: [1, 4, 5], fotoDeColor: { Blanco: 2, Negro: 3 } },
-  // Colón: dirección web, "Impresión full color" y "AQUÍ". Celeste va al azul opaco (4) y
-  // Translúcidos al rojo translúcido (6): a confirmar.
+  // Colón: dirección web, "Impresión full color" y "AQUÍ". Translúcidos va al rojo
+  // translúcido (6). Celeste: sin foto (la 4 es un azul opaco más fuerte; Nachi, 18/11).
   "OW-OFI-22": {
     descartar: [1, 13, 14, 15],
-    fotoDeColor: { Blanco: 2, Amarillo: 3, Celeste: 4, Negro: 5, Translúcidos: 6, Rojo: 10, Cristal: 11, "Eco beige": 12 },
+    fotoDeColor: { Blanco: 2, Amarillo: 3, Negro: 5, Translúcidos: 6, Rojo: 10, Cristal: 11, "Eco beige": 12 },
   },
-  // Cervantes: aviso del proveedor y "TU LOGO aquí". Translúcidos va al azul translúcido (5): a confirmar.
+  // Cervantes: aviso del proveedor y "TU LOGO aquí". Translúcidos va al azul translúcido (5).
   "OW-OFI-23": { descartar: [1, 2, 3, 4, 6, 7, 8, 10], fotoDeColor: { Translúcidos: 5, Cristal: 9 } },
   // Colón Tarjetero: "Colores especiales", "Impresión full color" y "AQUÍ".
   "OW-OFI-24": { descartar: [1, 3, 5, 6], fotoDeColor: { Blanco: 2, Negro: 4 } },
@@ -240,7 +240,7 @@ export const AJUSTES: Record<string, AjusteProducto> = {
   "OW-DRK-19": { fotoDeColor: { Blanco: 3, Negro: 4 } }, // Virasoro
   "OW-DRK-22": { fotoDeColor: { Blanco: 3, Negro: 5 } }, // Trelew
   "OW-DRK-24": { fotoDeColor: { Negro: 1, Rojo: 2, Blanco: 3, Azul: 4 } }, // Ushuaia Matte
-  "OW-DRK-26": { fotoDeColor: { Blanco: 2, Negro: 3, Gris: 4 } }, // Bolsón (la 4 es gris claro: a confirmar)
+  "OW-DRK-26": { fotoDeColor: { Blanco: 2, Negro: 3, Gris: 4 } }, // Bolsón (la 4 es gris claro)
   "OW-DRK-28": { fotoDeColor: { Azul: 1, Rojo: 2, Blanco: 3, Negro: 4 } }, // Angostura
   "OW-DRK-30": { fotoDeColor: { Negro: 2, Blanco: 4 } }, // Recoleta
   "OW-DRK-31": { fotoDeColor: { Negro: 2, Blanco: 4 } }, // Recoleta con Manija
@@ -286,10 +286,23 @@ export const AJUSTES: Record<string, AjusteProducto> = {
   "OW-PAR-01": { fotoDeColor: { "Azul marino": 1, Verde: 2, Negro: 4, Gris: 8, "Azul francia": 9 } },
   "OW-PAR-02": { fotoDeColor: { "Azul marino": 1, Blanco: 2, Negro: 7 } }, // Ejecutivo con mango de goma (Rojo: sin foto)
   "OW-PAR-03": { fotoDeColor: { Azul: 1, "Gris claro": 2, Negro: 7 } }, // Ejecutivo con mango plástico
-  "OW-PAR-04": { fotoDeColor: { Gris: 1, "Azul marino": 2, Negro: 7 } }, // Plegable con mosquetón (la 1 es gris oscuro: a confirmar)
+  "OW-PAR-04": { fotoDeColor: { Gris: 1, "Azul marino": 2, Negro: 7 } }, // Plegable con mosquetón (la 1 es gris oscuro)
+  // Compacto automático: el Excel dice "Violeta (colores pastel)", y lo pastel vale para
+  // todos los de color (Nachi, 18/11).
   "OW-PAR-05": {
-    fotoDeColor: { Celeste: 3, Blanco: 4, Amarillo: 5, "Violeta (colores pastel)": 6, Verde: 7, Rosa: 8, Negro: 9 },
-  }, // Compacto automático
+    textos: {
+      colores: ["Negro", "Blanco", "Rosa pastel", "Verde pastel", "Amarillo pastel", "Celeste pastel", "Violeta pastel"],
+    },
+    fotoDeColor: {
+      "Celeste pastel": 3,
+      Blanco: 4,
+      "Amarillo pastel": 5,
+      "Violeta pastel": 6,
+      "Verde pastel": 7,
+      "Rosa pastel": 8,
+      Negro: 9,
+    },
+  },
   "OW-PAR-06": { fotoDeColor: { Gris: 1, Negro: 6, Azul: 7 } }, // Mini manual
   // Golf automático: Blanco, Negro, Rojo y blanco y Verde y blanco van a la foto de todos (3).
   "OW-PAR-10": {

@@ -139,7 +139,7 @@ const LISTA: Catalogo[] = [
       {
         nombre: "Plásticos",
         paginas: "04–05",
-        texto: "Livianos, coloridos y económicos: los más elegidos para eventos, ferias y entregas masivas.",
+        texto: "Livianos, coloridos y económicos: para eventos, ferias y entregas masivas.",
       },
       {
         nombre: "Ecológicos",

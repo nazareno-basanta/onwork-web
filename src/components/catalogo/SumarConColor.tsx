@@ -79,8 +79,11 @@ export default function SumarConColor({ producto, colores, fotoDeColor }: Props)
                   onChange={() => {
                     setColor(c);
                     // La galería pasa a la foto de ese color (GaleriaProducto escucha este aviso).
-                    const foto = fotoDeColor?.[c];
-                    if (foto !== undefined) window.dispatchEvent(new CustomEvent("ow:ver-foto", { detail: foto }));
+                    // Un color sin foto propia, o "A definir", vuelve a la principal: así no
+                    // queda a la vista la foto del color elegido antes.
+                    if (fotoDeColor) {
+                      window.dispatchEvent(new CustomEvent("ow:ver-foto", { detail: fotoDeColor[c] ?? 0 }));
+                    }
                   }}
                   className="sr-only"
                 />
