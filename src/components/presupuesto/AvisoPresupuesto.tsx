@@ -27,12 +27,18 @@ export default function AvisoPresupuesto() {
   const [anuncio, setAnuncio] = useState("");
   const temporizador = useRef<ReturnType<typeof setTimeout>>(undefined);
 
+  const programarCierre = () => {
+    clearTimeout(temporizador.current);
+    temporizador.current = setTimeout(() => setAviso(null), DURACION);
+  };
+  // Mientras el mouse o el foco del teclado están en el aviso, no se va (así se llega a "Ver presupuesto").
+  const pausar = () => clearTimeout(temporizador.current);
+
   useEffect(
     () =>
       presupuesto.alSumar(({ nombre }) => {
         setAviso({ nombre, id: Date.now() });
-        clearTimeout(temporizador.current);
-        temporizador.current = setTimeout(() => setAviso(null), DURACION);
+        programarCierre();
       }),
     [],
   );
@@ -73,6 +79,12 @@ export default function AvisoPresupuesto() {
         {visible && (
           <div
             key={visible.id}
+            onMouseEnter={pausar}
+            onMouseLeave={programarCierre}
+            onFocus={pausar}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node | null)) programarCierre();
+            }}
             // El borde crema lo separa del pie (tinta sobre tinta) sin usar sombra.
             className="entra pointer-events-auto flex max-w-md items-center gap-4 rounded-3xl border-2 border-ow-paper bg-ow-black py-3 pr-3 pl-5 text-sm text-white"
           >

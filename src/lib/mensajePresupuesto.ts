@@ -29,7 +29,7 @@ export type LineaMensaje = {
   cantidad: number;
   nombre: string;
   codigo: string;
-  /** Vacío o ausente si es "A definir". */
+  /** El color elegido, o "A definir" si todavía no se eligió. Vacío o ausente si el producto no tiene opciones de color. */
   color?: string;
 };
 
@@ -65,14 +65,23 @@ export function armarConNivel(grupos: GrupoMensaje[], otro: string, nivel: Nivel
 }
 
 /**
+ * El mensaje en el primer nivel que entra (según `entra`); si ni el último
+ * entra, va el último igual.
+ */
+export function armarHasta(grupos: GrupoMensaje[], otro: string, entra: (texto: string) => boolean) {
+  for (const nivel of [0, 1, 2] as const) {
+    const texto = armarConNivel(grupos, otro, nivel);
+    if (entra(texto)) return { texto, nivel };
+  }
+  return { texto: armarConNivel(grupos, otro, 3), nivel: 3 as NivelMensaje };
+}
+
+/**
  * El mensaje para el link de WhatsApp, en el primer nivel que entra en el
  * largo máximo (si ni el último entra, va igual: la página avisa y ofrece
  * copiar la lista).
  */
 export function armarMensajePresupuesto(grupos: GrupoMensaje[], otro = "") {
-  for (const nivel of [0, 1, 2] as const) {
-    const texto = armarConNivel(grupos, otro, nivel);
-    if (encodeURIComponent(texto).length <= LARGO_MAXIMO) return { texto, nivel, completo: armarConNivel(grupos, otro, 0) };
-  }
-  return { texto: armarConNivel(grupos, otro, 3), nivel: 3 as NivelMensaje, completo: armarConNivel(grupos, otro, 0) };
+  const { texto, nivel } = armarHasta(grupos, otro, (t) => encodeURIComponent(t).length <= LARGO_MAXIMO);
+  return { texto, nivel, completo: armarConNivel(grupos, otro, 0) };
 }

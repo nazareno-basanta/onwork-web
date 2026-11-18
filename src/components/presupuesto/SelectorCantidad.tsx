@@ -44,20 +44,26 @@ export default function SelectorCantidad({ valor, onCambiar, nombre, enfocar, al
   const quitarAca = valor <= 1 && onQuitar;
   // Lo que la persona está escribiendo; null cuando no está editando.
   const [borrador, setBorrador] = useState<string | null>(null);
-  // Si escribe 0, la cantidad vuelve a la anterior y se explica cómo sacarlo.
-  const [pista, setPista] = useState(false);
+  // Una pista que se va sola: con 0, cómo sacarlo (la cantidad vuelve a la
+  // anterior); con más de 99.999, que ese es el máximo.
+  const [pista, setPista] = useState<string | null>(null);
   const temporizador = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(() => () => clearTimeout(temporizador.current), []);
+
+  const mostrarPista = (texto: string) => {
+    setPista(texto);
+    clearTimeout(temporizador.current);
+    temporizador.current = setTimeout(() => setPista(null), 5000);
+  };
 
   const confirmar = () => {
     if (borrador === null) return;
     const n = Number.parseInt(borrador, 10);
-    if (Number.isFinite(n) && n > 0) onCambiar(n);
-    else if (n === 0) {
-      setPista(true);
-      clearTimeout(temporizador.current);
-      temporizador.current = setTimeout(() => setPista(false), 5000);
-    }
+    if (n > CANTIDAD_MAXIMA) {
+      onCambiar(CANTIDAD_MAXIMA);
+      mostrarPista(PRESUPUESTO.cantidadMaxima);
+    } else if (Number.isFinite(n) && n > 0) onCambiar(n);
+    else if (n === 0) mostrarPista(PRESUPUESTO.paraSacarlo);
     setBorrador(null);
   };
 
@@ -99,7 +105,9 @@ export default function SelectorCantidad({ valor, onCambiar, nombre, enfocar, al
           ref={numero}
           aria-label={`Cantidad de ${nombre}`}
           value={borrador ?? String(valor)}
-          onChange={(e) => setBorrador(e.target.value.replace(/\D/g, "").slice(0, String(CANTIDAD_MAXIMA).length))}
+          // Deja escribir de más (y al confirmar avisa que el máximo es 99.999):
+          // cortar mientras se escribe convertía 100000 en 10000 sin aviso.
+          onChange={(e) => setBorrador(e.target.value.replace(/\D/g, "").slice(0, 9))}
           onBlur={confirmar}
           onKeyDown={onKeyDown}
           onFocus={(e) => e.currentTarget.select()}
@@ -117,7 +125,7 @@ export default function SelectorCantidad({ valor, onCambiar, nombre, enfocar, al
       </div>
       {/* Ocupa su propia línea en el contenedor (que va con flex-wrap). */}
       <span role="status" className={pista ? "basis-full text-sm text-ow-gray" : "sr-only"}>
-        {pista ? PRESUPUESTO.paraSacarlo : ""}
+        {pista ?? ""}
       </span>
     </>
   );

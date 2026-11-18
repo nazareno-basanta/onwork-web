@@ -11,9 +11,9 @@ import WhatsAppLink from "@/components/WhatsAppLink";
 import { COMO_PEDIR, FRANJA_CATALOGOS } from "@/data/inicio";
 import { PRESUPUESTO } from "@/data/presupuesto";
 import type { ProductoPresupuesto } from "@/data/productos";
-import { armarMensajePresupuesto } from "@/lib/mensajePresupuesto";
+import { armarHasta, armarMensajePresupuesto, type GrupoMensaje } from "@/lib/mensajePresupuesto";
 import { medir } from "@/lib/medicion";
-import { presupuesto, type LineaPresupuesto } from "@/lib/presupuesto";
+import { OTRO_MAXIMO, presupuesto, type LineaPresupuesto } from "@/lib/presupuesto";
 import { mailUrl, whatsappUrl } from "@/lib/site";
 import { btn } from "@/lib/ui";
 import { usePresupuesto } from "@/lib/usePresupuesto";
@@ -65,10 +65,18 @@ function Color({ fila, usados }: { fila: Fila; usados: string[] }) {
         <select
           value={color}
           onChange={(e) => presupuesto.cambiarColor(producto.codigo, color, e.target.value)}
-          aria-label={`${PRESUPUESTO.color} de ${producto.nombre}`}
+          // Con dos líneas del mismo producto, cada una dice su color (si no, las dos se llaman igual).
+          aria-label={
+            usados.length > 1
+              ? `${PRESUPUESTO.color} de ${producto.nombre}, ${color || PRESUPUESTO.colorADefinir}`
+              : `${PRESUPUESTO.color} de ${producto.nombre}`
+          }
           className="h-11 w-full cursor-pointer appearance-none truncate rounded-full border-2 border-ow-black bg-white pr-9 pl-4 font-display text-sm font-bold pointer-coarse:text-base"
         >
-          <option value="">{PRESUPUESTO.aDefinir}</option>
+          {/* Como los colores ya usados: si otra línea está en "A definir", no se elige acá (si no, se unían sin aviso). */}
+          <option value="" disabled={color !== "" && usados.includes("")}>
+            {PRESUPUESTO.aDefinir}
+          </option>
           {producto.colores.map((c) => (
             <option key={c} value={c} disabled={c !== color && usados.includes(c)}>
               {c}
@@ -201,9 +209,10 @@ function Vaciar() {
       className="flex min-h-11 items-center gap-4 font-display text-sm font-bold"
     >
       <span aria-hidden>{PRESUPUESTO.confirmarVaciar}</span>
+      {/* "Sí" y "No" son palabras cortas: el área para tocar se agranda a 44 px de ancho. */}
       <button
         type="button"
-        className={linkQuitar}
+        className={`${linkQuitar} min-w-11 justify-center`}
         onClick={() => {
           presupuesto.vaciar();
           medir("vaciar_presupuesto");
@@ -213,23 +222,26 @@ function Vaciar() {
         {PRESUPUESTO.si}
       </button>
       {/* El foco va al "No": así un segundo Enter no borra sin querer. */}
-      <button type="button" className={link} onClick={cancelar} autoFocus>
+      <button type="button" className={`${link} min-w-11 justify-center`} onClick={cancelar} autoFocus>
         {PRESUPUESTO.no}
       </button>
     </div>
   );
 }
 
+/** Largo máximo del link de mail: más largo, algunos programas (Outlook en Windows) no lo abren. */
+const LARGO_MAIL = 1900;
+
 /**
  * "Mandarlo por mail": abre el programa de mail con el presupuesto escrito,
  * dirigido al mail de On Work (Nachi, 12/11/2026). Va el mensaje completo; si
- * el link queda muy largo para algunos programas (más de ~1900 caracteres),
- * el compactado, como en WhatsApp. No marca el presupuesto como enviado: ese
- * aviso habla de WhatsApp.
+ * el link queda muy largo para algunos programas, se compacta por etapas,
+ * como en WhatsApp (ver lib/mensajePresupuesto). No marca el presupuesto como
+ * enviado: ese aviso habla de WhatsApp.
  */
-function PorMail({ completo, texto, filas }: { completo: string; texto: string; filas: Fila[] }) {
-  const largo = mailUrl(PRESUPUESTO.asuntoMail, completo);
-  const href = largo.length > 1900 ? mailUrl(PRESUPUESTO.asuntoMail, texto) : largo;
+function PorMail({ grupos, otro, filas }: { grupos: GrupoMensaje[]; otro: string; filas: Fila[] }) {
+  const { texto } = armarHasta(grupos, otro, (t) => mailUrl(PRESUPUESTO.asuntoMail, t).length <= LARGO_MAIL);
+  const href = mailUrl(PRESUPUESTO.asuntoMail, texto);
   const unidades = filas.reduce((suma, f) => suma + f.cantidad, 0);
   return (
     <a
@@ -305,7 +317,7 @@ function CampoOtro({ otro }: { otro: string }) {
         rows={2}
         // Que el header fijo no lo tape al llegar con #presupuesto-otro.
         style={{ scrollMarginTop: "8rem" }}
-        maxLength={300}
+        maxLength={OTRO_MAXIMO}
         value={otro}
         placeholder={PRESUPUESTO.otroEjemplo}
         onChange={(e) => presupuesto.cambiarOtro(e.target.value)}
@@ -426,7 +438,7 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
             <>
               <Enviar texto={soloOtro.texto} filas={[]} />
               <div className="mt-4 flex flex-wrap items-center gap-x-6">
-                <PorMail completo={soloOtro.completo} texto={soloOtro.texto} filas={[]} />
+                <PorMail grupos={[]} otro={otro} filas={[]} />
                 <CopiarLista texto={soloOtro.completo} />
               </div>
             </>
@@ -436,13 +448,17 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
     );
   }
 
-  const { texto, nivel, completo } = armarMensajePresupuesto(
-    grupos.map((g) => ({
-      catalogo: g.titulo,
-      lineas: g.filas.map((f) => ({ cantidad: f.cantidad, nombre: f.producto.nombre, codigo: f.codigo, color: f.color })),
+  const gruposMensaje: GrupoMensaje[] = grupos.map((g) => ({
+    catalogo: g.titulo,
+    lineas: g.filas.map((f) => ({
+      cantidad: f.cantidad,
+      nombre: f.producto.nombre,
+      codigo: f.codigo,
+      // Si el producto tiene colores y todavía no se eligió, la línea lo dice ("· A definir").
+      color: f.color || (f.producto.colores.length > 0 ? PRESUPUESTO.aDefinir : ""),
     })),
-    otro,
-  );
+  }));
+  const { texto, nivel, completo } = armarMensajePresupuesto(gruposMensaje, otro);
 
   return (
     <>
@@ -503,7 +519,7 @@ export default function ListaPresupuesto({ indice }: { indice: ProductoPresupues
           )}
           <Enviar texto={texto} filas={filas} />
           <div className="mt-4 flex flex-wrap items-center gap-x-6">
-            <PorMail completo={completo} texto={texto} filas={filas} />
+            <PorMail grupos={gruposMensaje} otro={otro} filas={filas} />
             <CopiarLista texto={completo} />
             <Vaciar />
           </div>

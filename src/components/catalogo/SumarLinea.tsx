@@ -4,7 +4,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import { PRESUPUESTO } from "@/data/presupuesto";
 import { medir } from "@/lib/medicion";
-import { presupuesto } from "@/lib/presupuesto";
+import { estaEnOtro, presupuesto } from "@/lib/presupuesto";
 import { usePresupuesto } from "@/lib/usePresupuesto";
 
 const link =
@@ -18,7 +18,7 @@ const link =
 export default function SumarLinea({ seccion, catalogo }: { seccion: string; catalogo: string }) {
   const { listo, otro } = usePresupuesto();
   const texto = PRESUPUESTO.lineaEnOtro(seccion, catalogo);
-  const sumada = listo && otro.includes(texto);
+  const sumada = listo && estaEnOtro(otro, texto);
 
   if (sumada) {
     return (
@@ -44,6 +44,8 @@ export default function SumarLinea({ seccion, catalogo }: { seccion: string; cat
     >
       <Icon name="mas" size={18} />
       {PRESUPUESTO.sumar}
+      {/* Para el lector de pantalla: en Cintas y Llaveros hay un botón igual en cada sección. */}
+      <span className="sr-only">: {seccion}</span>
     </button>
   );
 }

@@ -53,6 +53,8 @@ export const PRESUPUESTO = {
   quitado: (nombre: string) => `Quitaste ${nombre} del presupuesto.`,
   /** Cuando alguien escribe 0 en la cantidad. */
   paraSacarlo: "Para sacarlo del presupuesto, tocá Quitar.",
+  /** ✏️ Borrador de Claude (18/11/2026): cuando alguien escribe más de 99.999. */
+  cantidadMaxima: "El máximo es 99.999 por línea. Si necesitás más, contanos por WhatsApp.",
   colorADefinir: "color a definir",
   vaciar: "Vaciar presupuesto",
   confirmarVaciar: "¿Vaciar?",

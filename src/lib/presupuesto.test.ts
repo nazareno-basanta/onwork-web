@@ -1,7 +1,37 @@
 // Pruebas de las operaciones del presupuesto. Correr con: npm test
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { cambiarCantidad, cambiarColor, depurar, leerGuardado, normalizarCantidad, quitar, sumar } from "./presupuesto.ts";
+import {
+  OTRO_MAXIMO,
+  cambiarCantidad,
+  cambiarColor,
+  depurar,
+  estaEnOtro,
+  leerGuardado,
+  normalizarCantidad,
+  quitar,
+  sumar,
+  sumarTextoAOtro,
+} from "./presupuesto.ts";
+
+test("sumar a Otro: separa con coma, no repite y nunca corta a mitad de palabra", () => {
+  let otro = sumarTextoAOtro("", "Cintas sublimadas (catálogo Cintas e identificación)");
+  assert.equal(otro, "Cintas sublimadas (catálogo Cintas e identificación)");
+  otro = sumarTextoAOtro(otro!, "Pines (catálogo Cintas e identificación)");
+  assert.equal(otro, "Cintas sublimadas (catálogo Cintas e identificación), Pines (catálogo Cintas e identificación)");
+  assert.equal(sumarTextoAOtro(otro!, "pines (catálogo cintas e identificación)"), otro, "ya estaba: no se repite");
+  assert.equal(sumarTextoAOtro("gorra trucker", "Gorra trucker"), "gorra trucker");
+  assert.ok(estaEnOtro("Gorras trucker, delantales", "delantales"));
+
+  // Las seis líneas de Cintas (más de 300 caracteres) entran enteras.
+  const secciones = ["Cintas sublimadas", "Cintas largas", "Cintas cortas", "Identificadores", "Pines", "Botones, medallas y pulseras"];
+  const todas = secciones.reduce((o, s) => sumarTextoAOtro(o, `${s} (catálogo Cintas e identificación)`)!, "");
+  assert.ok(todas.length > 300);
+  assert.ok(todas.endsWith("Botones, medallas y pulseras (catálogo Cintas e identificación)"));
+
+  // Si no entra, no se suma (null): nada queda cortado.
+  assert.equal(sumarTextoAOtro("x".repeat(OTRO_MAXIMO - 5), "Pines (catálogo Cintas e identificación)"), null);
+});
 
 test("sumar arranca en 1 y, si el producto ya está en ese color, suma", () => {
   let lineas = sumar([], "OW-DRK-01");

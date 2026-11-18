@@ -52,11 +52,11 @@ export default function BotonPresupuesto({ producto, className, destacado = fals
   const sumar = (
     <div className={cn("@container w-full", !conColor && className)}>
       {/* En una tarjeta angosta (dos columnas en el celular) el texto completo no
-          entra en una línea: ahí dice "Sumar" (el nombre completo queda para los
-          lectores de pantalla). */}
+          entra en una línea: ahí dice "Sumar". Para el lector de pantalla, el
+          nombre del botón empieza con lo que se ve y suma el producto (así
+          también lo encuentra quien lo activa con la voz). */}
       <button
         type="button"
-        aria-label={PRESUPUESTO.sumarEtiqueta(producto.nombre)}
         className={destacado ? cn(btn.black, "w-full sm:w-auto") : btn.line}
         onClick={(e) => {
           // La foto vuela al contador del header (antes de sumar, así el contador espera a que llegue).
@@ -70,8 +70,14 @@ export default function BotonPresupuesto({ producto, className, destacado = fals
         }}
       >
         <Icon name="mas" size={18} />
-        <span className="@[13rem]:hidden">{PRESUPUESTO.sumarCorto}</span>
-        <span className="hidden @[13rem]:inline">{PRESUPUESTO.sumar}</span>
+        <span className="@[13rem]:hidden">
+          <span aria-hidden>{PRESUPUESTO.sumarCorto}</span>
+          <span className="sr-only">{PRESUPUESTO.sumarEtiqueta(producto.nombre)}</span>
+        </span>
+        <span className="hidden @[13rem]:inline">
+          {PRESUPUESTO.sumar}
+          <span className="sr-only">: {producto.nombre}</span>
+        </span>
       </button>
     </div>
   );

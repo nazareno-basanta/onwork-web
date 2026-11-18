@@ -27,6 +27,11 @@ export const CLAVE = "onwork-presupuesto-v1";
 /** Dónde arranca el selector al sumar un producto (no es un mínimo). */
 export const CANTIDAD_INICIAL = 1;
 export const CANTIDAD_MAXIMA = 99999;
+/**
+ * Largo máximo del campo "Otro". Alcanza para todas las líneas que están solo
+ * en el PDF (Cintas, Llaveros: unos 800 caracteres) y lo que se escriba a mano.
+ */
+export const OTRO_MAXIMO = 1000;
 
 const VACIO: EstadoPresupuesto = { listo: false, lineas: [], otro: "", enviado: false, descartados: 0 };
 
@@ -70,6 +75,22 @@ export function cambiarColor(lineas: LineaPresupuesto[], codigo: string, color: 
 
 export function quitar(lineas: LineaPresupuesto[], codigo: string, color: string) {
   return lineas.filter((l) => !esLinea(codigo, color)(l));
+}
+
+/** ¿El campo "Otro" ya tiene ese texto? (sin importar mayúsculas) */
+export function estaEnOtro(otro: string, texto: string) {
+  return otro.toLocaleLowerCase("es").includes(texto.trim().toLocaleLowerCase("es"));
+}
+
+/**
+ * Suma un texto al campo "Otro", separado por coma y sin repetirlo. Nunca lo
+ * corta a mitad de palabra: si no entra, devuelve null (y no se suma).
+ */
+export function sumarTextoAOtro(otro: string, texto: string) {
+  const actual = otro.trim();
+  if (!texto.trim() || estaEnOtro(actual, texto)) return actual;
+  const nuevo = actual ? `${actual}, ${texto.trim()}` : texto.trim();
+  return nuevo.length <= OTRO_MAXIMO ? nuevo : null;
 }
 
 /** Descarta las líneas de productos que ya no están en la web. */
@@ -171,13 +192,17 @@ export const presupuesto = {
   cambiarOtro: (otro: string) => actualizar({ otro }),
   /**
    * Suma un texto a "Otro" (una línea que está solo en el PDF, como "Cintas
-   * sublimadas (catálogo Cintas e identificación)"), sin repetirlo, y avisa
-   * como al sumar un producto.
+   * sublimadas (catálogo Cintas e identificación)", o lo buscado que no está
+   * en los catálogos), sin repetirlo, y avisa como al sumar un producto. Si no
+   * entra, no se suma ni se avisa (devuelve false).
    */
   sumarAOtro(texto: string, { aviso }: { aviso?: string } = {}) {
-    const actual = estado.otro.trim();
-    if (!actual.includes(texto)) actualizar({ otro: (actual ? `${actual}, ${texto}` : texto).slice(0, 300) });
+    iniciar();
+    const nuevo = sumarTextoAOtro(estado.otro, texto);
+    if (nuevo === null) return false;
+    if (nuevo !== estado.otro) actualizar({ otro: nuevo });
     if (aviso) alSumarOyentes.forEach((f) => f({ codigo: "", nombre: aviso }));
+    return true;
   },
   vaciar: () => actualizar({ lineas: [], otro: "" }),
   /** Se tocó "Enviar presupuesto por WhatsApp". */

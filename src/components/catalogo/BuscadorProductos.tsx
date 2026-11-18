@@ -106,11 +106,8 @@ export default function BuscadorProductos({ productos, lugares }: { productos: P
     window.history.replaceState(null, "", url);
   };
 
-  // "Sumalo a tu presupuesto": lo buscado pasa al campo "Otro" (sin borrar lo que ya tenía).
-  const sumarAOtro = () => {
-    const otro = presupuesto.leer().otro.trim();
-    presupuesto.cambiarOtro((otro ? `${otro}, ${buscado}` : buscado).slice(0, 300));
-  };
+  // "Sumalo a tu presupuesto": lo buscado pasa al campo "Otro" (sin borrar lo que ya tenía ni repetirlo).
+  const sumarAOtro = () => presupuesto.sumarAOtro(buscado);
 
   const acciones = (
     <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
