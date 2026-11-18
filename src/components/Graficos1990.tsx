@@ -9,13 +9,14 @@
  */
 
 import { useRef } from "react";
-import { useInView, useReducedMotion } from "motion/react";
+import { useInView } from "motion/react";
 import { Trio } from "@/components/Formas";
+import { useMenosMovimiento } from "@/lib/useMenosMovimiento";
 import { cn } from "@/lib/utils";
 
 export function TrioQueAparece({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useMenosMovimiento();
   const visto = useInView(ref, { once: true, amount: 0.8 });
 
   return (

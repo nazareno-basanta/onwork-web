@@ -24,21 +24,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import {
-  motion,
-  type MotionValue,
-  useMotionValue,
-  useMotionValueEvent,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, type MotionValue, useMotionValue, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import CarruselHero, { type ProductoHero } from "@/components/CarruselHero";
 import Icon from "@/components/Icon";
 import { ISO_ARO, ISO_CAJA, ISO_PUNTO, ISO_SIGNO } from "@/components/Isotipo";
 import RotatingText from "@/components/ui/RotatingText";
 import { FRASE_ROTATIVA, HERO } from "@/data/inicio";
 import { btn } from "@/lib/ui";
+import { useMenosMovimiento } from "@/lib/useMenosMovimiento";
 import { sinViuda } from "@/lib/utils";
 
 // Tramos del scroll, medidos en vh de scroll mientras el hero queda fijo. El
@@ -163,6 +156,7 @@ function IsotipoReposo({ oculto, refCaja }: { oculto?: boolean; refCaja?: React.
 function Escena({
   isotipo,
   opacidad,
+  apagado = false,
   productos,
   progreso,
   abreHasta,
@@ -170,6 +164,8 @@ function Escena({
 }: {
   isotipo: React.ReactNode;
   opacidad?: MotionValue<number>;
+  /** El titular y los botones ya se apagaron con el scroll: quedan inertes (el teclado no los toca). */
+  apagado?: boolean;
   productos: ProductoHero[];
   progreso?: MotionValue<number>;
   abreHasta?: number;
@@ -177,7 +173,7 @@ function Escena({
 }) {
   return (
     <div className="container-ow relative z-10 flex h-full flex-col items-center justify-center gap-[clamp(2rem,5vh,3.5rem)] py-8 text-center md:py-12">
-      <motion.div style={opacidad ? { opacity: opacidad } : undefined} className="relative z-10">
+      <motion.div style={opacidad ? { opacity: opacidad } : undefined} inert={apagado} className="relative z-10">
         <TitularHero />
       </motion.div>
       {/* El carrusel pasa por detrás del isotipo; abajo deja lugar para los nombres de los productos. */}
@@ -186,7 +182,11 @@ function Escena({
         <div className="relative">{isotipo}</div>
       </div>
       {/* "Ver catálogos" es la acción principal (amarillo, más grande); "Conocenos", la segunda. */}
-      <motion.div style={opacidad ? { opacity: opacidad } : undefined} className="relative z-10 flex flex-wrap justify-center gap-3">
+      <motion.div
+        style={opacidad ? { opacity: opacidad } : undefined}
+        inert={apagado}
+        className="relative z-10 flex flex-wrap justify-center gap-3"
+      >
         <Link href="/catalogos" className={`${btn.yellow} !min-h-14 !px-8 !text-base`}>
           {HERO.botonCatalogos}
           <Icon name="flecha-derecha" size={20} />
@@ -200,7 +200,7 @@ function Escena({
 }
 
 function Frase({ indice, final }: { indice: number; final: boolean }) {
-  const reduce = useReducedMotion();
+  const reduce = useMenosMovimiento();
   const { inicio, palabras } = FRASE_ROTATIVA;
   // Cuanto más rápido pasan, más corta es la animación de cada letra (si no,
   // se pisan). "detalle" entra con el tiempo de siempre.
@@ -249,7 +249,7 @@ function Frase({ indice, final }: { indice: number; final: boolean }) {
 type Geo = { ox: number; oy: number; sx: number; sy: number; k: number; maxEscala: number };
 
 export default function HeroScroll({ productos }: { productos: ProductoHero[] }) {
-  const reduce = useReducedMotion();
+  const reduce = useMenosMovimiento();
   const contRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const cajaRef = useRef<SVGSVGElement>(null);
@@ -286,7 +286,8 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
     return () => ro.disconnect();
   }, [reduce]);
 
-  const { scrollYProgress: p } = useScroll({ target: contRef, offset: ["start start", "end end"] });
+  // Con menos movimiento no hay hero fijo (contRef no se usa): sin target, para que motion no lo busque.
+  const { scrollYProgress: p } = useScroll({ target: reduce ? undefined : contRef, offset: ["start start", "end end"] });
   const ox = useMotionValue(0);
   const oy = useMotionValue(0);
   const sx = useMotionValue(0);
@@ -320,6 +321,11 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
   });
 
   const textoOpacidad = useTransform(p, TEXTO, [1, 0]);
+  // Apagados (casi invisibles y tapados por el header), "Ver catálogos" y
+  // "Conocenos" no reciben el foco: si no, volviendo con Shift+Tab el foco
+  // caía en botones que no se ven.
+  const [apagado, setApagado] = useState(false);
+  useMotionValueEvent(textoOpacidad, "change", (v) => setApagado(v < 0.05));
   const fraseOpacidad = useTransform(p, FRASE, [0, 1]);
   const fraseY = useTransform(p, FRASE, [36, 0]);
 
@@ -365,6 +371,7 @@ export default function HeroScroll({ productos }: { productos: ProductoHero[] })
       <div ref={stageRef} className="sticky top-16 h-[calc(100svh-4rem)] overflow-hidden">
         <Escena
           opacidad={textoOpacidad}
+          apagado={apagado}
           isotipo={<IsotipoReposo oculto={!!geo} refCaja={cajaRef} />}
           productos={productos}
           progreso={p}

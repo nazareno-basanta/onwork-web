@@ -41,7 +41,8 @@ export default function ListaIdeas({
                 >
                   <Titular
                     as={titulos}
-                    className="text-[clamp(1.6rem,3vw,2.25rem)] decoration-ow-yellow decoration-2 underline-offset-[6px] group-hover:underline"
+                    // balance: los dos renglones parejos (si no, el segundo quedaba con dos palabras).
+                    className="text-[clamp(1.6rem,3vw,2.25rem)] text-balance decoration-ow-yellow decoration-2 underline-offset-[6px] group-hover:underline"
                   >
                     {idea.titulo}
                   </Titular>

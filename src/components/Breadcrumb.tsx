@@ -39,7 +39,11 @@ export default function Breadcrumb({ items }: { items: Miga[] }) {
                 </span>
               ) : (
                 <>
-                  <Link href={m.href} className="rounded-sm underline-offset-4 hover:text-ow-black hover:underline">
+                  {/* El área para tocar llega a 44 px de alto sin agrandar la línea (el after se estira arriba y abajo). */}
+                  <Link
+                    href={m.href}
+                    className="relative rounded-sm underline-offset-4 after:absolute after:inset-x-0 after:-inset-y-3 hover:text-ow-black hover:underline"
+                  >
                     {m.label}
                   </Link>
                   <Icon name="flecha-derecha" size={14} />

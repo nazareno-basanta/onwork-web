@@ -67,15 +67,18 @@ body {
 }
 
 /* Sin viudas: el navegador reparte mejor las últimas palabras de cada línea.
-   (Además, en los textos se unen las dos últimas palabras con espacio duro.) */
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-summary {
-  text-wrap: pretty;
+   (Además, en los textos se unen las dos últimas palabras con espacio duro.)
+   Va en la capa base, así una clase puntual (text-balance) la puede cambiar. */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  summary {
+    text-wrap: pretty;
+  }
 }
 
 ::selection {
@@ -275,6 +278,21 @@ details.faq[open]::details-content {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  /* Y todo el contenido visible desde el principio, aun antes de que cargue
+     JavaScript: los bloques que aparecen al bajar (Reveal) y el trío de 1990. */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .trio-aparece path {
+    transform: scale(1);
+  }
+}
+
+/* Al cambiar de página, el foco pasa al contenido principal (ver
+   FocoAlNavegar): no lleva contorno, es solo el punto de partida del Tab. */
+#contenido:focus {
+  outline: none;
 }
 
 /* Contenedor estándar: mismo ancho y márgenes en todas las secciones */

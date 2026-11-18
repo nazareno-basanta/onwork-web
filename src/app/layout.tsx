@@ -13,6 +13,7 @@ import AvisoPresupuesto from "@/components/presupuesto/AvisoPresupuesto";
 import BarraPresupuesto from "@/components/presupuesto/BarraPresupuesto";
 import PresupuestoInicio from "@/components/presupuesto/PresupuestoInicio";
 import { PRODUCTOS } from "@/data/productos";
+import FocoAlNavegar from "@/components/FocoAlNavegar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -65,12 +66,19 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#fffcef",
+  // La web es clara (no tiene modo oscuro): así el modo oscuro automático de
+  // algunos navegadores del celular no invierte los colores.
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-AR" className={`${montserrat.variable} ${nunito.variable} h-full`}>
       <body className="flex min-h-full flex-col">
+        {/* Sin JavaScript, los bloques que aparecen al bajar (Reveal) se ven igual. */}
+        <noscript>
+          <style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style>
+        </noscript>
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ow-yellow focus:px-5 focus:py-2 focus:font-bold"
@@ -79,9 +87,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <SmoothScroll />
         <Header />
-        <main id="contenido" className="flex-1 pt-16">
+        {/* tabIndex -1: recibe el foco del "Saltar al contenido" y al cambiar de página (FocoAlNavegar). */}
+        <main id="contenido" tabIndex={-1} className="foco-propio flex-1 pt-16">
           {children}
         </main>
+        <FocoAlNavegar />
         <Footer />
         <WhatsAppFloat />
         {/* Presupuesto: códigos válidos, aviso al sumar y barra del celular. */}

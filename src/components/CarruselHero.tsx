@@ -55,7 +55,8 @@ function medidas(ancho: number, altoIso: number) {
  * crema del fondo que tapa las tarjetas). Todas tienen el mismo tamaño (Nachi,
  * 6/11/2026); solo al meterse por detrás achican un poco, lo justo para no
  * asomar por los costados del aro.
- * - Con el mouse encima no arranca el próximo paso; cada tarjeta lleva a su producto.
+ * - Con el mouse encima, o con el foco del teclado en el hero, no arranca el
+ *   próximo paso; cada tarjeta lleva a su producto.
  * - Al bajar (progreso del hero), las tarjetas se abren hacia los costados y
  *   se van mientras el isotipo crece.
  * - Con menos movimiento queda quieta: tres a cada lado, como en el diseño.
@@ -93,12 +94,16 @@ export default function CarruselHero({
     // Arranca con el cuarto escondido detrás del isotipo: tres a cada lado (como el diseño).
     let lugar = 3; // qué tarjeta está detrás del isotipo
     let avance = 0; // de 0 a 1 mientras corre un lugar
-    let reloj = 0;
-    let moviendo = false;
-    let frenado = false;
+    // Solo hay animación cuadro a cuadro mientras corre un lugar (0,75 s). La
+    // pausa de 1,4 s es un temporizador: quieta, no gasta nada.
+    let cuadro = 0; // requestAnimationFrame mientras corre
+    let espera = 0; // setTimeout de la pausa
+    let inicioViaje = 0;
     let visible = true;
-    let cuadro = 0;
-    let antes = performance.now();
+    // Lo que frena el próximo paso: el mouse sobre una tarjeta o el foco del
+    // teclado en el hero (en los botones), así se puede leer sin que se mueva.
+    let conMouse = false;
+    let conFoco = false;
 
     const medir = () => {
       m = medidas(document.documentElement.clientWidth, iso.getBoundingClientRect().height);
@@ -143,65 +148,102 @@ export default function CarruselHero({
       });
     };
 
+    // Puede arrancar el próximo paso: se ve, no está quieta, nada la frena y
+    // está arriba de todo (mientras se baja por el hero no avanza).
+    const puedeAndar = () => visible && !quieto && !conMouse && !conFoco && !(progreso && progreso.get() > 0.001);
+
+    // Después de cada paso (o cuando se suelta lo que la frenaba), espera la pausa y corre el siguiente.
+    const programar = () => {
+      clearTimeout(espera);
+      espera = 0;
+      if (cuadro || !puedeAndar()) return;
+      espera = window.setTimeout(correr, PAUSA * 1000);
+    };
+
+    const correr = () => {
+      espera = 0;
+      if (!puedeAndar()) return; // vuelve a programarse cuando se suelte lo que la frena
+      inicioViaje = performance.now();
+      cuadro = requestAnimationFrame(paso);
+    };
+
+    // Un lugar: el paso en curso siempre termina (aunque entre el mouse).
     const paso = (ahora: number) => {
-      const dt = Math.min(0.05, (ahora - antes) / 1000);
-      antes = ahora;
-      // Mientras se baja por el hero, el carrusel no avanza (vuelve a andar arriba de todo).
-      const bajando = !!progreso && progreso.get() > 0.001;
-      if (!moviendo) {
-        // Con el mouse encima no arranca el próximo paso (el que está en curso termina).
-        if (!frenado && !bajando) reloj += dt;
-        if (reloj >= PAUSA) {
-          moviendo = true;
-          reloj = 0;
-        }
-      } else {
-        reloj += dt;
-        avance = Math.min(1, reloj / VIAJE);
-        if (avance >= 1) {
-          lugar = (lugar + 1) % n;
-          avance = 0;
-          moviendo = false;
-          reloj = 0;
-        }
+      avance = Math.min(1, (ahora - inicioViaje) / 1000 / VIAJE);
+      if (avance >= 1) {
+        lugar = (lugar + 1) % n;
+        avance = 0;
+        dibujar();
+        cuadro = 0;
+        programar();
+        return;
       }
       dibujar();
-      cuadro = visible && !quieto ? requestAnimationFrame(paso) : 0;
+      cuadro = requestAnimationFrame(paso);
     };
 
     medir();
     dibujar();
     banda.current.dataset.listo = "true";
 
-    const alEntrar = () => (frenado = true);
-    const alSalir = () => (frenado = false);
+    const alEntrar = () => {
+      conMouse = true;
+    };
+    const alSalir = () => {
+      conMouse = false;
+      programar();
+    };
     const lista = tarjetas.current.filter((t): t is HTMLAnchorElement => !!t);
     for (const t of lista) {
       t.addEventListener("pointerenter", alEntrar);
       t.addEventListener("pointerleave", alSalir);
     }
+    // El foco del teclado en el hero ("Ver catálogos", "Conocenos") también la frena.
+    const hero = caja.current?.closest("section");
+    const alEnfocar = () => {
+      conFoco = true;
+    };
+    const alDesenfocar = (e: FocusEvent) => {
+      if (hero?.contains(e.relatedTarget as Node | null)) return;
+      conFoco = false;
+      programar();
+    };
+    hero?.addEventListener("focusin", alEnfocar);
+    hero?.addEventListener("focusout", alDesenfocar);
     const ro = new ResizeObserver(() => {
       medir();
       dibujar();
     });
     ro.observe(iso);
     ro.observe(document.documentElement);
-    // Solo se mueve mientras se ve (y con el scroll del hero, aunque esté quieto).
+    // Solo anda mientras se ve.
     const io = new IntersectionObserver(([e]) => {
       visible = e.isIntersecting;
-      if (visible && !cuadro && !quieto) {
-        antes = performance.now();
-        cuadro = requestAnimationFrame(paso);
-      }
+      if (visible) programar();
+      else clearTimeout(espera);
     });
     io.observe(iso);
-    const sinScroll = progreso?.on("change", () => !cuadro && dibujar());
+    // Con el scroll del hero las tarjetas se abren y se van (aunque esté
+    // quieta); al volver arriba de todo, sigue andando.
+    const sinScroll = progreso?.on("change", (v) => {
+      if (!cuadro) dibujar();
+      if (v <= 0.001) {
+        if (!espera) programar();
+      } else {
+        clearTimeout(espera);
+        espera = 0;
+      }
+    });
+    programar();
     return () => {
       cancelAnimationFrame(cuadro);
+      clearTimeout(espera);
       for (const t of lista) {
         t.removeEventListener("pointerenter", alEntrar);
         t.removeEventListener("pointerleave", alSalir);
       }
+      hero?.removeEventListener("focusin", alEnfocar);
+      hero?.removeEventListener("focusout", alDesenfocar);
       ro.disconnect();
       io.disconnect();
       sinScroll?.();
@@ -233,7 +275,7 @@ export default function CarruselHero({
               <Image src={p.src} alt="" width={480} height={480} unoptimized className="size-full object-contain p-[10%]" />
             </span>
             <span className="absolute top-0 left-0 hidden w-36 flex-col items-center gap-1.5 text-center sm:flex">
-              <span className="rounded-full bg-ow-yellow px-2 py-1 font-display text-[0.625rem] leading-none font-bold tracking-[0.14em] whitespace-nowrap tabular-nums">
+              <span className="rounded-full bg-ow-yellow px-2 py-1 font-display text-xs leading-none font-bold tracking-[0.14em] whitespace-nowrap tabular-nums">
                 {p.codigo}
               </span>
               <span className="font-display text-xs leading-tight font-bold text-balance">{p.nombre}</span>
